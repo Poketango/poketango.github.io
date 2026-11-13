@@ -1,0 +1,34 @@
+<!DOCTYPE html><html lang="en"><head><script async src="https://www.googletagmanager.com/gtag/js?id=G-2S81YX6L53"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2S81YX6L53');</script><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pokémon Katakana Quiz – Learn to Read Japanese with Pokémon</title><meta name="description" content="A free quiz: read Pokémon names written in Japanese katakana and pick the right Pokémon. Great practice for beginners learning Japanese.">
+<link rel="canonical" href="https://poketango.com/en/quiz.html"><link rel="icon" type="image/png" href="../favicon.png">
+<meta property="og:type" content="article"><meta property="og:title" content="Pokémon Katakana Quiz – Learn to Read Japanese with Pokémon"><meta property="og:description" content="A free quiz: read Pokémon names written in Japanese katakana and pick the right Pokémon. Great practice for beginners learning Japanese."><meta property="og:url" content="https://poketango.com/en/quiz.html"><meta property="og:image" content="https://poketango.com/ogp.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../theme.css"><style>
+.kana{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}.kana .u{display:flex;flex-direction:column;align-items:center;min-width:64px;padding:10px 8px;border-radius:14px;background:#fff7ed;border:2px solid #fed7aa}
+.kana .u b{font-size:34px;line-height:1.1;font-family:"Noto Sans JP",sans-serif}.kana .u span{font-size:14px;color:#9a3412;font-weight:700;margin-top:4px}
+.kana .u.sp{background:#eef2ff;border-color:#c7d2fe}.kana .u.sp span{color:#4338ca}
+.big-jp{font-size:44px;font-weight:900;margin:0;line-height:1.2}.ro{font-size:22px;color:#475569;margin:2px 0 0}
+.note{font-size:14px;color:#475569;line-height:1.7}.ja-text{font-size:18px;line-height:1.9}
+.chart{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}.chart a,.chart div{display:flex;flex-direction:column;align-items:center;padding:8px 2px;border-radius:10px;background:#f8fafc;text-decoration:none;color:inherit}
+.chart b{font-size:26px}.chart small{font-size:12px;color:#64748b}.chart i{font-style:normal;font-size:11px;color:#2563eb}
+.mlist{columns:3 220px;column-gap:24px}.mlist a{display:block;padding:3px 0;text-decoration:none}.mlist a small{color:#64748b}
+</style><meta name="google-adsense-account" content="ca-pub-4829093383068106">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4829093383068106" crossorigin="anonymous"></script>
+</head><body class="pkpage"><nav class="topnav"><a class="brand" href="../en/">🎌 Pokémon Katakana</a><div class="tn-links"><a href="../en/list.html">All Pokémon</a><a href="../en/chart.html">Katakana Chart</a><a href="../en/quiz.html">Quiz</a><a href="../">日本語</a></div></nav>
+<main class="pkwrap"><section class="list-hero"><h1>Pokémon Katakana Quiz</h1><p>Read the Japanese name – which Pokémon is it?</p></section>
+<section class="card" id="qbox"><div class="row" style="gap:8px;flex-wrap:wrap"><label>Mode <select id="mode"><option value="en">Katakana → English name</option><option value="ro">Katakana → romaji</option></select></label><label>Generation <select id="gen"><option value="1">Gen 1 (easiest)</option><option value="0">All generations</option></select></label></div>
+<p class="big-jp" id="q" lang="ja" style="text-align:center;margin:18px 0 6px"></p><p style="text-align:center"><button class="chip-btn" id="hint">💡 Hint (sprite)</button> <button class="chip-btn" id="say">🔊 Listen</button></p><p style="text-align:center"><img id="sp" alt="" width="96" height="96" style="visibility:hidden"></p>
+<div id="opts" style="display:grid;grid-template-columns:1fr 1fr;gap:10px"></div><p id="res" style="text-align:center;font-weight:700;min-height:1.5em"></p><p style="text-align:center">Score <b id="sc">0</b> / <b id="tot">0</b> · Streak <b id="st">0</b></p></section>
+<section class="card"><p class="note">Don’t know katakana yet? Start with the <a href="chart.html">katakana chart</a>. Each wrong answer shows the Pokémon so you learn as you go.</p></section>
+<style>#opts button{font-size:18px;padding:14px;border-radius:14px;border:2px solid #cbd5e1;background:#fff;cursor:pointer}#opts button.ok{background:#dcfce7;border-color:#22c55e}#opts button.ng{background:#fee2e2;border-color:#ef4444}</style>
+<script>let D=[],cur=null,sc=0,tot=0,st=0;const $=i=>document.getElementById(i);
+function pool(){const g=+$("gen").value;return g?D.filter(x=>x[5]===g):D}
+function sayJa(t){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang="ja-JP";u.rate=.8;speechSynthesis.speak(u)}
+function next(){const P=pool();cur=P[Math.floor(Math.random()*P.length)];const m=$("mode").value,idx=m==="en"?1:3;let c=[cur];while(c.length<4){const r=P[Math.floor(Math.random()*P.length)];if(!c.includes(r))c.push(r)}c.sort(()=>Math.random()-.5);
+$("q").textContent=cur[2];$("sp").style.visibility="hidden";$("sp").src="../pokemon_sprites/"+cur[4];$("res").textContent="";
+$("opts").innerHTML="";c.forEach(o=>{const b=document.createElement("button");b.textContent=o[idx];b.onclick=()=>ans(b,o,c,idx);$("opts").appendChild(b)})}
+function ans(b,o,c,idx){if($("res").textContent)return;tot++;const ok=o===cur;if(ok){sc++;st++;b.classList.add("ok");$("res").textContent="✅ Correct! "+cur[2]+" = "+cur[3]}else{st=0;b.classList.add("ng");[...$("opts").children].forEach(x=>{if(x.textContent===cur[idx])x.classList.add("ok")});$("res").innerHTML="❌ It was "+cur[1]+" ("+cur[3]+") · <a href=\"p/"+cur[0]+".html\">learn this name</a>"}
+$("sp").style.visibility="visible";$("sc").textContent=sc;$("tot").textContent=tot;$("st").textContent=st;sayJa(cur[2]);setTimeout(next,ok?1300:3200)}
+$("hint").onclick=()=>$("sp").style.visibility="visible";$("say").onclick=()=>sayJa(cur[2]);$("mode").onchange=next;$("gen").onchange=next;
+fetch("quiz.json").then(r=>r.json()).then(d=>{D=d;next()});</script></main>
+<footer class="note" style="text-align:center;padding:24px 16px">Unofficial fan-made learning site. Pokémon names, images and Pokédex text © Nintendo / Creatures Inc. / GAME FREAK inc. / The Pokémon Company.<br><a href="../policy.html">Operator &amp; privacy policy (Japanese)</a></footer></body></html>
