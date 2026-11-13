@@ -165,18 +165,18 @@ const pick = (arr, seed) => arr[Math.abs(seed) % arr.length];
 //   商品の種類はここで増やせる。[アイコン, 表示する文字, 小さい説明, 楽天での検索キーワード, 色]
 // =========================================================
 const RAIL_ITEMS = [
-    ["🃏", "ポケモンカード 最新弾", "BOX・パック", "ポケモンカード 拡張パック BOX", "#ef4444"],
-    ["🛡️", "カードスリーブ", "デッキケースも", "ポケモンカード スリーブ デッキケース", "#3b82f6"],
-    ["🇺🇸", "英語版ポケモンカード", "英語の勉強にも", "ポケモンカード 英語版", "#0ea5e9"],
-    ["🎮", "ポケモンのゲーム", "Switch ソフト", "ポケモン Switch ソフト", "#e11d48"],
-    ["📕", "ポケモン図鑑の本", "全国図鑑・大百科", "ポケモン 全国図鑑 本", "#f59e0b"],
-    ["🧸", "ぬいぐるみ", "ほぺぴた・もふもふ", "ポケモン ぬいぐるみ", "#ec4899"],
-    ["🧩", "ポケモン プラモデル", "ポケプラ", "ポケモン プラモデル", "#8b5cf6"],
-    ["✏️", "ポケモン文房具", "筆箱・ノート", "ポケモン 文房具", "#10b981"],
-    ["🗓️", "2027年カレンダー", "ポケモン", "ポケモン カレンダー 2027", "#14b8a6"],
-    ["🔤", "ポケモンで英語", "えいご絵本・ドリル", "ポケモン 英語 ドリル", "#2563eb"],
-    ["🎁", "クリスマスプレゼント", "ポケモングッズ", "ポケモン グッズ プレゼント", "#16a34a"],
-    ["🍫", "ポケモンのお菓子", "おまけシール付き", "ポケモン お菓子 シール", "#d97706"],
+    ["🃏", "ポケモンカード 最新弾", "BOX・パック", "ポケモンカード 拡張パック BOX", "#ef4444", 10034],
+    ["🛡️", "カードスリーブ", "デッキケースも", "ポケモンカード スリーブ デッキケース", "#3b82f6", 6],
+    ["🇺🇸", "英語版ポケモンカード", "英語の勉強にも", "ポケモンカード 英語版", "#0ea5e9", 25],
+    ["🎮", "ポケモンのゲーム", "Switch ソフト", "ポケモン Switch ソフト", "#e11d48", 718],
+    ["📕", "ポケモン図鑑の本", "全国図鑑・大百科", "ポケモン 全国図鑑 本", "#f59e0b", 479],
+    ["🧸", "ぬいぐるみ", "ほぺぴた・もふもふ", "ポケモン ぬいぐるみ", "#ec4899", 133],
+    ["🧩", "ポケモン プラモデル", "ポケプラ", "ポケモン プラモデル", "#8b5cf6", 150],
+    ["✏️", "ポケモン文房具", "筆箱・ノート", "ポケモン 文房具", "#10b981", 393],
+    ["🗓️", "2027年カレンダー", "ポケモン", "ポケモン カレンダー 2027", "#14b8a6", 143],
+    ["🔤", "ポケモンで英語", "えいご絵本・ドリル", "ポケモン 英語 ドリル", "#2563eb", 1],
+    ["🎁", "クリスマスプレゼント", "ポケモングッズ", "ポケモン グッズ プレゼント", "#16a34a", 225],
+    ["🍫", "ポケモンのお菓子", "おまけシール付き", "ポケモン お菓子 シール", "#d97706", 869],
 ];
 const RAIL_A8 = [
     ["🧒", "子ども向けオンライン英会話", "QQキッズ", "qqkids", "#22c55e"],
@@ -194,6 +194,9 @@ const RAIL_A8 = [
         box-shadow: 0 4px 14px rgba(0,0,0,.15); transition: transform .15s; line-height: 1.35; }
     .rail-card:hover { transform: translateY(-3px) scale(1.02); }
     .rail-card .ri { font-size: 34px; display: block; }
+    .rail-card .rimg { display: flex; justify-content: center; align-items: center; height: 112px; margin: -4px -4px 4px;
+        background: radial-gradient(circle, rgba(255,255,255,.95) 0 52%, rgba(255,255,255,0) 53%); }
+    .rail-card .rimg img { max-width: 104px; max-height: 104px; object-fit: contain; filter: drop-shadow(0 3px 4px rgba(0,0,0,.25)); }
     .rail-card .rt { font-weight: 800; font-size: 15px; display: block; margin-top: 4px; }
     .rail-card .rs { font-size: 12px; opacity: .92; display: block; margin-top: 2px; }
     .rail-card .rb { display: inline-block; margin-top: 8px; background: rgba(255,255,255,.95); color: #222; font-size: 12px; font-weight: 700;
@@ -201,9 +204,11 @@ const RAIL_A8 = [
     .rail-card .pr { position: absolute; top: 6px; right: 8px; font-size: 10px; background: rgba(0,0,0,.35); color: #fff; padding: 1px 5px; border-radius: 4px; }
     .side-rail .a8px { position: absolute; width: 1px; height: 1px; }
     @media print { .side-rail { display: none !important; } }`;
-    function card(icon, title, sub, href, color, mat) {
+    function card(icon, title, sub, href, color, mat, img) {
+        const vis = img ? '<span class="rimg"><img src="/img/ads/' + img + '.webp" alt="" loading="lazy" width="120" height="120"></span>'
+                        : '<span class="ri">' + icon + '</span>';
         return '<a class="rail-card" rel="nofollow sponsored noopener" target="_blank" href="' + href + '" style="background:linear-gradient(160deg,' +
-            color + ',' + color + 'cc)"><span class="pr">PR</span><span class="ri">' + icon + '</span><span class="rt">' + title +
+            color + ',' + color + 'cc)"><span class="pr">PR</span>' + vis + '<span class="rt">' + (img ? icon + ' ' : '') + title +
             '</span><span class="rs">' + sub + '</span><span class="rb">見てみる ›</span></a>' + (mat ? pixel(mat) : "");
     }
     function build() {
@@ -213,8 +218,8 @@ const RAIL_A8 = [
         const rnd = () => (seed = (seed * 1103515245 + 12345) >>> 0) / 4294967296;
         const items = RAIL_ITEMS.slice().sort(() => rnd() - 0.5);
         const a8s = RAIL_A8.slice().sort(() => rnd() - 0.5);
-        const hot = (typeof HOT !== "undefined" && HOT[0]) ? card(HOT[0][0], HOT[0][1].replace(/^\d+\/\d+発売 /, ""), "いま話題", rakutenLink(HOT[0][2]), "#dc2626", RAIL_PIX) : "";
-        const mk = (it) => card(it[0], it[1], it[2], rakutenLink(it[3]), it[4], RAIL_PIX);
+        const hot = (typeof HOT !== "undefined" && HOT[0]) ? card(HOT[0][0], HOT[0][1].replace(/^\d+\/\d+発売 /, ""), "いま話題", rakutenLink(HOT[0][2]), "#dc2626", RAIL_PIX, 94) : "";
+        const mk = (it) => card(it[0], it[1], it[2], rakutenLink(it[3]), it[4], RAIL_PIX, it[5]);
         const mkA8 = (it) => card(it[0], it[1], it[2], "https://px.a8.net/svt/ejp?a8mat=" + A8[it[3]].mat, it[4], A8[it[3]].mat);
         const L = document.createElement("aside"); L.className = "side-rail left"; L.setAttribute("aria-label", "広告");
         const R = document.createElement("aside"); R.className = "side-rail right"; R.setAttribute("aria-label", "広告");
