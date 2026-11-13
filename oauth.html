@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<title>承認コード</title>
+<style>
+  body { font-family: system-ui, sans-serif; background: #f6f3ee; color: #222; margin: 0; padding: 24px; }
+  .box { max-width: 640px; margin: 40px auto; background: #fff; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,.08); }
+  textarea { width: 100%; height: 90px; font: 15px monospace; padding: 10px; box-sizing: border-box; border: 3px solid #e3350d; border-radius: 10px; }
+  button { margin-top: 12px; font-size: 20px; font-weight: bold; padding: 14px 28px; border: 0; border-radius: 12px; background: #e3350d; color: #fff; cursor: pointer; }
+  .ok { color: #2fa84f; font-weight: bold; }
+</style>
+</head>
+<body>
+<div class="box">
+  <h1>承認コード</h1>
+  <p id="msg">下のボタンでコピーして、GitHub の欄に貼り付けてください。</p>
+  <textarea id="code" readonly></textarea>
+  <button id="copy">コピーする</button> <span id="done"></span>
+</div>
+<script>
+  const p = new URLSearchParams(location.search);
+  const c = p.get("code") || "";
+  document.getElementById("code").value = c || ("エラー：" + (p.get("error") || "コードがありません"));
+  document.getElementById("copy").onclick = async () => {
+    const t = document.getElementById("code"); t.select();
+    try { await navigator.clipboard.writeText(t.value); } catch (e) { document.execCommand("copy"); }
+    document.getElementById("done").innerHTML = '<span class="ok">コピーしました</span>';
+  };
+  // コードをアドレス欄や履歴に残さない
+  history.replaceState(null, "", location.pathname);
+</script>
+</body>
+</html>
