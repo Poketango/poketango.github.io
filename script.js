@@ -192,74 +192,7 @@ function drawRadarChart(stats) {
  // ===============================
 // 穴あき処理（完全版）
 // ===============================
-function makeBlank(description, name) {
-
-    // アクセント除去＋小文字化
-    function normalizeWord(w) {
-        return w
-            .normalize("NFD")
-            .replace(/[\u0300-\u036f]/g, "")
-            .toLowerCase();
-    }
-
-    // 除外ワード（大文字小文字混在OK）
-    const exclude = [
-        "About","Above","After","Again","All","Although","Always","And","Any","As",
-        "Because","Before","Below","Both","But","By","Can't","Each","Either","Ever",
-        "Every","Few","For","From","Here","How","I","If","In","Into","Is","It","Its",
-        "Just","Least","Less","Many","More","Most","Much","Now","Of","On","Once","One",
-        "Only","Or","Over","Pokemon","Pokémon","Since","Some","Sometimes","Such","Than","That",
-        "The","Their","Them","Then","There","These","They","This","Though","Through",
-        "To","Under","Until","Very","Was","We","Were","What","When","Where","Which",
-        "While","Who","Whom","Whose","Why","Will","With","Without","Would","Yet","You",
-        "about","above","after","again","all","although","always","and","any","as",
-        "because","before","below","both","but","by","can","can't","each","either",
-        "ever","every","few","for","from","has","here","how","if","in","into","is","it",
-        "its","it's","just","least","less","out","many","more","most","much","now",
-        "of","on","once","one","only","or","over","since","some","sometimes","such",
-        "than","that","the","their","them","then","there","these","they","this",
-        "though","through","to","under","until","very","was","we","were","what",
-        "when","where","which","while","who","whom","whose","why","will","with",
-        "without","would","yet","you"
-    ];
-
-    // 除外ワードを正規化しておく
-    const normalizedExclude = exclude.map(normalizeWord);
-
-    // 元の文章を単語に分割（表示用）
-    const originalWords = description.split(" ");
-
-    // 記号を除去したバージョン（穴あき判定用）
-    const cleaned = description.replace(/[.,!?;:]/g, "");
-    const cleanedWords = cleaned.split(" ");
-
-    // 候補抽出
-    const candidates = cleanedWords
-        .map((w, i) => ({ word: w, index: i }))
-        .filter(obj => {
-            const nw = normalizeWord(obj.word);
-            return (
-                !normalizedExclude.includes(nw) &&     // 除外ワードではない
-                nw.length > 2 &&                       // 3文字以上
-                nw !== normalizeWord(name)             // ポケモン名ではない
-            );
-        });
-
-    // 穴を開ける単語のインデックス
-    const targetIndex = candidates.length > 0
-        ? candidates[Math.floor(Math.random() * candidates.length)].index
-        : Math.floor(Math.random() * cleanedWords.length);
-
-    const answer = cleanedWords[targetIndex];
-
-    // 表示用の originalWords に穴を開ける
-    originalWords[targetIndex] = `<span class="blank">_____</span>`;
-
-    return {
-        question: originalWords.join(" "),
-        answer: answer
-    };
-}
+// makeBlank は quiz-words.js（練習・実践で共通）にあります
 
 
 

@@ -235,38 +235,7 @@ function showAchievementPopup(key) {
 // ===============================
 // 穴あき処理
 // ===============================
-function makeBlank(description, name) {
-    function normalizeWord(w) {
-        return w.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-    }
-
-    const exclude = [/* 省略（あなたの元コードのまま） */];
-
-    const normalizedExclude = exclude.map(normalizeWord);
-
-    const originalWords = description.split(" ");
-    const cleaned = description.replace(/[.,!?;:]/g, "");
-    const cleanedWords = cleaned.split(" ");
-
-    const candidates = cleanedWords
-        .map((w, i) => ({ word: w, index: i }))
-        .filter(obj => {
-            const nw = normalizeWord(obj.word);
-            return !normalizedExclude.includes(nw) && nw.length > 2 && nw !== normalizeWord(name);
-        });
-
-    const targetIndex = candidates.length > 0
-        ? candidates[Math.floor(Math.random() * candidates.length)].index
-        : Math.floor(Math.random() * cleanedWords.length);
-
-    const answer = cleanedWords[targetIndex];
-    originalWords[targetIndex] = `<span class="blank">_____</span>`;
-
-    return {
-        question: originalWords.join(" "),
-        answer: answer
-    };
-}
+// makeBlank は quiz-words.js（練習・実践で共通）にあります
 
 // ===============================
 // X（旧Twitter）投稿
