@@ -156,7 +156,34 @@
     .home-link { cursor: pointer; }
     .home-link:hover { opacity: 0.7; }
 </style>
-    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="theme.css?v=20261113b">
+    <style>
+/* キー操作の目印（ボタンの色に合わせて白で表示、タッチ端末では非表示） */
+kbd.key-hint {
+    display: inline-block; margin: 0 0 0 8px; padding: 2px 8px;
+    font: bold 13px/1.4 system-ui, sans-serif; color: #fff !important;
+    background: rgba(255,255,255,.22); border: 1px solid rgba(255,255,255,.75);
+    border-radius: 6px; vertical-align: middle;
+}
+#home-btn kbd.key-hint { color: inherit !important; background: rgba(0,0,0,.06); border-color: currentColor; }
+@media (hover: none), (pointer: coarse) { kbd.key-hint { display: none; } }
+
+/* スマホ */
+@media (max-width: 640px) {
+    #main { padding: 0 12px; }
+    #poke-img { max-width: 55vw; margin: 8px auto; }
+    #desc { font-size: 17px; margin: 10px 0; }
+    .answer-row { display: flex; gap: 8px; }
+    #answer-input { flex: 1; width: auto; min-width: 0; margin: 0; font-size: 16px; padding: 12px; }
+    #check-answer-btn { flex: none; padding: 12px 14px; font-size: 16px; white-space: nowrap; }
+    #gameover-box { padding: 16px 12px !important; }
+    #fail-flex { flex-direction: column; align-items: center !important; gap: 10px !important; }
+    #fail-left, #fail-left img { width: 140px !important; }
+    #fail-right { width: 100%; text-align: center; }
+    #fail-title { font-size: 24px !important; }
+    #retry-btn, #home-btn, #gameover-box .tweet-button { display: block; width: 100%; max-width: 360px; margin: 10px auto !important; padding: 14px 0 !important; }
+}
+    </style>
 </head>
 <body>
 
@@ -231,7 +258,7 @@
 </div>
 
 <script src="medals.js"></script>
-<script src="script_jissen.js"></script>
+<script src="script_jissen.js?v=20261113b"></script>
 
 <div id="achievement-popup" style="
     display:none;

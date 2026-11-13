@@ -192,18 +192,23 @@ document.getElementById("retry-btn").addEventListener("click", () => {
 // ゲームオーバー画面のキー操作
 // スペースキー：もう一度挑戦する／Escキー：ホームへ戻る
 // ===============================
-document.addEventListener("keydown", e => {
-    if (e.ctrlKey || e.metaKey || e.altKey || e.repeat) return;
+// ゲームオーバー画面のキー操作：Space＝もう一度挑戦する、Esc＝ホームへ戻る
+// 日本語入力がオンのままでも反応するように、key・code・keyCode のどれでも判定する
+function jissenGameOverKey(e) {
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
     const box = document.getElementById("gameover-box");
     if (!box || getComputedStyle(box).display === "none") return;
-    if (e.key === " " || e.code === "Space") {
-        e.preventDefault();
-        document.getElementById("retry-btn").click();
-    } else if (e.key === "Escape") {
-        e.preventDefault();
-        location.href = "index.html";
-    }
-}, true);
+    const space = e.key === " " || e.key === "Spacebar" || e.code === "Space" || e.keyCode === 32;
+    const esc = e.key === "Escape" || e.key === "Esc" || e.code === "Escape" || e.keyCode === 27;
+    if (!space && !esc) return;
+    e.preventDefault();
+    e.stopPropagation();
+    if (e.repeat) return;
+    if (document.activeElement && document.activeElement.blur) document.activeElement.blur();
+    if (space) document.getElementById("retry-btn").click();
+    else location.href = "index.html";
+}
+window.addEventListener("keydown", jissenGameOverKey, true);
 
 // ===============================
 // 実績ポップアップ

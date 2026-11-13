@@ -1013,3 +1013,30 @@ input, textarea, select, [contenteditable="true"] { caret-color: auto; }
 .pkwrap .ad-box { margin: 14px 0 0; max-width: none; border-radius: 20px; }
 .goods + .goods-title, .goods ~ .goods-title { margin-top: 14px; }
 .ad-box .goods-btn { font-size: 13px; }
+
+/* =========================================================
+   スマホで使いやすく（2026-11-13）
+   ========================================================= */
+.bm-btn { white-space: nowrap; }
+#gameover-box .tweet-button { margin-left: auto !important; margin-right: auto !important; }
+@media (max-width: 640px) {
+    #page-header h1, #site-header h1, #header h1 { font-size: 19px !important; line-height: 1.35; }
+    #site-header h2, #site-header .subtitle { font-size: 13px !important; }
+    #question-box { padding: 16px 14px 14px; border-radius: 16px; }
+    #question-box #poke-img { width: 108px !important; height: 108px !important; }
+    #question-box #desc { font-size: 17px !important; line-height: 1.6; }
+    input, select, textarea { font-size: 16px !important; }    /* iPhoneで入力時に勝手に拡大されないように */
+    button, .cta, a.btn { min-height: 44px; }                  /* 指で押しやすい大きさ */
+    .answer-row #answer-input, #question-box .answer-row #answer-input { flex: 1 1 0 !important; min-width: 0; }
+    .answer-row { flex-wrap: nowrap !important; }
+    .quiz-head { gap: 10px; }
+    .quiz-head { flex-wrap: wrap; }
+    .quiz-head #poke-img { width: 96px !important; height: 96px !important; }
+    .quiz-head #poke-name { flex: 1 1 0; min-width: 0; font-size: 20px; }
+    .quiz-head .bm-btn { flex: 1 0 100%; }
+    /* 練習モード・図鑑：問題を一番上に、検索とチャートはその下に */
+    #layout #content { order: -1; }
+    #layout #chart-column { order: 1; }
+    #layout #sidebar { order: 2; }
+    #layout { padding-left: 12px !important; padding-right: 12px !important; gap: 14px; }
+}
