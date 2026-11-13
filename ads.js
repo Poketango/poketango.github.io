@@ -158,3 +158,89 @@ const pick = (arr, seed) => arr[Math.abs(seed) % arr.length];
     if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run);
     else run();
 })();
+
+// =========================================================
+// 左右の余白の広告（パソコンなど横に広い画面だけ）
+//   本文の左右に空きがあるときだけ、縦長のカードを並べて表示する。
+//   商品の種類はここで増やせる。[アイコン, 表示する文字, 小さい説明, 楽天での検索キーワード, 色]
+// =========================================================
+const RAIL_ITEMS = [
+    ["🃏", "ポケモンカード 最新弾", "BOX・パック", "ポケモンカード 拡張パック BOX", "#ef4444"],
+    ["🛡️", "カードスリーブ", "デッキケースも", "ポケモンカード スリーブ デッキケース", "#3b82f6"],
+    ["🇺🇸", "英語版ポケモンカード", "英語の勉強にも", "ポケモンカード 英語版", "#0ea5e9"],
+    ["🎮", "ポケモンのゲーム", "Switch ソフト", "ポケモン Switch ソフト", "#e11d48"],
+    ["📕", "ポケモン図鑑の本", "全国図鑑・大百科", "ポケモン 全国図鑑 本", "#f59e0b"],
+    ["🧸", "ぬいぐるみ", "ほぺぴた・もふもふ", "ポケモン ぬいぐるみ", "#ec4899"],
+    ["🧩", "ポケモン プラモデル", "ポケプラ", "ポケモン プラモデル", "#8b5cf6"],
+    ["✏️", "ポケモン文房具", "筆箱・ノート", "ポケモン 文房具", "#10b981"],
+    ["🗓️", "2027年カレンダー", "ポケモン", "ポケモン カレンダー 2027", "#14b8a6"],
+    ["🔤", "ポケモンで英語", "えいご絵本・ドリル", "ポケモン 英語 ドリル", "#2563eb"],
+    ["🎁", "クリスマスプレゼント", "ポケモングッズ", "ポケモン グッズ プレゼント", "#16a34a"],
+    ["🍫", "ポケモンのお菓子", "おまけシール付き", "ポケモン お菓子 シール", "#d97706"],
+];
+const RAIL_A8 = [
+    ["🧒", "子ども向けオンライン英会話", "QQキッズ", "qqkids", "#22c55e"],
+    ["👨‍👩‍👧", "家族で受けられる英会話", "クラウティ", "cloudy", "#06b6d4"],
+    ["🛍️", "トレカ通販", "Bee本舗", "bee", "#f97316"],
+    ["💴", "トレカ買取", "ふるいち", "furuichi", "#64748b"],
+];
+
+(function () {
+    const css = `
+    .side-rail { position: fixed; top: 120px; width: 180px; z-index: 5; display: none; flex-direction: column; gap: 12px; }
+    .side-rail.left { left: 12px; } .side-rail.right { right: 12px; }
+    .side-rail.show { display: flex; }
+    .rail-card { position: relative; display: block; text-decoration: none; border-radius: 16px; padding: 14px 12px 12px; color: #fff;
+        box-shadow: 0 4px 14px rgba(0,0,0,.15); transition: transform .15s; line-height: 1.35; }
+    .rail-card:hover { transform: translateY(-3px) scale(1.02); }
+    .rail-card .ri { font-size: 34px; display: block; }
+    .rail-card .rt { font-weight: 800; font-size: 15px; display: block; margin-top: 4px; }
+    .rail-card .rs { font-size: 12px; opacity: .92; display: block; margin-top: 2px; }
+    .rail-card .rb { display: inline-block; margin-top: 8px; background: rgba(255,255,255,.95); color: #222; font-size: 12px; font-weight: 700;
+        padding: 3px 10px; border-radius: 99px; }
+    .rail-card .pr { position: absolute; top: 6px; right: 8px; font-size: 10px; background: rgba(0,0,0,.35); color: #fff; padding: 1px 5px; border-radius: 4px; }
+    .side-rail .a8px { position: absolute; width: 1px; height: 1px; }
+    @media print { .side-rail { display: none !important; } }`;
+    function card(icon, title, sub, href, color, mat) {
+        return '<a class="rail-card" rel="nofollow sponsored noopener" target="_blank" href="' + href + '" style="background:linear-gradient(160deg,' +
+            color + ',' + color + 'cc)"><span class="pr">PR</span><span class="ri">' + icon + '</span><span class="rt">' + title +
+            '</span><span class="rs">' + sub + '</span><span class="rb">見てみる ›</span></a>' + (mat ? pixel(mat) : "");
+    }
+    function build() {
+        const st = document.createElement("style"); st.textContent = css; document.head.appendChild(st);
+        // ページと日付ごとに並びを変える
+        let seed = [...(location.pathname + new Date().toDateString())].reduce((a, c) => (a * 31 + c.charCodeAt(0)) >>> 0, 7);
+        const rnd = () => (seed = (seed * 1103515245 + 12345) >>> 0) / 4294967296;
+        const items = RAIL_ITEMS.slice().sort(() => rnd() - 0.5);
+        const a8s = RAIL_A8.slice().sort(() => rnd() - 0.5);
+        const hot = (typeof HOT !== "undefined" && HOT[0]) ? card(HOT[0][0], HOT[0][1].replace(/^\d+\/\d+発売 /, ""), "いま話題", rakutenLink(HOT[0][2]), "#dc2626", RAIL_PIX) : "";
+        const mk = (it) => card(it[0], it[1], it[2], rakutenLink(it[3]), it[4], RAIL_PIX);
+        const mkA8 = (it) => card(it[0], it[1], it[2], "https://px.a8.net/svt/ejp?a8mat=" + A8[it[3]].mat, it[4], A8[it[3]].mat);
+        const L = document.createElement("aside"); L.className = "side-rail left"; L.setAttribute("aria-label", "広告");
+        const R = document.createElement("aside"); R.className = "side-rail right"; R.setAttribute("aria-label", "広告");
+        L.innerHTML = hot + mk(items[0]) + mk(items[1]) + mkA8(a8s[0]);
+        R.innerHTML = mk(items[2]) + mkA8(a8s[1]) + mk(items[3]) + mk(items[4]);
+        document.body.appendChild(L); document.body.appendChild(R);
+        function fit() {
+            // 本文のいちばん外側の箱を探し、左右の空きを測る
+            const sel = [".pkwrap", "#layout", "#main", "main", "#bm-page", ".policy", "#page", "#container", ".container"];
+            let left = Infinity, right = 0;
+            sel.forEach(s => document.querySelectorAll(s).forEach(e => {
+                const r = e.getBoundingClientRect(); if (r.width < 300) return;
+                // 画面いっぱいの背景だけの箱は除く
+                const inner = e.firstElementChild ? e : null;
+                left = Math.min(left, r.left); right = Math.max(right, r.right);
+            }));
+            if (!isFinite(left)) { left = (innerWidth - 1000) / 2; right = innerWidth - left; }
+            const gap = Math.min(left, innerWidth - right);
+            const w = Math.min(200, gap - 24);
+            const ok = w >= 150 && innerHeight >= 520;
+            [L, R].forEach(el => { el.classList.toggle("show", ok); el.style.width = w + "px"; });
+            // 縦に入りきらないカードは隠す
+            [L, R].forEach(el => { let h = 120; [...el.querySelectorAll(".rail-card")].forEach(c => { c.style.display = ""; h += c.offsetHeight + 12; if (h > innerHeight - 20) c.style.display = "none"; }); });
+        }
+        fit(); addEventListener("resize", fit); setTimeout(fit, 800);
+    }
+    const RAIL_PIX = RAKUTEN_PIXEL;
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", build); else build();
+})();
