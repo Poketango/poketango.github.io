@@ -18,13 +18,25 @@
     <p class="pk-en"><span class="en-name" lang="en">Regieleki</span><button class="say" aria-label="英語名の発音を聞く" onclick="pkSay('Regieleki',0.85)">🔊</button></p>
   </div>
 </section>
-<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
+<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#words">📝 単語</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
 <section class="card" id="dex">
   <h2>📖 英語版の図鑑説明</h2>
   <blockquote class="pk-text" lang="en">Its entire body is made up of a single organ that generates electrical energy. Regieleki is capable of creating all Galar’s electricity.</blockquote>
   <div class="row"><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.9)">🔊 英文を読み上げる</button><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.65)">🐢 ゆっくり</button></div>
   <h3>日本語訳</h3><p class="pk-ja">全身が電気エネルギーを生む単一の器官で構成される。ガラル全土の電力を生み出せると言われる。</p>
   <div class="pk-cta"><a class="cta blue" href="../zukan.html?p=regieleki">🔍 図鑑モードで見る</a><a class="cta green" href="../practice.html">✏️ 穴埋めクイズに挑戦</a></div>
+</section>
+<section class="card" id="words"><h2>📝 この図鑑文に出てくる英単語</h2>
+<table class="vt"><tr><th>英単語</th><th>意味</th><th>品詞</th><th>レベル</th></tr>
+<tr><td class="w" lang="en">entire</td><td>全体の</td><td>形容詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">single</td><td>ひとつの</td><td>形容詞</td><td><span class="lv">中3</span></td></tr>
+<tr><td class="w" lang="en">organ</td><td>器官</td><td>名詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">generates</td><td>生み出す</td><td>動詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">electrical</td><td>電気の</td><td>形容詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">capable</td><td>できる</td><td>形容詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">creating</td><td>作り出している</td><td>動詞</td><td><span class="lv">中3</span></td></tr>
+<tr><td class="w" lang="en">electricity</td><td>電気</td><td>名詞</td><td><span class="lv">中3</span></td></tr>
+</table>
 </section>
 <section class="card" id="origin"><h2>💡 英語名「Regieleki」の由来</h2><p>英語名「Regieleki」は、regis（ラテン語で「王の」）がもとになっていると考えられている。</p><p class="src">出典 <a href="https://bulbapedia.bulbagarden.net/wiki/Regieleki_%28Pok%C3%A9mon%29" rel="nofollow noopener" target="_blank">Bulbapedia</a></p></section>
 <section class="card" id="stats"><h2>📊 レジエレキの種族値</h2><div class="stats"><div class="stat s-hp"><span class="lab">HP</span><span class="val">80</span><span class="track"><span class="bar" style="width:44%"></span></span></div><div class="stat s-attack"><span class="lab">こうげき</span><span class="val">100</span><span class="track"><span class="bar" style="width:56%"></span></span></div><div class="stat s-defense"><span class="lab">ぼうぎょ</span><span class="val">50</span><span class="track"><span class="bar" style="width:28%"></span></span></div><div class="stat s-special-attack"><span class="lab">とくこう</span><span class="val">100</span><span class="track"><span class="bar" style="width:56%"></span></span></div><div class="stat s-special-defense"><span class="lab">とくぼう</span><span class="val">50</span><span class="track"><span class="bar" style="width:28%"></span></span></div><div class="stat s-speed"><span class="lab">すばやさ</span><span class="val">200</span><span class="track"><span class="bar" style="width:100%"></span></span></div></div><p class="total">合計 <strong>580</strong></p></section>
@@ -34,5 +46,5 @@
 </main>
 <nav class="pk-dock"><a href="zarude.html">◀ ザルード</a><a class="dock-rand" href="index.html" data-rand="1">🎲</a><a href="regidrago.html">レジドラゴ ▶</a></nav>
 <script>function pkSay(t,r){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=r;speechSynthesis.speak(u)}</script>
-<script src="../ads.js"></script><script src="../site-footer.js"></script>
+<script src="../ads.js?v=20261114a"></script><script src="../site-footer.js"></script>
 </body></html>

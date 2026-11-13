@@ -18,13 +18,26 @@
     <p class="pk-en"><span class="en-name" lang="en">Watchog</span><button class="say" aria-label="英語名の発音を聞く" onclick="pkSay('Watchog',0.85)">🔊</button></p>
   </div>
 </section>
-<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
+<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#words">📝 単語</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
 <section class="card" id="dex">
   <h2>📖 英語版の図鑑説明</h2>
   <blockquote class="pk-text" lang="en">When they see an enemy, their tails stand high, and they spit the seeds of berries stored in their cheek pouches.</blockquote>
   <div class="row"><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.9)">🔊 英文を読み上げる</button><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.65)">🐢 ゆっくり</button></div>
   <h3>日本語訳</h3><p class="pk-ja">敵を見つけると尻尾を高く上げ、頬袋に蓄えたベリーの種を吐き出します。</p>
   <div class="pk-cta"><a class="cta blue" href="../zukan.html?p=watchog">🔍 図鑑モードで見る</a><a class="cta green" href="../practice.html">✏️ 穴埋めクイズに挑戦</a></div>
+</section>
+<section class="card" id="words"><h2>📝 この図鑑文に出てくる英単語</h2>
+<table class="vt"><tr><th>英単語</th><th>意味</th><th>品詞</th><th>レベル</th></tr>
+<tr><td class="w" lang="en">enemy</td><td>敵</td><td>名詞</td><td><span class="lv">中3</span></td></tr>
+<tr><td class="w" lang="en">stand</td><td>立つ</td><td>動詞</td><td><span class="lv">中1</span></td></tr>
+<tr><td class="w" lang="en">spit</td><td>吐く</td><td>動詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">seeds</td><td>種(複数形)</td><td>名詞</td><td><span class="lv">中3</span></td></tr>
+<tr><td class="w" lang="en">berries</td><td>木の実(複数形)</td><td>名詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">stored</td><td>たくわえられた</td><td>動詞</td><td><span class="lv">中3</span></td></tr>
+<tr><td class="w" lang="en">cheek</td><td>ほお</td><td>名詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">pouches</td><td>袋(複数形)</td><td>名詞</td><td><span class="lv h">大学</span></td></tr>
+</table>
+<p class="gram"><b>文法ポイント</b>　<span lang="en">when 〜</span> は「〜するとき」という意味の接続詞。when のまとまりが、もう一方の文がいつ起こるかを表しています。</p>
 </section>
 <section class="card" id="origin"><h2>💡 英語名「Watchog」の由来</h2><p>英語名「Watchog」は、watch（見張る）、groundhog（ウッドチャック）とwatch out（気をつけて）を組み合わせた名前と考えられている。フランス語の名前は「Miradar」で、mirador（展望台）、radar（レーダー）から作られている。</p><p class="src">出典 <a href="https://bulbapedia.bulbagarden.net/wiki/Watchog_%28Pok%C3%A9mon%29" rel="nofollow noopener" target="_blank">Bulbapedia</a></p></section>
 <section class="card" id="stats"><h2>📊 ミルホッグの種族値</h2><div class="stats"><div class="stat s-hp"><span class="lab">HP</span><span class="val">60</span><span class="track"><span class="bar" style="width:33%"></span></span></div><div class="stat s-attack"><span class="lab">こうげき</span><span class="val">85</span><span class="track"><span class="bar" style="width:47%"></span></span></div><div class="stat s-defense"><span class="lab">ぼうぎょ</span><span class="val">69</span><span class="track"><span class="bar" style="width:38%"></span></span></div><div class="stat s-special-attack"><span class="lab">とくこう</span><span class="val">60</span><span class="track"><span class="bar" style="width:33%"></span></span></div><div class="stat s-special-defense"><span class="lab">とくぼう</span><span class="val">69</span><span class="track"><span class="bar" style="width:38%"></span></span></div><div class="stat s-speed"><span class="lab">すばやさ</span><span class="val">77</span><span class="track"><span class="bar" style="width:43%"></span></span></div></div><p class="total">合計 <strong>420</strong></p></section>
@@ -34,5 +47,5 @@
 </main>
 <nav class="pk-dock"><a href="patrat.html">◀ ミネズミ</a><a class="dock-rand" href="index.html" data-rand="1">🎲</a><a href="lillipup.html">ヨーテリー ▶</a></nav>
 <script>function pkSay(t,r){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=r;speechSynthesis.speak(u)}</script>
-<script src="../ads.js"></script><script src="../site-footer.js"></script>
+<script src="../ads.js?v=20261114a"></script><script src="../site-footer.js"></script>
 </body></html>

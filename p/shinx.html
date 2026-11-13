@@ -18,13 +18,25 @@
     <p class="pk-en"><span class="en-name" lang="en">Shinx</span><button class="say" aria-label="英語名の発音を聞く" onclick="pkSay('Shinx',0.85)">🔊</button></p>
   </div>
 </section>
-<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
+<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#words">📝 単語</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
 <section class="card" id="dex">
   <h2>📖 英語版の図鑑説明</h2>
   <blockquote class="pk-text" lang="en">Shakes its body to generate electricity. Its stature belies its aggression—one must be patient to tame this Pokémon.</blockquote>
   <div class="row"><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.9)">🔊 英文を読み上げる</button><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.65)">🐢 ゆっくり</button></div>
   <h3>日本語訳</h3><p class="pk-ja">体を震わせて電気を発生させる。その背丈からは想像できない攻撃性。このポケモンを飼いならすには忍耐が必要だ。</p>
   <div class="pk-cta"><a class="cta blue" href="../zukan.html?p=shinx">🔍 図鑑モードで見る</a><a class="cta green" href="../practice.html">✏️ 穴埋めクイズに挑戦</a></div>
+</section>
+<section class="card" id="words"><h2>📝 この図鑑文に出てくる英単語</h2>
+<table class="vt"><tr><th>英単語</th><th>意味</th><th>品詞</th><th>レベル</th></tr>
+<tr><td class="w" lang="en">shakes</td><td>ふる</td><td>動詞</td><td><span class="lv">中2</span></td></tr>
+<tr><td class="w" lang="en">generate</td><td>生み出す</td><td>動詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">electricity</td><td>電気</td><td>名詞</td><td><span class="lv">中3</span></td></tr>
+<tr><td class="w" lang="en">stature</td><td>身長</td><td>名詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">belies</td><td>裏腹である</td><td>動詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">aggression</td><td>攻撃性</td><td>名詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">patient</td><td>がまん強い</td><td>形容詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">tame</td><td>おとなしい、飼いならす</td><td>形容詞</td><td><span class="lv h">大学</span></td></tr>
+</table>
 </section>
 <section class="card" id="origin"><h2>💡 英語名「Shinx」の由来</h2><p>英語名「Shinx」は、shining（輝く）、shock（衝撃）、sphinx（スフィンクス）とlynx（オオヤマネコ）を組み合わせた名前と考えられている。フランス語の名前は「Lixy」で、「オオヤマネコ」のなまりから作られている。</p><p class="src">出典 <a href="https://bulbapedia.bulbagarden.net/wiki/Shinx_%28Pok%C3%A9mon%29" rel="nofollow noopener" target="_blank">Bulbapedia</a></p></section>
 <section class="card" id="stats"><h2>📊 コリンクの種族値</h2><div class="stats"><div class="stat s-hp"><span class="lab">HP</span><span class="val">45</span><span class="track"><span class="bar" style="width:25%"></span></span></div><div class="stat s-attack"><span class="lab">こうげき</span><span class="val">65</span><span class="track"><span class="bar" style="width:36%"></span></span></div><div class="stat s-defense"><span class="lab">ぼうぎょ</span><span class="val">34</span><span class="track"><span class="bar" style="width:19%"></span></span></div><div class="stat s-special-attack"><span class="lab">とくこう</span><span class="val">40</span><span class="track"><span class="bar" style="width:22%"></span></span></div><div class="stat s-special-defense"><span class="lab">とくぼう</span><span class="val">34</span><span class="track"><span class="bar" style="width:19%"></span></span></div><div class="stat s-speed"><span class="lab">すばやさ</span><span class="val">45</span><span class="track"><span class="bar" style="width:25%"></span></span></div></div><p class="total">合計 <strong>263</strong></p></section>
@@ -34,5 +46,5 @@
 </main>
 <nav class="pk-dock"><a href="kricketune.html">◀ コロトック</a><a class="dock-rand" href="index.html" data-rand="1">🎲</a><a href="luxio.html">ルクシオ ▶</a></nav>
 <script>function pkSay(t,r){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=r;speechSynthesis.speak(u)}</script>
-<script src="../ads.js"></script><script src="../site-footer.js"></script>
+<script src="../ads.js?v=20261114a"></script><script src="../site-footer.js"></script>
 </body></html>

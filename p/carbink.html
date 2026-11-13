@@ -18,13 +18,24 @@
     <p class="pk-en"><span class="en-name" lang="en">Carbink</span><button class="say" aria-label="英語名の発音を聞く" onclick="pkSay('Carbink',0.85)">🔊</button></p>
   </div>
 </section>
-<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
+<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#words">📝 単語</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
 <section class="card" id="dex">
   <h2>📖 英語版の図鑑説明</h2>
   <blockquote class="pk-text" lang="en">It’s said that somewhere in the world, there’s a mineral vein housing a large pack of slumbering Carbink. It’s also said that this pack has a queen.</blockquote>
   <div class="row"><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.9)">🔊 英文を読み上げる</button><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.65)">🐢 ゆっくり</button></div>
   <h3>日本語訳</h3><p class="pk-ja">世界のどこかに眠るメレシーの大群が潜む鉱脈があると言われる。そこには女王がいるとも噂される。</p>
   <div class="pk-cta"><a class="cta blue" href="../zukan.html?p=carbink">🔍 図鑑モードで見る</a><a class="cta green" href="../practice.html">✏️ 穴埋めクイズに挑戦</a></div>
+</section>
+<section class="card" id="words"><h2>📝 この図鑑文に出てくる英単語</h2>
+<table class="vt"><tr><th>英単語</th><th>意味</th><th>品詞</th><th>レベル</th></tr>
+<tr><td class="w" lang="en">somewhere</td><td>どこかで</td><td>副詞</td><td><span class="lv">中2</span></td></tr>
+<tr><td class="w" lang="en">mineral</td><td>鉱物</td><td>名詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">vein</td><td>血管</td><td>名詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">housing</td><td>おさめている</td><td>動詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">pack</td><td>群れ</td><td>名詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">slumbering</td><td>眠っている</td><td>動詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">queen</td><td>女王</td><td>名詞</td><td><span class="lv">中2</span></td></tr>
+</table>
 </section>
 <section class="card" id="origin"><h2>💡 英語名「Carbink」の由来</h2><p>英語名「Carbink」は、carbuncle（伝説の生き物カーバンクル）、carbon（炭素）、Carat（カラット）とtink（チン（小さな金属音））を組み合わせた名前と考えられている。フランス語の名前は「Strassie」で、strass（ラインストーン）、ダイヤモンドの模造品、ディアンシーと韻をふむから作られている。</p><p class="src">出典 <a href="https://bulbapedia.bulbagarden.net/wiki/Carbink_%28Pok%C3%A9mon%29" rel="nofollow noopener" target="_blank">Bulbapedia</a></p></section>
 <section class="card" id="stats"><h2>📊 メレシーの種族値</h2><div class="stats"><div class="stat s-hp"><span class="lab">HP</span><span class="val">50</span><span class="track"><span class="bar" style="width:28%"></span></span></div><div class="stat s-attack"><span class="lab">こうげき</span><span class="val">50</span><span class="track"><span class="bar" style="width:28%"></span></span></div><div class="stat s-defense"><span class="lab">ぼうぎょ</span><span class="val">150</span><span class="track"><span class="bar" style="width:83%"></span></span></div><div class="stat s-special-attack"><span class="lab">とくこう</span><span class="val">50</span><span class="track"><span class="bar" style="width:28%"></span></span></div><div class="stat s-special-defense"><span class="lab">とくぼう</span><span class="val">150</span><span class="track"><span class="bar" style="width:83%"></span></span></div><div class="stat s-speed"><span class="lab">すばやさ</span><span class="val">50</span><span class="track"><span class="bar" style="width:28%"></span></span></div></div><p class="total">合計 <strong>500</strong></p></section>
@@ -34,5 +45,5 @@
 </main>
 <nav class="pk-dock"><a href="dedenne.html">◀ デデンネ</a><a class="dock-rand" href="index.html" data-rand="1">🎲</a><a href="goomy.html">ヌメラ ▶</a></nav>
 <script>function pkSay(t,r){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=r;speechSynthesis.speak(u)}</script>
-<script src="../ads.js"></script><script src="../site-footer.js"></script>
+<script src="../ads.js?v=20261114a"></script><script src="../site-footer.js"></script>
 </body></html>

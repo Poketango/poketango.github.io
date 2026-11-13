@@ -18,13 +18,26 @@
     <p class="pk-en"><span class="en-name" lang="en">Skorupi</span><button class="say" aria-label="英語名の発音を聞く" onclick="pkSay('Skorupi',0.85)">🔊</button></p>
   </div>
 </section>
-<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
+<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#words">📝 単語</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
 <section class="card" id="dex">
   <h2>📖 英語版の図鑑説明</h2>
   <blockquote class="pk-text" lang="en">Its claws are not only razor-sharp but poisonous, making Skorupi a highly dangerous Pokémon. It seems to be weakened by cold temperatures, however.</blockquote>
   <div class="row"><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.9)">🔊 英文を読み上げる</button><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.65)">🐢 ゆっくり</button></div>
   <h3>日本語訳</h3><p class="pk-ja">爪は鋭く有毒で非常に危険。寒さには弱いようです。</p>
   <div class="pk-cta"><a class="cta blue" href="../zukan.html?p=skorupi">🔍 図鑑モードで見る</a><a class="cta green" href="../practice.html">✏️ 穴埋めクイズに挑戦</a></div>
+</section>
+<section class="card" id="words"><h2>📝 この図鑑文に出てくる英単語</h2>
+<table class="vt"><tr><th>英単語</th><th>意味</th><th>品詞</th><th>レベル</th></tr>
+<tr><td class="w" lang="en">claws</td><td>かぎ爪(複数形)</td><td>名詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">razor</td><td>かみそり</td><td>名詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">sharp</td><td>鋭い</td><td>形容詞</td><td><span class="lv">中2</span></td></tr>
+<tr><td class="w" lang="en">poisonous</td><td>毒のある</td><td>形容詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">highly</td><td>非常に</td><td>副詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">dangerous</td><td>危険な</td><td>形容詞</td><td><span class="lv">中2</span></td></tr>
+<tr><td class="w" lang="en">weakened</td><td>弱った</td><td>形容詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">temperatures</td><td>温度(複数形)</td><td>名詞</td><td><span class="lv">中3</span></td></tr>
+</table>
+<p class="gram"><b>文法ポイント</b>　<span lang="en">not only A but (also) B</span> は「AだけでなくBも」という意味の決まった形です。<br><span lang="en">seems to be weakened</span> は「seem/appear to + 動詞」で「〜するように見える、〜らしい」という意味です。</p>
 </section>
 <section class="card" id="origin"><h2>💡 英語名「Skorupi」の由来</h2><p>フランス語の名前は「Rapion」で、scorpion（サソリ）から作られている。ドイツ語の名前は「Pionskora」で、Skorpion（サソリ）から作られている。</p><p class="src">出典 <a href="https://bulbapedia.bulbagarden.net/wiki/Skorupi_%28Pok%C3%A9mon%29" rel="nofollow noopener" target="_blank">Bulbapedia</a></p></section>
 <section class="card" id="stats"><h2>📊 スコルピの種族値</h2><div class="stats"><div class="stat s-hp"><span class="lab">HP</span><span class="val">40</span><span class="track"><span class="bar" style="width:22%"></span></span></div><div class="stat s-attack"><span class="lab">こうげき</span><span class="val">50</span><span class="track"><span class="bar" style="width:28%"></span></span></div><div class="stat s-defense"><span class="lab">ぼうぎょ</span><span class="val">90</span><span class="track"><span class="bar" style="width:50%"></span></span></div><div class="stat s-special-attack"><span class="lab">とくこう</span><span class="val">30</span><span class="track"><span class="bar" style="width:17%"></span></span></div><div class="stat s-special-defense"><span class="lab">とくぼう</span><span class="val">55</span><span class="track"><span class="bar" style="width:31%"></span></span></div><div class="stat s-speed"><span class="lab">すばやさ</span><span class="val">65</span><span class="track"><span class="bar" style="width:36%"></span></span></div></div><p class="total">合計 <strong>330</strong></p></section>
@@ -34,5 +47,5 @@
 </main>
 <nav class="pk-dock"><a href="hippowdon.html">◀ カバルドン</a><a class="dock-rand" href="index.html" data-rand="1">🎲</a><a href="drapion.html">ドラピオン ▶</a></nav>
 <script>function pkSay(t,r){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=r;speechSynthesis.speak(u)}</script>
-<script src="../ads.js"></script><script src="../site-footer.js"></script>
+<script src="../ads.js?v=20261114a"></script><script src="../site-footer.js"></script>
 </body></html>

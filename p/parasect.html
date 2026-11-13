@@ -18,13 +18,25 @@
     <p class="pk-en"><span class="en-name" lang="en">Parasect</span><button class="say" aria-label="英語名の発音を聞く" onclick="pkSay('Parasect',0.85)">🔊</button></p>
   </div>
 </section>
-<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#origin">💡 由来</a><a href="#trivia">✨ 豆知識</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
+<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#words">📝 単語</a><a href="#origin">💡 由来</a><a href="#trivia">✨ 豆知識</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
 <section class="card" id="dex">
   <h2>📖 英語版の図鑑説明</h2>
   <blockquote class="pk-text" lang="en">Mushroom-lacking specimens of this Pokémon lie unmoving in the forest, lending credence to the hypothesis that the large mushroom is in control of Parasect&#x27;s actions.</blockquote>
   <div class="row"><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.9)">🔊 英文を読み上げる</button><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.65)">🐢 ゆっくり</button></div>
   <h3>日本語訳</h3><p class="pk-ja">キノコのない個体は森の中で動かずに横たわっており、大きなキノコがパラセクトの行動を制御しているという仮説を裏付けている。</p>
   <div class="pk-cta"><a class="cta blue" href="../zukan.html?p=parasect">🔍 図鑑モードで見る</a><a class="cta green" href="../practice.html">✏️ 穴埋めクイズに挑戦</a></div>
+</section>
+<section class="card" id="words"><h2>📝 この図鑑文に出てくる英単語</h2>
+<table class="vt"><tr><th>英単語</th><th>意味</th><th>品詞</th><th>レベル</th></tr>
+<tr><td class="w" lang="en">mushroom</td><td>キノコ</td><td>名詞</td><td><span class="lv">中3</span></td></tr>
+<tr><td class="w" lang="en">lacking</td><td>欠けている</td><td>形容詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">specimens</td><td>標本、個体(複数形)</td><td>名詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">unmoving</td><td>動かない</td><td>形容詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">lending</td><td>貸している</td><td>動詞</td><td><span class="lv">中3</span></td></tr>
+<tr><td class="w" lang="en">credence</td><td>信用</td><td>名詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">hypothesis</td><td>仮説</td><td>名詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">control</td><td>操る</td><td>動詞</td><td><span class="lv">中3</span></td></tr>
+</table>
 </section>
 <section class="card" id="origin"><h2>💡 英語名「Parasect」の由来</h2><p>英語名「Parasect」は、parasitism（寄生）とinsect（昆虫）を組み合わせた名前と考えられている。ドイツ語の名前は「Parasek」で、Parasit（寄生生物）、Insekt（昆虫）から作られている。</p><p class="src">出典 <a href="https://bulbapedia.bulbagarden.net/wiki/Parasect_%28Pok%C3%A9mon%29" rel="nofollow noopener" target="_blank">Bulbapedia</a></p></section><section class="card" id="trivia"><h2>✨ パラセクトの豆知識</h2><p>初代のスタッフロールでは、ポケモンたちが画面を右から左へ駆け抜けていく。その最後に登場するのがパラセクトだ。</p><p class="src">出典 <a href="https://dic.pixiv.net/a/%E3%83%91%E3%83%A9%E3%82%BB%E3%82%AF%E3%83%88" rel="nofollow noopener" target="_blank">Bulbapedia</a></p></section>
 <section class="card" id="stats"><h2>📊 パラセクトの種族値</h2><div class="stats"><div class="stat s-hp"><span class="lab">HP</span><span class="val">60</span><span class="track"><span class="bar" style="width:33%"></span></span></div><div class="stat s-attack"><span class="lab">こうげき</span><span class="val">95</span><span class="track"><span class="bar" style="width:53%"></span></span></div><div class="stat s-defense"><span class="lab">ぼうぎょ</span><span class="val">80</span><span class="track"><span class="bar" style="width:44%"></span></span></div><div class="stat s-special-attack"><span class="lab">とくこう</span><span class="val">60</span><span class="track"><span class="bar" style="width:33%"></span></span></div><div class="stat s-special-defense"><span class="lab">とくぼう</span><span class="val">80</span><span class="track"><span class="bar" style="width:44%"></span></span></div><div class="stat s-speed"><span class="lab">すばやさ</span><span class="val">30</span><span class="track"><span class="bar" style="width:17%"></span></span></div></div><p class="total">合計 <strong>405</strong></p></section>
@@ -34,5 +46,5 @@
 </main>
 <nav class="pk-dock"><a href="paras.html">◀ パラス</a><a class="dock-rand" href="index.html" data-rand="1">🎲</a><a href="venonat.html">コンパン ▶</a></nav>
 <script>function pkSay(t,r){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=r;speechSynthesis.speak(u)}</script>
-<script src="../ads.js"></script><script src="../site-footer.js"></script>
+<script src="../ads.js?v=20261114a"></script><script src="../site-footer.js"></script>
 </body></html>

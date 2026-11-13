@@ -18,13 +18,24 @@
     <p class="pk-en"><span class="en-name" lang="en">Sawk</span><button class="say" aria-label="英語名の発音を聞く" onclick="pkSay('Sawk',0.85)">🔊</button></p>
   </div>
 </section>
-<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
+<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#words">📝 単語</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
 <section class="card" id="dex">
   <h2>📖 英語版の図鑑説明</h2>
   <blockquote class="pk-text" lang="en">The karate chops of a Sawk that’s trained itself to the limit can cleave the ocean itself.</blockquote>
   <div class="row"><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.9)">🔊 英文を読み上げる</button><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.65)">🐢 ゆっくり</button></div>
   <h3>日本語訳</h3><p class="pk-ja">鍛え抜かれた空手チョップは海をも切り裂くと言われています。</p>
   <div class="pk-cta"><a class="cta blue" href="../zukan.html?p=sawk">🔍 図鑑モードで見る</a><a class="cta green" href="../practice.html">✏️ 穴埋めクイズに挑戦</a></div>
+</section>
+<section class="card" id="words"><h2>📝 この図鑑文に出てくる英単語</h2>
+<table class="vt"><tr><th>英単語</th><th>意味</th><th>品詞</th><th>レベル</th></tr>
+<tr><td class="w" lang="en">karate</td><td>空手</td><td>名詞</td><td><span class="lv">中2</span></td></tr>
+<tr><td class="w" lang="en">chops</td><td>たたき切る</td><td>動詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">trained</td><td>きたえられた</td><td>動詞</td><td><span class="lv">中3</span></td></tr>
+<tr><td class="w" lang="en">limit</td><td>限界</td><td>名詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">cleave</td><td>切り裂く</td><td>動詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">ocean</td><td>海</td><td>名詞</td><td><span class="lv">中2</span></td></tr>
+</table>
+<p class="gram"><b>文法ポイント</b>　<span lang="en">can cleave</span> は「can + 動詞の原形」で「〜することができる」と能力を表します。</p>
 </section>
 <section class="card" id="origin"><h2>💡 英語名「Sawk」の由来</h2><p>英語名「Sawk」は、sock（くつ下）がもとになっていると考えられている。フランス語の名前は「Karaclée」で、karaté（空手）、raclée（「ぶん殴ること」のくだけた言い方）から作られている。</p><p class="src">出典 <a href="https://bulbapedia.bulbagarden.net/wiki/Sawk_%28Pok%C3%A9mon%29" rel="nofollow noopener" target="_blank">Bulbapedia</a></p></section>
 <section class="card" id="stats"><h2>📊 ダゲキの種族値</h2><div class="stats"><div class="stat s-hp"><span class="lab">HP</span><span class="val">75</span><span class="track"><span class="bar" style="width:42%"></span></span></div><div class="stat s-attack"><span class="lab">こうげき</span><span class="val">125</span><span class="track"><span class="bar" style="width:69%"></span></span></div><div class="stat s-defense"><span class="lab">ぼうぎょ</span><span class="val">75</span><span class="track"><span class="bar" style="width:42%"></span></span></div><div class="stat s-special-attack"><span class="lab">とくこう</span><span class="val">30</span><span class="track"><span class="bar" style="width:17%"></span></span></div><div class="stat s-special-defense"><span class="lab">とくぼう</span><span class="val">75</span><span class="track"><span class="bar" style="width:42%"></span></span></div><div class="stat s-speed"><span class="lab">すばやさ</span><span class="val">85</span><span class="track"><span class="bar" style="width:47%"></span></span></div></div><p class="total">合計 <strong>465</strong></p></section>
@@ -34,5 +45,5 @@
 </main>
 <nav class="pk-dock"><a href="throh.html">◀ ナゲキ</a><a class="dock-rand" href="index.html" data-rand="1">🎲</a><a href="sewaddle.html">クルミル ▶</a></nav>
 <script>function pkSay(t,r){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=r;speechSynthesis.speak(u)}</script>
-<script src="../ads.js"></script><script src="../site-footer.js"></script>
+<script src="../ads.js?v=20261114a"></script><script src="../site-footer.js"></script>
 </body></html>

@@ -18,13 +18,26 @@
     <p class="pk-en"><span class="en-name" lang="en">Carkol</span><button class="say" aria-label="英語名の発音を聞く" onclick="pkSay('Carkol',0.85)">🔊</button></p>
   </div>
 </section>
-<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
+<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#words">📝 単語</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
 <section class="card" id="dex">
   <h2>📖 英語版の図鑑説明</h2>
   <blockquote class="pk-text" lang="en">By rapidly rolling its legs, it can travel at over 18 mph. The temperature of the flames it breathes exceeds 1,800 degrees Fahrenheit.</blockquote>
   <div class="row"><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.9)">🔊 英文を読み上げる</button><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.65)">🐢 ゆっくり</button></div>
   <h3>日本語訳</h3><p class="pk-ja">脚を高速回転させて時速18マイル以上で移動。吐き出す炎は摂氏約980度に達する。</p>
   <div class="pk-cta"><a class="cta blue" href="../zukan.html?p=carkol">🔍 図鑑モードで見る</a><a class="cta green" href="../practice.html">✏️ 穴埋めクイズに挑戦</a></div>
+</section>
+<section class="card" id="words"><h2>📝 この図鑑文に出てくる英単語</h2>
+<table class="vt"><tr><th>英単語</th><th>意味</th><th>品詞</th><th>レベル</th></tr>
+<tr><td class="w" lang="en">rapidly</td><td>急速に</td><td>副詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">rolling</td><td>転がっている</td><td>動詞</td><td><span class="lv">中3</span></td></tr>
+<tr><td class="w" lang="en">travel</td><td>旅をする、移動する</td><td>動詞</td><td><span class="lv">中2</span></td></tr>
+<tr><td class="w" lang="en">temperature</td><td>温度</td><td>名詞</td><td><span class="lv">中3</span></td></tr>
+<tr><td class="w" lang="en">flames</td><td>炎(複数形)</td><td>名詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">breathes</td><td>呼吸する</td><td>動詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">exceeds</td><td>上回る</td><td>動詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">degrees</td><td>度(複数形)</td><td>名詞</td><td><span class="lv">中3</span></td></tr>
+</table>
+<p class="gram"><b>文法ポイント</b>　<span lang="en">can travel</span> は「can + 動詞の原形」で「〜することができる」と能力を表します。</p>
 </section>
 <section class="card" id="origin"><h2>💡 英語名「Carkol」の由来</h2><p>英語名「Carkol」は、car（車）、cart（荷車）、carbon（炭素）とcoal（石炭）を組み合わせた名前と考えられている。フランス語の名前は「Wagomine」で、wagon（荷馬車）、mine（鉱山）から作られている。</p><p class="src">出典 <a href="https://bulbapedia.bulbagarden.net/wiki/Carkol_%28Pok%C3%A9mon%29" rel="nofollow noopener" target="_blank">Bulbapedia</a></p></section>
 <section class="card" id="stats"><h2>📊 トロッゴンの種族値</h2><div class="stats"><div class="stat s-hp"><span class="lab">HP</span><span class="val">80</span><span class="track"><span class="bar" style="width:44%"></span></span></div><div class="stat s-attack"><span class="lab">こうげき</span><span class="val">60</span><span class="track"><span class="bar" style="width:33%"></span></span></div><div class="stat s-defense"><span class="lab">ぼうぎょ</span><span class="val">90</span><span class="track"><span class="bar" style="width:50%"></span></span></div><div class="stat s-special-attack"><span class="lab">とくこう</span><span class="val">60</span><span class="track"><span class="bar" style="width:33%"></span></span></div><div class="stat s-special-defense"><span class="lab">とくぼう</span><span class="val">70</span><span class="track"><span class="bar" style="width:39%"></span></span></div><div class="stat s-speed"><span class="lab">すばやさ</span><span class="val">50</span><span class="track"><span class="bar" style="width:28%"></span></span></div></div><p class="total">合計 <strong>410</strong></p></section>
@@ -34,5 +47,5 @@
 </main>
 <nav class="pk-dock"><a href="rolycoly.html">◀ タンドン</a><a class="dock-rand" href="index.html" data-rand="1">🎲</a><a href="coalossal.html">セキタンザン ▶</a></nav>
 <script>function pkSay(t,r){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=r;speechSynthesis.speak(u)}</script>
-<script src="../ads.js"></script><script src="../site-footer.js"></script>
+<script src="../ads.js?v=20261114a"></script><script src="../site-footer.js"></script>
 </body></html>

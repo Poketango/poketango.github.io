@@ -18,13 +18,24 @@
     <p class="pk-en"><span class="en-name" lang="en">Tyrunt</span><button class="say" aria-label="英語名の発音を聞く" onclick="pkSay('Tyrunt',0.85)">🔊</button></p>
   </div>
 </section>
-<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
+<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#words">📝 単語</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
 <section class="card" id="dex">
   <h2>📖 英語版の図鑑説明</h2>
   <blockquote class="pk-text" lang="en">This Pokémon is selfish and likes to be pampered. It can also inflict grievous wounds on its Trainer just by playing around.</blockquote>
   <div class="row"><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.9)">🔊 英文を読み上げる</button><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.65)">🐢 ゆっくり</button></div>
   <h3>日本語訳</h3><p class="pk-ja">わがままで甘やかされて育った。遊び半分でトレーナーに重傷を負わせることもある。</p>
   <div class="pk-cta"><a class="cta blue" href="../zukan.html?p=tyrunt">🔍 図鑑モードで見る</a><a class="cta green" href="../practice.html">✏️ 穴埋めクイズに挑戦</a></div>
+</section>
+<section class="card" id="words"><h2>📝 この図鑑文に出てくる英単語</h2>
+<table class="vt"><tr><th>英単語</th><th>意味</th><th>品詞</th><th>レベル</th></tr>
+<tr><td class="w" lang="en">selfish</td><td>自分勝手な</td><td>形容詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">likes</td><td>好む</td><td>動詞</td><td><span class="lv">中1</span></td></tr>
+<tr><td class="w" lang="en">pampered</td><td>甘やかされた</td><td>形容詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">inflict</td><td>(害を)与える</td><td>動詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">grievous</td><td>ひどい</td><td>形容詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">wounds</td><td>傷(複数形)</td><td>名詞</td><td><span class="lv h">高校</span></td></tr>
+</table>
+<p class="gram"><b>文法ポイント</b>　<span lang="en">by playing</span> は「by + 動詞のing形」で「〜することによって」と手段を表します。<br><span lang="en">likes to be</span> は「動詞 + to + 動詞の原形」の形で、to 以下が「〜すること」を表します。</p>
 </section>
 <section class="card" id="origin"><h2>💡 英語名「Tyrunt」の由来</h2><p>英語名「Tyrunt」は、Tyrannosaurus（ティラノサウルス）、tyrant（暴君）とrunt（ちび）を組み合わせた名前と考えられている。フランス語の名前は「Ptyranidur」で、petit（小さい）、Tyrannosaurus（ティラノサウルス）、dur（たくましい）から作られている。</p><p class="src">出典 <a href="https://bulbapedia.bulbagarden.net/wiki/Tyrunt_%28Pok%C3%A9mon%29" rel="nofollow noopener" target="_blank">Bulbapedia</a></p></section>
 <section class="card" id="stats"><h2>📊 チゴラスの種族値</h2><div class="stats"><div class="stat s-hp"><span class="lab">HP</span><span class="val">58</span><span class="track"><span class="bar" style="width:32%"></span></span></div><div class="stat s-attack"><span class="lab">こうげき</span><span class="val">89</span><span class="track"><span class="bar" style="width:49%"></span></span></div><div class="stat s-defense"><span class="lab">ぼうぎょ</span><span class="val">77</span><span class="track"><span class="bar" style="width:43%"></span></span></div><div class="stat s-special-attack"><span class="lab">とくこう</span><span class="val">45</span><span class="track"><span class="bar" style="width:25%"></span></span></div><div class="stat s-special-defense"><span class="lab">とくぼう</span><span class="val">45</span><span class="track"><span class="bar" style="width:25%"></span></span></div><div class="stat s-speed"><span class="lab">すばやさ</span><span class="val">48</span><span class="track"><span class="bar" style="width:27%"></span></span></div></div><p class="total">合計 <strong>362</strong></p></section>
@@ -34,5 +45,5 @@
 </main>
 <nav class="pk-dock"><a href="heliolisk.html">◀ エレザード</a><a class="dock-rand" href="index.html" data-rand="1">🎲</a><a href="tyrantrum.html">ガチゴラス ▶</a></nav>
 <script>function pkSay(t,r){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=r;speechSynthesis.speak(u)}</script>
-<script src="../ads.js"></script><script src="../site-footer.js"></script>
+<script src="../ads.js?v=20261114a"></script><script src="../site-footer.js"></script>
 </body></html>

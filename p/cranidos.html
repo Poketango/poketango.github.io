@@ -18,13 +18,26 @@
     <p class="pk-en"><span class="en-name" lang="en">Cranidos</span><button class="say" aria-label="英語名の発音を聞く" onclick="pkSay('Cranidos',0.85)">🔊</button></p>
   </div>
 </section>
-<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
+<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#words">📝 単語</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
 <section class="card" id="dex">
   <h2>📖 英語版の図鑑説明</h2>
   <blockquote class="pk-text" lang="en">An incredibly rare sight. They duel each other by ramming their heads together, and the resulting sound echoes throughout the area like the pealing of a bell.</blockquote>
   <div class="row"><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.9)">🔊 英文を読み上げる</button><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.65)">🐢 ゆっくり</button></div>
   <h3>日本語訳</h3><p class="pk-ja">頭突きで決闘し、その衝撃音がエリア全体に響き渡る珍しい光景が見られます。</p>
   <div class="pk-cta"><a class="cta blue" href="../zukan.html?p=cranidos">🔍 図鑑モードで見る</a><a class="cta green" href="../practice.html">✏️ 穴埋めクイズに挑戦</a></div>
+</section>
+<section class="card" id="words"><h2>📝 この図鑑文に出てくる英単語</h2>
+<table class="vt"><tr><th>英単語</th><th>意味</th><th>品詞</th><th>レベル</th></tr>
+<tr><td class="w" lang="en">incredibly</td><td>信じられないほど</td><td>副詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">rare</td><td>めずらしい</td><td>形容詞</td><td><span class="lv">中3</span></td></tr>
+<tr><td class="w" lang="en">duel</td><td>決闘</td><td>名詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">ramming</td><td>体当たりしている</td><td>動詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">resulting</td><td>結果として生じる</td><td>形容詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">echoes</td><td>こだまする</td><td>動詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">throughout</td><td>〜の間ずっと、〜中で</td><td>前置詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">pealing</td><td>鳴り響いている</td><td>動詞</td><td><span class="lv h">大学</span></td></tr>
+</table>
+<p class="gram"><b>文法ポイント</b>　<span lang="en">by ramming</span> は「by + 動詞のing形」で「〜することによって」と手段を表します。</p>
 </section>
 <section class="card" id="origin"><h2>💡 英語名「Cranidos」の由来</h2><p>英語名「Cranidos」は、cranium（頭蓋骨）とdinosaur（恐竜）を組み合わせた名前と考えられている。</p><p class="src">出典 <a href="https://bulbapedia.bulbagarden.net/wiki/Cranidos_%28Pok%C3%A9mon%29" rel="nofollow noopener" target="_blank">Bulbapedia</a></p></section>
 <section class="card" id="stats"><h2>📊 ズガイドスの種族値</h2><div class="stats"><div class="stat s-hp"><span class="lab">HP</span><span class="val">67</span><span class="track"><span class="bar" style="width:37%"></span></span></div><div class="stat s-attack"><span class="lab">こうげき</span><span class="val">125</span><span class="track"><span class="bar" style="width:69%"></span></span></div><div class="stat s-defense"><span class="lab">ぼうぎょ</span><span class="val">40</span><span class="track"><span class="bar" style="width:22%"></span></span></div><div class="stat s-special-attack"><span class="lab">とくこう</span><span class="val">30</span><span class="track"><span class="bar" style="width:17%"></span></span></div><div class="stat s-special-defense"><span class="lab">とくぼう</span><span class="val">30</span><span class="track"><span class="bar" style="width:17%"></span></span></div><div class="stat s-speed"><span class="lab">すばやさ</span><span class="val">58</span><span class="track"><span class="bar" style="width:32%"></span></span></div></div><p class="total">合計 <strong>350</strong></p></section>
@@ -34,5 +47,5 @@
 </main>
 <nav class="pk-dock"><a href="roserade.html">◀ ロズレイド</a><a class="dock-rand" href="index.html" data-rand="1">🎲</a><a href="rampardos.html">ラムパルド ▶</a></nav>
 <script>function pkSay(t,r){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=r;speechSynthesis.speak(u)}</script>
-<script src="../ads.js"></script><script src="../site-footer.js"></script>
+<script src="../ads.js?v=20261114a"></script><script src="../site-footer.js"></script>
 </body></html>

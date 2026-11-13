@@ -18,13 +18,25 @@
     <p class="pk-en"><span class="en-name" lang="en">Torterra</span><button class="say" aria-label="英語名の発音を聞く" onclick="pkSay('Torterra',0.85)">🔊</button></p>
   </div>
 </section>
-<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
+<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#words">📝 単語</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
 <section class="card" id="dex">
   <h2>📖 英語版の図鑑説明</h2>
   <blockquote class="pk-text" lang="en">This remarkable, large-bodied Pokémon would serve beautifully as borrowed scenery for a garden, and its strength is peerless. Torterra roams the wilderness in search of clean water.</blockquote>
   <div class="row"><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.9)">🔊 英文を読み上げる</button><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.65)">🐢 ゆっくり</button></div>
   <h3>日本語訳</h3><p class="pk-ja">庭園の景観としても映える大きな体を持ち、強さは圧倒的。きれいな水を求めて荒野を歩きます。</p>
   <div class="pk-cta"><a class="cta blue" href="../zukan.html?p=torterra">🔍 図鑑モードで見る</a><a class="cta green" href="../practice.html">✏️ 穴埋めクイズに挑戦</a></div>
+</section>
+<section class="card" id="words"><h2>📝 この図鑑文に出てくる英単語</h2>
+<table class="vt"><tr><th>英単語</th><th>意味</th><th>品詞</th><th>レベル</th></tr>
+<tr><td class="w" lang="en">remarkable</td><td>注目すべき</td><td>形容詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">bodied</td><td>〜の体をした</td><td>形容詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">serve</td><td>仕える、役立つ</td><td>動詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">beautifully</td><td>美しく</td><td>副詞</td><td><span class="lv">中3</span></td></tr>
+<tr><td class="w" lang="en">scenery</td><td>景色</td><td>名詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">peerless</td><td>比べるものがない</td><td>形容詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">roams</td><td>歩き回る</td><td>動詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">wilderness</td><td>荒野</td><td>名詞</td><td><span class="lv h">大学</span></td></tr>
+</table>
 </section>
 <section class="card" id="origin"><h2>💡 英語名「Torterra」の由来</h2><p>英語名「Torterra」は、tortoise（リクガメ）とterra（ラテン語で「大地」）を組み合わせた名前と考えられている。ドイツ語の名前は「Chelterrar」で、アオウミガメ属、terra（ラテン語で「大地」）から作られている。</p><p class="src">出典 <a href="https://bulbapedia.bulbagarden.net/wiki/Torterra_%28Pok%C3%A9mon%29" rel="nofollow noopener" target="_blank">Bulbapedia</a></p></section>
 <section class="card" id="stats"><h2>📊 ドダイトスの種族値</h2><div class="stats"><div class="stat s-hp"><span class="lab">HP</span><span class="val">95</span><span class="track"><span class="bar" style="width:53%"></span></span></div><div class="stat s-attack"><span class="lab">こうげき</span><span class="val">109</span><span class="track"><span class="bar" style="width:61%"></span></span></div><div class="stat s-defense"><span class="lab">ぼうぎょ</span><span class="val">105</span><span class="track"><span class="bar" style="width:58%"></span></span></div><div class="stat s-special-attack"><span class="lab">とくこう</span><span class="val">75</span><span class="track"><span class="bar" style="width:42%"></span></span></div><div class="stat s-special-defense"><span class="lab">とくぼう</span><span class="val">85</span><span class="track"><span class="bar" style="width:47%"></span></span></div><div class="stat s-speed"><span class="lab">すばやさ</span><span class="val">56</span><span class="track"><span class="bar" style="width:31%"></span></span></div></div><p class="total">合計 <strong>525</strong></p></section>
@@ -34,5 +46,5 @@
 </main>
 <nav class="pk-dock"><a href="grotle.html">◀ ハヤシガメ</a><a class="dock-rand" href="index.html" data-rand="1">🎲</a><a href="chimchar.html">ヒコザル ▶</a></nav>
 <script>function pkSay(t,r){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=r;speechSynthesis.speak(u)}</script>
-<script src="../ads.js"></script><script src="../site-footer.js"></script>
+<script src="../ads.js?v=20261114a"></script><script src="../site-footer.js"></script>
 </body></html>

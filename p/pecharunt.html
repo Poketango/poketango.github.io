@@ -18,13 +18,26 @@
     <p class="pk-en"><span class="en-name" lang="en">Pecharunt</span><button class="say" aria-label="英語名の発音を聞く" onclick="pkSay('Pecharunt',0.85)">🔊</button></p>
   </div>
 </section>
-<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
+<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#words">📝 単語</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
 <section class="card" id="dex">
   <h2>📖 英語版の図鑑説明</h2>
   <blockquote class="pk-text" lang="en">It feeds others toxic mochi that draw out desires and capabilities. Those who eat the mochi fall under Pecharunt’s control, chained to its will.</blockquote>
   <div class="row"><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.9)">🔊 英文を読み上げる</button><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.65)">🐢 ゆっくり</button></div>
   <h3>日本語訳</h3><p class="pk-ja">欲望や能力を引き出す毒もちを他者に与える。そのもちを食べた者はモモワロウの意のままに操られてしまう。</p>
   <div class="pk-cta"><a class="cta blue" href="../zukan.html?p=pecharunt">🔍 図鑑モードで見る</a><a class="cta green" href="../practice.html">✏️ 穴埋めクイズに挑戦</a></div>
+</section>
+<section class="card" id="words"><h2>📝 この図鑑文に出てくる英単語</h2>
+<table class="vt"><tr><th>英単語</th><th>意味</th><th>品詞</th><th>レベル</th></tr>
+<tr><td class="w" lang="en">feeds</td><td>食べる</td><td>動詞</td><td><span class="lv">中3</span></td></tr>
+<tr><td class="w" lang="en">toxic</td><td>有毒な</td><td>形容詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">mochi</td><td>もち</td><td>名詞</td><td><span class="lv">中3</span></td></tr>
+<tr><td class="w" lang="en">draw</td><td>引き寄せる、描く</td><td>動詞</td><td><span class="lv">中2</span></td></tr>
+<tr><td class="w" lang="en">desires</td><td>願い、望む</td><td>名詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">capabilities</td><td>能力(複数形)</td><td>名詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">control</td><td>操る</td><td>動詞</td><td><span class="lv">中3</span></td></tr>
+<tr><td class="w" lang="en">chained</td><td>くさりでつながれた</td><td>形容詞</td><td><span class="lv h">高校</span></td></tr>
+</table>
+<p class="gram"><b>文法ポイント</b>　<span lang="en">who</span> は関係代名詞で、直前の名詞をくわしく説明するまとまりを作っています。人や生き物について説明するときに使います。</p>
 </section>
 <section class="card" id="origin"><h2>💡 英語名「Pecharunt」の由来</h2><p>英語名「Pecharunt」は、peach（モモ）、Pecha Berry（モモンのみ）、runt（ちび）とpetulant（すねた）を組み合わせた名前と考えられている。ドイツ語の名前は「Infamomo」で、infam（悪名高い）、īnfāns（ラテン語で「幼児」）、桃 momo（日本語の「もも」）から作られている。</p><p class="src">出典 <a href="https://bulbapedia.bulbagarden.net/wiki/Pecharunt_%28Pok%C3%A9mon%29" rel="nofollow noopener" target="_blank">Bulbapedia</a></p></section>
 <section class="card" id="stats"><h2>📊 モモワロウの種族値</h2><div class="stats"><div class="stat s-hp"><span class="lab">HP</span><span class="val">88</span><span class="track"><span class="bar" style="width:49%"></span></span></div><div class="stat s-attack"><span class="lab">こうげき</span><span class="val">88</span><span class="track"><span class="bar" style="width:49%"></span></span></div><div class="stat s-defense"><span class="lab">ぼうぎょ</span><span class="val">160</span><span class="track"><span class="bar" style="width:89%"></span></span></div><div class="stat s-special-attack"><span class="lab">とくこう</span><span class="val">88</span><span class="track"><span class="bar" style="width:49%"></span></span></div><div class="stat s-special-defense"><span class="lab">とくぼう</span><span class="val">88</span><span class="track"><span class="bar" style="width:49%"></span></span></div><div class="stat s-speed"><span class="lab">すばやさ</span><span class="val">88</span><span class="track"><span class="bar" style="width:49%"></span></span></div></div><p class="total">合計 <strong>600</strong></p></section>
@@ -34,5 +47,5 @@
 </main>
 <nav class="pk-dock"><a href="terapagos.html">◀ テラパゴス</a><a class="dock-rand" href="index.html" data-rand="1">🎲</a><span></span></nav>
 <script>function pkSay(t,r){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=r;speechSynthesis.speak(u)}</script>
-<script src="../ads.js"></script><script src="../site-footer.js"></script>
+<script src="../ads.js?v=20261114a"></script><script src="../site-footer.js"></script>
 </body></html>

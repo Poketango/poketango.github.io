@@ -18,13 +18,21 @@
     <p class="pk-en"><span class="en-name" lang="en">Hypno</span><button class="say" aria-label="英語名の発音を聞く" onclick="pkSay('Hypno',0.85)">🔊</button></p>
   </div>
 </section>
-<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#origin">💡 由来</a><a href="#trivia">✨ 豆知識</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
+<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#words">📝 単語</a><a href="#origin">💡 由来</a><a href="#trivia">✨ 豆知識</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
 <section class="card" id="dex">
   <h2>📖 英語版の図鑑説明</h2>
   <blockquote class="pk-text" lang="en">Avoid eye contact if you come across one. It will try to put you to sleep by using its pendulum.</blockquote>
   <div class="row"><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.9)">🔊 英文を読み上げる</button><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.65)">🐢 ゆっくり</button></div>
   <h3>日本語訳</h3><p class="pk-ja">スリーパーに出会ったら、目を合わせないように。振り子を使って眠らせようとする。</p>
   <div class="pk-cta"><a class="cta blue" href="../zukan.html?p=hypno">🔍 図鑑モードで見る</a><a class="cta green" href="../practice.html">✏️ 穴埋めクイズに挑戦</a></div>
+</section>
+<section class="card" id="words"><h2>📝 この図鑑文に出てくる英単語</h2>
+<table class="vt"><tr><th>英単語</th><th>意味</th><th>品詞</th><th>レベル</th></tr>
+<tr><td class="w" lang="en">avoid</td><td>避ける</td><td>動詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">contact</td><td>接触</td><td>名詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">pendulum</td><td>振り子</td><td>名詞</td><td><span class="lv h">大学</span></td></tr>
+</table>
+<p class="gram"><b>文法ポイント</b>　<span lang="en">by using</span> は「by + 動詞のing形」で「〜することによって」と手段を表します。<br><span lang="en">try to put</span> は「動詞 + to + 動詞の原形」の形で、to 以下が「〜すること」を表します。</p>
 </section>
 <section class="card" id="origin"><h2>💡 英語名「Hypno」の由来</h2><p>英語名「Hypno」は、hypnosis（催眠）がもとになっていると考えられている。フランス語の名前は「Hypnomade」で、hypnose（催眠）、nomade（遊牧民）から作られている。</p><p class="src">出典 <a href="https://bulbapedia.bulbagarden.net/wiki/Hypno_%28Pok%C3%A9mon%29" rel="nofollow noopener" target="_blank">Bulbapedia</a></p></section><section class="card" id="trivia"><h2>✨ スリーパーの豆知識</h2><p>初代の英語版の図鑑では、スリーパーの技が「PSI moves」と書かれている。エスパータイプが、英語で別の名前で呼ばれる予定だった名残ではないかといわれる。</p><p class="src">出典 <a href="https://bulbapedia.bulbagarden.net/wiki/Hypno_%28Pok%C3%A9mon%29" rel="nofollow noopener" target="_blank">Bulbapedia</a></p></section>
 <section class="card" id="stats"><h2>📊 スリーパーの種族値</h2><div class="stats"><div class="stat s-hp"><span class="lab">HP</span><span class="val">85</span><span class="track"><span class="bar" style="width:47%"></span></span></div><div class="stat s-attack"><span class="lab">こうげき</span><span class="val">73</span><span class="track"><span class="bar" style="width:41%"></span></span></div><div class="stat s-defense"><span class="lab">ぼうぎょ</span><span class="val">70</span><span class="track"><span class="bar" style="width:39%"></span></span></div><div class="stat s-special-attack"><span class="lab">とくこう</span><span class="val">73</span><span class="track"><span class="bar" style="width:41%"></span></span></div><div class="stat s-special-defense"><span class="lab">とくぼう</span><span class="val">115</span><span class="track"><span class="bar" style="width:64%"></span></span></div><div class="stat s-speed"><span class="lab">すばやさ</span><span class="val">67</span><span class="track"><span class="bar" style="width:37%"></span></span></div></div><p class="total">合計 <strong>483</strong></p></section>
@@ -34,5 +42,5 @@
 </main>
 <nav class="pk-dock"><a href="drowzee.html">◀ スリープ</a><a class="dock-rand" href="index.html" data-rand="1">🎲</a><a href="krabby.html">クラブ ▶</a></nav>
 <script>function pkSay(t,r){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=r;speechSynthesis.speak(u)}</script>
-<script src="../ads.js"></script><script src="../site-footer.js"></script>
+<script src="../ads.js?v=20261114a"></script><script src="../site-footer.js"></script>
 </body></html>

@@ -18,13 +18,25 @@
     <p class="pk-en"><span class="en-name" lang="en">Poliwrath</span><button class="say" aria-label="英語名の発音を聞く" onclick="pkSay('Poliwrath',0.85)">🔊</button></p>
   </div>
 </section>
-<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
+<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#words">📝 単語</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
 <section class="card" id="dex">
   <h2>📖 英語版の図鑑説明</h2>
   <blockquote class="pk-text" lang="en">Poliwrath is skilled at both swimming and martial arts. It uses its well-trained arms to dish out powerful punches.</blockquote>
   <div class="row"><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.9)">🔊 英文を読み上げる</button><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.65)">🐢 ゆっくり</button></div>
   <h3>日本語訳</h3><p class="pk-ja">ニョロボンは泳ぎと格闘技の両方に長けています。鍛え抜かれた腕で強力なパンチを繰り出す。</p>
   <div class="pk-cta"><a class="cta blue" href="../zukan.html?p=poliwrath">🔍 図鑑モードで見る</a><a class="cta green" href="../practice.html">✏️ 穴埋めクイズに挑戦</a></div>
+</section>
+<section class="card" id="words"><h2>📝 この図鑑文に出てくる英単語</h2>
+<table class="vt"><tr><th>英単語</th><th>意味</th><th>品詞</th><th>レベル</th></tr>
+<tr><td class="w" lang="en">skilled</td><td>熟練した</td><td>形容詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">martial</td><td>武術の</td><td>形容詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">arts</td><td>芸術、技</td><td>名詞</td><td><span class="lv">中2</span></td></tr>
+<tr><td class="w" lang="en">trained</td><td>きたえられた</td><td>動詞</td><td><span class="lv">中3</span></td></tr>
+<tr><td class="w" lang="en">dish</td><td>皿</td><td>名詞</td><td><span class="lv">中2</span></td></tr>
+<tr><td class="w" lang="en">powerful</td><td>強力な</td><td>形容詞</td><td><span class="lv">中3</span></td></tr>
+<tr><td class="w" lang="en">punches</td><td>パンチ(複数形)</td><td>名詞</td><td><span class="lv">中3</span></td></tr>
+</table>
+<p class="gram"><b>文法ポイント</b>　<span lang="en">It uses</span> は現在形。図鑑では、そのポケモンがふだんから繰り返している習性を現在形で表します。主語が it なので動詞に s がついています。</p>
 </section>
 <section class="card" id="origin"><h2>💡 英語名「Poliwrath」の由来</h2><p>英語名「Poliwrath」は、tadpole（オタマジャクシ）とwrath（激しい怒り）を組み合わせた名前と考えられている。フランス語の名前は「Tartard」で、Tartares（タタール人）、tarte（平手打ち）、têtard（オタマジャクシ）から作られている。</p><p class="src">出典 <a href="https://bulbapedia.bulbagarden.net/wiki/Poliwrath_%28Pok%C3%A9mon%29" rel="nofollow noopener" target="_blank">Bulbapedia</a></p></section>
 <section class="card" id="stats"><h2>📊 ニョロボンの種族値</h2><div class="stats"><div class="stat s-hp"><span class="lab">HP</span><span class="val">90</span><span class="track"><span class="bar" style="width:50%"></span></span></div><div class="stat s-attack"><span class="lab">こうげき</span><span class="val">95</span><span class="track"><span class="bar" style="width:53%"></span></span></div><div class="stat s-defense"><span class="lab">ぼうぎょ</span><span class="val">95</span><span class="track"><span class="bar" style="width:53%"></span></span></div><div class="stat s-special-attack"><span class="lab">とくこう</span><span class="val">70</span><span class="track"><span class="bar" style="width:39%"></span></span></div><div class="stat s-special-defense"><span class="lab">とくぼう</span><span class="val">90</span><span class="track"><span class="bar" style="width:50%"></span></span></div><div class="stat s-speed"><span class="lab">すばやさ</span><span class="val">70</span><span class="track"><span class="bar" style="width:39%"></span></span></div></div><p class="total">合計 <strong>510</strong></p></section>
@@ -34,5 +46,5 @@
 </main>
 <nav class="pk-dock"><a href="poliwhirl.html">◀ ニョロゾ</a><a class="dock-rand" href="index.html" data-rand="1">🎲</a><a href="abra.html">ケーシィ ▶</a></nav>
 <script>function pkSay(t,r){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=r;speechSynthesis.speak(u)}</script>
-<script src="../ads.js"></script><script src="../site-footer.js"></script>
+<script src="../ads.js?v=20261114a"></script><script src="../site-footer.js"></script>
 </body></html>

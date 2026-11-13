@@ -18,13 +18,24 @@
     <p class="pk-en"><span class="en-name" lang="en">Oricorio</span><button class="say" aria-label="英語名の発音を聞く" onclick="pkSay('Oricorio',0.85)">🔊</button></p>
   </div>
 </section>
-<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
+<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#words">📝 単語</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
 <section class="card" id="dex">
   <h2>📖 英語版の図鑑説明</h2>
   <blockquote class="pk-text" lang="en">This Oricorio has drunk red nectar. If its Trainer gives the wrong order, this passionate Pokémon becomes fiercely angry.</blockquote>
   <div class="row"><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.9)">🔊 英文を読み上げる</button><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.65)">🐢 ゆっくり</button></div>
   <h3>日本語訳</h3><p class="pk-ja">赤い蜜を飲んでいる。トレーナーが誤った指示を出すと激怒する情熱的なポケモン。</p>
   <div class="pk-cta"><a class="cta blue" href="../zukan.html?p=oricorio">🔍 図鑑モードで見る</a><a class="cta green" href="../practice.html">✏️ 穴埋めクイズに挑戦</a></div>
+</section>
+<section class="card" id="words"><h2>📝 この図鑑文に出てくる英単語</h2>
+<table class="vt"><tr><th>英単語</th><th>意味</th><th>品詞</th><th>レベル</th></tr>
+<tr><td class="w" lang="en">drunk</td><td>酔った、飲んだ</td><td>形容詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">nectar</td><td>花のみつ</td><td>名詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">wrong</td><td>まちがった</td><td>形容詞</td><td><span class="lv">中2</span></td></tr>
+<tr><td class="w" lang="en">order</td><td>命令、順番</td><td>名詞</td><td><span class="lv">中2</span></td></tr>
+<tr><td class="w" lang="en">passionate</td><td>情熱的な</td><td>形容詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">fiercely</td><td>激しく</td><td>副詞</td><td><span class="lv h">高校</span></td></tr>
+</table>
+<p class="gram"><b>文法ポイント</b>　<span lang="en">if 〜</span> は「もし〜ならば」という条件を表す接続詞です。</p>
 </section>
 <section class="card" id="origin"><h2>💡 英語名「Oricorio」の由来</h2><p>英語名「Oricorio」は、oriole（コウライウグイス）とchoreography（振り付け）を組み合わせた名前と考えられている。フランス語の名前は「Plumeline」で、plume（羽飾り）、ballerine（バレリーナ）から作られている。</p><p class="src">出典 <a href="https://bulbapedia.bulbagarden.net/wiki/Oricorio_%28Pok%C3%A9mon%29" rel="nofollow noopener" target="_blank">Bulbapedia</a></p></section>
 <section class="card" id="stats"><h2>📊 オドリドリの種族値</h2><div class="stats"><div class="stat s-hp"><span class="lab">HP</span><span class="val">75</span><span class="track"><span class="bar" style="width:42%"></span></span></div><div class="stat s-attack"><span class="lab">こうげき</span><span class="val">70</span><span class="track"><span class="bar" style="width:39%"></span></span></div><div class="stat s-defense"><span class="lab">ぼうぎょ</span><span class="val">70</span><span class="track"><span class="bar" style="width:39%"></span></span></div><div class="stat s-special-attack"><span class="lab">とくこう</span><span class="val">98</span><span class="track"><span class="bar" style="width:54%"></span></span></div><div class="stat s-special-defense"><span class="lab">とくぼう</span><span class="val">70</span><span class="track"><span class="bar" style="width:39%"></span></span></div><div class="stat s-speed"><span class="lab">すばやさ</span><span class="val">93</span><span class="track"><span class="bar" style="width:52%"></span></span></div></div><p class="total">合計 <strong>476</strong></p></section>
@@ -34,5 +45,5 @@
 </main>
 <nav class="pk-dock"><a href="crabominable.html">◀ ケケンカニ</a><a class="dock-rand" href="index.html" data-rand="1">🎲</a><a href="cutiefly.html">アブリー ▶</a></nav>
 <script>function pkSay(t,r){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=r;speechSynthesis.speak(u)}</script>
-<script src="../ads.js"></script><script src="../site-footer.js"></script>
+<script src="../ads.js?v=20261114a"></script><script src="../site-footer.js"></script>
 </body></html>

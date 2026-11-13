@@ -18,13 +18,26 @@
     <p class="pk-en"><span class="en-name" lang="en">Ceruledge</span><button class="say" aria-label="英語名の発音を聞く" onclick="pkSay('Ceruledge',0.85)">🔊</button></p>
   </div>
 </section>
-<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
+<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#words">📝 単語</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
 <section class="card" id="dex">
   <h2>📖 英語版の図鑑説明</h2>
   <blockquote class="pk-text" lang="en">The fiery blades on its arms burn fiercely with the lingering resentment of a sword wielder who fell before accomplishing their goal.</blockquote>
   <div class="row"><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.9)">🔊 英文を読み上げる</button><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.65)">🐢 ゆっくり</button></div>
   <h3>日本語訳</h3><p class="pk-ja">腕の炎の刃は、無念を抱えた剣士の怨念が燃え続けているかのように激しく燃え上がる。</p>
   <div class="pk-cta"><a class="cta blue" href="../zukan.html?p=ceruledge">🔍 図鑑モードで見る</a><a class="cta green" href="../practice.html">✏️ 穴埋めクイズに挑戦</a></div>
+</section>
+<section class="card" id="words"><h2>📝 この図鑑文に出てくる英単語</h2>
+<table class="vt"><tr><th>英単語</th><th>意味</th><th>品詞</th><th>レベル</th></tr>
+<tr><td class="w" lang="en">fiery</td><td>燃えるような</td><td>形容詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">blades</td><td>刃(複数形)</td><td>名詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">burn</td><td>燃やす、燃える</td><td>動詞</td><td><span class="lv">中3</span></td></tr>
+<tr><td class="w" lang="en">fiercely</td><td>激しく</td><td>副詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">lingering</td><td>残っている</td><td>形容詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">resentment</td><td>恨み</td><td>名詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">wielder</td><td>使い手</td><td>名詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">accomplishing</td><td>成しとげること</td><td>動詞</td><td><span class="lv h">高校</span></td></tr>
+</table>
+<p class="gram"><b>文法ポイント</b>　<span lang="en">before accomplishing</span> は前置詞のあとに動詞のing形(動名詞)が続く形で、「〜する前に」という意味です。<br><span lang="en">who</span> は関係代名詞で、直前の名詞をくわしく説明するまとまりを作っています。人や生き物について説明するときに使います。</p>
 </section>
 <section class="card" id="origin"><h2>💡 英語名「Ceruledge」の由来</h2><p>英語名「Ceruledge」は、cerulean（空色の）、cruel（残酷な）とedge（刃）を組み合わせた名前と考えられている。フランス語の名前は「Malvalame」で、mal（悪）、malva（スペイン語で「薄紫色」）、lame（刃）から作られている。</p><p class="src">出典 <a href="https://bulbapedia.bulbagarden.net/wiki/Ceruledge_%28Pok%C3%A9mon%29" rel="nofollow noopener" target="_blank">Bulbapedia</a></p></section>
 <section class="card" id="stats"><h2>📊 ソウブレイズの種族値</h2><div class="stats"><div class="stat s-hp"><span class="lab">HP</span><span class="val">75</span><span class="track"><span class="bar" style="width:42%"></span></span></div><div class="stat s-attack"><span class="lab">こうげき</span><span class="val">125</span><span class="track"><span class="bar" style="width:69%"></span></span></div><div class="stat s-defense"><span class="lab">ぼうぎょ</span><span class="val">80</span><span class="track"><span class="bar" style="width:44%"></span></span></div><div class="stat s-special-attack"><span class="lab">とくこう</span><span class="val">60</span><span class="track"><span class="bar" style="width:33%"></span></span></div><div class="stat s-special-defense"><span class="lab">とくぼう</span><span class="val">100</span><span class="track"><span class="bar" style="width:56%"></span></span></div><div class="stat s-speed"><span class="lab">すばやさ</span><span class="val">85</span><span class="track"><span class="bar" style="width:47%"></span></span></div></div><p class="total">合計 <strong>525</strong></p></section>
@@ -34,5 +47,5 @@
 </main>
 <nav class="pk-dock"><a href="armarouge.html">◀ グレンアルマ</a><a class="dock-rand" href="index.html" data-rand="1">🎲</a><a href="tadbulb.html">ズピカ ▶</a></nav>
 <script>function pkSay(t,r){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=r;speechSynthesis.speak(u)}</script>
-<script src="../ads.js"></script><script src="../site-footer.js"></script>
+<script src="../ads.js?v=20261114a"></script><script src="../site-footer.js"></script>
 </body></html>

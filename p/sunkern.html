@@ -18,13 +18,24 @@
     <p class="pk-en"><span class="en-name" lang="en">Sunkern</span><button class="say" aria-label="英語名の発音を聞く" onclick="pkSay('Sunkern',0.85)">🔊</button></p>
   </div>
 </section>
-<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
+<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#words">📝 単語</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
 <section class="card" id="dex">
   <h2>📖 英語版の図鑑説明</h2>
   <blockquote class="pk-text" lang="en">Sunkern tries to move as little as it possibly can. It does so because it tries to conserve all the nutrients it has stored in its body for its evolution. It will not eat a thing, subsisting only on morning dew.</blockquote>
   <div class="row"><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.9)">🔊 英文を読み上げる</button><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.65)">🐢 ゆっくり</button></div>
   <h3>日本語訳</h3><p class="pk-ja">ヒマナッツはできる限り動かないようにしている。これは、進化のために体内に蓄えた栄養分を温存するためである。何も食べず、朝露だけで生きている。</p>
   <div class="pk-cta"><a class="cta blue" href="../zukan.html?p=sunkern">🔍 図鑑モードで見る</a><a class="cta green" href="../practice.html">✏️ 穴埋めクイズに挑戦</a></div>
+</section>
+<section class="card" id="words"><h2>📝 この図鑑文に出てくる英単語</h2>
+<table class="vt"><tr><th>英単語</th><th>意味</th><th>品詞</th><th>レベル</th></tr>
+<tr><td class="w" lang="en">possibly</td><td>ひょっとすると</td><td>副詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">conserve</td><td>節約する</td><td>動詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">nutrients</td><td>栄養分(複数形)</td><td>名詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">stored</td><td>たくわえられた</td><td>動詞</td><td><span class="lv">中3</span></td></tr>
+<tr><td class="w" lang="en">evolution</td><td>進化</td><td>名詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">subsisting</td><td>生きのびている</td><td>動詞</td><td><span class="lv h">大学</span></td></tr>
+</table>
+<p class="gram"><b>文法ポイント</b>　<span lang="en">as little as 〜</span> は「〜と同じくらいlittle」という比べ方。2つのものが同じ程度であることを表します。<br><span lang="en">has stored</span> は「have/has + 過去分詞」の現在完了形。過去から今までの経験や継続、完了を表します。</p>
 </section>
 <section class="card" id="origin"><h2>💡 英語名「Sunkern」の由来</h2><p>英語名「Sunkern」は、sunflower（ヒマワリ）とkernel（種の核）を組み合わせた名前と考えられている。ドイツ語の名前は「Sonnkern」で、Sonnenblumenkern（ヒマワリの種）から作られている。</p><p class="src">出典 <a href="https://bulbapedia.bulbagarden.net/wiki/Sunkern_%28Pok%C3%A9mon%29" rel="nofollow noopener" target="_blank">Bulbapedia</a></p></section>
 <section class="card" id="stats"><h2>📊 ヒマナッツの種族値</h2><div class="stats"><div class="stat s-hp"><span class="lab">HP</span><span class="val">30</span><span class="track"><span class="bar" style="width:17%"></span></span></div><div class="stat s-attack"><span class="lab">こうげき</span><span class="val">30</span><span class="track"><span class="bar" style="width:17%"></span></span></div><div class="stat s-defense"><span class="lab">ぼうぎょ</span><span class="val">30</span><span class="track"><span class="bar" style="width:17%"></span></span></div><div class="stat s-special-attack"><span class="lab">とくこう</span><span class="val">30</span><span class="track"><span class="bar" style="width:17%"></span></span></div><div class="stat s-special-defense"><span class="lab">とくぼう</span><span class="val">30</span><span class="track"><span class="bar" style="width:17%"></span></span></div><div class="stat s-speed"><span class="lab">すばやさ</span><span class="val">30</span><span class="track"><span class="bar" style="width:17%"></span></span></div></div><p class="total">合計 <strong>180</strong></p></section>
@@ -34,5 +45,5 @@
 </main>
 <nav class="pk-dock"><a href="aipom.html">◀ エイパム</a><a class="dock-rand" href="index.html" data-rand="1">🎲</a><a href="sunflora.html">キマワリ ▶</a></nav>
 <script>function pkSay(t,r){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=r;speechSynthesis.speak(u)}</script>
-<script src="../ads.js"></script><script src="../site-footer.js"></script>
+<script src="../ads.js?v=20261114a"></script><script src="../site-footer.js"></script>
 </body></html>

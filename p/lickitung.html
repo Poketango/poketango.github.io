@@ -18,13 +18,26 @@
     <p class="pk-en"><span class="en-name" lang="en">Lickitung</span><button class="say" aria-label="英語名の発音を聞く" onclick="pkSay('Lickitung',0.85)">🔊</button></p>
   </div>
 </section>
-<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
+<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#words">📝 単語</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
 <section class="card" id="dex">
   <h2>📖 英語版の図鑑説明</h2>
   <blockquote class="pk-text" lang="en">Wields its long tongue deftly, as though it were an arm. The Pokémon&#x27;s viscous saliva, once it has been collected and boiled down, yields a strong and highly useful adhesive.</blockquote>
   <div class="row"><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.9)">🔊 英文を読み上げる</button><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.65)">🐢 ゆっくり</button></div>
   <h3>日本語訳</h3><p class="pk-ja">長い舌をまるで腕のように巧みに操る。粘り気のある唾液は、集めて煮詰めると、強力で非常に有用な接着剤になる。</p>
   <div class="pk-cta"><a class="cta blue" href="../zukan.html?p=lickitung">🔍 図鑑モードで見る</a><a class="cta green" href="../practice.html">✏️ 穴埋めクイズに挑戦</a></div>
+</section>
+<section class="card" id="words"><h2>📝 この図鑑文に出てくる英単語</h2>
+<table class="vt"><tr><th>英単語</th><th>意味</th><th>品詞</th><th>レベル</th></tr>
+<tr><td class="w" lang="en">wields</td><td>ふるう</td><td>動詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">tongue</td><td>舌</td><td>名詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">deftly</td><td>器用に</td><td>副詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">viscous</td><td>ねばねばした</td><td>形容詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">saliva</td><td>だ液</td><td>名詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">boiled</td><td>ゆでた、沸いた</td><td>動詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">yields</td><td>生み出す</td><td>動詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">adhesive</td><td>粘着性の</td><td>形容詞</td><td><span class="lv h">大学</span></td></tr>
+</table>
+<p class="gram"><b>文法ポイント</b>　<span lang="en">has been</span> は「have/has + 過去分詞」の現在完了形。過去から今までの経験や継続、完了を表します。</p>
 </section>
 <section class="card" id="origin"><h2>💡 英語名「Lickitung」の由来</h2><p>英語名「Lickitung」は、lick（なめる）とtongue（舌）を組み合わせた名前と考えられている。フランス語の名前は「Excelangue」で、excellent（すばらしい）、langue（舌）から作られている。</p><p class="src">出典 <a href="https://bulbapedia.bulbagarden.net/wiki/Lickitung_%28Pok%C3%A9mon%29" rel="nofollow noopener" target="_blank">Bulbapedia</a></p></section>
 <section class="card" id="stats"><h2>📊 ベロリンガの種族値</h2><div class="stats"><div class="stat s-hp"><span class="lab">HP</span><span class="val">90</span><span class="track"><span class="bar" style="width:50%"></span></span></div><div class="stat s-attack"><span class="lab">こうげき</span><span class="val">55</span><span class="track"><span class="bar" style="width:31%"></span></span></div><div class="stat s-defense"><span class="lab">ぼうぎょ</span><span class="val">75</span><span class="track"><span class="bar" style="width:42%"></span></span></div><div class="stat s-special-attack"><span class="lab">とくこう</span><span class="val">60</span><span class="track"><span class="bar" style="width:33%"></span></span></div><div class="stat s-special-defense"><span class="lab">とくぼう</span><span class="val">75</span><span class="track"><span class="bar" style="width:42%"></span></span></div><div class="stat s-speed"><span class="lab">すばやさ</span><span class="val">30</span><span class="track"><span class="bar" style="width:17%"></span></span></div></div><p class="total">合計 <strong>385</strong></p></section>
@@ -34,5 +47,5 @@
 </main>
 <nav class="pk-dock"><a href="hitmonchan.html">◀ エビワラー</a><a class="dock-rand" href="index.html" data-rand="1">🎲</a><a href="koffing.html">ドガース ▶</a></nav>
 <script>function pkSay(t,r){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=r;speechSynthesis.speak(u)}</script>
-<script src="../ads.js"></script><script src="../site-footer.js"></script>
+<script src="../ads.js?v=20261114a"></script><script src="../site-footer.js"></script>
 </body></html>

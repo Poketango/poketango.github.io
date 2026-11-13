@@ -18,13 +18,21 @@
     <p class="pk-en"><span class="en-name" lang="en">Ivysaur</span><button class="say" aria-label="英語名の発音を聞く" onclick="pkSay('Ivysaur',0.85)">🔊</button></p>
   </div>
 </section>
-<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#origin">💡 由来</a><a href="#trivia">✨ 豆知識</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
+<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#words">📝 単語</a><a href="#origin">💡 由来</a><a href="#trivia">✨ 豆知識</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
 <section class="card" id="dex">
   <h2>📖 英語版の図鑑説明</h2>
   <blockquote class="pk-text" lang="en">Exposure to sunlight adds to its strength. Sunlight also makes the bud on its back grow larger.</blockquote>
   <div class="row"><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.9)">🔊 英文を読み上げる</button><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.65)">🐢 ゆっくり</button></div>
   <h3>日本語訳</h3><p class="pk-ja">日光を浴びることで力が強くなる。また、日光は背中の蕾を大きくする。</p>
   <div class="pk-cta"><a class="cta blue" href="../zukan.html?p=ivysaur">🔍 図鑑モードで見る</a><a class="cta green" href="../practice.html">✏️ 穴埋めクイズに挑戦</a></div>
+</section>
+<section class="card" id="words"><h2>📝 この図鑑文に出てくる英単語</h2>
+<table class="vt"><tr><th>英単語</th><th>意味</th><th>品詞</th><th>レベル</th></tr>
+<tr><td class="w" lang="en">exposure</td><td>さらされること</td><td>名詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">sunlight</td><td>日光</td><td>名詞</td><td><span class="lv">中2</span></td></tr>
+<tr><td class="w" lang="en">adds</td><td>加える</td><td>動詞</td><td><span class="lv">中2</span></td></tr>
+<tr><td class="w" lang="en">strength</td><td>強さ</td><td>名詞</td><td><span class="lv">中3</span></td></tr>
+</table>
 </section>
 <section class="card" id="origin"><h2>💡 英語名「Ivysaur」の由来</h2><p>英語名「Ivysaur」は、ivy（ツタ）とdinosaur（恐竜）を組み合わせた名前と考えられている。ドイツ語の名前は「Bisaknosp」で、bizarr（奇妙な）、Saurier（トカゲの仲間）、Knospe（球根）から作られている。</p><p class="src">出典 <a href="https://bulbapedia.bulbagarden.net/wiki/Ivysaur_%28Pok%C3%A9mon%29" rel="nofollow noopener" target="_blank">Bulbapedia</a></p></section><section class="card" id="trivia"><h2>✨ フシギソウの豆知識</h2><p>英語版の「Ivysaur」は、名前に含まれる「sau」がドイツ語の悪口と同じつづりのため、DS時代のGTSではニックネームなしでは預けられなかった。</p><p class="src">出典 <a href="https://pokemondb.net/pokebase/51546/why-cant-a-conkeldurr-be-traded-without-a-nickname" rel="nofollow noopener" target="_blank">Bulbapedia</a></p></section>
 <section class="card" id="stats"><h2>📊 フシギソウの種族値</h2><div class="stats"><div class="stat s-hp"><span class="lab">HP</span><span class="val">60</span><span class="track"><span class="bar" style="width:33%"></span></span></div><div class="stat s-attack"><span class="lab">こうげき</span><span class="val">62</span><span class="track"><span class="bar" style="width:34%"></span></span></div><div class="stat s-defense"><span class="lab">ぼうぎょ</span><span class="val">63</span><span class="track"><span class="bar" style="width:35%"></span></span></div><div class="stat s-special-attack"><span class="lab">とくこう</span><span class="val">80</span><span class="track"><span class="bar" style="width:44%"></span></span></div><div class="stat s-special-defense"><span class="lab">とくぼう</span><span class="val">80</span><span class="track"><span class="bar" style="width:44%"></span></span></div><div class="stat s-speed"><span class="lab">すばやさ</span><span class="val">60</span><span class="track"><span class="bar" style="width:33%"></span></span></div></div><p class="total">合計 <strong>405</strong></p></section>
@@ -34,5 +42,5 @@
 </main>
 <nav class="pk-dock"><a href="bulbasaur.html">◀ フシギダネ</a><a class="dock-rand" href="index.html" data-rand="1">🎲</a><a href="venusaur.html">フシギバナ ▶</a></nav>
 <script>function pkSay(t,r){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=r;speechSynthesis.speak(u)}</script>
-<script src="../ads.js"></script><script src="../site-footer.js"></script>
+<script src="../ads.js?v=20261114a"></script><script src="../site-footer.js"></script>
 </body></html>

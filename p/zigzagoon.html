@@ -18,13 +18,24 @@
     <p class="pk-en"><span class="en-name" lang="en">Zigzagoon</span><button class="say" aria-label="英語名の発音を聞く" onclick="pkSay('Zigzagoon',0.85)">🔊</button></p>
   </div>
 </section>
-<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
+<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#words">📝 単語</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
 <section class="card" id="dex">
   <h2>📖 英語版の図鑑説明</h2>
   <blockquote class="pk-text" lang="en">Zigzagoon that adapted to regions outside Galar acquired this appearance. If you’ve lost something, this Pokémon can likely find it.</blockquote>
   <div class="row"><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.9)">🔊 英文を読み上げる</button><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.65)">🐢 ゆっくり</button></div>
   <h3>日本語訳</h3><p class="pk-ja">ガラル地方以外の地域に適応したジグザグマがこの姿になった。何かをなくした時、このポケモンなら見つけてくれる可能性が高い。</p>
   <div class="pk-cta"><a class="cta blue" href="../zukan.html?p=zigzagoon">🔍 図鑑モードで見る</a><a class="cta green" href="../practice.html">✏️ 穴埋めクイズに挑戦</a></div>
+</section>
+<section class="card" id="words"><h2>📝 この図鑑文に出てくる英単語</h2>
+<table class="vt"><tr><th>英単語</th><th>意味</th><th>品詞</th><th>レベル</th></tr>
+<tr><td class="w" lang="en">adapted</td><td>適応した</td><td>動詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">regions</td><td>地方(複数形)</td><td>名詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">outside</td><td>外に</td><td>前置詞</td><td><span class="lv">中1</span></td></tr>
+<tr><td class="w" lang="en">acquired</td><td>身につけた、手に入れた</td><td>動詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">appearance</td><td>見た目、出現</td><td>名詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">lost</td><td>失った、迷った</td><td>形容詞</td><td><span class="lv">中2</span></td></tr>
+</table>
+<p class="gram"><b>文法ポイント</b>　<span lang="en">if 〜</span> は「もし〜ならば」という条件を表す接続詞です。<br><span lang="en">can likely</span> は「can + 動詞の原形」で「〜することができる」と能力を表します。</p>
 </section>
 <section class="card" id="origin"><h2>💡 英語名「Zigzagoon」の由来</h2><p>英語名「Zigzagoon」は、zigzag（ジグザグ）とraccoon（アライグマ）を組み合わせた名前と考えられている。フランス語の名前は「Zigzaton」で、zigzag（ジグザグ）、raton（アライグマ）から作られている。</p><p class="src">出典 <a href="https://bulbapedia.bulbagarden.net/wiki/Zigzagoon_%28Pok%C3%A9mon%29" rel="nofollow noopener" target="_blank">Bulbapedia</a></p></section>
 <section class="card" id="stats"><h2>📊 ジグザグマの種族値</h2><div class="stats"><div class="stat s-hp"><span class="lab">HP</span><span class="val">38</span><span class="track"><span class="bar" style="width:21%"></span></span></div><div class="stat s-attack"><span class="lab">こうげき</span><span class="val">30</span><span class="track"><span class="bar" style="width:17%"></span></span></div><div class="stat s-defense"><span class="lab">ぼうぎょ</span><span class="val">41</span><span class="track"><span class="bar" style="width:23%"></span></span></div><div class="stat s-special-attack"><span class="lab">とくこう</span><span class="val">30</span><span class="track"><span class="bar" style="width:17%"></span></span></div><div class="stat s-special-defense"><span class="lab">とくぼう</span><span class="val">41</span><span class="track"><span class="bar" style="width:23%"></span></span></div><div class="stat s-speed"><span class="lab">すばやさ</span><span class="val">60</span><span class="track"><span class="bar" style="width:33%"></span></span></div></div><p class="total">合計 <strong>240</strong></p></section>
@@ -34,5 +45,5 @@
 </main>
 <nav class="pk-dock"><a href="mightyena.html">◀ グラエナ</a><a class="dock-rand" href="index.html" data-rand="1">🎲</a><a href="linoone.html">マッスグマ ▶</a></nav>
 <script>function pkSay(t,r){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=r;speechSynthesis.speak(u)}</script>
-<script src="../ads.js"></script><script src="../site-footer.js"></script>
+<script src="../ads.js?v=20261114a"></script><script src="../site-footer.js"></script>
 </body></html>

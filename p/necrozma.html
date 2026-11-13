@@ -18,13 +18,24 @@
     <p class="pk-en"><span class="en-name" lang="en">Necrozma</span><button class="say" aria-label="英語名の発音を聞く" onclick="pkSay('Necrozma',0.85)">🔊</button></p>
   </div>
 </section>
-<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
+<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#words">📝 単語</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
 <section class="card" id="dex">
   <h2>📖 英語版の図鑑説明</h2>
   <blockquote class="pk-text" lang="en">It needs light to survive, and it goes on a rampage seeking it out. Its laser beams will cut anything to pieces.</blockquote>
   <div class="row"><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.9)">🔊 英文を読み上げる</button><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.65)">🐢 ゆっくり</button></div>
   <h3>日本語訳</h3><p class="pk-ja">光を必要とし、光を求めて暴れ回る。レーザービームであらゆるものを切り裂く。</p>
   <div class="pk-cta"><a class="cta blue" href="../zukan.html?p=necrozma">🔍 図鑑モードで見る</a><a class="cta green" href="../practice.html">✏️ 穴埋めクイズに挑戦</a></div>
+</section>
+<section class="card" id="words"><h2>📝 この図鑑文に出てくる英単語</h2>
+<table class="vt"><tr><th>英単語</th><th>意味</th><th>品詞</th><th>レベル</th></tr>
+<tr><td class="w" lang="en">survive</td><td>生き残る</td><td>動詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">rampage</td><td>暴れ回ること</td><td>名詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">seeking</td><td>探し求めている</td><td>動詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">laser</td><td>レーザー</td><td>名詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">beams</td><td>光線(複数形)</td><td>名詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">pieces</td><td>かけら(複数形)</td><td>名詞</td><td><span class="lv">中2</span></td></tr>
+</table>
+<p class="gram"><b>文法ポイント</b>　<span lang="en">It needs</span> は現在形。図鑑では、そのポケモンがふだんから繰り返している習性を現在形で表します。主語が it なので動詞に s がついています。</p>
 </section>
 <section class="card" id="origin"><h2>💡 英語名「Necrozma」の由来</h2><p>英語名「Necrozma」は、νεκρός nekrós（ギリシャ語で「死者」）、πρῖσμα prîsma（ギリシャ語で「プリズム」）とplasma（プラズマ）を組み合わせた名前と考えられている。</p><p class="src">出典 <a href="https://bulbapedia.bulbagarden.net/wiki/Necrozma_%28Pok%C3%A9mon%29" rel="nofollow noopener" target="_blank">Bulbapedia</a></p></section>
 <section class="card" id="stats"><h2>📊 ネクロズマの種族値</h2><div class="stats"><div class="stat s-hp"><span class="lab">HP</span><span class="val">97</span><span class="track"><span class="bar" style="width:54%"></span></span></div><div class="stat s-attack"><span class="lab">こうげき</span><span class="val">107</span><span class="track"><span class="bar" style="width:59%"></span></span></div><div class="stat s-defense"><span class="lab">ぼうぎょ</span><span class="val">101</span><span class="track"><span class="bar" style="width:56%"></span></span></div><div class="stat s-special-attack"><span class="lab">とくこう</span><span class="val">127</span><span class="track"><span class="bar" style="width:71%"></span></span></div><div class="stat s-special-defense"><span class="lab">とくぼう</span><span class="val">89</span><span class="track"><span class="bar" style="width:49%"></span></span></div><div class="stat s-speed"><span class="lab">すばやさ</span><span class="val">79</span><span class="track"><span class="bar" style="width:44%"></span></span></div></div><p class="total">合計 <strong>600</strong></p></section>
@@ -34,5 +45,5 @@
 </main>
 <nav class="pk-dock"><a href="guzzlord.html">◀ アクジキング</a><a class="dock-rand" href="index.html" data-rand="1">🎲</a><a href="magearna.html">マギアナ ▶</a></nav>
 <script>function pkSay(t,r){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=r;speechSynthesis.speak(u)}</script>
-<script src="../ads.js"></script><script src="../site-footer.js"></script>
+<script src="../ads.js?v=20261114a"></script><script src="../site-footer.js"></script>
 </body></html>

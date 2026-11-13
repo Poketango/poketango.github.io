@@ -18,13 +18,26 @@
     <p class="pk-en"><span class="en-name" lang="en">Tentacruel</span><button class="say" aria-label="英語名の発音を聞く" onclick="pkSay('Tentacruel',0.85)">🔊</button></p>
   </div>
 </section>
-<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
+<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#words">📝 単語</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
 <section class="card" id="dex">
   <h2>📖 英語版の図鑑説明</h2>
   <blockquote class="pk-text" lang="en">It has 80 tentacles, each with a venomous tip. These tentacles are also extendible, lengthening when Tentacruel attempts to catch prey. Use caution.</blockquote>
   <div class="row"><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.9)">🔊 英文を読み上げる</button><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.65)">🐢 ゆっくり</button></div>
   <h3>日本語訳</h3><p class="pk-ja">触手は80本あり、それぞれの先端に毒が付いています。これらの触手は伸縮可能で、ドククラゲが獲物を捕まえようとすると伸びます。注意してください。</p>
   <div class="pk-cta"><a class="cta blue" href="../zukan.html?p=tentacruel">🔍 図鑑モードで見る</a><a class="cta green" href="../practice.html">✏️ 穴埋めクイズに挑戦</a></div>
+</section>
+<section class="card" id="words"><h2>📝 この図鑑文に出てくる英単語</h2>
+<table class="vt"><tr><th>英単語</th><th>意味</th><th>品詞</th><th>レベル</th></tr>
+<tr><td class="w" lang="en">tentacles</td><td>触手(複数形)</td><td>名詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">venomous</td><td>毒のある</td><td>形容詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">extendible</td><td>伸ばせる</td><td>形容詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">lengthening</td><td>伸びている</td><td>動詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">attempts</td><td>試み(複数形)</td><td>名詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">catch</td><td>つかまえる</td><td>動詞</td><td><span class="lv">中1</span></td></tr>
+<tr><td class="w" lang="en">prey</td><td>えもの</td><td>名詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">caution</td><td>用心</td><td>名詞</td><td><span class="lv h">高校</span></td></tr>
+</table>
+<p class="gram"><b>文法ポイント</b>　<span lang="en">attempts to catch</span> は「動詞 + to + 動詞の原形」の形で、to 以下が「〜すること」を表します。<br><span lang="en">when 〜</span> は「〜するとき」という意味の接続詞。when のまとまりが、もう一方の文がいつ起こるかを表しています。</p>
 </section>
 <section class="card" id="origin"><h2>💡 英語名「Tentacruel」の由来</h2><p>英語名「Tentacruel」は、tentacle（触手）とcruel（残酷な）を組み合わせた名前と考えられている。ドイツ語の名前は「Tentoxa」で、Tentakel（触手）、toxisch（有毒な）から作られている。</p><p class="src">出典 <a href="https://bulbapedia.bulbagarden.net/wiki/Tentacruel_%28Pok%C3%A9mon%29" rel="nofollow noopener" target="_blank">Bulbapedia</a></p></section>
 <section class="card" id="stats"><h2>📊 ドククラゲの種族値</h2><div class="stats"><div class="stat s-hp"><span class="lab">HP</span><span class="val">80</span><span class="track"><span class="bar" style="width:44%"></span></span></div><div class="stat s-attack"><span class="lab">こうげき</span><span class="val">70</span><span class="track"><span class="bar" style="width:39%"></span></span></div><div class="stat s-defense"><span class="lab">ぼうぎょ</span><span class="val">65</span><span class="track"><span class="bar" style="width:36%"></span></span></div><div class="stat s-special-attack"><span class="lab">とくこう</span><span class="val">80</span><span class="track"><span class="bar" style="width:44%"></span></span></div><div class="stat s-special-defense"><span class="lab">とくぼう</span><span class="val">120</span><span class="track"><span class="bar" style="width:67%"></span></span></div><div class="stat s-speed"><span class="lab">すばやさ</span><span class="val">100</span><span class="track"><span class="bar" style="width:56%"></span></span></div></div><p class="total">合計 <strong>515</strong></p></section>
@@ -34,5 +47,5 @@
 </main>
 <nav class="pk-dock"><a href="tentacool.html">◀ メノクラゲ</a><a class="dock-rand" href="index.html" data-rand="1">🎲</a><a href="geodude.html">イシツブテ ▶</a></nav>
 <script>function pkSay(t,r){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=r;speechSynthesis.speak(u)}</script>
-<script src="../ads.js"></script><script src="../site-footer.js"></script>
+<script src="../ads.js?v=20261114a"></script><script src="../site-footer.js"></script>
 </body></html>

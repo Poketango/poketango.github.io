@@ -18,13 +18,24 @@
     <p class="pk-en"><span class="en-name" lang="en">Scraggy</span><button class="say" aria-label="英語名の発音を聞く" onclick="pkSay('Scraggy',0.85)">🔊</button></p>
   </div>
 </section>
-<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
+<nav class="pk-toc"><a href="#dex">📖 図鑑</a><a href="#words">📝 単語</a><a href="#origin">💡 由来</a><a href="#stats">📊 種族値</a><a href="#faq">❓ FAQ</a></nav>
 <section class="card" id="dex">
   <h2>📖 英語版の図鑑説明</h2>
   <blockquote class="pk-text" lang="en">It protects itself with its durable skin. It’s thought that this Pokémon will evolve once its skin has completely stretched out.</blockquote>
   <div class="row"><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.9)">🔊 英文を読み上げる</button><button class="chip-btn" onclick="pkSay(document.querySelector('.pk-text').textContent,0.65)">🐢 ゆっくり</button></div>
   <h3>日本語訳</h3><p class="pk-ja">丈夫な皮で身を守ります。皮が伸びきると進化すると考えられています。</p>
   <div class="pk-cta"><a class="cta blue" href="../zukan.html?p=scraggy">🔍 図鑑モードで見る</a><a class="cta green" href="../practice.html">✏️ 穴埋めクイズに挑戦</a></div>
+</section>
+<section class="card" id="words"><h2>📝 この図鑑文に出てくる英単語</h2>
+<table class="vt"><tr><th>英単語</th><th>意味</th><th>品詞</th><th>レベル</th></tr>
+<tr><td class="w" lang="en">protects</td><td>守る</td><td>動詞</td><td><span class="lv">中3</span></td></tr>
+<tr><td class="w" lang="en">durable</td><td>丈夫な</td><td>形容詞</td><td><span class="lv h">大学</span></td></tr>
+<tr><td class="w" lang="en">skin</td><td>皮ふ</td><td>名詞</td><td><span class="lv">中3</span></td></tr>
+<tr><td class="w" lang="en">evolve</td><td>進化する</td><td>動詞</td><td><span class="lv h">高校</span></td></tr>
+<tr><td class="w" lang="en">completely</td><td>完全に</td><td>副詞</td><td><span class="lv">中3</span></td></tr>
+<tr><td class="w" lang="en">stretched</td><td>伸ばした</td><td>動詞</td><td><span class="lv h">高校</span></td></tr>
+</table>
+<p class="gram"><b>文法ポイント</b>　<span lang="en">It protects</span> は現在形。図鑑では、そのポケモンがふだんから繰り返している習性を現在形で表します。主語が it なので動詞に s がついています。</p>
 </section>
 <section class="card" id="origin"><h2>💡 英語名「Scraggy」の由来</h2><p>英語名「Scraggy」は、scraggy（やせこけた）とscraggly（ぼさぼさの）を組み合わせた名前と考えられている。フランス語の名前は「Baggiguane」で、baggy（だぶだぶのズボン）、iguane（イグアナ）から作られている。</p><p class="src">出典 <a href="https://bulbapedia.bulbagarden.net/wiki/Scraggy_%28Pok%C3%A9mon%29" rel="nofollow noopener" target="_blank">Bulbapedia</a></p></section>
 <section class="card" id="stats"><h2>📊 ズルッグの種族値</h2><div class="stats"><div class="stat s-hp"><span class="lab">HP</span><span class="val">50</span><span class="track"><span class="bar" style="width:28%"></span></span></div><div class="stat s-attack"><span class="lab">こうげき</span><span class="val">75</span><span class="track"><span class="bar" style="width:42%"></span></span></div><div class="stat s-defense"><span class="lab">ぼうぎょ</span><span class="val">70</span><span class="track"><span class="bar" style="width:39%"></span></span></div><div class="stat s-special-attack"><span class="lab">とくこう</span><span class="val">35</span><span class="track"><span class="bar" style="width:19%"></span></span></div><div class="stat s-special-defense"><span class="lab">とくぼう</span><span class="val">70</span><span class="track"><span class="bar" style="width:39%"></span></span></div><div class="stat s-speed"><span class="lab">すばやさ</span><span class="val">48</span><span class="track"><span class="bar" style="width:27%"></span></span></div></div><p class="total">合計 <strong>348</strong></p></section>
@@ -34,5 +45,5 @@
 </main>
 <nav class="pk-dock"><a href="crustle.html">◀ イワパレス</a><a class="dock-rand" href="index.html" data-rand="1">🎲</a><a href="scrafty.html">ズルズキン ▶</a></nav>
 <script>function pkSay(t,r){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=r;speechSynthesis.speak(u)}</script>
-<script src="../ads.js"></script><script src="../site-footer.js"></script>
+<script src="../ads.js?v=20261114a"></script><script src="../site-footer.js"></script>
 </body></html>
