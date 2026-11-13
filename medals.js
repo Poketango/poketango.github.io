@@ -973,13 +973,13 @@ Object.assign(ACH_TIER, {
 Object.assign(ACH_TRIVIA, {
     noja10: { msg: "Pokémon という名前は、日本語の「ポケットモンスター」を縮めた言葉だ。英語圏でも Pocket Monsters の略として説明されている。英語版の図鑑を読むときは、この言葉自体が日本生まれだと思い出すと少し楽しい。", src: "https://en.wikipedia.org/wiki/Pok%C3%A9mon" },
     noja30: { msg: "初代『赤・緑』の英語版『Pokémon Red and Blue』が北米で発売されたのは1998年9月。日本での発売から約2年半後のことだ。この英語版で、151匹すべての英語名と英語の図鑑文が初めて作られた。", src: "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Red_and_Blue_Versions" },
-    sec10_10: { msg: "テッカニンの素早さの種族値は160。第3世代で登場したときから、トップクラスの速さを誇るポケモンだ。英語名の Ninjask は ninja（忍者）と mask（仮面）を合わせた名前とされる。", src: "https://pokemondb.net/pokedex/ninjask" },
-    sec10_30: { msg: "技「しんそく」は、第5世代から優先度が+2になった。でんこうせっか（優先度+1）よりも先に動けるため、相手の先制技にさえ割り込める、まさに神速の技である。", src: "https://pokemondb.net/move/extreme-speed" },
+    sec10_10: { msg: "第3世代の対戦では、テッカニンが「バトンタッチ」の起点として大活躍した。特性かそくで毎ターン素早さが上がるので、みがわりを張りながら何ターンか粘り、上がった素早さや攻撃をまとめて後ろの仲間に引き継ぐ。速いだけの虫ポケモンが、チーム全体を加速させる司令塔だったのである。", src: "https://smogon.com/rs/articles/baton_pass" },
+    sec10_30: { msg: "「しんそく」の使い手として有名なウインディは、図鑑の分類がなんと「でんせつポケモン」だ。初代から伝説のポケモンと同じ分類を名乗っているが、実際には伝説のポケモンではない。中国の伝説に語られる生き物として図鑑に書かれていることが由来とされる。", src: "https://pokemondb.net/pokedex/arcanine" },
     ta10: { msg: "ディアルガは時間を司る伝説のポケモンだ。シンオウの神話では、ディアルガが生まれたことで時間が動き出したと語られている。60秒を戦い抜いたあなたにふさわしい相手である。", src: "https://bulbapedia.bulbagarden.net/wiki/Dialga_(Pok%C3%A9mon)" },
-    ta20: { msg: "デオキシスのスピードフォルムは、素早さの種族値が180。フォルムを変えるだけで、攻撃特化や防御特化にもなれる不思議なポケモンだ。", src: "https://pokemondb.net/pokedex/deoxys" },
+    ta20: { msg: "第3世代では、デオキシスの姿は入っているソフトで決まっていた。『ルビー・サファイア』ではノーマル、『ファイアレッド』ではアタック、『リーフグリーン』ではディフェンス、『エメラルド』ではスピードフォルムになる。交換で別のソフトに移すと、それだけで姿が変わったのである。", src: "https://bulbapedia.bulbagarden.net/wiki/Deoxys_(Pok%C3%A9mon)" },
     ta30: { msg: "レジエレキの素早さの種族値は200。全ポケモンの中で最も高い数値で、体のほとんどが電気エネルギーでできているとされる。", src: "https://pokemondb.net/pokedex/regieleki" },
-    oni5: { msg: "ツボツボの素早さの種族値はわずか5。全ポケモンの中でも最低クラスだ。そのかわり防御と特防は230もある。速さがなくても負けない戦い方がある、という見本のようなポケモンだ。", src: "https://pokemondb.net/pokedex/shuckle" },
-    oni15: { msg: "技「ほろびのうた」を聞いたポケモンは、交代しなければ3ターン後にすべて倒れてしまう。残りターンが刻まれていく、カウントダウンそのもののような技である。", src: "https://pokemondb.net/move/perish-song" },
-    fast2s: { msg: "でんこうせっかは優先度+1の技で、素早さに関係なくほぼ必ず先に攻撃できる。第1世代から登場する、先制技の代表である。", src: "https://pokemondb.net/move/quick-attack" },
-    buzzer: { msg: "ポケモンの特性「がんじょう」は、第5世代から、HPが満タンのときに一撃で倒される攻撃を受けてもHP1で耐える効果になった。ギリギリで踏みとどまる、まさにこの称号の象徴だ。", src: "https://pokemondb.net/ability/sturdy" }
+    oni5: { msg: "素早さも攻撃も最低クラスのツボツボには、対戦でまさかの攻撃型の使い方がある。技「パワートリック」で攻撃と防御の数値を入れ替えると、全ポケモンでも屈指の防御230がそのまま攻撃力になる。鈍足ゆえに「トリックルーム」の中では先手まで取れるのだ。", src: "https://serebii.net/potw-dp/213.shtml" },
+    oni15: { msg: "対戦には「ほろびのうた」と、相手を逃がさない特性「かげふみ」を組み合わせる「ほろびハメ」という戦術がある。相手は交代できないまま3ターン後に倒れ、こちらだけ交代して生き残る。第6世代ではメガゲンガーがかげふみを手に入れ、この戦術で大暴れした。", src: "https://bulbapedia.bulbagarden.net/wiki/Perish_Trap" },
+    fast2s: { msg: "対戦には、あえて遅いポケモンを集めて勝つ戦術がある。技「トリックルーム」を使うと、5ターンの間、素早さの低い順に行動するようになる。ふだんは最後に動くような鈍足の重量級が、いきなり先手を取って暴れ出すのだ。速さがすべてではない、というのも対戦の奥深さである。", src: "https://pokemondb.net/move/trick-room" },
+    buzzer: { msg: "2014年の世界大会の決勝で、韓国のセジュン・パク選手は、ほとんど使われていなかったパチリスをチームに入れて優勝した。パチリスは「このゆびとまれ」で相手の攻撃を引き受け、バンギラスとボーマンダの強烈な攻撃を受けてもギリギリで耐えきった。この試合は今も対戦史に残る名場面として語り継がれている。", src: "https://upcomer.com/pokemon-worlds-opening-ceremony-references-sejuns-2014-win-with-pachirisu" }
 });
