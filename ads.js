@@ -164,25 +164,37 @@ const pick = (arr, seed) => arr[Math.abs(seed) % arr.length];
 //   本文の左右に空きがあるときだけ、縦長のカードを並べて表示する。
 //   商品の種類はここで増やせる。[アイコン, 表示する文字, 小さい説明, 楽天での検索キーワード, 色]
 // =========================================================
+// 楽天の実際の商品（A8.netの楽天商品リンクで選んだもの）
+// [表示する文字, 小さい説明, 楽天の商品ページ, 商品画像, 色]
+const RI = "https://thumbnail.image.rakuten.co.jp/@0_mall/";
 const RAIL_ITEMS = [
-    ["🃏", "ポケモンカード 最新弾", "BOX・パック", "ポケモンカード 拡張パック BOX", "#ef4444", 10034],
-    ["🛡️", "カードスリーブ", "デッキケースも", "ポケモンカード スリーブ デッキケース", "#3b82f6", 6],
-    ["🇺🇸", "英語版ポケモンカード", "英語の勉強にも", "ポケモンカード 英語版", "#0ea5e9", 25],
-    ["🎮", "ポケモンのゲーム", "Switch ソフト", "ポケモン Switch ソフト", "#e11d48", 718],
-    ["📕", "ポケモン図鑑の本", "全国図鑑・大百科", "ポケモン 全国図鑑 本", "#f59e0b", 479],
-    ["🧸", "ぬいぐるみ", "ほぺぴた・もふもふ", "ポケモン ぬいぐるみ", "#ec4899", 133],
-    ["🧩", "ポケモン プラモデル", "ポケプラ", "ポケモン プラモデル", "#8b5cf6", 150],
-    ["✏️", "ポケモン文房具", "筆箱・ノート", "ポケモン 文房具", "#10b981", 393],
-    ["🗓️", "2027年カレンダー", "ポケモン", "ポケモン カレンダー 2027", "#14b8a6", 143],
-    ["🔤", "ポケモンで英語", "えいご絵本・ドリル", "ポケモン 英語 ドリル", "#2563eb", 1],
-    ["🎁", "クリスマスプレゼント", "ポケモングッズ", "ポケモン グッズ プレゼント", "#16a34a", 225],
-    ["🍫", "ポケモンのお菓子", "おまけシール付き", "ポケモン お菓子 シール", "#d97706", 869],
+    ["メガゲンガーデッキ", "スペシャルデッキセットMEGA", "https://item.rakuten.co.jp/spjstore/4521329463155/", RI + "spjstore/cabinet/11379786/11406626/4521329463155.jpg", "#7c3aed"],
+    ["30th CELEBRATION", "30周年記念パック", "https://item.rakuten.co.jp/yum-yum/4521329462424/", RI + "yum-yum/cabinet/4521329462424-ryo.jpg", "#ef4444"],
+    ["デッキシールド", "カードを守るスリーブ", "https://item.rakuten.co.jp/dra-shop/4521329345581/", RI + "dra-shop/cabinet/11147593/imgrc0104444401.jpg", "#3b82f6"],
+    ["英語版ポケモンカード", "英語の勉強にも", "https://item.rakuten.co.jp/toretoku/262600e/", RI + "toretoku/cabinet/items600/262600eat_1.jpg", "#0ea5e9"],
+    ["Pokémon LEGENDS Z-A", "Nintendo Switch", "https://item.rakuten.co.jp/book/18314207/", RI + "book/cabinet/3550/4902370553550.jpg", "#e11d48"],
+    ["ポケモン全国大図鑑", "図鑑の本", "https://item.rakuten.co.jp/renet20/r0012594887/", RI + "renet20/cabinet/item_photo/001259/4/0012594887.jpg", "#f59e0b"],
+    ["ピカチュウ ぬいぐるみ", "クリスマスにも", "https://item.rakuten.co.jp/grengren/20160715-09296/", "https://thumbnail.image.rakuten.co.jp/@0_gold/grengren/img/thumbnail/20160715-09296.jpg", "#ec4899"],
+    ["ポケプラ", "ポケモンのプラモデル", "https://item.rakuten.co.jp/yamada-denki/6536538017/", RI + "yamada-denki/cabinet/a07000425/6536538017.jpg", "#8b5cf6"],
+    ["ポケモン筆箱", "文房具", "https://item.rakuten.co.jp/bunbougu-shibuya/177729003/", RI + "bunbougu-shibuya/cabinet/108/pokefude.jpg", "#10b981"],
+    ["2027年カレンダー", "ポケモン", "https://item.rakuten.co.jp/book/18797638/", RI + "book/cabinet/4572/4991307454572_1_2.jpg", "#14b8a6"],
+    ["ポケモンで英語ドリル", "小学生向け", "https://item.rakuten.co.jp/book/17976029/", RI + "book/cabinet/6777/9784092536777_1_12.jpg", "#2563eb"],
+    ["ポケモンウエハース", "カードのおまけ付き", "https://item.rakuten.co.jp/dagasi/sm-4570117920462/", RI + "dagasi/cabinet/09212374/12334395/imgrc0141562773.jpg", "#d97706"],
 ];
+function rakutenItemLink(url) {
+    const inner = "http://hb.afl.rakuten.co.jp/hgc/0ea62065.34400275.0ea62066.204f04c0/a26110980102_4BGH3G_21TRSI_2HOM_BW8O1?pc=" + encodeURIComponent(url) + "&m=" + encodeURIComponent(url);
+    return "https://rpx.a8.net/svt/ejp?a8mat=4BGH3G+21TRSI+2HOM+BW8O1&rakuten=y&a8ejpredirect=" + encodeURIComponent(inner);
+}
+// A8.netの公式バナー（300×250） [a8mat, 画像サーバー, aid, mid]
 const RAIL_A8 = [
-    ["🧒", "子ども向けオンライン英会話", "QQキッズ", "qqkids", "#22c55e"],
-    ["👨‍👩‍👧", "家族で受けられる英会話", "クラウティ", "cloudy", "#06b6d4"],
-    ["🛍️", "トレカ通販", "Bee本舗", "bee", "#f97316"],
-    ["💴", "トレカ買取", "ふるいち", "furuichi", "#64748b"],
+    ["4BGK7Z+15OD4I+4HHM+644DT", "www20", "261113183070", "s00000020929001027000"],
+    ["4BGK7Z+15OD4I+4HHM+5ZMCH", "www29", "261113183070", "s00000020929001006000"],
+    ["4BGK7Z+16V8C2+46SW+64JTD", "www29", "261113183072", "s00000019544001029000"],
+    ["4BGK7Z+16V8C2+46SW+61Z81", "www29", "261113183072", "s00000019544001017000"],
+    ["4BGK7Z+1LR2GI+5NJ8+5Z6WX", "www29", "261113183097", "s00000026378001004000"],
+    ["4BGK7Z+1LR2GI+5NJ8+5YZ75", "www21", "261113183097", "s00000026378001003000"],
+    ["4BGK7Z+1YULRM+5W1M+BXB8X", "www26", "261113183119", "s00000027481002003000"],
+    ["4BGK7Z+1KK78Y+5T6U+5YZ75", "www29", "261113183095", "s00000027111001003000"],
 ];
 
 (function () {
@@ -202,14 +214,22 @@ const RAIL_A8 = [
     .rail-card .rb { display: inline-block; margin-top: 8px; background: rgba(255,255,255,.95); color: #222; font-size: 12px; font-weight: 700;
         padding: 3px 10px; border-radius: 99px; }
     .rail-card .pr { position: absolute; top: 6px; right: 8px; font-size: 10px; background: rgba(0,0,0,.35); color: #fff; padding: 1px 5px; border-radius: 4px; }
+    .rail-ban { position: relative; display: block; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 14px rgba(0,0,0,.15); transition: transform .15s; line-height: 0; background: #fff; }
+    .rail-ban:hover { transform: translateY(-3px); }
+    .rail-ban img { width: 100%; height: auto; display: block; }
+    .rail-ban .pr { position: absolute; top: 4px; right: 4px; font-size: 10px; line-height: 1.4; background: rgba(0,0,0,.45); color: #fff; padding: 1px 5px; border-radius: 4px; }
+    .rail-card .rimg { background: #fff; border-radius: 12px; height: 128px; }
+    .rail-card .rimg img { max-width: 92%; max-height: 120px; filter: none; border-radius: 6px; }
     .side-rail .a8px { position: absolute; width: 1px; height: 1px; }
     @media print { .side-rail { display: none !important; } }`;
-    function card(icon, title, sub, href, color, mat, img) {
-        const vis = img ? '<span class="rimg"><img src="/img/ads/' + img + '.webp" alt="" loading="lazy" width="120" height="120"></span>'
-                        : '<span class="ri">' + icon + '</span>';
+    function card(title, sub, href, color, img) {
         return '<a class="rail-card" rel="nofollow sponsored noopener" target="_blank" href="' + href + '" style="background:linear-gradient(160deg,' +
-            color + ',' + color + 'cc)"><span class="pr">PR</span>' + vis + '<span class="rt">' + (img ? icon + ' ' : '') + title +
-            '</span><span class="rs">' + sub + '</span><span class="rb">見てみる ›</span></a>' + (mat ? pixel(mat) : "");
+            color + ',' + color + 'cc)"><span class="pr">PR</span><span class="rimg"><img src="' + img + '?_ex=240x240" alt="' + title + '" loading="lazy" width="120" height="120"></span><span class="rt">' + title +
+            '</span><span class="rs">' + sub + '</span><span class="rb">楽天で見る ›</span></a>' + pixel(RAKUTEN_PIXEL);
+    }
+    function banner(b) {
+        return '<a class="rail-ban" rel="nofollow sponsored noopener" target="_blank" href="https://px.a8.net/svt/ejp?a8mat=' + b[0] + '"><span class="pr">PR</span><img src="https://' + b[1] +
+            '.a8.net/svt/bgt?aid=' + b[2] + '&wid=001&eno=01&mid=' + b[3] + '&mc=1" alt="広告" width="300" height="250" loading="lazy"></a>' + pixel(b[0]);
     }
     function build() {
         const st = document.createElement("style"); st.textContent = css; document.head.appendChild(st);
@@ -218,13 +238,17 @@ const RAIL_A8 = [
         const rnd = () => (seed = (seed * 1103515245 + 12345) >>> 0) / 4294967296;
         const items = RAIL_ITEMS.slice().sort(() => rnd() - 0.5);
         const a8s = RAIL_A8.slice().sort(() => rnd() - 0.5);
-        const hot = (typeof HOT !== "undefined" && HOT[0]) ? card(HOT[0][0], HOT[0][1].replace(/^\d+\/\d+発売 /, ""), "いま話題", rakutenLink(HOT[0][2]), "#dc2626", RAIL_PIX, 94) : "";
-        const mk = (it) => card(it[0], it[1], it[2], rakutenLink(it[3]), it[4], RAIL_PIX, it[5]);
-        const mkA8 = (it) => card(it[0], it[1], it[2], "https://px.a8.net/svt/ejp?a8mat=" + A8[it[3]].mat, it[4], A8[it[3]].mat);
+        // 新発売のデッキはいちばん上に固定
+        const hot = card("🔥 " + RAIL_ITEMS[0][0], "11/13発売 いま話題", rakutenItemLink(RAIL_ITEMS[0][2]), "#dc2626", RAIL_ITEMS[0][3]);
+        items.splice(items.indexOf(RAIL_ITEMS[0]), 1);
+        const mk = (it) => card(it[0], it[1], rakutenItemLink(it[2]), it[4], it[3]);
+        // 同じ会社のバナーが左右に並ばないようにする
+        const mkA8 = (b) => banner(b);
+        const b2 = a8s.find(b => b[2] !== a8s[0][2]);
         const L = document.createElement("aside"); L.className = "side-rail left"; L.setAttribute("aria-label", "広告");
         const R = document.createElement("aside"); R.className = "side-rail right"; R.setAttribute("aria-label", "広告");
         L.innerHTML = hot + mk(items[0]) + mk(items[1]) + mkA8(a8s[0]);
-        R.innerHTML = mk(items[2]) + mkA8(a8s[1]) + mk(items[3]) + mk(items[4]);
+        R.innerHTML = mk(items[2]) + mkA8(b2) + mk(items[3]) + mk(items[4]);
         document.body.appendChild(L); document.body.appendChild(R);
         function fit() {
             // 本文のいちばん外側の箱を探し、左右の空きを測る
@@ -242,10 +266,9 @@ const RAIL_A8 = [
             const ok = w >= 150 && innerHeight >= 520;
             [L, R].forEach(el => { el.classList.toggle("show", ok); el.style.width = w + "px"; });
             // 縦に入りきらないカードは隠す
-            [L, R].forEach(el => { let h = 120; [...el.querySelectorAll(".rail-card")].forEach(c => { c.style.display = ""; h += c.offsetHeight + 12; if (h > innerHeight - 20) c.style.display = "none"; }); });
+            [L, R].forEach(el => { let h = 120; [...el.querySelectorAll(".rail-card,.rail-ban")].forEach(c => { c.style.display = ""; h += c.offsetHeight + 12; if (h > innerHeight - 20) c.style.display = "none"; }); });
         }
         fit(); addEventListener("resize", fit); setTimeout(fit, 800);
     }
-    const RAIL_PIX = RAKUTEN_PIXEL;
     if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", build); else build();
 })();
