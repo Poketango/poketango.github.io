@@ -187,6 +187,24 @@ document.getElementById("retry-btn").addEventListener("click", () => {
     nextQuestion();
 });
 
+
+// ===============================
+// ゲームオーバー画面のキー操作
+// スペースキー：もう一度挑戦する／Escキー：ホームへ戻る
+// ===============================
+document.addEventListener("keydown", e => {
+    if (e.ctrlKey || e.metaKey || e.altKey || e.repeat) return;
+    const box = document.getElementById("gameover-box");
+    if (!box || getComputedStyle(box).display === "none") return;
+    if (e.key === " " || e.code === "Space") {
+        e.preventDefault();
+        document.getElementById("retry-btn").click();
+    } else if (e.key === "Escape") {
+        e.preventDefault();
+        location.href = "index.html";
+    }
+}, true);
+
 // ===============================
 // 実績ポップアップ
 // ===============================
