@@ -12,7 +12,7 @@ const HOT = [
     ["🔥", "11/13発売 メガゲンガー・メガカイリュー デッキ", "スペシャルデッキセットMEGA メガオーダイル メガカイリュー メガゲンガー"],
     ["🎉", "30周年記念パック 30th CELEBRATION", "ポケモンカード 30th CELEBRATION"],
     ["🎮", "Pokémon LEGENDS Z-A（Switch）", "Pokemon LEGENDS Z-A"],
-    ["🎄", "クリスマスに ポケモンのぬいぐるみ", "ポケモン ぬいぐるみ"],
+    ["🗿", "原寸比で集める ポケモンスケールワールド", "ポケモンスケールワールド"],
 ];
 
 // ---- リンクを作る部品 ----
@@ -38,6 +38,7 @@ function link(href, inner, cls, mat) {
     return '<a class="' + cls + '" rel="nofollow sponsored noopener" target="_blank" href="' + href + '">' + inner + '</a>' + (mat ? pixel(mat) : "");
 }
 function rakuten(inner, kw, cls) { return link(rakutenLink(kw), inner, cls, RAKUTEN_PIXEL); }
+function a8href(key) { return "https://px.a8.net/svt/ejp?a8mat=" + A8[key].mat; }
 function a8(key, cls, before) {
     const p = A8[key];
     return link("https://px.a8.net/svt/ejp?a8mat=" + p.mat, (before || "") + p.text, cls, p.mat);
@@ -64,7 +65,7 @@ const pick = (arr, seed) => arr[Math.abs(seed) % arr.length];
 
         // ② 図鑑モード・クイズのボタンの並びに、グッズのボタン
         const cta = document.querySelector(".pk-cta");
-        if (cta) cta.insertAdjacentHTML("beforeend", rakuten("🧸 " + jn + "のぬいぐるみ・グッズ" + PR, "ポケモン " + jn + " グッズ", "cta orange"));
+        if (cta) cta.insertAdjacentHTML("beforeend", rakuten("🗿 " + jn + "のフィギュア・グッズ" + PR, "ポケモン " + jn + " フィギュア", "cta orange"));
 
         // ③ 英語名の由来のあと：英語に興味を持った人向け
         const origin = document.querySelector("#origin");
@@ -150,8 +151,41 @@ const pick = (arr, seed) => arr[Math.abs(seed) % arr.length];
         return true;
     }
 
+    // 練習モード・図鑑モード・実践モード：表示中のポケモンに合わせて広告を入れかえる
+    function modePage() {
+        const nameEl = document.getElementById("poke-name");
+        const content = document.getElementById("content") || document.getElementById("main");
+        if (!nameEl || !content || typeof RAIL_ITEMS === "undefined") return false;
+        const css = document.createElement("style");
+        css.textContent = `.mode-ad{margin:14px 0 4px;display:grid;grid-template-columns:1fr 1fr;gap:8px;text-align:left}
+        .mode-ad a{display:flex;gap:10px;align-items:center;padding:8px 10px;border-radius:12px;background:#fff7ed;border:1.5px solid #fed7aa;color:#1f2937;text-decoration:none;font-size:13px;line-height:1.35;position:relative}
+        .mode-ad a img{width:52px;height:52px;object-fit:contain;flex:none;background:#fff;border-radius:8px}
+        .mode-ad a b{display:block;font-size:13.5px}.mode-ad a small{color:#6b7280;font-size:11.5px}
+        .mode-ad .pr{position:absolute;top:3px;right:6px;font-size:9px;background:rgba(0,0,0,.35);color:#fff;padding:0 4px;border-radius:3px}
+        @media(max-width:520px){.mode-ad{grid-template-columns:1fr}}`;
+        document.head.appendChild(css);
+        const box = el("", "div", "mode-ad");
+        content.appendChild(box);
+        let JN = null, n = 0;
+        fetch("pokemon_names_jp.json").then(r => r.json()).then(d => { JN = d; draw(); }).catch(() => draw());
+        function draw() {
+            const key = (nameEl.textContent || "").trim();
+            const jn = (JN && JN[key]) || "";
+            const it = RAIL_ITEMS[(n++ + key.length) % RAIL_ITEMS.length];
+            const card = jn
+                ? '<a rel="nofollow sponsored noopener" target="_blank" href="' + rakutenLink("ポケモンカード " + jn) + '"><img src="pokemon_sprites/' + encodeURIComponent(key) + '.png" alt=""><span><b>' + jn + 'のポケモンカード</b><small>楽天市場で探す ›</small></span><span class="pr">PR</span></a>'
+                : '<a rel="nofollow sponsored noopener" target="_blank" href="' + a8href("bee") + '"><span style="font-size:34px">🃏</span><span><b>ポケカの通販</b><small>Bee本舗で見る ›</small></span><span class="pr">PR</span></a>';
+            const goods = '<a rel="nofollow sponsored noopener" target="_blank" href="' + rakutenItemLink(it[2]) + '"><img src="' + it[3] + '?_ex=120x120" alt=""><span><b>' + it[0] + '</b><small>' + it[1] + '</small></span><span class="pr">PR</span></a>';
+            box.innerHTML = card + goods + pixel(RAKUTEN_PIXEL);
+        }
+        let last = "";
+        new MutationObserver(() => { const k = nameEl.textContent; if (k && k !== last) { last = k; if (JN !== undefined) draw(); } }).observe(nameEl, { childList: true, characterData: true, subtree: true });
+        return true;
+    }
+
     function run() {
         if (pokemonPage()) return;
+        if (modePage()) return;
         listPage() || hubPage() || homePage();
     }
 
@@ -174,7 +208,11 @@ const RAIL_ITEMS = [
     ["英語版ポケモンカード", "英語の勉強にも", "https://item.rakuten.co.jp/toretoku/262600e/", RI + "toretoku/cabinet/items600/262600eat_1.jpg", "#0ea5e9"],
     ["Pokémon LEGENDS Z-A", "Nintendo Switch", "https://item.rakuten.co.jp/book/18314207/", RI + "book/cabinet/3550/4902370553550.jpg", "#e11d48"],
     ["ポケモン全国大図鑑", "図鑑の本", "https://item.rakuten.co.jp/renet20/r0012594887/", RI + "renet20/cabinet/item_photo/001259/4/0012594887.jpg", "#f59e0b"],
-    ["ピカチュウ ぬいぐるみ", "クリスマスにも", "https://item.rakuten.co.jp/grengren/20160715-09296/", "https://thumbnail.image.rakuten.co.jp/@0_gold/grengren/img/thumbnail/20160715-09296.jpg", "#ec4899"],
+    ["スケールワールド リザードン", "原寸比で並べる食玩フィギュア", "https://item.rakuten.co.jp/amiami/goods-04523238/", RI + "amiami/cabinet/images/2024/342/goods-04523238.jpg", "#ea580c"],
+    ["ポケモン記念切手シート", "2005年発行のコレクター品", "https://item.rakuten.co.jp/yamabun-r/sr01a110/", RI + "yamabun-r/cabinet/03809619/03821045/img60277181.jpg", "#0f766e"],
+    ["30周年ビジュアルアートブック", "12/18発売・予約受付中", "https://item.rakuten.co.jp/machida/9784824018731/", RI + "machida/cabinet/img10960000/9784824018731.jpg", "#7c2d12"],
+    ["コレクションファイルプレミアム", "メガレックウザ柄のカード収納", "https://item.rakuten.co.jp/suns-online-store/8j-88ji-l4du/", RI + "suns-online-store/cabinet/tradingcard/pokemon-card/imgrc0131752481.jpg", "#15803d"],
+    ["SWITCH 特集 ポケモン百景", "制作者インタビュー満載の雑誌", "https://item.rakuten.co.jp/harupoyo/compass1771077625/", RI + "harupoyo/cabinet/12631657/compass1771077545.jpg", "#334155"],
     ["ポケプラ", "ポケモンのプラモデル", "https://item.rakuten.co.jp/yamada-denki/6536538017/", RI + "yamada-denki/cabinet/a07000425/6536538017.jpg", "#8b5cf6"],
     ["ポケモン筆箱", "文房具", "https://item.rakuten.co.jp/bunbougu-shibuya/177729003/", RI + "bunbougu-shibuya/cabinet/108/pokefude.jpg", "#10b981"],
     ["2027年カレンダー", "ポケモン", "https://item.rakuten.co.jp/book/18797638/", RI + "book/cabinet/4572/4991307454572_1_2.jpg", "#14b8a6"],
