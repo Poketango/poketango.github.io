@@ -980,6 +980,6 @@ Object.assign(ACH_TRIVIA, {
     ta30: { msg: "レジエレキとレジドラゴは、『剣・盾』の追加コンテンツで「どちらか片方」しか選べない。ひとつのソフトで両方をそろえることはできず、もう一方がほしければ別のソフトから交換してもらうしかなかった。", src: "https://www.serebii.net/swordshield/theterribletitanslurkinglockedaway.shtml" },
     oni5: { msg: "素早さも攻撃も最低クラスのツボツボには、対戦でまさかの攻撃型の使い方がある。技「パワートリック」で攻撃と防御の数値を入れ替えると、全ポケモンでも屈指の防御230がそのまま攻撃力になる。鈍足ゆえに「トリックルーム」の中では先手まで取れるのだ。", src: "https://serebii.net/potw-dp/213.shtml" },
     oni15: { msg: "初代では、命中率100%の技でも256回に1回は外れてしまう。命中判定のプログラムが「未満」で比べていたため、255/256でしか当たらなかったのだ。この不具合は『金・銀』で直された。", src: "https://glitchcity.info/wiki/1/256_miss_glitch" },
-    fast2s: { msg: "初代では、急所に当たる確率がポケモンの素早さで決まっていた。素早さの種族値が高いほど急所に当たりやすく、ペルシアンやスターミーのような速いポケモンは、きりさくを使うとほぼ確実に急所に当たった。", src: "https://bulbapedia.bulbagarden.net/wiki/Critical_hit" },
+    fast2s: { msg: "初代では、急所に当たる確率がポケモンの素早さで決まっていた。素早さの種族値が高いほど急所に当たりやすく、ペルシアンやダグトリオのような速いポケモンは、きりさくを使うとほぼ確実に急所に当たった。", src: "https://bulbapedia.bulbagarden.net/wiki/Critical_hit" },
     buzzer: { msg: "ヌケニンのHPは常に1だ。『剣・盾』でダイマックスすると、ほかのポケモンはHPが大きく増えるが、ヌケニンだけはダイマックスしてもHP1のまま。ダイマックスアメを与えても変わらない。巨大化しても一撃で倒れる、ギリギリの巨人である。", src: "https://pokemondb.net/pokebase/335956/does-dyanamax-shedinja-get-a-hp-boost" }
 });
