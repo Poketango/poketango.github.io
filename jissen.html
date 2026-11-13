@@ -183,6 +183,18 @@ kbd.key-hint {
     #fail-title { font-size: 24px !important; }
     #retry-btn, #home-btn, #gameover-box .tweet-button { display: block; width: 100%; max-width: 360px; margin: 10px auto !important; padding: 14px 0 !important; }
 }
+
+    #mode-bar{max-width:900px;margin:12px auto 0;padding:0 12px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+    #mode-bar button{padding:8px 14px;border-radius:999px;border:2px solid #cbd5e1;background:#fff;font-weight:700;font-size:14px;cursor:pointer;color:#334155}
+    #mode-bar button.on{background:#2563eb;border-color:#2563eb;color:#fff}
+    #mode-bar button[data-mode="oni"].on{background:#b91c1c;border-color:#b91c1c}
+    #mode-desc{width:100%;text-align:center;font-size:13px;color:#64748b;margin:2px 0 0}
+    #timer-wrap{position:relative;height:22px;border-radius:999px;background:#e2e8f0;overflow:hidden;margin:0 0 12px}
+    #timer-bar{height:100%;width:100%;background:linear-gradient(90deg,#22c55e,#84cc16);transition:width .1s linear}
+    #timer-bar.warn{background:linear-gradient(90deg,#f97316,#ef4444)}
+    #timer-text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:#0f172a}
+    #desc-ja.hidden-ja{display:none}
+    #ta-flash{font-weight:800;color:#dc2626;min-height:1.4em;text-align:center}
     </style>
 <meta name="google-adsense-account" content="ca-pub-4829093383068106">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4829093383068106" crossorigin="anonymous"></script>
@@ -194,7 +206,16 @@ kbd.key-hint {
     <p class="subtitle">実践モード：何問連続で正解できるか挑戦！</p>
 </header>
 
+<div id="mode-bar">
+    <button data-mode="normal">ノーマル</button>
+    <button data-mode="noja">日本語なし</button>
+    <button data-mode="sec10">10秒サバイバル</button>
+    <button data-mode="ta60">60秒タイムアタック</button>
+    <button data-mode="oni">鬼（日本語なし＋8秒）</button>
+    <p id="mode-desc"></p>
+</div>
 <div id="main">
+    <div id="timer-wrap" style="display:none"><div id="timer-bar"></div><span id="timer-text"></span></div>
     <div id="question-box">
         <img id="poke-img" src="" alt="pokemon image">
         <p id="desc"></p>
@@ -206,6 +227,7 @@ kbd.key-hint {
 
         <p id="desc-ja"></p>
 
+        <p id="ta-flash"></p>
         <p id="judge"></p>
         <p id="combo">現在の連続正解数：0</p>
         <p id="best">最高記録：0</p>
@@ -259,9 +281,9 @@ kbd.key-hint {
     
 </div>
 
-<script src="medals.js"></script>
+<script src="medals.js?v=20261114a"></script>
 <script src="quiz-words.js?v=20261113c"></script>
-<script src="script_jissen.js?v=20261113c"></script>
+<script src="script_jissen.js?v=20261114a"></script>
 
 <div id="achievement-popup" style="
     display:none;

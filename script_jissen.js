@@ -9,8 +9,66 @@ let pokemonNames = [];
 
 // スコア
 let combo = 0;
-let best = Number(localStorage.getItem("bestScore") || 0);
+// ===============================
+// ルール（モード）
+//   ja: 日本語訳を出すか / perQ: 1問の制限時間(秒) / total: 全体の制限時間(秒)
+// ===============================
+const JISSEN_MODES = {
+    normal: { label: "ノーマル", ja: true, perQ: 0, total: 0, desc: "1回まちがえたら終わり。何問連続で正解できるか挑戦！" },
+    noja:   { label: "日本語なし", ja: false, perQ: 0, total: 0, desc: "日本語訳なし。英文だけで答えを考えよう。" },
+    sec10:  { label: "10秒サバイバル", ja: true, perQ: 10, total: 0, desc: "1問10秒以内に答えないと終了。まちがえても終了。" },
+    ta60:   { label: "60秒タイムアタック", ja: true, perQ: 0, total: 60, desc: "60秒で何問正解できるか。まちがえても続けられる（正解が表示されて次の問題へ）。" },
+    oni:    { label: "鬼（日本語なし＋8秒）", ja: false, perQ: 8, total: 0, desc: "日本語訳なし、1問8秒。上級者向け。" }
+};
+let jMode = localStorage.getItem("jissenMode");
+if (!JISSEN_MODES[jMode]) jMode = "normal";
+const bestKey = m => m === "normal" ? "bestScore" : "bestScore_" + m;
+let best = Number(localStorage.getItem(bestKey(jMode)) || 0);
 document.getElementById("best").textContent = `最高記録：${best}`;
+let timerId = null, qStart = 0, runStart = 0, taScore = 0, playing = false, timeoutFlag = false;
+function jissenStats() { try { return JSON.parse(localStorage.getItem("jissenStats") || "{}"); } catch (e) { return {}; } }
+function jissenStatsSave(o) { try { localStorage.setItem("jissenStats", JSON.stringify(o)); } catch (e) {} }
+function recordModeBest(mode, score) {
+    const js = jissenStats(); js.best = js.best || {};
+    if (!js.best[mode] || score > js.best[mode]) js.best[mode] = score;
+    jissenStatsSave(js);
+    if (typeof achCheck === "function") achCheck({}, false);
+}
+function setMode(m) {
+    jMode = m; localStorage.setItem("jissenMode", m);
+    document.querySelectorAll("#mode-bar button").forEach(b => b.classList.toggle("on", b.dataset.mode === m));
+    document.getElementById("mode-desc").textContent = JISSEN_MODES[m].desc;
+    best = Number(localStorage.getItem(bestKey(m)) || 0);
+    document.getElementById("best").textContent = `最高記録：${best}`;
+    restartRun();
+}
+function restartRun() {
+    stopTimer(); combo = 0; taScore = 0; playing = false; timeoutFlag = false;
+    document.getElementById("combo").textContent = JISSEN_MODES[jMode].total ? "正解数：0" : "現在の連続正解数：0";
+    document.getElementById("main").style.display = "block";
+    document.getElementById("gameover-box").style.display = "none";
+    document.getElementById("ta-flash").textContent = "";
+    const cfg = JISSEN_MODES[jMode];
+    document.getElementById("timer-wrap").style.display = (cfg.perQ || cfg.total) ? "block" : "none";
+    if (pokemonNames.length) nextQuestion();
+}
+function stopTimer() { if (timerId) { clearInterval(timerId); timerId = null; } }
+function startTimer() {
+    const cfg = JISSEN_MODES[jMode];
+    stopTimer();
+    if (!cfg.perQ && !cfg.total) return;
+    timerId = setInterval(() => {
+        const now = Date.now();
+        const limit = cfg.total || cfg.perQ;
+        const start = cfg.total ? runStart : qStart;
+        const left = Math.max(0, limit - (now - start) / 1000);
+        const bar = document.getElementById("timer-bar");
+        bar.style.width = (left / limit * 100) + "%";
+        bar.classList.toggle("warn", left <= Math.min(3, limit * 0.3));
+        document.getElementById("timer-text").textContent = (cfg.total ? `残り ${left.toFixed(1)} 秒　正解 ${taScore}` : `残り ${left.toFixed(1)} 秒`);
+        if (left <= 0) { stopTimer(); timeoutFlag = true; if (cfg.perQ) medalOnWrong(); gameOver(); }
+    }, 100);
+}
 
 // ===============================
 // 実績データ
@@ -87,6 +145,10 @@ loadData();
 function nextQuestion() {
     const name = pokemonNames[Math.floor(Math.random() * pokemonNames.length)];
     showPokemon(name);
+    const cfg = JISSEN_MODES[jMode];
+    qStart = Date.now();
+    if (!playing) { playing = true; runStart = Date.now(); if (cfg.perQ || cfg.total) startTimer(); }
+    const inp = document.getElementById("answer-input"); if (inp && window.innerWidth > 700) inp.focus();
 }
 
 // ===============================
@@ -104,6 +166,7 @@ function showPokemon(name) {
     document.getElementById("poke-img").src = imgPath;
     document.getElementById("desc").innerHTML = result.question;
     document.getElementById("desc-ja").textContent = jaText;
+    document.getElementById("desc-ja").classList.toggle("hidden-ja", !JISSEN_MODES[jMode].ja);
 
     window.currentAnswer = result.answer;
 
@@ -126,17 +189,38 @@ function checkAnswer() {
     const user = document.getElementById("answer-input").value.trim().toLowerCase();
     const correct = window.currentAnswer.toLowerCase();
 
+    if (!user || !playing && JISSEN_MODES[jMode].total && timeoutFlag) return;
+    const cfg = JISSEN_MODES[jMode];
+    const elapsed = (Date.now() - qStart) / 1000;
     if (user === correct) {
         combo++;
-        document.getElementById("combo").textContent = `現在の連続正解数：${combo}`;
+        if (cfg.total) taScore++;
+        document.getElementById("combo").textContent = cfg.total ? `正解数：${taScore}` : `現在の連続正解数：${combo}`;
+        document.getElementById("ta-flash").textContent = "";
 
-        if (combo === 10) unlockAchievement("combo10");
-        if (combo === 20) unlockAchievement("combo20");
-        if (combo === 50) unlockAchievement("combo50");
+        if (jMode === "normal") {
+            if (combo === 10) unlockAchievement("combo10");
+            if (combo === 20) unlockAchievement("combo20");
+            if (combo === 50) unlockAchievement("combo50");
+        }
+        // 実践モードの新ルール用の記録（称号の判定に使う）
+        const left = cfg.perQ ? cfg.perQ - elapsed : 99;
+        window.jissenCtx = { mode: jMode, combo: combo, elapsed: elapsed, left: left };
+        const js = jissenStats(); js.combo = js.combo || {};
+        if (!cfg.total && combo > (js.combo[jMode] || 0)) js.combo[jMode] = combo;
+        if (elapsed <= 2) js.fast = (js.fast || 0) + 1;
+        if (cfg.perQ && left <= 1) js.buzzer = (js.buzzer || 0) + 1;
+        jissenStatsSave(js);
 
         // ★ メダル・実績用：正解を記録
         medalOnCorrect(window.currentPokemon, window.currentAnswer, "jissen", combo);
 
+        nextQuestion();
+    } else if (cfg.total) {
+        // タイムアタック：まちがえても続行（正解を見せて次へ）
+        medalOnWrong();
+        combo = 0;
+        document.getElementById("ta-flash").textContent = `✗ 正解は ${window.currentAnswer}`;
         nextQuestion();
     } else {
         // ★ 実績用：不正解を記録
@@ -149,13 +233,18 @@ function checkAnswer() {
 // ゲームオーバー
 // ===============================
 function gameOver() {
+    stopTimer(); playing = false;
+    const cfg = JISSEN_MODES[jMode];
+    const score = cfg.total ? taScore : combo;
     document.getElementById("main").style.display = "none";
     document.getElementById("gameover-box").style.display = "block";
 
-    document.getElementById("fail-title").textContent = "不正解！";
+    document.getElementById("fail-title").textContent = cfg.total ? "タイムアップ！" : (timeoutFlag ? "時間切れ！" : "不正解！");
     document.getElementById("fail-answer").textContent = `正解：${window.currentAnswer}`;
-    document.getElementById("fail-combo").textContent = `今回の連続正解数：${combo}`;
-    document.getElementById("final-score").textContent = `今回の記録：${combo} 問`;
+    document.getElementById("fail-combo").textContent = cfg.total ? `60秒間の正解数：${taScore}` : `今回の連続正解数：${combo}`;
+    document.getElementById("final-score").textContent = `【${cfg.label}】今回の記録：${score} 問`;
+    timeoutFlag = false;
+    recordModeBest(jMode, score);
 
     // ★ ここから追加（不正解ポケモンの情報表示）
     const name = window.currentPokemon;
@@ -164,12 +253,13 @@ function gameOver() {
     document.getElementById("fail-desc-ja").textContent = pokedexJP[name];
     // ★ ここまで追加
 
-    if (combo > best) {
-        best = combo;
-        localStorage.setItem("bestScore", best);
+    if (score > best) {
+        best = score;
+        localStorage.setItem(bestKey(jMode), best);
     }
 
-    localStorage.setItem("lastScore", combo);
+    localStorage.setItem("lastScore", score);
+    localStorage.setItem("lastMode", cfg.label);
 
     document.getElementById("best-score").textContent = `最高記録：${best} 問`;
 
@@ -180,12 +270,9 @@ function gameOver() {
     
 
 
-document.getElementById("retry-btn").addEventListener("click", () => {
-    combo = 0;
-    document.getElementById("main").style.display = "block";
-    document.getElementById("gameover-box").style.display = "none";
-    nextQuestion();
-});
+document.getElementById("retry-btn").addEventListener("click", () => restartRun());
+document.querySelectorAll("#mode-bar button").forEach(b => b.addEventListener("click", () => setMode(b.dataset.mode)));
+setMode(jMode);
 
 
 // ===============================
@@ -243,7 +330,9 @@ function showAchievementPopup(key) {
 document.getElementById("tweet-btn").addEventListener("click", () => {
     const score = Number(localStorage.getItem("lastScore") || 0);
 
-    const text = `【実践モード記録】\n${score}連続正解を達成しました！\n#英語を勉強するテイでポケモン図鑑を見れる場所 \n#Pokedex Index`;
+    const mode = localStorage.getItem("lastMode") || "ノーマル";
+    const head = mode.includes("タイムアタック") ? `【実践モード・${mode}】\n60秒で${score}問正解しました！` : `【実践モード・${mode}】\n${score}連続正解を達成しました！`;
+    const text = head + `\n#英語を勉強するテイでポケモン図鑑を見れる場所\nhttps://poketango.com/jissen.html`;
 
     const url = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text);
 

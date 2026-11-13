@@ -922,3 +922,64 @@ Object.assign(ACH_TRIVIA, {
     master: { msg: "タマムシシティのゲームフリークが入っている建物は、初代の開発が始まったころに本物のゲームフリークの事務所があった、下北沢の第2鈴木ビルがモデルだといわれる。", src: "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Journal" },
     practice30: { msg: "ジムバッジは、最初は胸に付けるバッジではなく、服に縫い付けるワッペンのようなデザインで考えられていた。初期の設定画には、その名残が残っている。", src: "https://bulbapedia.bulbagarden.net/wiki/Thunder_Badge" },
 });
+
+// ---------------------------------------------------------
+// 実践モードの新ルール（日本語なし・10秒サバイバル・60秒タイムアタック・鬼）の実績と称号
+// 記録は script_jissen.js が localStorage の jissenStats に保存する
+// ---------------------------------------------------------
+function jsStat() { try { return JSON.parse(localStorage.getItem("jissenStats") || "{}"); } catch (e) { return {}; } }
+const jsCombo = m => ((jsStat().combo || {})[m] || 0);
+const jsBest = m => ((jsStat().best || {})[m] || 0);
+ACH_LIST.push(
+    { key: "noja10", icon: "📖", name: "辞書いらず",
+      desc: "実践モード「日本語なし」で10連続正解する", secret: "日本語訳なしで10連続正解。英文がそのまま頭に入ってきている。",
+      check: () => jsCombo("noja") >= 10 },
+    { key: "noja30", icon: "🗽", name: "ネイティブ級",
+      desc: "実践モード「日本語なし」で30連続正解する", secret: "日本語訳なしで30連続。もう英語版の図鑑を普通に読めるレベル。",
+      check: () => jsCombo("noja") >= 30 },
+    { key: "sec10_10", icon: "⏱️", name: "テッカニンの羽音",
+      desc: "「10秒サバイバル」で10連続正解する", secret: "10秒の壁を10回こえた。",
+      check: () => jsCombo("sec10") >= 10 },
+    { key: "sec10_30", icon: "💨", name: "しんそくの使い手",
+      desc: "「10秒サバイバル」で30連続正解する", secret: "10秒以内の正解を30回続けた。速さも正確さも本物。",
+      check: () => jsCombo("sec10") >= 30 },
+    { key: "ta10", icon: "⌛", name: "時の番人",
+      desc: "「60秒タイムアタック」で10問正解する", secret: "60秒で10問。1問6秒のペース。",
+      check: () => jsBest("ta60") >= 10 },
+    { key: "ta20", icon: "🧬", name: "スピードフォルム",
+      desc: "「60秒タイムアタック」で20問正解する", secret: "60秒で20問。1問3秒のペース。",
+      check: () => jsBest("ta60") >= 20 },
+    { key: "ta30", icon: "⚡", name: "最速の電気",
+      desc: "「60秒タイムアタック」で30問正解する", secret: "60秒で30問。1問2秒。もはや人間ばなれした速さ。",
+      check: () => jsBest("ta60") >= 30 },
+    { key: "oni5", icon: "👹", name: "鬼に金棒",
+      desc: "「鬼モード」で5連続正解する", secret: "日本語なし・8秒の鬼モードで5連続。",
+      check: () => jsCombo("oni") >= 5 },
+    { key: "oni15", icon: "🐉", name: "鬼神",
+      desc: "「鬼モード」で15連続正解する", secret: "鬼モードで15連続。このサイトで最難関の称号のひとつ。",
+      check: () => jsCombo("oni") >= 15 },
+    { key: "fast2s", icon: "🏃", name: "でんこうせっか",
+      desc: "実践モードで、問題が出てから2秒以内に正解する", secret: "問題を見た瞬間に答えが出た。",
+      check: () => (jsStat().fast || 0) >= 1 },
+    { key: "buzzer", icon: "🔔", name: "ギリギリセーフ",
+      desc: "時間制限のあるモードで、残り1秒以内に正解する", secret: "時間切れ寸前で正解。心臓に悪い。",
+      check: () => (jsStat().buzzer || 0) >= 1 }
+);
+Object.assign(ACH_TIER, {
+    noja10: "bronze", sec10_10: "bronze", ta10: "bronze", fast2s: "bronze", buzzer: "bronze",
+    noja30: "silver", sec10_30: "silver", ta20: "silver", oni5: "silver",
+    ta30: "gold", oni15: "gold"
+});
+Object.assign(ACH_TRIVIA, {
+    noja10: { msg: "Pokémon という名前は、日本語の「ポケットモンスター」を縮めた言葉だ。英語圏でも Pocket Monsters の略として説明されている。英語版の図鑑を読むときは、この言葉自体が日本生まれだと思い出すと少し楽しい。", src: "https://en.wikipedia.org/wiki/Pok%C3%A9mon" },
+    noja30: { msg: "初代『赤・緑』の英語版『Pokémon Red and Blue』が北米で発売されたのは1998年9月。日本での発売から約2年半後のことだ。この英語版で、151匹すべての英語名と英語の図鑑文が初めて作られた。", src: "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Red_and_Blue_Versions" },
+    sec10_10: { msg: "テッカニンの素早さの種族値は160。第3世代で登場したときから、トップクラスの速さを誇るポケモンだ。英語名の Ninjask は ninja（忍者）と mask（仮面）を合わせた名前とされる。", src: "https://pokemondb.net/pokedex/ninjask" },
+    sec10_30: { msg: "技「しんそく」は、第5世代から優先度が+2になった。でんこうせっか（優先度+1）よりも先に動けるため、相手の先制技にさえ割り込める、まさに神速の技である。", src: "https://pokemondb.net/move/extreme-speed" },
+    ta10: { msg: "ディアルガは時間を司る伝説のポケモンだ。シンオウの神話では、ディアルガが生まれたことで時間が動き出したと語られている。60秒を戦い抜いたあなたにふさわしい相手である。", src: "https://bulbapedia.bulbagarden.net/wiki/Dialga_(Pok%C3%A9mon)" },
+    ta20: { msg: "デオキシスのスピードフォルムは、素早さの種族値が180。フォルムを変えるだけで、攻撃特化や防御特化にもなれる不思議なポケモンだ。", src: "https://pokemondb.net/pokedex/deoxys" },
+    ta30: { msg: "レジエレキの素早さの種族値は200。全ポケモンの中で最も高い数値で、体のほとんどが電気エネルギーでできているとされる。", src: "https://pokemondb.net/pokedex/regieleki" },
+    oni5: { msg: "ツボツボの素早さの種族値はわずか5。全ポケモンの中でも最低クラスだ。そのかわり防御と特防は230もある。速さがなくても負けない戦い方がある、という見本のようなポケモンだ。", src: "https://pokemondb.net/pokedex/shuckle" },
+    oni15: { msg: "技「ほろびのうた」を聞いたポケモンは、交代しなければ3ターン後にすべて倒れてしまう。残りターンが刻まれていく、カウントダウンそのもののような技である。", src: "https://pokemondb.net/move/perish-song" },
+    fast2s: { msg: "でんこうせっかは優先度+1の技で、素早さに関係なくほぼ必ず先に攻撃できる。第1世代から登場する、先制技の代表である。", src: "https://pokemondb.net/move/quick-attack" },
+    buzzer: { msg: "ポケモンの特性「がんじょう」は、第5世代から、HPが満タンのときに一撃で倒される攻撃を受けてもHP1で耐える効果になった。ギリギリで踏みとどまる、まさにこの称号の象徴だ。", src: "https://pokemondb.net/ability/sturdy" }
+});
