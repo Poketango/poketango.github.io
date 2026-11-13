@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google アナリティクス（アクセス数の計測） -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2S81YX6L53"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2S81YX6L53');
+    </script>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <title>英語を勉強するテイでポケモン図鑑を見れる場所｜ポケモン図鑑で英単語クイズ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ポケモンの英語版図鑑の文章で英単語を覚える無料サイト。穴埋めクイズ、英語の図鑑、連続正解バトル、133種類の称号とメダルで楽しく続けられます。">
+    <link rel="canonical" href="https://poketango.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="英語を勉強するテイでポケモン図鑑を見れる場所">
+    <meta property="og:title" content="英語を勉強するテイでポケモン図鑑を見れる場所｜ポケモン図鑑で英単語クイズ">
+    <meta property="og:description" content="ポケモンの英語版図鑑の文章で英単語を覚える無料サイト。穴埋めクイズ、英語の図鑑、連続正解バトル、133種類の称号とメダルで楽しく続けられます。">
+    <meta property="og:url" content="https://poketango.github.io/">
+    <meta property="og:image" content="https://poketango.github.io/ogp.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding-top: 80px;
+            background-color: #f7f7f7;
+        }
+
+
+        .mode-button {
+            display: block;
+            width: 260px;
+            margin: 15px auto;
+            padding: 15px;
+            font-size: 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            background-color: #ffcc00;
+        }
+
+        .mode-button:hover {
+            background-color: #ffdd33;
+        }
+
+        #site-header {
+        width: 100%;
+        background-color: #f5f5f5;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
+        text-align: center;
+        }
+
+        #site-header h1 {
+            margin: 0;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        #site-header h2{
+            margin:0;
+            font-size:18px;
+            color: #696969;
+            
+        }
+    </style>
+    <link rel="stylesheet" href="theme.css">
+</head>
+
+<body>
+
+<header id="site-header">
+    <h1>英語を勉強するテイでポケモン図鑑を見れる場所</h1>
+    <p class="subtitle">モードを選んでください</p>
+</header>
+
+<div class="mode-grid">
+    <button class="mode-button practice" onclick="location.href='practice.html'">
+        <img class="icon" src="home_icons/item_practice.png" alt="鉛筆">練習モード<span class="note">穴埋めで英単語を覚える</span>
+    </button>
+
+    <button class="mode-button dex" onclick="location.href='zukan.html'">
+        <img class="icon" src="home_icons/item_dex.png" alt="本">図鑑モード<span class="note">図鑑を順番に読む</span>
+    </button>
+
+    <button class="mode-button battle" onclick="location.href='jissen.html'">
+        <img class="icon" src="home_icons/item_battle.png" alt="炎">実践モード<span class="note">何問連続で正解できるか挑戦</span>
+    </button>
+
+    <button class="mode-button trophy" onclick="location.href='achievements.html'">
+        <img class="icon" src="home_icons/item_trophy.png" alt="トロフィー">実績一覧<span class="note">集めた実績と図鑑の進み具合</span>
+    </button>
+
+    <button class="mode-button bookmark" onclick="location.href='bookmarks.html'">
+        <img class="icon" src="home_icons/item_bookmark.png" alt="星">ブックマーク<span class="note" id="bm-home-count">お気に入りのポケモン一覧</span>
+    </button>
+    <button class="mode-button dex" onclick="location.href='p/'">
+        <img class="icon" src="home_icons/item_dex.png" alt="本">英語名一覧<span class="note">全ポケモンの英語名と図鑑の日本語訳</span>
+    </button>
+</div>
+
+<p class="hub-top" style="justify-content:center;max-width:560px;margin:24px auto 0"><a href="p/pun.html">英語名がダジャレなポケモン</a><a href="p/scary.html">英語版の図鑑が怖いポケモン</a><a href="p/gen1.html">初代151匹の英語名</a></p>
+
+<section id="contact">
+    <h2>お問い合わせ・ご意見</h2>
+    <p class="contact-x">Xでポケモンの英語名クイズや雑学を出しています → <a href="https://x.com/zukan_eitango" target="_blank" rel="noopener">@zukan_eitango</a></p>
+    <p class="contact-note">不具合の報告、ほしい機能、ポケモン雑学のまちがいなど、なんでも送ってください。返信がほしいときだけメールアドレスを書いてください。</p>
+    <form name="contact" id="contact-form">
+        <p class="hp">ここは空のままにしてください <input name="bot-field"></p>
+        <label>種類
+            <select name="kind">
+                <option>不具合の報告</option>
+                <option>機能のリクエスト</option>
+                <option>雑学・内容のまちがい</option>
+                <option>その他</option>
+            </select>
+        </label>
+        <label>お名前（ニックネームでOK・任意）
+            <input type="text" name="name" maxlength="50">
+        </label>
+        <label>メールアドレス（返信がほしいときだけ）
+            <input type="email" name="email" maxlength="200">
+        </label>
+        <label>内容（必須）
+            <textarea name="message" rows="5" maxlength="2000" required></textarea>
+        </label>
+        <button type="submit" id="contact-send">送信する</button>
+        <p id="contact-result" role="status"></p>
+    </form>
+    <p class="privacy-note">このサイトでは、アクセス数を知るためにGoogle アナリティクスを使っています。Cookieを使って匿名の利用データを集めていますが、名前などの個人を特定する情報は集めていません。詳しくは<a href="https://policies.google.com/technologies/partner-sites?hl=ja" target="_blank" rel="noopener">Googleのポリシー</a>をご覧ください。広告やCookieについては<a href="policy.html">プライバシーポリシー</a>をご覧ください。</p>
+</section>
+
+<script>
+document.getElementById("contact-form").addEventListener("submit", async e => {
+    e.preventDefault();
+    const f = e.target, btn = document.getElementById("contact-send"), out = document.getElementById("contact-result");
+    btn.disabled = true; out.textContent = "送信中…"; out.className = "";
+    try {
+        const d = new FormData(f);
+        if (d.get("bot-field")) throw new Error("bot");
+        const text = "【種類】" + d.get("kind") + "\n【お名前】" + (d.get("name") || "") + "\n【メール】" + (d.get("email") || "") + "\n\n" + d.get("message");
+        // Googleフォームに送る（回答はフォームの持ち主のGoogleアカウントで確認できる）
+        await fetch("https://docs.google.com/forms/d/e/1FAIpQLSdxrHCJ04VrhYJIFWWIBCPzDAptXVZ7f425Om_CeCQex5nCVQ/formResponse", {
+            method: "POST", mode: "no-cors",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams({ "entry.1370898497": text }).toString()
+        });
+        f.reset();
+        out.textContent = "送信しました。ありがとうございます！";
+        out.className = "ok";
+    } catch (err) {
+        out.textContent = "送信できませんでした。時間をおいてもう一度お試しください。";
+        out.className = "ng";
+    }
+    btn.disabled = false;
+});
+</script>
+
+<script src="medals.js"></script>
+<script src="bookmark.js"></script>
+<script src="ads.js"></script>
+<script src="site-footer.js"></script>
+<script src="share.js"></script>
+</body>
+</html>

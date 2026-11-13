@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google アナリティクス（アクセス数の計測） -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2S81YX6L53"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2S81YX6L53');
+    </script>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <title>図鑑モード（英語と日本語で読むポケモン図鑑）｜英語を勉強するテイでポケモン図鑑を見れる場所</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ポケモン図鑑の説明文を英語と日本語で読み比べ。種族値のグラフつきで、楽しく英語に触れられます。">
+    <link rel="canonical" href="https://poketango.github.io/zukan.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="英語を勉強するテイでポケモン図鑑を見れる場所">
+    <meta property="og:title" content="図鑑モード（英語と日本語で読むポケモン図鑑）｜英語を勉強するテイでポケモン図鑑を見れる場所">
+    <meta property="og:description" content="ポケモン図鑑の説明文を英語と日本語で読み比べ。種族値のグラフつきで、楽しく英語に触れられます。">
+    <meta property="og:url" content="https://poketango.github.io/zukan.html">
+    <meta property="og:image" content="https://poketango.github.io/ogp.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        #layout {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        #sidebar {
+            width: 200px;
+            padding: 10px;
+            border-right: 1px solid #ccc;
+        }
+
+        #search-box {
+            width: 100%;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        #search-results {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        #search-results li {
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        #search-results li:hover {
+            background-color: #eee;
+        }
+
+        #chart-column {
+            width: 260px;
+        }
+
+        #stats-chart {
+            width: 250px !important;
+            height: 250px !important;
+        }
+
+        #content {
+            flex: 1;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        #poke-img {
+            width: 200px;
+            image-rendering: pixelated;
+            display: block;
+            margin: 0;
+        }
+
+        #desc {
+            max-width: 480px;
+            line-height: 1.4;
+            margin: 10px 0;
+        }
+
+        #desc-ja {
+            max-width: 480px;
+            line-height: 1.5;
+            margin-top: 5px;
+        }
+
+        #change-btn {
+        padding: 10px 20px;
+        font-size: 18px;
+        margin-top: 10px;
+        }
+
+        #site-header {
+        width: 100%;
+        padding: 12px 0;
+        background-color: #f5f5f5;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
+        text-align: center;
+        }
+
+        #site-header h1 {
+            margin: 0;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        #site-header h2{
+            margin:0;
+            font-size:18px;
+            color: #696969;
+            
+        }
+
+
+        /* タイトルを押すとホームへ戻る */
+    .home-link { cursor: pointer; }
+    .home-link:hover { opacity: 0.7; }
+</style>
+    <link rel="stylesheet" href="theme.css">
+</head>
+
+<body>
+
+<header id="site-header">
+    <h1 class="home-link" title="ホームへ戻る" onclick="if (confirm('ホームに戻りますか？')) location.href='index.html';">英語を勉強するテイでポケモン図鑑を見れる場所</h1>
+    <h2>~Pokédex Index~</h2>
+</header>
+
+
+<div id="layout">
+
+    <!-- 左：検索 -->
+    <div id="sidebar">
+        <h3>Search Pokémon</h3>
+        <input type="text" id="search-box" placeholder="Type a name...">
+        <ul id="search-results"></ul>
+    </div>
+
+    <!-- 中央：チャート -->
+    <div id="chart-column">
+        <canvas id="stats-chart" width="260" height="260"></canvas>
+    </div>
+
+    <!-- 右：メイン -->
+    <div id="content">
+    <img id="poke-img" src="">
+    <h2 id="poke-name"></h2>
+
+    <p id="desc"></p>
+    <p id="desc-ja"></p>
+
+    <button onclick="showRandomPokemon()">ポケモンいれかえ</button>
+    <button onclick="showPrevPokemon()">← 前のポケモン</button>
+    <button onclick="showNextPokemon()">次のポケモン →</button>
+</div>
+
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+<script src="medals.js"></script>
+<script src="zukan.js"></script>
+<script src="bookmark.js"></script>
+<script src="speak.js"></script>
+<script src="trivia.js"></script>
+
+<script src="ads.js"></script>
+<script src="site-footer.js"></script>
+<script src="share.js"></script>
+</body>
+</html>

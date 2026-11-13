@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google アナリティクス（アクセス数の計測） -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2S81YX6L53"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2S81YX6L53');
+    </script>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <title>ブックマークと苦手なポケモン｜英語を勉強するテイでポケモン図鑑を見れる場所</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <meta name="description" content="ブックマークしたポケモンの一覧。図鑑で読み直したり、ブックマークしたポケモンだけで練習できます。">
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+<header id="site-header">
+    <h1 class="home-link" title="ホームへ戻る" onclick="location.href='index.html'">英語を勉強するテイでポケモン図鑑を見れる場所</h1>
+    <p class="subtitle">ブックマークと苦手なポケモン</p>
+</header>
+
+<main id="bm-page">
+    <div id="bm-toolbar">
+        <span id="bm-total"></span>
+        <label>並べ方
+            <select id="bm-sort">
+                <option value="new">追加が新しい順</option>
+                <option value="old">追加が古い順</option>
+                <option value="id">図鑑番号順</option>
+                <option value="name">名前順（あいうえお）</option>
+            </select>
+        </label>
+        <input id="bm-filter" type="text" placeholder="名前でしぼりこみ">
+        <button id="bm-practice" type="button">★ このポケモンだけで練習</button>
+    </div>
+
+    <p id="bm-empty" style="display:none">
+        まだブックマークがありません。<br>
+        図鑑モードや練習モードで、ポケモンの画像の下にある「☆ ブックマーク」を押すと、ここに並びます。<br>
+        <a href="zukan.html">図鑑モードへ行く</a>
+    </p>
+
+    <div id="bm-grid"></div>
+
+    <section id="wrong-section">
+        <h2 class="bm-sec-title">✎ 苦手なポケモン</h2>
+        <p class="bm-sec-note">練習モードや実践モードで答えをまちがえて、まだ正解できていないポケモンです。正解するとここから自動で消えます。</p>
+        <div id="wrong-toolbar">
+            <span id="wrong-total"></span>
+            <button id="wrong-practice" type="button">✎ 苦手だけで練習</button>
+        </div>
+        <p id="wrong-empty" style="display:none">いまは苦手なポケモンはいません。すばらしい！</p>
+        <div id="wrong-grid" class="bm-grid-like"></div>
+    </section>
+</main>
+
+<button id="back-btn" onclick="location.href='index.html'">ホームへ戻る</button>
+
+<script src="medals.js"></script>
+<script src="bookmark.js"></script>
+<script>
+let bmJp = {}, bmStats = {};
+
+function hiraToKataBm(str) {
+    return str.replace(/[ぁ-ゖ]/g, ch => String.fromCharCode(ch.charCodeAt(0) + 0x60));
+}
+
+function bmRender() {
+    const grid = document.getElementById("bm-grid");
+    const sort = document.getElementById("bm-sort").value;
+    const raw = document.getElementById("bm-filter").value.trim();
+    const kw = raw.toLowerCase(), kwKana = hiraToKataBm(raw);
+
+    let list = bmLoad();
+    document.getElementById("bm-total").textContent = `${list.length} 匹`;
+    document.getElementById("bm-empty").style.display = list.length ? "none" : "block";
+    document.getElementById("bm-practice").disabled = list.length === 0;
+
+    const jp = n => bmJp[n] || n;
+    const id = n => (bmStats[n] && bmStats[n].id) || 9999;
+
+    if (kw) list = list.filter(x => x.name.includes(kw) || jp(x.name).includes(kwKana));
+
+    if (sort === "new") list.sort((a, b) => b.at - a.at);
+    if (sort === "old") list.sort((a, b) => a.at - b.at);
+    if (sort === "id") list.sort((a, b) => id(a.name) - id(b.name));
+    if (sort === "name") list.sort((a, b) => jp(a.name).localeCompare(jp(b.name), "ja"));
+
+    grid.innerHTML = "";
+    list.forEach(x => {
+        const n = x.name;
+        const card = document.createElement("div");
+        card.className = "bm-card";
+        card.title = "図鑑で開く";
+
+        const img = document.createElement("img");
+        img.src = `pokemon_sprites/${n}.png`;
+        img.alt = jp(n);
+        img.loading = "lazy";
+
+        const no = document.createElement("div");
+        no.className = "bm-no";
+        no.textContent = bmStats[n] ? `No.${String(bmStats[n].id).padStart(4, "0")}` : "";
+
+        const nameJp = document.createElement("div");
+        nameJp.className = "bm-jp";
+        nameJp.textContent = jp(n);
+
+        const nameEn = document.createElement("div");
+        nameEn.className = "bm-en";
+        nameEn.textContent = n;
+
+        const del = document.createElement("button");
+        del.type = "button";
+        del.className = "bm-del";
+        del.textContent = "★ 外す";
+        del.title = "ブックマークから外す";
+        del.addEventListener("click", e => {
+            e.stopPropagation();
+            bmRemove(n);
+            bmToast(`${jp(n)} をブックマークから外しました`);
+            bmRender();
+        });
+
+        card.append(img, no, nameJp, nameEn, del);
+        card.addEventListener("click", () => {
+            location.href = "zukan.html?p=" + encodeURIComponent(n);
+        });
+        grid.appendChild(card);
+    });
+}
+
+function wrongRender() {
+    const list = bmWrongList().sort((a, b) => b.count - a.count);
+    document.getElementById("wrong-total").textContent = `${list.length} 匹`;
+    document.getElementById("wrong-empty").style.display = list.length ? "none" : "block";
+    document.getElementById("wrong-practice").disabled = list.length === 0;
+    const grid = document.getElementById("wrong-grid");
+    grid.innerHTML = "";
+    list.forEach(x => {
+        const n = x.name;
+        const card = document.createElement("div");
+        card.className = "bm-card wrong";
+        card.title = "図鑑で開く";
+        const img = document.createElement("img");
+        img.src = `pokemon_sprites/${n}.png`; img.alt = bmJp[n] || n; img.loading = "lazy";
+        const nameJp = document.createElement("div"); nameJp.className = "bm-jp"; nameJp.textContent = bmJp[n] || n;
+        const nameEn = document.createElement("div"); nameEn.className = "bm-en"; nameEn.textContent = n;
+        const cnt = document.createElement("div"); cnt.className = "bm-miss"; cnt.textContent = `まちがえた回数 ${x.count}`;
+        card.append(img, nameJp, nameEn, cnt);
+        card.addEventListener("click", () => { location.href = "zukan.html?p=" + encodeURIComponent(n); });
+        grid.appendChild(card);
+    });
+}
+
+async function bmStart() {
+    try {
+        bmJp = await fetch("pokemon_names_jp.json").then(r => r.json());
+        bmStats = await fetch("pokedex_stats.json").then(r => r.json());
+    } catch (e) {}
+    bmRender();
+    wrongRender();
+}
+
+document.getElementById("bm-sort").addEventListener("change", bmRender);
+document.getElementById("bm-filter").addEventListener("input", bmRender);
+document.getElementById("bm-practice").addEventListener("click", () => {
+    location.href = "practice.html?bm=1";
+});
+document.getElementById("wrong-practice").addEventListener("click", () => {
+    location.href = "practice.html?bm=wrong";
+});
+bmStart();
+</script>
+<script src="ads.js"></script>
+<script src="site-footer.js"></script>
+</body>
+</html>

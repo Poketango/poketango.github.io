@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google アナリティクス（アクセス数の計測） -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2S81YX6L53"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2S81YX6L53');
+    </script>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <title>実践モード（何問連続で正解できるか挑戦）｜英語を勉強するテイでポケモン図鑑を見れる場所</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ポケモン図鑑の英単語クイズで、何問連続で正解できるか挑戦。記録はシェアして友だちと競えます。">
+    <link rel="canonical" href="https://poketango.github.io/jissen.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="英語を勉強するテイでポケモン図鑑を見れる場所">
+    <meta property="og:title" content="実践モード（何問連続で正解できるか挑戦）｜英語を勉強するテイでポケモン図鑑を見れる場所">
+    <meta property="og:description" content="ポケモン図鑑の英単語クイズで、何問連続で正解できるか挑戦。記録はシェアして友だちと競えます。">
+    <meta property="og:url" content="https://poketango.github.io/jissen.html">
+    <meta property="og:image" content="https://poketango.github.io/ogp.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- ★ CSS をここに内包する -->
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #fafafa;
+        }
+
+        #site-header {
+        width: 100%;
+        padding: 12px 0;
+        background-color: #f5f5f5;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
+        text-align: center;
+        }
+
+        #site-header h1 {
+            margin: 0;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        
+
+        /* 実践モードレイアウト */
+        #main {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #poke-img {
+            width: 200px;
+            height: auto;
+            margin: 20px auto;
+            display: block;
+        }
+
+        #desc {
+            font-size: 20px;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        #desc-ja {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        #answer-input {
+            width: 60%;
+            padding: 10px;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        #check-answer-btn {
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+
+        #combo, #best {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        #gameover-box {
+    display: none;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+#fail-flex {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+#fail-left img {
+    width: 180px;
+    border-radius: 10px;
+}
+
+#fail-right {
+    flex: 1;
+}
+
+#fail-desc-en {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#fail-desc-ja {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+#fail-info p {
+    margin: 4px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.tweet-button {
+    display: block;
+    width: 260px;
+    margin: 20px auto;
+    padding: 14px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: #000; /* ★ 黒 */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.tweet-button:hover {
+    background: #222; /* 少し明るい黒 */
+}
+
+
+        /* タイトルを押すとホームへ戻る */
+    .home-link { cursor: pointer; }
+    .home-link:hover { opacity: 0.7; }
+</style>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+<header id="site-header">
+    <h1 class="home-link" title="ホームへ戻る" onclick="if (confirm('ホームに戻りますか？')) location.href='index.html';">英語を勉強するテイでポケモン図鑑を見れる場所</h1>
+    <p class="subtitle">実践モード：何問連続で正解できるか挑戦！</p>
+</header>
+
+<div id="main">
+    <div id="question-box">
+        <img id="poke-img" src="" alt="pokemon image">
+        <p id="desc"></p>
+
+        <div class="answer-row">
+            <input id="answer-input" placeholder="答えを入力してEnter" autocomplete="off" autocapitalize="off" spellcheck="false">
+            <button id="check-answer-btn">答え合わせ</button>
+        </div>
+
+        <p id="desc-ja"></p>
+
+        <p id="judge"></p>
+        <p id="combo">現在の連続正解数：0</p>
+        <p id="best">最高記録：0</p>
+    </div>
+</div>
+
+<!-- ★ main の外に移動する！ -->
+<div id="gameover-box" style="display:none; padding:30px; max-width:900px; margin:0 auto;">
+
+    <div id="fail-flex" style="display:flex; gap:20px; align-items:flex-start;">
+
+        <!-- 左：画像 -->
+        <div id="fail-left" style="width:180px; text-align:center;">
+            <img id="fail-poke-img" src="" style="width:180px; border-radius:10px;">
+        </div>
+
+        <!-- 右：説明 + 不正解情報 -->
+        <div id="fail-right" style="flex:1;">
+
+            <!-- 英語説明 -->
+            <p id="fail-desc-en" style="font-size:14px; margin-bottom:10px;"></p>
+
+            <!-- 日本語説明 -->
+            <p id="fail-desc-ja" style="font-size:14px; margin-bottom:15px;"></p>
+
+            <!-- 不正解情報 -->
+            <p id="fail-title" style="font-size:28px; font-weight:bold; color:#d9534f; margin:5px 0;"></p>
+            <p id="fail-answer" style="font-size:22px; font-weight:bold; margin:5px 0;"></p>
+            <p id="fail-combo" style="font-size:20px; margin:5px 0;"></p>
+
+            <p id="final-score" style="font-size:18px; margin:5px 0;"></p>
+            <p id="best-score" style="font-size:18px; margin:10px 0 20px;"></p>
+
+        </div>
+
+    </div>
+
+    <!-- ボタン類 -->
+    <div style="text-align:center; margin-top:20px;">
+        <button id="retry-btn" style="padding:12px 25px; font-size:18px; margin:10px;">もう一度挑戦する</button>
+        <button id="home-btn" onclick="location.href='index.html'" style="padding:12px 25px; font-size:18px; margin:10px;">ホームへ戻る</button>
+        <button id="tweet-btn" class="tweet-button">Xで記録をポスト</button>
+    </div>
+
+</div>
+
+
+<div id="achievement-popup" style="display:none;"></div>
+
+
+    
+</div>
+
+<script src="medals.js"></script>
+<script src="script_jissen.js"></script>
+
+<div id="achievement-popup" style="
+    display:none;
+    position:fixed;
+    top:20px;
+    right:20px;
+    background:gold;
+    padding:10px 16px;
+    border-radius:10px;
+    font-weight:bold;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+"></div>
+
+
+<script src="bookmark.js"></script>
+<script src="speak.js"></script>
+<script src="quiz-ux.js"></script>
+<script src="ads.js"></script>
+<script src="site-footer.js"></script>
+<script src="share.js"></script>
+</body>
+</html>
+

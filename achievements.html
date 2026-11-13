@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google アナリティクス（アクセス数の計測） -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2S81YX6L53"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2S81YX6L53');
+    </script>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <title>実績・称号一覧｜英語を勉強するテイでポケモン図鑑を見れる場所</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="地方ごとのメダルと、ポケモン雑学つきの称号133種類。集めた称号と進捗をここで確認できます。">
+    <link rel="canonical" href="https://poketango.github.io/achievements.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="英語を勉強するテイでポケモン図鑑を見れる場所">
+    <meta property="og:title" content="実績・称号一覧｜英語を勉強するテイでポケモン図鑑を見れる場所">
+    <meta property="og:description" content="地方ごとのメダルと、ポケモン雑学つきの称号133種類。集めた称号と進捗をここで確認できます。">
+    <meta property="og:url" content="https://poketango.github.io/achievements.html">
+    <meta property="og:image" content="https://poketango.github.io/ogp.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #fafafa;
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-bottom: 2px solid #ddd;
+        }
+
+        #header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        /* ▼▼ 進捗カード（3列） ▼▼ */
+        #progress-box {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .progress-item {
+            background: white;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .progress-item p {
+            margin: 6px 0;
+            font-size: 14px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 6px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: gold;
+            width: 0%;
+            transition: width 0.5s;
+        }
+
+        /* ▼▼ 実績一覧 ▼▼ */
+        #achievement-list {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .achievement {
+            background: white;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border-left: 8px solid #ccc;
+            font-size: 18px;
+        }
+
+        /* ▼ 達成済み実績（色 + ホバー説明） ▼ */
+        .achievement.unlocked {
+            border-left-color: gold;
+            background: #fff8d1;
+            font-weight: bold;
+            position: relative; /* ★ ホバー説明に必須 */
+        }
+
+        .achievement.unlocked:hover::after {
+            content: attr(data-desc);
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            background: #333;
+            color: white;
+            padding: 8px 10px;
+            border-radius: 6px;
+            font-size: 14px;
+            margin-top: 6px;
+            z-index: 10;
+            opacity: 0.95;
+        }
+
+        #back-btn {
+            display: block;
+            margin: 40px auto;
+            padding: 12px 25px;
+            font-size: 18px;
+        }
+        /* ▼▼ メダル ▼▼ */
+        #medal-summary {
+            max-width: 960px;
+            margin: 0 auto 20px;
+            padding: 18px 22px;
+            box-sizing: border-box;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 18px rgba(31, 41, 51, 0.08);
+        }
+
+        .summary-counts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            font-weight: 700;
+            font-size: 17px;
+        }
+
+        .summary-counts .pill {
+            padding: 4px 12px;
+            border-radius: 999px;
+            background: #f2f4f8;
+        }
+
+        .title-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .title-chip {
+            padding: 5px 12px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 700;
+            border: 2px solid;
+        }
+
+        .title-chip.bronze { color: #8a4b1c; border-color: #cd7f32; background: #fbefe4; }
+        .title-chip.silver { color: #4b5563; border-color: #a8b0bb; background: #f1f3f6; }
+        .title-chip.gold   { color: #8a6a00; border-color: #e6b800; background: #fff6cc; }
+
+        .title-rows {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 14px;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .title-row .title-chip {
+            flex-shrink: 0;
+            min-width: 220px;
+        }
+
+        .overall-progress { margin-bottom: 14px; }
+        .overall-head { display: flex; justify-content: space-between; font-weight: 700; margin-bottom: 6px; }
+        .overall-sub { font-size: 0.8em; color: #777; margin-top: 4px; }
+        .title-src {
+            margin-left: 8px;
+            font-size: 0.8em;
+            color: #c0392b;
+            white-space: nowrap;
+        }
+        .title-src::after { content: " ↗"; }
+        .title-msg {
+            font-size: 13px;
+            color: #5f6b7a;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 700px) {
+            .title-row { flex-direction: column; align-items: flex-start; gap: 4px; }
+        }
+
+        .empty-note {
+            color: #8a94a3;
+            font-size: 14px;
+            margin: 10px 0 0;
+        }
+
+        #medal-board {
+            max-width: 960px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+            gap: 18px;
+        }
+
+        .region-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 18px rgba(31, 41, 51, 0.08);
+            padding: 16px 18px;
+        }
+
+        .region-card h3 {
+            margin: 0 0 10px;
+            font-size: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .region-card h3 small {
+            font-size: 13px;
+            color: #8a94a3;
+            font-weight: 600;
+        }
+
+        .medal-row {
+            margin: 10px 0;
+        }
+
+        .medal-row-head {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .medal-row-head span:last-child {
+            color: #5f6b7a;
+            font-weight: 600;
+        }
+
+        .medal-slots {
+            display: flex;
+            gap: 8px;
+            margin-top: 6px;
+        }
+
+        .medal {
+            flex: 1;
+            text-align: center;
+            padding: 6px 4px;
+            border-radius: 10px;
+            font-size: 12px;
+            line-height: 1.3;
+            background: #f2f4f8;
+            color: #a0a8b4;
+            border: 2px dashed #d9dee6;
+            position: relative;
+            cursor: default;
+        }
+
+        .medal .m-icon {
+            display: block;
+            font-size: 22px;
+            filter: grayscale(1);
+            opacity: 0.35;
+        }
+
+        .medal.got { border-style: solid; color: #1f2933; font-weight: 700; }
+        .medal.got .m-icon { filter: none; opacity: 1; }
+        .medal.got.bronze { background: #fbefe4; border-color: #cd7f32; }
+        .medal.got.silver { background: #f1f3f6; border-color: #a8b0bb; }
+        .medal.got.gold   { background: #fff6cc; border-color: #e6b800; }
+
+        /* 称号はホバーで表示 */
+        .medal:hover::after {
+            content: attr(data-tip);
+            position: absolute;
+            left: 50%;
+            bottom: 100%;
+            transform: translateX(-50%);
+            margin-bottom: 6px;
+            white-space: nowrap;
+            background: #1f2933;
+            color: white;
+            padding: 6px 10px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            z-index: 10;
+        }
+
+        #progress-box {
+            grid-template-columns: 1fr !important;
+            max-width: 960px !important;
+            margin-top: 18px !important;
+        }
+        /* ▼▼ 実績カード ▼▼ */
+        .ach-head {
+            font-size: 20px;
+            margin: 0 0 14px;
+        }
+
+        .ach-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ach-icon {
+            font-size: 22px;
+        }
+
+        .ach-trivia {
+            margin: 6px 0 0;
+            font-size: 0.8em;
+            line-height: 1.6;
+            color: #555;
+            font-weight: normal;
+            text-align: left;
+        }
+        .ach-tag {
+            margin-left: 6px;
+            font-size: 0.75em;
+            opacity: 0.7;
+        }
+        .ach-secret {
+            font-size: 14px;
+            color: #555;
+            margin: 8px 0 0;
+            font-weight: normal;
+        }
+
+        .achievement:not(.unlocked) {
+            color: #9aa3af;
+            background: #f7f8fa !important;
+        }
+
+        .ach-hint {
+            font-size: 13px;
+            margin: 6px 0 0;
+        }
+
+        #achievement-list {
+            max-width: 960px !important;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+            gap: 14px;
+            align-items: start;
+        }
+
+        #achievement-list .ach-head {
+            grid-column: 1 / -1;
+        }
+
+        .ach-medals {
+            font-size: 15px;
+            font-weight: 700;
+            margin-left: 16px;
+            color: #5f6b7a;
+        }
+
+        .ach-medal {
+            margin-left: auto;
+            font-size: 24px;
+        }
+
+        .achievement.unlocked.bronze {
+            border-left-color: #cd7f32 !important;
+            background: linear-gradient(90deg, #fbefe4, #ffffff) !important;
+        }
+
+        .achievement.unlocked.silver {
+            border-left-color: #a8b0bb !important;
+            background: linear-gradient(90deg, #eef1f5, #ffffff) !important;
+        }
+
+        .achievement.unlocked.gold {
+            border-left-color: #e6b800 !important;
+            background: linear-gradient(90deg, #fff3b8, #ffffff) !important;
+        }
+
+        #achievement-list .achievement {
+            margin-bottom: 0 !important;
+        }
+    </style>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+<div id="header">
+    <h1>実績一覧</h1>
+</div>
+
+<!-- ▼▼ メダルのまとめ ▼▼ -->
+<div id="medal-summary"></div>
+
+<!-- ▼▼ 地方ごとのメダル ▼▼ -->
+<div id="medal-board"></div>
+
+<!-- ▼▼ 連続正解 ▼▼ -->
+<div id="progress-box">
+    <div class="progress-item">
+        <p>連続正解（最高記録）</p>
+        <div class="progress-bar">
+            <div id="combo-progress" class="progress-fill"></div>
+        </div>
+        <p id="combo-count"></p>
+    </div>
+</div>
+
+<!-- ▼▼ 実績一覧 ▼▼ -->
+<div id="achievement-list"></div>
+
+<button id="back-btn" onclick="location.href='index.html'">ホームへ戻る</button>
+
+<script src="medals.js"></script>
+<script src="achievements.js"></script>
+
+<script src="ads.js"></script>
+<script src="site-footer.js"></script>
+<script src="share.js"></script>
+</body>
+</html>

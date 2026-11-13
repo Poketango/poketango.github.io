@@ -1,0 +1,9227 @@
+{
+  "bulbasaur": {
+    "id": "001",
+    "hp": 45,
+    "attack": 49,
+    "defense": 49,
+    "special-attack": 65,
+    "special-defense": 65,
+    "speed": 45
+  },
+  "ivysaur": {
+    "id": "002",
+    "hp": 60,
+    "attack": 62,
+    "defense": 63,
+    "special-attack": 80,
+    "special-defense": 80,
+    "speed": 60
+  },
+  "venusaur": {
+    "id": "003",
+    "hp": 80,
+    "attack": 82,
+    "defense": 83,
+    "special-attack": 100,
+    "special-defense": 100,
+    "speed": 80
+  },
+  "charmander": {
+    "id": "004",
+    "hp": 39,
+    "attack": 52,
+    "defense": 43,
+    "special-attack": 60,
+    "special-defense": 50,
+    "speed": 65
+  },
+  "charmeleon": {
+    "id": "005",
+    "hp": 58,
+    "attack": 64,
+    "defense": 58,
+    "special-attack": 80,
+    "special-defense": 65,
+    "speed": 80
+  },
+  "charizard": {
+    "id": "006",
+    "hp": 78,
+    "attack": 84,
+    "defense": 78,
+    "special-attack": 109,
+    "special-defense": 85,
+    "speed": 100
+  },
+  "squirtle": {
+    "id": "007",
+    "hp": 44,
+    "attack": 48,
+    "defense": 65,
+    "special-attack": 50,
+    "special-defense": 64,
+    "speed": 43
+  },
+  "wartortle": {
+    "id": "008",
+    "hp": 59,
+    "attack": 63,
+    "defense": 80,
+    "special-attack": 65,
+    "special-defense": 80,
+    "speed": 58
+  },
+  "blastoise": {
+    "id": "009",
+    "hp": 79,
+    "attack": 83,
+    "defense": 100,
+    "special-attack": 85,
+    "special-defense": 105,
+    "speed": 78
+  },
+  "caterpie": {
+    "id": "010",
+    "hp": 45,
+    "attack": 30,
+    "defense": 35,
+    "special-attack": 20,
+    "special-defense": 20,
+    "speed": 45
+  },
+  "metapod": {
+    "id": "011",
+    "hp": 50,
+    "attack": 20,
+    "defense": 55,
+    "special-attack": 25,
+    "special-defense": 25,
+    "speed": 30
+  },
+  "butterfree": {
+    "id": "012",
+    "hp": 60,
+    "attack": 45,
+    "defense": 50,
+    "special-attack": 90,
+    "special-defense": 80,
+    "speed": 70
+  },
+  "weedle": {
+    "id": "013",
+    "hp": 40,
+    "attack": 35,
+    "defense": 30,
+    "special-attack": 20,
+    "special-defense": 20,
+    "speed": 50
+  },
+  "kakuna": {
+    "id": "014",
+    "hp": 45,
+    "attack": 25,
+    "defense": 50,
+    "special-attack": 25,
+    "special-defense": 25,
+    "speed": 35
+  },
+  "beedrill": {
+    "id": "015",
+    "hp": 65,
+    "attack": 90,
+    "defense": 40,
+    "special-attack": 45,
+    "special-defense": 80,
+    "speed": 75
+  },
+  "pidgey": {
+    "id": "016",
+    "hp": 40,
+    "attack": 45,
+    "defense": 40,
+    "special-attack": 35,
+    "special-defense": 35,
+    "speed": 56
+  },
+  "pidgeotto": {
+    "id": "017",
+    "hp": 63,
+    "attack": 60,
+    "defense": 55,
+    "special-attack": 50,
+    "special-defense": 50,
+    "speed": 71
+  },
+  "pidgeot": {
+    "id": "018",
+    "hp": 83,
+    "attack": 80,
+    "defense": 75,
+    "special-attack": 70,
+    "special-defense": 70,
+    "speed": 101
+  },
+  "rattata": {
+    "id": "019",
+    "hp": 30,
+    "attack": 56,
+    "defense": 35,
+    "special-attack": 25,
+    "special-defense": 35,
+    "speed": 72
+  },
+  "raticate": {
+    "id": "020",
+    "hp": 55,
+    "attack": 81,
+    "defense": 60,
+    "special-attack": 50,
+    "special-defense": 70,
+    "speed": 97
+  },
+  "spearow": {
+    "id": "021",
+    "hp": 40,
+    "attack": 60,
+    "defense": 30,
+    "special-attack": 31,
+    "special-defense": 31,
+    "speed": 70
+  },
+  "fearow": {
+    "id": "022",
+    "hp": 65,
+    "attack": 90,
+    "defense": 65,
+    "special-attack": 61,
+    "special-defense": 61,
+    "speed": 100
+  },
+  "ekans": {
+    "id": "023",
+    "hp": 35,
+    "attack": 60,
+    "defense": 44,
+    "special-attack": 40,
+    "special-defense": 54,
+    "speed": 55
+  },
+  "arbok": {
+    "id": "024",
+    "hp": 60,
+    "attack": 95,
+    "defense": 69,
+    "special-attack": 65,
+    "special-defense": 79,
+    "speed": 80
+  },
+  "pikachu": {
+    "id": "025",
+    "hp": 35,
+    "attack": 55,
+    "defense": 40,
+    "special-attack": 50,
+    "special-defense": 50,
+    "speed": 90
+  },
+  "raichu": {
+    "id": "026",
+    "hp": 60,
+    "attack": 90,
+    "defense": 55,
+    "special-attack": 90,
+    "special-defense": 80,
+    "speed": 110
+  },
+  "sandshrew": {
+    "id": "027",
+    "hp": 50,
+    "attack": 75,
+    "defense": 85,
+    "special-attack": 20,
+    "special-defense": 30,
+    "speed": 40
+  },
+  "sandslash": {
+    "id": "028",
+    "hp": 75,
+    "attack": 100,
+    "defense": 110,
+    "special-attack": 45,
+    "special-defense": 55,
+    "speed": 65
+  },
+  "nidoranf": {
+    "id": "029",
+    "hp": 55,
+    "attack": 47,
+    "defense": 52,
+    "special-attack": 40,
+    "special-defense": 40,
+    "speed": 41
+  },
+  "nidorina": {
+    "id": "030",
+    "hp": 70,
+    "attack": 62,
+    "defense": 67,
+    "special-attack": 55,
+    "special-defense": 55,
+    "speed": 56
+  },
+  "nidoqueen": {
+    "id": "031",
+    "hp": 90,
+    "attack": 92,
+    "defense": 87,
+    "special-attack": 75,
+    "special-defense": 85,
+    "speed": 76
+  },
+  "nidoranm": {
+    "id": "032",
+    "hp": 46,
+    "attack": 57,
+    "defense": 40,
+    "special-attack": 40,
+    "special-defense": 40,
+    "speed": 50
+  },
+  "nidorino": {
+    "id": "033",
+    "hp": 61,
+    "attack": 72,
+    "defense": 57,
+    "special-attack": 55,
+    "special-defense": 55,
+    "speed": 65
+  },
+  "nidoking": {
+    "id": "034",
+    "hp": 81,
+    "attack": 102,
+    "defense": 77,
+    "special-attack": 85,
+    "special-defense": 75,
+    "speed": 85
+  },
+  "clefairy": {
+    "id": "035",
+    "hp": 70,
+    "attack": 45,
+    "defense": 48,
+    "special-attack": 60,
+    "special-defense": 65,
+    "speed": 35
+  },
+  "clefable": {
+    "id": "036",
+    "hp": 95,
+    "attack": 70,
+    "defense": 73,
+    "special-attack": 95,
+    "special-defense": 90,
+    "speed": 60
+  },
+  "vulpix": {
+    "id": "037",
+    "hp": 38,
+    "attack": 41,
+    "defense": 40,
+    "special-attack": 50,
+    "special-defense": 65,
+    "speed": 65
+  },
+  "ninetales": {
+    "id": "038",
+    "hp": 73,
+    "attack": 76,
+    "defense": 75,
+    "special-attack": 81,
+    "special-defense": 100,
+    "speed": 100
+  },
+  "jigglypuff": {
+    "id": "039",
+    "hp": 115,
+    "attack": 45,
+    "defense": 20,
+    "special-attack": 45,
+    "special-defense": 25,
+    "speed": 20
+  },
+  "wigglytuff": {
+    "id": "040",
+    "hp": 140,
+    "attack": 70,
+    "defense": 45,
+    "special-attack": 85,
+    "special-defense": 50,
+    "speed": 45
+  },
+  "zubat": {
+    "id": "041",
+    "hp": 40,
+    "attack": 45,
+    "defense": 35,
+    "special-attack": 30,
+    "special-defense": 40,
+    "speed": 55
+  },
+  "golbat": {
+    "id": "042",
+    "hp": 75,
+    "attack": 80,
+    "defense": 70,
+    "special-attack": 65,
+    "special-defense": 75,
+    "speed": 90
+  },
+  "oddish": {
+    "id": "043",
+    "hp": 45,
+    "attack": 50,
+    "defense": 55,
+    "special-attack": 75,
+    "special-defense": 65,
+    "speed": 30
+  },
+  "gloom": {
+    "id": "044",
+    "hp": 60,
+    "attack": 65,
+    "defense": 70,
+    "special-attack": 85,
+    "special-defense": 75,
+    "speed": 40
+  },
+  "vileplume": {
+    "id": "045",
+    "hp": 75,
+    "attack": 80,
+    "defense": 85,
+    "special-attack": 110,
+    "special-defense": 90,
+    "speed": 50
+  },
+  "paras": {
+    "id": "046",
+    "hp": 35,
+    "attack": 70,
+    "defense": 55,
+    "special-attack": 45,
+    "special-defense": 55,
+    "speed": 25
+  },
+  "parasect": {
+    "id": "047",
+    "hp": 60,
+    "attack": 95,
+    "defense": 80,
+    "special-attack": 60,
+    "special-defense": 80,
+    "speed": 30
+  },
+  "venonat": {
+    "id": "048",
+    "hp": 60,
+    "attack": 55,
+    "defense": 50,
+    "special-attack": 40,
+    "special-defense": 55,
+    "speed": 45
+  },
+  "venomoth": {
+    "id": "049",
+    "hp": 70,
+    "attack": 65,
+    "defense": 60,
+    "special-attack": 90,
+    "special-defense": 75,
+    "speed": 90
+  },
+  "diglett": {
+    "id": "050",
+    "hp": 10,
+    "attack": 55,
+    "defense": 25,
+    "special-attack": 35,
+    "special-defense": 45,
+    "speed": 95
+  },
+  "dugtrio": {
+    "id": "051",
+    "hp": 35,
+    "attack": 100,
+    "defense": 50,
+    "special-attack": 50,
+    "special-defense": 70,
+    "speed": 120
+  },
+  "meowth": {
+    "id": "052",
+    "hp": 40,
+    "attack": 45,
+    "defense": 35,
+    "special-attack": 40,
+    "special-defense": 40,
+    "speed": 90
+  },
+  "persian": {
+    "id": "053",
+    "hp": 65,
+    "attack": 70,
+    "defense": 60,
+    "special-attack": 65,
+    "special-defense": 65,
+    "speed": 115
+  },
+  "psyduck": {
+    "id": "054",
+    "hp": 50,
+    "attack": 52,
+    "defense": 48,
+    "special-attack": 65,
+    "special-defense": 50,
+    "speed": 55
+  },
+  "golduck": {
+    "id": "055",
+    "hp": 80,
+    "attack": 82,
+    "defense": 78,
+    "special-attack": 95,
+    "special-defense": 80,
+    "speed": 85
+  },
+  "mankey": {
+    "id": "056",
+    "hp": 40,
+    "attack": 80,
+    "defense": 35,
+    "special-attack": 35,
+    "special-defense": 45,
+    "speed": 70
+  },
+  "primeape": {
+    "id": "057",
+    "hp": 65,
+    "attack": 105,
+    "defense": 60,
+    "special-attack": 60,
+    "special-defense": 70,
+    "speed": 95
+  },
+  "growlithe": {
+    "id": "058",
+    "hp": 55,
+    "attack": 70,
+    "defense": 45,
+    "special-attack": 70,
+    "special-defense": 50,
+    "speed": 60
+  },
+  "arcanine": {
+    "id": "059",
+    "hp": 90,
+    "attack": 110,
+    "defense": 80,
+    "special-attack": 100,
+    "special-defense": 80,
+    "speed": 95
+  },
+  "poliwag": {
+    "id": "060",
+    "hp": 40,
+    "attack": 50,
+    "defense": 40,
+    "special-attack": 40,
+    "special-defense": 40,
+    "speed": 90
+  },
+  "poliwhirl": {
+    "id": "061",
+    "hp": 65,
+    "attack": 65,
+    "defense": 65,
+    "special-attack": 50,
+    "special-defense": 50,
+    "speed": 90
+  },
+  "poliwrath": {
+    "id": "062",
+    "hp": 90,
+    "attack": 95,
+    "defense": 95,
+    "special-attack": 70,
+    "special-defense": 90,
+    "speed": 70
+  },
+  "abra": {
+    "id": "063",
+    "hp": 25,
+    "attack": 20,
+    "defense": 15,
+    "special-attack": 105,
+    "special-defense": 55,
+    "speed": 90
+  },
+  "kadabra": {
+    "id": "064",
+    "hp": 40,
+    "attack": 35,
+    "defense": 30,
+    "special-attack": 120,
+    "special-defense": 70,
+    "speed": 105
+  },
+  "alakazam": {
+    "id": "065",
+    "hp": 55,
+    "attack": 50,
+    "defense": 45,
+    "special-attack": 135,
+    "special-defense": 95,
+    "speed": 120
+  },
+  "machop": {
+    "id": "066",
+    "hp": 70,
+    "attack": 80,
+    "defense": 50,
+    "special-attack": 35,
+    "special-defense": 35,
+    "speed": 35
+  },
+  "machoke": {
+    "id": "067",
+    "hp": 80,
+    "attack": 100,
+    "defense": 70,
+    "special-attack": 50,
+    "special-defense": 60,
+    "speed": 45
+  },
+  "machamp": {
+    "id": "068",
+    "hp": 90,
+    "attack": 130,
+    "defense": 80,
+    "special-attack": 65,
+    "special-defense": 85,
+    "speed": 55
+  },
+  "bellsprout": {
+    "id": "069",
+    "hp": 50,
+    "attack": 75,
+    "defense": 35,
+    "special-attack": 70,
+    "special-defense": 30,
+    "speed": 40
+  },
+  "weepinbell": {
+    "id": "070",
+    "hp": 65,
+    "attack": 90,
+    "defense": 50,
+    "special-attack": 85,
+    "special-defense": 45,
+    "speed": 55
+  },
+  "victreebel": {
+    "id": "071",
+    "hp": 80,
+    "attack": 105,
+    "defense": 65,
+    "special-attack": 100,
+    "special-defense": 70,
+    "speed": 70
+  },
+  "tentacool": {
+    "id": "072",
+    "hp": 40,
+    "attack": 40,
+    "defense": 35,
+    "special-attack": 50,
+    "special-defense": 100,
+    "speed": 70
+  },
+  "tentacruel": {
+    "id": "073",
+    "hp": 80,
+    "attack": 70,
+    "defense": 65,
+    "special-attack": 80,
+    "special-defense": 120,
+    "speed": 100
+  },
+  "geodude": {
+    "id": "074",
+    "hp": 40,
+    "attack": 80,
+    "defense": 100,
+    "special-attack": 30,
+    "special-defense": 30,
+    "speed": 20
+  },
+  "graveler": {
+    "id": "075",
+    "hp": 55,
+    "attack": 95,
+    "defense": 115,
+    "special-attack": 45,
+    "special-defense": 45,
+    "speed": 35
+  },
+  "golem": {
+    "id": "076",
+    "hp": 80,
+    "attack": 120,
+    "defense": 130,
+    "special-attack": 55,
+    "special-defense": 65,
+    "speed": 45
+  },
+  "ponyta": {
+    "id": "077",
+    "hp": 50,
+    "attack": 85,
+    "defense": 55,
+    "special-attack": 65,
+    "special-defense": 65,
+    "speed": 90
+  },
+  "rapidash": {
+    "id": "078",
+    "hp": 65,
+    "attack": 100,
+    "defense": 70,
+    "special-attack": 80,
+    "special-defense": 80,
+    "speed": 105
+  },
+  "slowpoke": {
+    "id": "079",
+    "hp": 90,
+    "attack": 65,
+    "defense": 65,
+    "special-attack": 40,
+    "special-defense": 40,
+    "speed": 15
+  },
+  "slowbro": {
+    "id": "080",
+    "hp": 95,
+    "attack": 75,
+    "defense": 110,
+    "special-attack": 100,
+    "special-defense": 80,
+    "speed": 30
+  },
+  "magnemite": {
+    "id": "081",
+    "hp": 25,
+    "attack": 35,
+    "defense": 70,
+    "special-attack": 95,
+    "special-defense": 55,
+    "speed": 45
+  },
+  "magneton": {
+    "id": "082",
+    "hp": 50,
+    "attack": 60,
+    "defense": 95,
+    "special-attack": 120,
+    "special-defense": 70,
+    "speed": 70
+  },
+  "farfetchd": {
+    "id": "083",
+    "hp": 52,
+    "attack": 90,
+    "defense": 55,
+    "special-attack": 58,
+    "special-defense": 62,
+    "speed": 60
+  },
+  "doduo": {
+    "id": "084",
+    "hp": 35,
+    "attack": 85,
+    "defense": 45,
+    "special-attack": 35,
+    "special-defense": 35,
+    "speed": 75
+  },
+  "dodrio": {
+    "id": "085",
+    "hp": 60,
+    "attack": 110,
+    "defense": 70,
+    "special-attack": 60,
+    "special-defense": 60,
+    "speed": 110
+  },
+  "seel": {
+    "id": "086",
+    "hp": 65,
+    "attack": 45,
+    "defense": 55,
+    "special-attack": 45,
+    "special-defense": 70,
+    "speed": 45
+  },
+  "dewgong": {
+    "id": "087",
+    "hp": 90,
+    "attack": 70,
+    "defense": 80,
+    "special-attack": 70,
+    "special-defense": 95,
+    "speed": 70
+  },
+  "grimer": {
+    "id": "088",
+    "hp": 80,
+    "attack": 80,
+    "defense": 50,
+    "special-attack": 40,
+    "special-defense": 50,
+    "speed": 25
+  },
+  "muk": {
+    "id": "089",
+    "hp": 105,
+    "attack": 105,
+    "defense": 75,
+    "special-attack": 65,
+    "special-defense": 100,
+    "speed": 50
+  },
+  "shellder": {
+    "id": "090",
+    "hp": 30,
+    "attack": 65,
+    "defense": 100,
+    "special-attack": 45,
+    "special-defense": 25,
+    "speed": 40
+  },
+  "cloyster": {
+    "id": "091",
+    "hp": 50,
+    "attack": 95,
+    "defense": 180,
+    "special-attack": 85,
+    "special-defense": 45,
+    "speed": 70
+  },
+  "gastly": {
+    "id": "092",
+    "hp": 30,
+    "attack": 35,
+    "defense": 30,
+    "special-attack": 100,
+    "special-defense": 35,
+    "speed": 80
+  },
+  "haunter": {
+    "id": "093",
+    "hp": 45,
+    "attack": 50,
+    "defense": 45,
+    "special-attack": 115,
+    "special-defense": 55,
+    "speed": 95
+  },
+  "gengar": {
+    "id": "094",
+    "hp": 60,
+    "attack": 65,
+    "defense": 60,
+    "special-attack": 130,
+    "special-defense": 75,
+    "speed": 110
+  },
+  "onix": {
+    "id": "095",
+    "hp": 35,
+    "attack": 45,
+    "defense": 160,
+    "special-attack": 30,
+    "special-defense": 45,
+    "speed": 70
+  },
+  "drowzee": {
+    "id": "096",
+    "hp": 60,
+    "attack": 48,
+    "defense": 45,
+    "special-attack": 43,
+    "special-defense": 90,
+    "speed": 42
+  },
+  "hypno": {
+    "id": "097",
+    "hp": 85,
+    "attack": 73,
+    "defense": 70,
+    "special-attack": 73,
+    "special-defense": 115,
+    "speed": 67
+  },
+  "krabby": {
+    "id": "098",
+    "hp": 30,
+    "attack": 105,
+    "defense": 90,
+    "special-attack": 25,
+    "special-defense": 25,
+    "speed": 50
+  },
+  "kingler": {
+    "id": "099",
+    "hp": 55,
+    "attack": 130,
+    "defense": 115,
+    "special-attack": 50,
+    "special-defense": 50,
+    "speed": 75
+  },
+  "voltorb": {
+    "id": "100",
+    "hp": 40,
+    "attack": 30,
+    "defense": 50,
+    "special-attack": 55,
+    "special-defense": 55,
+    "speed": 100
+  },
+  "electrode": {
+    "id": "101",
+    "hp": 60,
+    "attack": 50,
+    "defense": 70,
+    "special-attack": 80,
+    "special-defense": 80,
+    "speed": 150
+  },
+  "exeggcute": {
+    "id": "102",
+    "hp": 60,
+    "attack": 40,
+    "defense": 80,
+    "special-attack": 60,
+    "special-defense": 45,
+    "speed": 40
+  },
+  "exeggutor": {
+    "id": "103",
+    "hp": 95,
+    "attack": 95,
+    "defense": 85,
+    "special-attack": 125,
+    "special-defense": 75,
+    "speed": 55
+  },
+  "cubone": {
+    "id": "104",
+    "hp": 50,
+    "attack": 50,
+    "defense": 95,
+    "special-attack": 40,
+    "special-defense": 50,
+    "speed": 35
+  },
+  "marowak": {
+    "id": "105",
+    "hp": 60,
+    "attack": 80,
+    "defense": 110,
+    "special-attack": 50,
+    "special-defense": 80,
+    "speed": 45
+  },
+  "hitmonlee": {
+    "id": "106",
+    "hp": 50,
+    "attack": 120,
+    "defense": 53,
+    "special-attack": 35,
+    "special-defense": 110,
+    "speed": 87
+  },
+  "hitmonchan": {
+    "id": "107",
+    "hp": 50,
+    "attack": 105,
+    "defense": 79,
+    "special-attack": 35,
+    "special-defense": 110,
+    "speed": 76
+  },
+  "lickitung": {
+    "id": "108",
+    "hp": 90,
+    "attack": 55,
+    "defense": 75,
+    "special-attack": 60,
+    "special-defense": 75,
+    "speed": 30
+  },
+  "koffing": {
+    "id": "109",
+    "hp": 40,
+    "attack": 65,
+    "defense": 95,
+    "special-attack": 60,
+    "special-defense": 45,
+    "speed": 35
+  },
+  "weezing": {
+    "id": "110",
+    "hp": 65,
+    "attack": 90,
+    "defense": 120,
+    "special-attack": 85,
+    "special-defense": 70,
+    "speed": 60
+  },
+  "rhyhorn": {
+    "id": "111",
+    "hp": 80,
+    "attack": 85,
+    "defense": 95,
+    "special-attack": 30,
+    "special-defense": 30,
+    "speed": 25
+  },
+  "rhydon": {
+    "id": "112",
+    "hp": 105,
+    "attack": 130,
+    "defense": 120,
+    "special-attack": 45,
+    "special-defense": 45,
+    "speed": 40
+  },
+  "chansey": {
+    "id": "113",
+    "hp": 250,
+    "attack": 5,
+    "defense": 5,
+    "special-attack": 35,
+    "special-defense": 105,
+    "speed": 50
+  },
+  "tangela": {
+    "id": "114",
+    "hp": 65,
+    "attack": 55,
+    "defense": 115,
+    "special-attack": 100,
+    "special-defense": 40,
+    "speed": 60
+  },
+  "kangaskhan": {
+    "id": "115",
+    "hp": 105,
+    "attack": 95,
+    "defense": 80,
+    "special-attack": 40,
+    "special-defense": 80,
+    "speed": 90
+  },
+  "horsea": {
+    "id": "116",
+    "hp": 30,
+    "attack": 40,
+    "defense": 70,
+    "special-attack": 70,
+    "special-defense": 25,
+    "speed": 60
+  },
+  "seadra": {
+    "id": "117",
+    "hp": 55,
+    "attack": 65,
+    "defense": 95,
+    "special-attack": 95,
+    "special-defense": 45,
+    "speed": 85
+  },
+  "goldeen": {
+    "id": "118",
+    "hp": 45,
+    "attack": 67,
+    "defense": 60,
+    "special-attack": 35,
+    "special-defense": 50,
+    "speed": 63
+  },
+  "seaking": {
+    "id": "119",
+    "hp": 80,
+    "attack": 92,
+    "defense": 65,
+    "special-attack": 65,
+    "special-defense": 80,
+    "speed": 68
+  },
+  "staryu": {
+    "id": "120",
+    "hp": 30,
+    "attack": 45,
+    "defense": 55,
+    "special-attack": 70,
+    "special-defense": 55,
+    "speed": 85
+  },
+  "starmie": {
+    "id": "121",
+    "hp": 60,
+    "attack": 75,
+    "defense": 85,
+    "special-attack": 100,
+    "special-defense": 85,
+    "speed": 115
+  },
+  "mr. mime": {
+    "id": "122",
+    "hp": 40,
+    "attack": 45,
+    "defense": 65,
+    "special-attack": 100,
+    "special-defense": 120,
+    "speed": 90
+  },
+  "scyther": {
+    "id": "123",
+    "hp": 70,
+    "attack": 110,
+    "defense": 80,
+    "special-attack": 55,
+    "special-defense": 80,
+    "speed": 105
+  },
+  "jynx": {
+    "id": "124",
+    "hp": 65,
+    "attack": 50,
+    "defense": 35,
+    "special-attack": 115,
+    "special-defense": 95,
+    "speed": 95
+  },
+  "electabuzz": {
+    "id": "125",
+    "hp": 65,
+    "attack": 83,
+    "defense": 57,
+    "special-attack": 95,
+    "special-defense": 85,
+    "speed": 105
+  },
+  "magmar": {
+    "id": "126",
+    "hp": 65,
+    "attack": 95,
+    "defense": 57,
+    "special-attack": 100,
+    "special-defense": 85,
+    "speed": 93
+  },
+  "pinsir": {
+    "id": "127",
+    "hp": 65,
+    "attack": 125,
+    "defense": 100,
+    "special-attack": 55,
+    "special-defense": 70,
+    "speed": 85
+  },
+  "tauros": {
+    "id": "128",
+    "hp": 75,
+    "attack": 100,
+    "defense": 95,
+    "special-attack": 40,
+    "special-defense": 70,
+    "speed": 110
+  },
+  "magikarp": {
+    "id": "129",
+    "hp": 20,
+    "attack": 10,
+    "defense": 55,
+    "special-attack": 15,
+    "special-defense": 20,
+    "speed": 80
+  },
+  "gyarados": {
+    "id": "130",
+    "hp": 95,
+    "attack": 125,
+    "defense": 79,
+    "special-attack": 60,
+    "special-defense": 100,
+    "speed": 81
+  },
+  "lapras": {
+    "id": "131",
+    "hp": 130,
+    "attack": 85,
+    "defense": 80,
+    "special-attack": 85,
+    "special-defense": 95,
+    "speed": 60
+  },
+  "ditto": {
+    "id": "132",
+    "hp": 48,
+    "attack": 48,
+    "defense": 48,
+    "special-attack": 48,
+    "special-defense": 48,
+    "speed": 48
+  },
+  "eevee": {
+    "id": "133",
+    "hp": 55,
+    "attack": 55,
+    "defense": 50,
+    "special-attack": 45,
+    "special-defense": 65,
+    "speed": 55
+  },
+  "vaporeon": {
+    "id": "134",
+    "hp": 130,
+    "attack": 65,
+    "defense": 60,
+    "special-attack": 110,
+    "special-defense": 95,
+    "speed": 65
+  },
+  "jolteon": {
+    "id": "135",
+    "hp": 65,
+    "attack": 65,
+    "defense": 60,
+    "special-attack": 110,
+    "special-defense": 95,
+    "speed": 130
+  },
+  "flareon": {
+    "id": "136",
+    "hp": 65,
+    "attack": 130,
+    "defense": 60,
+    "special-attack": 95,
+    "special-defense": 110,
+    "speed": 65
+  },
+  "porygon": {
+    "id": "137",
+    "hp": 65,
+    "attack": 60,
+    "defense": 70,
+    "special-attack": 85,
+    "special-defense": 75,
+    "speed": 40
+  },
+  "omanyte": {
+    "id": "138",
+    "hp": 35,
+    "attack": 40,
+    "defense": 100,
+    "special-attack": 90,
+    "special-defense": 55,
+    "speed": 35
+  },
+  "omastar": {
+    "id": "139",
+    "hp": 70,
+    "attack": 60,
+    "defense": 125,
+    "special-attack": 115,
+    "special-defense": 70,
+    "speed": 55
+  },
+  "kabuto": {
+    "id": "140",
+    "hp": 30,
+    "attack": 80,
+    "defense": 90,
+    "special-attack": 55,
+    "special-defense": 45,
+    "speed": 55
+  },
+  "kabutops": {
+    "id": "141",
+    "hp": 60,
+    "attack": 115,
+    "defense": 105,
+    "special-attack": 65,
+    "special-defense": 70,
+    "speed": 80
+  },
+  "aerodactyl": {
+    "id": "142",
+    "hp": 80,
+    "attack": 105,
+    "defense": 65,
+    "special-attack": 60,
+    "special-defense": 75,
+    "speed": 130
+  },
+  "snorlax": {
+    "id": "143",
+    "hp": 160,
+    "attack": 110,
+    "defense": 65,
+    "special-attack": 65,
+    "special-defense": 110,
+    "speed": 30
+  },
+  "articuno": {
+    "id": "144",
+    "hp": 90,
+    "attack": 85,
+    "defense": 100,
+    "special-attack": 95,
+    "special-defense": 125,
+    "speed": 85
+  },
+  "zapdos": {
+    "id": "145",
+    "hp": 90,
+    "attack": 90,
+    "defense": 85,
+    "special-attack": 125,
+    "special-defense": 90,
+    "speed": 100
+  },
+  "moltres": {
+    "id": "146",
+    "hp": 90,
+    "attack": 100,
+    "defense": 90,
+    "special-attack": 125,
+    "special-defense": 85,
+    "speed": 90
+  },
+  "dratini": {
+    "id": "147",
+    "hp": 41,
+    "attack": 64,
+    "defense": 45,
+    "special-attack": 50,
+    "special-defense": 50,
+    "speed": 50
+  },
+  "dragonair": {
+    "id": "148",
+    "hp": 61,
+    "attack": 84,
+    "defense": 65,
+    "special-attack": 70,
+    "special-defense": 70,
+    "speed": 70
+  },
+  "dragonite": {
+    "id": "149",
+    "hp": 91,
+    "attack": 134,
+    "defense": 95,
+    "special-attack": 100,
+    "special-defense": 100,
+    "speed": 80
+  },
+  "mewtwo": {
+    "id": "150",
+    "hp": 106,
+    "attack": 110,
+    "defense": 90,
+    "special-attack": 154,
+    "special-defense": 90,
+    "speed": 130
+  },
+  "mew": {
+    "id": "151",
+    "hp": 100,
+    "attack": 100,
+    "defense": 100,
+    "special-attack": 100,
+    "special-defense": 100,
+    "speed": 100
+  },
+  "chikorita": {
+    "id": "152",
+    "hp": 45,
+    "attack": 49,
+    "defense": 65,
+    "special-attack": 49,
+    "special-defense": 65,
+    "speed": 45
+  },
+  "bayleef": {
+    "id": "153",
+    "hp": 60,
+    "attack": 62,
+    "defense": 80,
+    "special-attack": 63,
+    "special-defense": 80,
+    "speed": 60
+  },
+  "meganium": {
+    "id": "154",
+    "hp": 80,
+    "attack": 82,
+    "defense": 100,
+    "special-attack": 83,
+    "special-defense": 100,
+    "speed": 80
+  },
+  "cyndaquil": {
+    "id": "155",
+    "hp": 39,
+    "attack": 52,
+    "defense": 43,
+    "special-attack": 60,
+    "special-defense": 50,
+    "speed": 65
+  },
+  "quilava": {
+    "id": "156",
+    "hp": 58,
+    "attack": 64,
+    "defense": 58,
+    "special-attack": 80,
+    "special-defense": 65,
+    "speed": 80
+  },
+  "typhlosion": {
+    "id": "157",
+    "hp": 78,
+    "attack": 84,
+    "defense": 78,
+    "special-attack": 109,
+    "special-defense": 85,
+    "speed": 100
+  },
+  "totodile": {
+    "id": "158",
+    "hp": 50,
+    "attack": 65,
+    "defense": 64,
+    "special-attack": 44,
+    "special-defense": 48,
+    "speed": 43
+  },
+  "croconaw": {
+    "id": "159",
+    "hp": 65,
+    "attack": 80,
+    "defense": 80,
+    "special-attack": 59,
+    "special-defense": 63,
+    "speed": 58
+  },
+  "feraligatr": {
+    "id": "160",
+    "hp": 85,
+    "attack": 105,
+    "defense": 100,
+    "special-attack": 79,
+    "special-defense": 83,
+    "speed": 78
+  },
+  "sentret": {
+    "id": "161",
+    "hp": 35,
+    "attack": 46,
+    "defense": 34,
+    "special-attack": 35,
+    "special-defense": 45,
+    "speed": 20
+  },
+  "furret": {
+    "id": "162",
+    "hp": 85,
+    "attack": 76,
+    "defense": 64,
+    "special-attack": 45,
+    "special-defense": 55,
+    "speed": 90
+  },
+  "hoothoot": {
+    "id": "163",
+    "hp": 60,
+    "attack": 30,
+    "defense": 30,
+    "special-attack": 36,
+    "special-defense": 56,
+    "speed": 50
+  },
+  "noctowl": {
+    "id": "164",
+    "hp": 100,
+    "attack": 50,
+    "defense": 50,
+    "special-attack": 86,
+    "special-defense": 96,
+    "speed": 70
+  },
+  "ledyba": {
+    "id": "165",
+    "hp": 40,
+    "attack": 20,
+    "defense": 30,
+    "special-attack": 40,
+    "special-defense": 80,
+    "speed": 55
+  },
+  "ledian": {
+    "id": "166",
+    "hp": 55,
+    "attack": 35,
+    "defense": 50,
+    "special-attack": 55,
+    "special-defense": 110,
+    "speed": 85
+  },
+  "spinarak": {
+    "id": "167",
+    "hp": 40,
+    "attack": 60,
+    "defense": 40,
+    "special-attack": 40,
+    "special-defense": 40,
+    "speed": 30
+  },
+  "ariados": {
+    "id": "168",
+    "hp": 70,
+    "attack": 90,
+    "defense": 70,
+    "special-attack": 60,
+    "special-defense": 70,
+    "speed": 40
+  },
+  "crobat": {
+    "id": "169",
+    "hp": 85,
+    "attack": 90,
+    "defense": 80,
+    "special-attack": 70,
+    "special-defense": 80,
+    "speed": 130
+  },
+  "chinchou": {
+    "id": "170",
+    "hp": 75,
+    "attack": 38,
+    "defense": 38,
+    "special-attack": 56,
+    "special-defense": 56,
+    "speed": 67
+  },
+  "lanturn": {
+    "id": "171",
+    "hp": 125,
+    "attack": 58,
+    "defense": 58,
+    "special-attack": 76,
+    "special-defense": 76,
+    "speed": 67
+  },
+  "pichu": {
+    "id": "172",
+    "hp": 20,
+    "attack": 40,
+    "defense": 15,
+    "special-attack": 35,
+    "special-defense": 35,
+    "speed": 60
+  },
+  "cleffa": {
+    "id": "173",
+    "hp": 50,
+    "attack": 25,
+    "defense": 28,
+    "special-attack": 45,
+    "special-defense": 55,
+    "speed": 15
+  },
+  "igglybuff": {
+    "id": "174",
+    "hp": 90,
+    "attack": 30,
+    "defense": 15,
+    "special-attack": 40,
+    "special-defense": 20,
+    "speed": 15
+  },
+  "togepi": {
+    "id": "175",
+    "hp": 35,
+    "attack": 20,
+    "defense": 65,
+    "special-attack": 40,
+    "special-defense": 65,
+    "speed": 20
+  },
+  "togetic": {
+    "id": "176",
+    "hp": 55,
+    "attack": 40,
+    "defense": 85,
+    "special-attack": 80,
+    "special-defense": 105,
+    "speed": 40
+  },
+  "natu": {
+    "id": "177",
+    "hp": 40,
+    "attack": 50,
+    "defense": 45,
+    "special-attack": 70,
+    "special-defense": 45,
+    "speed": 70
+  },
+  "xatu": {
+    "id": "178",
+    "hp": 65,
+    "attack": 75,
+    "defense": 70,
+    "special-attack": 95,
+    "special-defense": 70,
+    "speed": 95
+  },
+  "mareep": {
+    "id": "179",
+    "hp": 55,
+    "attack": 40,
+    "defense": 40,
+    "special-attack": 65,
+    "special-defense": 45,
+    "speed": 35
+  },
+  "flaaffy": {
+    "id": "180",
+    "hp": 70,
+    "attack": 55,
+    "defense": 55,
+    "special-attack": 80,
+    "special-defense": 60,
+    "speed": 45
+  },
+  "ampharos": {
+    "id": "181",
+    "hp": 90,
+    "attack": 75,
+    "defense": 85,
+    "special-attack": 115,
+    "special-defense": 90,
+    "speed": 55
+  },
+  "bellossom": {
+    "id": "182",
+    "hp": 75,
+    "attack": 80,
+    "defense": 95,
+    "special-attack": 90,
+    "special-defense": 100,
+    "speed": 50
+  },
+  "marill": {
+    "id": "183",
+    "hp": 70,
+    "attack": 20,
+    "defense": 50,
+    "special-attack": 20,
+    "special-defense": 50,
+    "speed": 40
+  },
+  "azumarill": {
+    "id": "184",
+    "hp": 100,
+    "attack": 50,
+    "defense": 80,
+    "special-attack": 60,
+    "special-defense": 80,
+    "speed": 50
+  },
+  "sudowoodo": {
+    "id": "185",
+    "hp": 70,
+    "attack": 100,
+    "defense": 115,
+    "special-attack": 30,
+    "special-defense": 65,
+    "speed": 30
+  },
+  "politoed": {
+    "id": "186",
+    "hp": 90,
+    "attack": 75,
+    "defense": 75,
+    "special-attack": 90,
+    "special-defense": 100,
+    "speed": 70
+  },
+  "hoppip": {
+    "id": "187",
+    "hp": 35,
+    "attack": 35,
+    "defense": 40,
+    "special-attack": 35,
+    "special-defense": 55,
+    "speed": 50
+  },
+  "skiploom": {
+    "id": "188",
+    "hp": 55,
+    "attack": 45,
+    "defense": 50,
+    "special-attack": 45,
+    "special-defense": 65,
+    "speed": 80
+  },
+  "jumpluff": {
+    "id": "189",
+    "hp": 75,
+    "attack": 55,
+    "defense": 70,
+    "special-attack": 55,
+    "special-defense": 95,
+    "speed": 110
+  },
+  "aipom": {
+    "id": "190",
+    "hp": 55,
+    "attack": 70,
+    "defense": 55,
+    "special-attack": 40,
+    "special-defense": 55,
+    "speed": 85
+  },
+  "sunkern": {
+    "id": "191",
+    "hp": 30,
+    "attack": 30,
+    "defense": 30,
+    "special-attack": 30,
+    "special-defense": 30,
+    "speed": 30
+  },
+  "sunflora": {
+    "id": "192",
+    "hp": 75,
+    "attack": 75,
+    "defense": 55,
+    "special-attack": 105,
+    "special-defense": 85,
+    "speed": 30
+  },
+  "yanma": {
+    "id": "193",
+    "hp": 65,
+    "attack": 65,
+    "defense": 45,
+    "special-attack": 75,
+    "special-defense": 45,
+    "speed": 95
+  },
+  "wooper": {
+    "id": "194",
+    "hp": 55,
+    "attack": 45,
+    "defense": 45,
+    "special-attack": 25,
+    "special-defense": 25,
+    "speed": 15
+  },
+  "quagsire": {
+    "id": "195",
+    "hp": 95,
+    "attack": 85,
+    "defense": 85,
+    "special-attack": 65,
+    "special-defense": 65,
+    "speed": 35
+  },
+  "espeon": {
+    "id": "196",
+    "hp": 65,
+    "attack": 65,
+    "defense": 60,
+    "special-attack": 130,
+    "special-defense": 95,
+    "speed": 110
+  },
+  "umbreon": {
+    "id": "197",
+    "hp": 95,
+    "attack": 65,
+    "defense": 110,
+    "special-attack": 60,
+    "special-defense": 130,
+    "speed": 65
+  },
+  "murkrow": {
+    "id": "198",
+    "hp": 60,
+    "attack": 85,
+    "defense": 42,
+    "special-attack": 85,
+    "special-defense": 42,
+    "speed": 91
+  },
+  "slowking": {
+    "id": "199",
+    "hp": 95,
+    "attack": 75,
+    "defense": 80,
+    "special-attack": 100,
+    "special-defense": 110,
+    "speed": 30
+  },
+  "misdreavus": {
+    "id": "200",
+    "hp": 60,
+    "attack": 60,
+    "defense": 60,
+    "special-attack": 85,
+    "special-defense": 85,
+    "speed": 85
+  },
+  "unown": {
+    "id": "201",
+    "hp": 48,
+    "attack": 72,
+    "defense": 48,
+    "special-attack": 72,
+    "special-defense": 48,
+    "speed": 48
+  },
+  "wobbuffet": {
+    "id": "202",
+    "hp": 190,
+    "attack": 33,
+    "defense": 58,
+    "special-attack": 33,
+    "special-defense": 58,
+    "speed": 33
+  },
+  "girafarig": {
+    "id": "203",
+    "hp": 70,
+    "attack": 80,
+    "defense": 65,
+    "special-attack": 90,
+    "special-defense": 65,
+    "speed": 85
+  },
+  "pineco": {
+    "id": "204",
+    "hp": 50,
+    "attack": 65,
+    "defense": 90,
+    "special-attack": 35,
+    "special-defense": 35,
+    "speed": 15
+  },
+  "forretress": {
+    "id": "205",
+    "hp": 75,
+    "attack": 90,
+    "defense": 140,
+    "special-attack": 60,
+    "special-defense": 60,
+    "speed": 40
+  },
+  "dunsparce": {
+    "id": "206",
+    "hp": 100,
+    "attack": 70,
+    "defense": 70,
+    "special-attack": 65,
+    "special-defense": 65,
+    "speed": 45
+  },
+  "gligar": {
+    "id": "207",
+    "hp": 65,
+    "attack": 75,
+    "defense": 105,
+    "special-attack": 35,
+    "special-defense": 65,
+    "speed": 85
+  },
+  "steelix": {
+    "id": "208",
+    "hp": 75,
+    "attack": 85,
+    "defense": 200,
+    "special-attack": 55,
+    "special-defense": 65,
+    "speed": 30
+  },
+  "snubbull": {
+    "id": "209",
+    "hp": 60,
+    "attack": 80,
+    "defense": 50,
+    "special-attack": 40,
+    "special-defense": 40,
+    "speed": 30
+  },
+  "granbull": {
+    "id": "210",
+    "hp": 90,
+    "attack": 120,
+    "defense": 75,
+    "special-attack": 60,
+    "special-defense": 60,
+    "speed": 45
+  },
+  "qwilfish": {
+    "id": "211",
+    "hp": 65,
+    "attack": 95,
+    "defense": 85,
+    "special-attack": 55,
+    "special-defense": 55,
+    "speed": 85
+  },
+  "scizor": {
+    "id": "212",
+    "hp": 70,
+    "attack": 130,
+    "defense": 100,
+    "special-attack": 55,
+    "special-defense": 80,
+    "speed": 65
+  },
+  "shuckle": {
+    "id": "213",
+    "hp": 20,
+    "attack": 10,
+    "defense": 230,
+    "special-attack": 10,
+    "special-defense": 230,
+    "speed": 5
+  },
+  "heracross": {
+    "id": "214",
+    "hp": 80,
+    "attack": 125,
+    "defense": 75,
+    "special-attack": 40,
+    "special-defense": 95,
+    "speed": 85
+  },
+  "sneasel": {
+    "id": "215",
+    "hp": 55,
+    "attack": 95,
+    "defense": 55,
+    "special-attack": 35,
+    "special-defense": 75,
+    "speed": 115
+  },
+  "teddiursa": {
+    "id": "216",
+    "hp": 60,
+    "attack": 80,
+    "defense": 50,
+    "special-attack": 50,
+    "special-defense": 50,
+    "speed": 40
+  },
+  "ursaring": {
+    "id": "217",
+    "hp": 90,
+    "attack": 130,
+    "defense": 75,
+    "special-attack": 75,
+    "special-defense": 75,
+    "speed": 55
+  },
+  "slugma": {
+    "id": "218",
+    "hp": 40,
+    "attack": 40,
+    "defense": 40,
+    "special-attack": 70,
+    "special-defense": 40,
+    "speed": 20
+  },
+  "magcargo": {
+    "id": "219",
+    "hp": 60,
+    "attack": 50,
+    "defense": 120,
+    "special-attack": 90,
+    "special-defense": 80,
+    "speed": 30
+  },
+  "swinub": {
+    "id": "220",
+    "hp": 50,
+    "attack": 50,
+    "defense": 40,
+    "special-attack": 30,
+    "special-defense": 30,
+    "speed": 50
+  },
+  "piloswine": {
+    "id": "221",
+    "hp": 100,
+    "attack": 100,
+    "defense": 80,
+    "special-attack": 60,
+    "special-defense": 60,
+    "speed": 50
+  },
+  "corsola": {
+    "id": "222",
+    "hp": 65,
+    "attack": 55,
+    "defense": 95,
+    "special-attack": 65,
+    "special-defense": 95,
+    "speed": 35
+  },
+  "remoraid": {
+    "id": "223",
+    "hp": 35,
+    "attack": 65,
+    "defense": 35,
+    "special-attack": 65,
+    "special-defense": 35,
+    "speed": 65
+  },
+  "octillery": {
+    "id": "224",
+    "hp": 75,
+    "attack": 105,
+    "defense": 75,
+    "special-attack": 105,
+    "special-defense": 75,
+    "speed": 45
+  },
+  "delibird": {
+    "id": "225",
+    "hp": 45,
+    "attack": 55,
+    "defense": 45,
+    "special-attack": 65,
+    "special-defense": 45,
+    "speed": 75
+  },
+  "mantine": {
+    "id": "226",
+    "hp": 85,
+    "attack": 40,
+    "defense": 70,
+    "special-attack": 80,
+    "special-defense": 140,
+    "speed": 70
+  },
+  "skarmory": {
+    "id": "227",
+    "hp": 65,
+    "attack": 80,
+    "defense": 140,
+    "special-attack": 40,
+    "special-defense": 70,
+    "speed": 70
+  },
+  "houndour": {
+    "id": "228",
+    "hp": 45,
+    "attack": 60,
+    "defense": 30,
+    "special-attack": 80,
+    "special-defense": 50,
+    "speed": 65
+  },
+  "houndoom": {
+    "id": "229",
+    "hp": 75,
+    "attack": 90,
+    "defense": 50,
+    "special-attack": 110,
+    "special-defense": 80,
+    "speed": 95
+  },
+  "kingdra": {
+    "id": "230",
+    "hp": 75,
+    "attack": 95,
+    "defense": 95,
+    "special-attack": 95,
+    "special-defense": 95,
+    "speed": 85
+  },
+  "phanpy": {
+    "id": "231",
+    "hp": 90,
+    "attack": 60,
+    "defense": 60,
+    "special-attack": 40,
+    "special-defense": 40,
+    "speed": 40
+  },
+  "donphan": {
+    "id": "232",
+    "hp": 90,
+    "attack": 120,
+    "defense": 120,
+    "special-attack": 60,
+    "special-defense": 60,
+    "speed": 50
+  },
+  "porygon2": {
+    "id": "233",
+    "hp": 85,
+    "attack": 80,
+    "defense": 90,
+    "special-attack": 105,
+    "special-defense": 95,
+    "speed": 60
+  },
+  "stantler": {
+    "id": "234",
+    "hp": 73,
+    "attack": 95,
+    "defense": 62,
+    "special-attack": 85,
+    "special-defense": 65,
+    "speed": 85
+  },
+  "smeargle": {
+    "id": "235",
+    "hp": 55,
+    "attack": 20,
+    "defense": 35,
+    "special-attack": 20,
+    "special-defense": 45,
+    "speed": 75
+  },
+  "tyrogue": {
+    "id": "236",
+    "hp": 35,
+    "attack": 35,
+    "defense": 35,
+    "special-attack": 35,
+    "special-defense": 35,
+    "speed": 35
+  },
+  "hitmontop": {
+    "id": "237",
+    "hp": 50,
+    "attack": 95,
+    "defense": 95,
+    "special-attack": 35,
+    "special-defense": 110,
+    "speed": 70
+  },
+  "smoochum": {
+    "id": "238",
+    "hp": 45,
+    "attack": 30,
+    "defense": 15,
+    "special-attack": 85,
+    "special-defense": 65,
+    "speed": 65
+  },
+  "elekid": {
+    "id": "239",
+    "hp": 45,
+    "attack": 63,
+    "defense": 37,
+    "special-attack": 65,
+    "special-defense": 55,
+    "speed": 95
+  },
+  "magby": {
+    "id": "240",
+    "hp": 45,
+    "attack": 75,
+    "defense": 37,
+    "special-attack": 70,
+    "special-defense": 55,
+    "speed": 83
+  },
+  "miltank": {
+    "id": "241",
+    "hp": 95,
+    "attack": 80,
+    "defense": 105,
+    "special-attack": 40,
+    "special-defense": 70,
+    "speed": 100
+  },
+  "blissey": {
+    "id": "242",
+    "hp": 255,
+    "attack": 10,
+    "defense": 10,
+    "special-attack": 75,
+    "special-defense": 135,
+    "speed": 55
+  },
+  "raikou": {
+    "id": "243",
+    "hp": 90,
+    "attack": 85,
+    "defense": 75,
+    "special-attack": 115,
+    "special-defense": 100,
+    "speed": 115
+  },
+  "entei": {
+    "id": "244",
+    "hp": 115,
+    "attack": 115,
+    "defense": 85,
+    "special-attack": 90,
+    "special-defense": 75,
+    "speed": 100
+  },
+  "suicune": {
+    "id": "245",
+    "hp": 100,
+    "attack": 75,
+    "defense": 115,
+    "special-attack": 90,
+    "special-defense": 115,
+    "speed": 85
+  },
+  "larvitar": {
+    "id": "246",
+    "hp": 50,
+    "attack": 64,
+    "defense": 50,
+    "special-attack": 45,
+    "special-defense": 50,
+    "speed": 41
+  },
+  "pupitar": {
+    "id": "247",
+    "hp": 70,
+    "attack": 84,
+    "defense": 70,
+    "special-attack": 65,
+    "special-defense": 70,
+    "speed": 51
+  },
+  "tyranitar": {
+    "id": "248",
+    "hp": 100,
+    "attack": 134,
+    "defense": 110,
+    "special-attack": 95,
+    "special-defense": 100,
+    "speed": 61
+  },
+  "lugia": {
+    "id": "249",
+    "hp": 106,
+    "attack": 90,
+    "defense": 130,
+    "special-attack": 90,
+    "special-defense": 154,
+    "speed": 110
+  },
+  "ho-oh": {
+    "id": "250",
+    "hp": 106,
+    "attack": 130,
+    "defense": 90,
+    "special-attack": 110,
+    "special-defense": 154,
+    "speed": 90
+  },
+  "celebi": {
+    "id": "251",
+    "hp": 100,
+    "attack": 100,
+    "defense": 100,
+    "special-attack": 100,
+    "special-defense": 100,
+    "speed": 100
+  },
+  "treecko": {
+    "id": "252",
+    "hp": 40,
+    "attack": 45,
+    "defense": 35,
+    "special-attack": 65,
+    "special-defense": 55,
+    "speed": 70
+  },
+  "grovyle": {
+    "id": "253",
+    "hp": 50,
+    "attack": 65,
+    "defense": 45,
+    "special-attack": 85,
+    "special-defense": 65,
+    "speed": 95
+  },
+  "sceptile": {
+    "id": "254",
+    "hp": 70,
+    "attack": 85,
+    "defense": 65,
+    "special-attack": 105,
+    "special-defense": 85,
+    "speed": 120
+  },
+  "torchic": {
+    "id": "255",
+    "hp": 45,
+    "attack": 60,
+    "defense": 40,
+    "special-attack": 70,
+    "special-defense": 50,
+    "speed": 45
+  },
+  "combusken": {
+    "id": "256",
+    "hp": 60,
+    "attack": 85,
+    "defense": 60,
+    "special-attack": 85,
+    "special-defense": 60,
+    "speed": 55
+  },
+  "blaziken": {
+    "id": "257",
+    "hp": 80,
+    "attack": 120,
+    "defense": 70,
+    "special-attack": 110,
+    "special-defense": 70,
+    "speed": 80
+  },
+  "mudkip": {
+    "id": "258",
+    "hp": 50,
+    "attack": 70,
+    "defense": 50,
+    "special-attack": 50,
+    "special-defense": 50,
+    "speed": 40
+  },
+  "marshtomp": {
+    "id": "259",
+    "hp": 70,
+    "attack": 85,
+    "defense": 70,
+    "special-attack": 60,
+    "special-defense": 70,
+    "speed": 50
+  },
+  "swampert": {
+    "id": "260",
+    "hp": 100,
+    "attack": 110,
+    "defense": 90,
+    "special-attack": 85,
+    "special-defense": 90,
+    "speed": 60
+  },
+  "poochyena": {
+    "id": "261",
+    "hp": 35,
+    "attack": 55,
+    "defense": 35,
+    "special-attack": 30,
+    "special-defense": 30,
+    "speed": 35
+  },
+  "mightyena": {
+    "id": "262",
+    "hp": 70,
+    "attack": 90,
+    "defense": 70,
+    "special-attack": 60,
+    "special-defense": 60,
+    "speed": 70
+  },
+  "zigzagoon": {
+    "id": "263",
+    "hp": 38,
+    "attack": 30,
+    "defense": 41,
+    "special-attack": 30,
+    "special-defense": 41,
+    "speed": 60
+  },
+  "linoone": {
+    "id": "264",
+    "hp": 78,
+    "attack": 70,
+    "defense": 61,
+    "special-attack": 50,
+    "special-defense": 61,
+    "speed": 100
+  },
+  "wurmple": {
+    "id": "265",
+    "hp": 45,
+    "attack": 45,
+    "defense": 35,
+    "special-attack": 20,
+    "special-defense": 30,
+    "speed": 20
+  },
+  "silcoon": {
+    "id": "266",
+    "hp": 50,
+    "attack": 35,
+    "defense": 55,
+    "special-attack": 25,
+    "special-defense": 25,
+    "speed": 15
+  },
+  "beautifly": {
+    "id": "267",
+    "hp": 60,
+    "attack": 70,
+    "defense": 50,
+    "special-attack": 100,
+    "special-defense": 50,
+    "speed": 65
+  },
+  "cascoon": {
+    "id": "268",
+    "hp": 50,
+    "attack": 35,
+    "defense": 55,
+    "special-attack": 25,
+    "special-defense": 25,
+    "speed": 15
+  },
+  "dustox": {
+    "id": "269",
+    "hp": 60,
+    "attack": 50,
+    "defense": 70,
+    "special-attack": 50,
+    "special-defense": 90,
+    "speed": 65
+  },
+  "lotad": {
+    "id": "270",
+    "hp": 40,
+    "attack": 30,
+    "defense": 30,
+    "special-attack": 40,
+    "special-defense": 50,
+    "speed": 30
+  },
+  "lombre": {
+    "id": "271",
+    "hp": 60,
+    "attack": 50,
+    "defense": 50,
+    "special-attack": 60,
+    "special-defense": 70,
+    "speed": 50
+  },
+  "ludicolo": {
+    "id": "272",
+    "hp": 80,
+    "attack": 70,
+    "defense": 70,
+    "special-attack": 90,
+    "special-defense": 100,
+    "speed": 70
+  },
+  "seedot": {
+    "id": "273",
+    "hp": 40,
+    "attack": 40,
+    "defense": 50,
+    "special-attack": 30,
+    "special-defense": 30,
+    "speed": 30
+  },
+  "nuzleaf": {
+    "id": "274",
+    "hp": 70,
+    "attack": 70,
+    "defense": 40,
+    "special-attack": 60,
+    "special-defense": 40,
+    "speed": 60
+  },
+  "shiftry": {
+    "id": "275",
+    "hp": 90,
+    "attack": 100,
+    "defense": 60,
+    "special-attack": 90,
+    "special-defense": 60,
+    "speed": 80
+  },
+  "taillow": {
+    "id": "276",
+    "hp": 40,
+    "attack": 55,
+    "defense": 30,
+    "special-attack": 30,
+    "special-defense": 30,
+    "speed": 85
+  },
+  "swellow": {
+    "id": "277",
+    "hp": 60,
+    "attack": 85,
+    "defense": 60,
+    "special-attack": 75,
+    "special-defense": 50,
+    "speed": 125
+  },
+  "wingull": {
+    "id": "278",
+    "hp": 40,
+    "attack": 30,
+    "defense": 30,
+    "special-attack": 55,
+    "special-defense": 30,
+    "speed": 85
+  },
+  "pelipper": {
+    "id": "279",
+    "hp": 60,
+    "attack": 50,
+    "defense": 100,
+    "special-attack": 95,
+    "special-defense": 70,
+    "speed": 65
+  },
+  "ralts": {
+    "id": "280",
+    "hp": 28,
+    "attack": 25,
+    "defense": 25,
+    "special-attack": 45,
+    "special-defense": 35,
+    "speed": 40
+  },
+  "kirlia": {
+    "id": "281",
+    "hp": 38,
+    "attack": 35,
+    "defense": 35,
+    "special-attack": 65,
+    "special-defense": 55,
+    "speed": 50
+  },
+  "gardevoir": {
+    "id": "282",
+    "hp": 68,
+    "attack": 65,
+    "defense": 65,
+    "special-attack": 125,
+    "special-defense": 115,
+    "speed": 80
+  },
+  "surskit": {
+    "id": "283",
+    "hp": 40,
+    "attack": 30,
+    "defense": 32,
+    "special-attack": 50,
+    "special-defense": 52,
+    "speed": 65
+  },
+  "masquerain": {
+    "id": "284",
+    "hp": 70,
+    "attack": 60,
+    "defense": 62,
+    "special-attack": 100,
+    "special-defense": 82,
+    "speed": 80
+  },
+  "shroomish": {
+    "id": "285",
+    "hp": 60,
+    "attack": 40,
+    "defense": 60,
+    "special-attack": 40,
+    "special-defense": 60,
+    "speed": 35
+  },
+  "breloom": {
+    "id": "286",
+    "hp": 60,
+    "attack": 130,
+    "defense": 80,
+    "special-attack": 60,
+    "special-defense": 60,
+    "speed": 70
+  },
+  "slakoth": {
+    "id": "287",
+    "hp": 60,
+    "attack": 60,
+    "defense": 60,
+    "special-attack": 35,
+    "special-defense": 35,
+    "speed": 30
+  },
+  "vigoroth": {
+    "id": "288",
+    "hp": 80,
+    "attack": 80,
+    "defense": 80,
+    "special-attack": 55,
+    "special-defense": 55,
+    "speed": 90
+  },
+  "slaking": {
+    "id": "289",
+    "hp": 150,
+    "attack": 160,
+    "defense": 100,
+    "special-attack": 95,
+    "special-defense": 65,
+    "speed": 100
+  },
+  "nincada": {
+    "id": "290",
+    "hp": 31,
+    "attack": 45,
+    "defense": 90,
+    "special-attack": 30,
+    "special-defense": 30,
+    "speed": 40
+  },
+  "ninjask": {
+    "id": "291",
+    "hp": 61,
+    "attack": 90,
+    "defense": 45,
+    "special-attack": 50,
+    "special-defense": 50,
+    "speed": 160
+  },
+  "shedinja": {
+    "id": "292",
+    "hp": 1,
+    "attack": 90,
+    "defense": 45,
+    "special-attack": 30,
+    "special-defense": 30,
+    "speed": 40
+  },
+  "whismur": {
+    "id": "293",
+    "hp": 64,
+    "attack": 51,
+    "defense": 23,
+    "special-attack": 51,
+    "special-defense": 23,
+    "speed": 28
+  },
+  "loudred": {
+    "id": "294",
+    "hp": 84,
+    "attack": 71,
+    "defense": 43,
+    "special-attack": 71,
+    "special-defense": 43,
+    "speed": 48
+  },
+  "exploud": {
+    "id": "295",
+    "hp": 104,
+    "attack": 91,
+    "defense": 63,
+    "special-attack": 91,
+    "special-defense": 73,
+    "speed": 68
+  },
+  "makuhita": {
+    "id": "296",
+    "hp": 72,
+    "attack": 60,
+    "defense": 30,
+    "special-attack": 20,
+    "special-defense": 30,
+    "speed": 25
+  },
+  "hariyama": {
+    "id": "297",
+    "hp": 144,
+    "attack": 120,
+    "defense": 60,
+    "special-attack": 40,
+    "special-defense": 60,
+    "speed": 50
+  },
+  "azurill": {
+    "id": "298",
+    "hp": 50,
+    "attack": 20,
+    "defense": 40,
+    "special-attack": 20,
+    "special-defense": 40,
+    "speed": 20
+  },
+  "nosepass": {
+    "id": "299",
+    "hp": 30,
+    "attack": 45,
+    "defense": 135,
+    "special-attack": 45,
+    "special-defense": 90,
+    "speed": 30
+  },
+  "skitty": {
+    "id": "300",
+    "hp": 50,
+    "attack": 45,
+    "defense": 45,
+    "special-attack": 35,
+    "special-defense": 35,
+    "speed": 50
+  },
+  "delcatty": {
+    "id": "301",
+    "hp": 70,
+    "attack": 65,
+    "defense": 65,
+    "special-attack": 55,
+    "special-defense": 55,
+    "speed": 90
+  },
+  "sableye": {
+    "id": "302",
+    "hp": 50,
+    "attack": 75,
+    "defense": 75,
+    "special-attack": 65,
+    "special-defense": 65,
+    "speed": 50
+  },
+  "mawile": {
+    "id": "303",
+    "hp": 50,
+    "attack": 85,
+    "defense": 85,
+    "special-attack": 55,
+    "special-defense": 55,
+    "speed": 50
+  },
+  "aron": {
+    "id": "304",
+    "hp": 50,
+    "attack": 70,
+    "defense": 100,
+    "special-attack": 40,
+    "special-defense": 40,
+    "speed": 30
+  },
+  "lairon": {
+    "id": "305",
+    "hp": 60,
+    "attack": 90,
+    "defense": 140,
+    "special-attack": 50,
+    "special-defense": 50,
+    "speed": 40
+  },
+  "aggron": {
+    "id": "306",
+    "hp": 70,
+    "attack": 110,
+    "defense": 180,
+    "special-attack": 60,
+    "special-defense": 60,
+    "speed": 50
+  },
+  "meditite": {
+    "id": "307",
+    "hp": 30,
+    "attack": 40,
+    "defense": 55,
+    "special-attack": 40,
+    "special-defense": 55,
+    "speed": 60
+  },
+  "medicham": {
+    "id": "308",
+    "hp": 60,
+    "attack": 60,
+    "defense": 75,
+    "special-attack": 60,
+    "special-defense": 75,
+    "speed": 80
+  },
+  "electrike": {
+    "id": "309",
+    "hp": 40,
+    "attack": 45,
+    "defense": 40,
+    "special-attack": 65,
+    "special-defense": 40,
+    "speed": 65
+  },
+  "manectric": {
+    "id": "310",
+    "hp": 70,
+    "attack": 75,
+    "defense": 60,
+    "special-attack": 105,
+    "special-defense": 60,
+    "speed": 105
+  },
+  "plusle": {
+    "id": "311",
+    "hp": 60,
+    "attack": 50,
+    "defense": 40,
+    "special-attack": 85,
+    "special-defense": 75,
+    "speed": 95
+  },
+  "minun": {
+    "id": "312",
+    "hp": 60,
+    "attack": 40,
+    "defense": 50,
+    "special-attack": 75,
+    "special-defense": 85,
+    "speed": 95
+  },
+  "volbeat": {
+    "id": "313",
+    "hp": 65,
+    "attack": 73,
+    "defense": 75,
+    "special-attack": 47,
+    "special-defense": 85,
+    "speed": 85
+  },
+  "illumise": {
+    "id": "314",
+    "hp": 65,
+    "attack": 47,
+    "defense": 75,
+    "special-attack": 73,
+    "special-defense": 85,
+    "speed": 85
+  },
+  "roselia": {
+    "id": "315",
+    "hp": 50,
+    "attack": 60,
+    "defense": 45,
+    "special-attack": 100,
+    "special-defense": 80,
+    "speed": 65
+  },
+  "gulpin": {
+    "id": "316",
+    "hp": 70,
+    "attack": 43,
+    "defense": 53,
+    "special-attack": 43,
+    "special-defense": 53,
+    "speed": 40
+  },
+  "swalot": {
+    "id": "317",
+    "hp": 100,
+    "attack": 73,
+    "defense": 83,
+    "special-attack": 73,
+    "special-defense": 83,
+    "speed": 55
+  },
+  "carvanha": {
+    "id": "318",
+    "hp": 45,
+    "attack": 90,
+    "defense": 20,
+    "special-attack": 65,
+    "special-defense": 20,
+    "speed": 65
+  },
+  "sharpedo": {
+    "id": "319",
+    "hp": 70,
+    "attack": 120,
+    "defense": 40,
+    "special-attack": 95,
+    "special-defense": 40,
+    "speed": 95
+  },
+  "wailmer": {
+    "id": "320",
+    "hp": 130,
+    "attack": 70,
+    "defense": 35,
+    "special-attack": 70,
+    "special-defense": 35,
+    "speed": 60
+  },
+  "wailord": {
+    "id": "321",
+    "hp": 170,
+    "attack": 90,
+    "defense": 45,
+    "special-attack": 90,
+    "special-defense": 45,
+    "speed": 60
+  },
+  "numel": {
+    "id": "322",
+    "hp": 60,
+    "attack": 60,
+    "defense": 40,
+    "special-attack": 65,
+    "special-defense": 45,
+    "speed": 35
+  },
+  "camerupt": {
+    "id": "323",
+    "hp": 70,
+    "attack": 100,
+    "defense": 70,
+    "special-attack": 105,
+    "special-defense": 75,
+    "speed": 40
+  },
+  "torkoal": {
+    "id": "324",
+    "hp": 70,
+    "attack": 85,
+    "defense": 140,
+    "special-attack": 85,
+    "special-defense": 70,
+    "speed": 20
+  },
+  "spoink": {
+    "id": "325",
+    "hp": 60,
+    "attack": 25,
+    "defense": 35,
+    "special-attack": 70,
+    "special-defense": 80,
+    "speed": 60
+  },
+  "grumpig": {
+    "id": "326",
+    "hp": 80,
+    "attack": 45,
+    "defense": 65,
+    "special-attack": 90,
+    "special-defense": 110,
+    "speed": 80
+  },
+  "spinda": {
+    "id": "327",
+    "hp": 60,
+    "attack": 60,
+    "defense": 60,
+    "special-attack": 60,
+    "special-defense": 60,
+    "speed": 60
+  },
+  "trapinch": {
+    "id": "328",
+    "hp": 45,
+    "attack": 100,
+    "defense": 45,
+    "special-attack": 45,
+    "special-defense": 45,
+    "speed": 10
+  },
+  "vibrava": {
+    "id": "329",
+    "hp": 50,
+    "attack": 70,
+    "defense": 50,
+    "special-attack": 50,
+    "special-defense": 50,
+    "speed": 70
+  },
+  "flygon": {
+    "id": "330",
+    "hp": 80,
+    "attack": 100,
+    "defense": 80,
+    "special-attack": 80,
+    "special-defense": 80,
+    "speed": 100
+  },
+  "cacnea": {
+    "id": "331",
+    "hp": 50,
+    "attack": 85,
+    "defense": 40,
+    "special-attack": 85,
+    "special-defense": 40,
+    "speed": 35
+  },
+  "cacturne": {
+    "id": "332",
+    "hp": 70,
+    "attack": 115,
+    "defense": 60,
+    "special-attack": 115,
+    "special-defense": 60,
+    "speed": 55
+  },
+  "swablu": {
+    "id": "333",
+    "hp": 45,
+    "attack": 40,
+    "defense": 60,
+    "special-attack": 40,
+    "special-defense": 75,
+    "speed": 50
+  },
+  "altaria": {
+    "id": "334",
+    "hp": 75,
+    "attack": 70,
+    "defense": 90,
+    "special-attack": 70,
+    "special-defense": 105,
+    "speed": 80
+  },
+  "zangoose": {
+    "id": "335",
+    "hp": 73,
+    "attack": 115,
+    "defense": 60,
+    "special-attack": 60,
+    "special-defense": 60,
+    "speed": 90
+  },
+  "seviper": {
+    "id": "336",
+    "hp": 73,
+    "attack": 100,
+    "defense": 60,
+    "special-attack": 100,
+    "special-defense": 60,
+    "speed": 65
+  },
+  "lunatone": {
+    "id": "337",
+    "hp": 90,
+    "attack": 55,
+    "defense": 65,
+    "special-attack": 95,
+    "special-defense": 85,
+    "speed": 70
+  },
+  "solrock": {
+    "id": "338",
+    "hp": 90,
+    "attack": 95,
+    "defense": 85,
+    "special-attack": 55,
+    "special-defense": 65,
+    "speed": 70
+  },
+  "barboach": {
+    "id": "339",
+    "hp": 50,
+    "attack": 48,
+    "defense": 43,
+    "special-attack": 46,
+    "special-defense": 41,
+    "speed": 60
+  },
+  "whiscash": {
+    "id": "340",
+    "hp": 110,
+    "attack": 78,
+    "defense": 73,
+    "special-attack": 76,
+    "special-defense": 71,
+    "speed": 60
+  },
+  "corphish": {
+    "id": "341",
+    "hp": 43,
+    "attack": 80,
+    "defense": 65,
+    "special-attack": 50,
+    "special-defense": 35,
+    "speed": 35
+  },
+  "crawdaunt": {
+    "id": "342",
+    "hp": 63,
+    "attack": 120,
+    "defense": 85,
+    "special-attack": 90,
+    "special-defense": 55,
+    "speed": 55
+  },
+  "baltoy": {
+    "id": "343",
+    "hp": 40,
+    "attack": 40,
+    "defense": 55,
+    "special-attack": 40,
+    "special-defense": 70,
+    "speed": 55
+  },
+  "claydol": {
+    "id": "344",
+    "hp": 60,
+    "attack": 70,
+    "defense": 105,
+    "special-attack": 70,
+    "special-defense": 120,
+    "speed": 75
+  },
+  "lileep": {
+    "id": "345",
+    "hp": 66,
+    "attack": 41,
+    "defense": 77,
+    "special-attack": 61,
+    "special-defense": 87,
+    "speed": 23
+  },
+  "cradily": {
+    "id": "346",
+    "hp": 86,
+    "attack": 81,
+    "defense": 97,
+    "special-attack": 81,
+    "special-defense": 107,
+    "speed": 43
+  },
+  "anorith": {
+    "id": "347",
+    "hp": 45,
+    "attack": 95,
+    "defense": 50,
+    "special-attack": 40,
+    "special-defense": 50,
+    "speed": 75
+  },
+  "armaldo": {
+    "id": "348",
+    "hp": 75,
+    "attack": 125,
+    "defense": 100,
+    "special-attack": 70,
+    "special-defense": 80,
+    "speed": 45
+  },
+  "feebas": {
+    "id": "349",
+    "hp": 20,
+    "attack": 15,
+    "defense": 20,
+    "special-attack": 10,
+    "special-defense": 55,
+    "speed": 80
+  },
+  "milotic": {
+    "id": "350",
+    "hp": 95,
+    "attack": 60,
+    "defense": 79,
+    "special-attack": 100,
+    "special-defense": 125,
+    "speed": 81
+  },
+  "castform": {
+    "id": "351",
+    "hp": 70,
+    "attack": 70,
+    "defense": 70,
+    "special-attack": 70,
+    "special-defense": 70,
+    "speed": 70
+  },
+  "kecleon": {
+    "id": "352",
+    "hp": 60,
+    "attack": 90,
+    "defense": 70,
+    "special-attack": 60,
+    "special-defense": 120,
+    "speed": 40
+  },
+  "shuppet": {
+    "id": "353",
+    "hp": 44,
+    "attack": 75,
+    "defense": 35,
+    "special-attack": 63,
+    "special-defense": 33,
+    "speed": 45
+  },
+  "banette": {
+    "id": "354",
+    "hp": 64,
+    "attack": 115,
+    "defense": 65,
+    "special-attack": 83,
+    "special-defense": 63,
+    "speed": 65
+  },
+  "duskull": {
+    "id": "355",
+    "hp": 20,
+    "attack": 40,
+    "defense": 90,
+    "special-attack": 30,
+    "special-defense": 90,
+    "speed": 25
+  },
+  "dusclops": {
+    "id": "356",
+    "hp": 40,
+    "attack": 70,
+    "defense": 130,
+    "special-attack": 60,
+    "special-defense": 130,
+    "speed": 25
+  },
+  "tropius": {
+    "id": "357",
+    "hp": 99,
+    "attack": 68,
+    "defense": 83,
+    "special-attack": 72,
+    "special-defense": 87,
+    "speed": 51
+  },
+  "chimecho": {
+    "id": "358",
+    "hp": 75,
+    "attack": 50,
+    "defense": 80,
+    "special-attack": 95,
+    "special-defense": 90,
+    "speed": 65
+  },
+  "absol": {
+    "id": "359",
+    "hp": 65,
+    "attack": 130,
+    "defense": 60,
+    "special-attack": 75,
+    "special-defense": 60,
+    "speed": 75
+  },
+  "wynaut": {
+    "id": "360",
+    "hp": 95,
+    "attack": 23,
+    "defense": 48,
+    "special-attack": 23,
+    "special-defense": 48,
+    "speed": 23
+  },
+  "snorunt": {
+    "id": "361",
+    "hp": 50,
+    "attack": 50,
+    "defense": 50,
+    "special-attack": 50,
+    "special-defense": 50,
+    "speed": 50
+  },
+  "glalie": {
+    "id": "362",
+    "hp": 80,
+    "attack": 80,
+    "defense": 80,
+    "special-attack": 80,
+    "special-defense": 80,
+    "speed": 80
+  },
+  "spheal": {
+    "id": "363",
+    "hp": 70,
+    "attack": 40,
+    "defense": 50,
+    "special-attack": 55,
+    "special-defense": 50,
+    "speed": 25
+  },
+  "sealeo": {
+    "id": "364",
+    "hp": 90,
+    "attack": 60,
+    "defense": 70,
+    "special-attack": 75,
+    "special-defense": 70,
+    "speed": 45
+  },
+  "walrein": {
+    "id": "365",
+    "hp": 110,
+    "attack": 80,
+    "defense": 90,
+    "special-attack": 95,
+    "special-defense": 90,
+    "speed": 65
+  },
+  "clamperl": {
+    "id": "366",
+    "hp": 35,
+    "attack": 64,
+    "defense": 85,
+    "special-attack": 74,
+    "special-defense": 55,
+    "speed": 32
+  },
+  "huntail": {
+    "id": "367",
+    "hp": 55,
+    "attack": 104,
+    "defense": 105,
+    "special-attack": 94,
+    "special-defense": 75,
+    "speed": 52
+  },
+  "gorebyss": {
+    "id": "368",
+    "hp": 55,
+    "attack": 84,
+    "defense": 105,
+    "special-attack": 114,
+    "special-defense": 75,
+    "speed": 52
+  },
+  "relicanth": {
+    "id": "369",
+    "hp": 100,
+    "attack": 90,
+    "defense": 130,
+    "special-attack": 45,
+    "special-defense": 65,
+    "speed": 55
+  },
+  "luvdisc": {
+    "id": "370",
+    "hp": 43,
+    "attack": 30,
+    "defense": 55,
+    "special-attack": 40,
+    "special-defense": 65,
+    "speed": 97
+  },
+  "bagon": {
+    "id": "371",
+    "hp": 45,
+    "attack": 75,
+    "defense": 60,
+    "special-attack": 40,
+    "special-defense": 30,
+    "speed": 50
+  },
+  "shelgon": {
+    "id": "372",
+    "hp": 65,
+    "attack": 95,
+    "defense": 100,
+    "special-attack": 60,
+    "special-defense": 50,
+    "speed": 50
+  },
+  "salamence": {
+    "id": "373",
+    "hp": 95,
+    "attack": 135,
+    "defense": 80,
+    "special-attack": 110,
+    "special-defense": 80,
+    "speed": 100
+  },
+  "beldum": {
+    "id": "374",
+    "hp": 40,
+    "attack": 55,
+    "defense": 80,
+    "special-attack": 35,
+    "special-defense": 60,
+    "speed": 30
+  },
+  "metang": {
+    "id": "375",
+    "hp": 60,
+    "attack": 75,
+    "defense": 100,
+    "special-attack": 55,
+    "special-defense": 80,
+    "speed": 50
+  },
+  "metagross": {
+    "id": "376",
+    "hp": 80,
+    "attack": 135,
+    "defense": 130,
+    "special-attack": 95,
+    "special-defense": 90,
+    "speed": 70
+  },
+  "regirock": {
+    "id": "377",
+    "hp": 80,
+    "attack": 100,
+    "defense": 200,
+    "special-attack": 50,
+    "special-defense": 100,
+    "speed": 50
+  },
+  "regice": {
+    "id": "378",
+    "hp": 80,
+    "attack": 50,
+    "defense": 100,
+    "special-attack": 100,
+    "special-defense": 200,
+    "speed": 50
+  },
+  "registeel": {
+    "id": "379",
+    "hp": 80,
+    "attack": 75,
+    "defense": 150,
+    "special-attack": 75,
+    "special-defense": 150,
+    "speed": 50
+  },
+  "latias": {
+    "id": "380",
+    "hp": 80,
+    "attack": 80,
+    "defense": 90,
+    "special-attack": 110,
+    "special-defense": 130,
+    "speed": 110
+  },
+  "latios": {
+    "id": "381",
+    "hp": 80,
+    "attack": 90,
+    "defense": 80,
+    "special-attack": 130,
+    "special-defense": 110,
+    "speed": 110
+  },
+  "kyogre": {
+    "id": "382",
+    "hp": 100,
+    "attack": 100,
+    "defense": 90,
+    "special-attack": 150,
+    "special-defense": 140,
+    "speed": 90
+  },
+  "groudon": {
+    "id": "383",
+    "hp": 100,
+    "attack": 150,
+    "defense": 140,
+    "special-attack": 100,
+    "special-defense": 90,
+    "speed": 90
+  },
+  "rayquaza": {
+    "id": "384",
+    "hp": 105,
+    "attack": 150,
+    "defense": 90,
+    "special-attack": 150,
+    "special-defense": 90,
+    "speed": 95
+  },
+  "jirachi": {
+    "id": "385",
+    "hp": 100,
+    "attack": 100,
+    "defense": 100,
+    "special-attack": 100,
+    "special-defense": 100,
+    "speed": 100
+  },
+  "deoxys": {
+    "id": "386",
+    "hp": 50,
+    "attack": 150,
+    "defense": 50,
+    "special-attack": 150,
+    "special-defense": 50,
+    "speed": 150
+  },
+  "turtwig": {
+    "id": "387",
+    "hp": 55,
+    "attack": 68,
+    "defense": 64,
+    "special-attack": 45,
+    "special-defense": 55,
+    "speed": 31
+  },
+  "grotle": {
+    "id": "388",
+    "hp": 75,
+    "attack": 89,
+    "defense": 85,
+    "special-attack": 55,
+    "special-defense": 65,
+    "speed": 36
+  },
+  "torterra": {
+    "id": "389",
+    "hp": 95,
+    "attack": 109,
+    "defense": 105,
+    "special-attack": 75,
+    "special-defense": 85,
+    "speed": 56
+  },
+  "chimchar": {
+    "id": "390",
+    "hp": 44,
+    "attack": 58,
+    "defense": 44,
+    "special-attack": 58,
+    "special-defense": 44,
+    "speed": 61
+  },
+  "monferno": {
+    "id": "391",
+    "hp": 64,
+    "attack": 78,
+    "defense": 52,
+    "special-attack": 78,
+    "special-defense": 52,
+    "speed": 81
+  },
+  "infernape": {
+    "id": "392",
+    "hp": 76,
+    "attack": 104,
+    "defense": 71,
+    "special-attack": 104,
+    "special-defense": 71,
+    "speed": 108
+  },
+  "piplup": {
+    "id": "393",
+    "hp": 53,
+    "attack": 51,
+    "defense": 53,
+    "special-attack": 61,
+    "special-defense": 56,
+    "speed": 40
+  },
+  "prinplup": {
+    "id": "394",
+    "hp": 64,
+    "attack": 66,
+    "defense": 68,
+    "special-attack": 81,
+    "special-defense": 76,
+    "speed": 50
+  },
+  "empoleon": {
+    "id": "395",
+    "hp": 84,
+    "attack": 86,
+    "defense": 88,
+    "special-attack": 111,
+    "special-defense": 101,
+    "speed": 60
+  },
+  "starly": {
+    "id": "396",
+    "hp": 40,
+    "attack": 55,
+    "defense": 30,
+    "special-attack": 30,
+    "special-defense": 30,
+    "speed": 60
+  },
+  "staravia": {
+    "id": "397",
+    "hp": 55,
+    "attack": 75,
+    "defense": 50,
+    "special-attack": 40,
+    "special-defense": 40,
+    "speed": 80
+  },
+  "staraptor": {
+    "id": "398",
+    "hp": 85,
+    "attack": 120,
+    "defense": 70,
+    "special-attack": 50,
+    "special-defense": 60,
+    "speed": 100
+  },
+  "bidoof": {
+    "id": "399",
+    "hp": 59,
+    "attack": 45,
+    "defense": 40,
+    "special-attack": 35,
+    "special-defense": 40,
+    "speed": 31
+  },
+  "bibarel": {
+    "id": "400",
+    "hp": 79,
+    "attack": 85,
+    "defense": 60,
+    "special-attack": 55,
+    "special-defense": 60,
+    "speed": 71
+  },
+  "kricketot": {
+    "id": "401",
+    "hp": 37,
+    "attack": 25,
+    "defense": 41,
+    "special-attack": 25,
+    "special-defense": 41,
+    "speed": 25
+  },
+  "kricketune": {
+    "id": "402",
+    "hp": 77,
+    "attack": 85,
+    "defense": 51,
+    "special-attack": 55,
+    "special-defense": 51,
+    "speed": 65
+  },
+  "shinx": {
+    "id": "403",
+    "hp": 45,
+    "attack": 65,
+    "defense": 34,
+    "special-attack": 40,
+    "special-defense": 34,
+    "speed": 45
+  },
+  "luxio": {
+    "id": "404",
+    "hp": 60,
+    "attack": 85,
+    "defense": 49,
+    "special-attack": 60,
+    "special-defense": 49,
+    "speed": 60
+  },
+  "luxray": {
+    "id": "405",
+    "hp": 80,
+    "attack": 120,
+    "defense": 79,
+    "special-attack": 95,
+    "special-defense": 79,
+    "speed": 70
+  },
+  "budew": {
+    "id": "406",
+    "hp": 40,
+    "attack": 30,
+    "defense": 35,
+    "special-attack": 50,
+    "special-defense": 70,
+    "speed": 55
+  },
+  "roserade": {
+    "id": "407",
+    "hp": 60,
+    "attack": 70,
+    "defense": 65,
+    "special-attack": 125,
+    "special-defense": 105,
+    "speed": 90
+  },
+  "cranidos": {
+    "id": "408",
+    "hp": 67,
+    "attack": 125,
+    "defense": 40,
+    "special-attack": 30,
+    "special-defense": 30,
+    "speed": 58
+  },
+  "rampardos": {
+    "id": "409",
+    "hp": 97,
+    "attack": 165,
+    "defense": 60,
+    "special-attack": 65,
+    "special-defense": 50,
+    "speed": 58
+  },
+  "shieldon": {
+    "id": "410",
+    "hp": 30,
+    "attack": 42,
+    "defense": 118,
+    "special-attack": 42,
+    "special-defense": 88,
+    "speed": 30
+  },
+  "bastiodon": {
+    "id": "411",
+    "hp": 60,
+    "attack": 52,
+    "defense": 168,
+    "special-attack": 47,
+    "special-defense": 138,
+    "speed": 30
+  },
+  "burmy": {
+    "id": "412",
+    "hp": 40,
+    "attack": 29,
+    "defense": 45,
+    "special-attack": 29,
+    "special-defense": 45,
+    "speed": 36
+  },
+  "wormadam": {
+    "id": "413",
+    "hp": 60,
+    "attack": 59,
+    "defense": 85,
+    "special-attack": 79,
+    "special-defense": 105,
+    "speed": 36
+  },
+  "mothim": {
+    "id": "414",
+    "hp": 70,
+    "attack": 94,
+    "defense": 50,
+    "special-attack": 94,
+    "special-defense": 50,
+    "speed": 66
+  },
+  "combee": {
+    "id": "415",
+    "hp": 30,
+    "attack": 30,
+    "defense": 42,
+    "special-attack": 30,
+    "special-defense": 42,
+    "speed": 70
+  },
+  "vespiquen": {
+    "id": "416",
+    "hp": 70,
+    "attack": 80,
+    "defense": 102,
+    "special-attack": 80,
+    "special-defense": 102,
+    "speed": 40
+  },
+  "pachirisu": {
+    "id": "417",
+    "hp": 60,
+    "attack": 45,
+    "defense": 70,
+    "special-attack": 45,
+    "special-defense": 90,
+    "speed": 95
+  },
+  "buizel": {
+    "id": "418",
+    "hp": 55,
+    "attack": 65,
+    "defense": 35,
+    "special-attack": 60,
+    "special-defense": 30,
+    "speed": 85
+  },
+  "floatzel": {
+    "id": "419",
+    "hp": 85,
+    "attack": 105,
+    "defense": 55,
+    "special-attack": 85,
+    "special-defense": 50,
+    "speed": 115
+  },
+  "cherubi": {
+    "id": "420",
+    "hp": 45,
+    "attack": 35,
+    "defense": 45,
+    "special-attack": 62,
+    "special-defense": 53,
+    "speed": 35
+  },
+  "cherrim": {
+    "id": "421",
+    "hp": 70,
+    "attack": 60,
+    "defense": 70,
+    "special-attack": 87,
+    "special-defense": 78,
+    "speed": 85
+  },
+  "shellos": {
+    "id": "422",
+    "hp": 76,
+    "attack": 48,
+    "defense": 48,
+    "special-attack": 57,
+    "special-defense": 62,
+    "speed": 34
+  },
+  "gastrodon": {
+    "id": "423",
+    "hp": 111,
+    "attack": 83,
+    "defense": 68,
+    "special-attack": 92,
+    "special-defense": 82,
+    "speed": 39
+  },
+  "ambipom": {
+    "id": "424",
+    "hp": 75,
+    "attack": 100,
+    "defense": 66,
+    "special-attack": 60,
+    "special-defense": 66,
+    "speed": 115
+  },
+  "drifloon": {
+    "id": "425",
+    "hp": 90,
+    "attack": 50,
+    "defense": 34,
+    "special-attack": 60,
+    "special-defense": 44,
+    "speed": 70
+  },
+  "drifblim": {
+    "id": "426",
+    "hp": 150,
+    "attack": 80,
+    "defense": 44,
+    "special-attack": 90,
+    "special-defense": 54,
+    "speed": 80
+  },
+  "buneary": {
+    "id": "427",
+    "hp": 55,
+    "attack": 66,
+    "defense": 44,
+    "special-attack": 44,
+    "special-defense": 56,
+    "speed": 85
+  },
+  "lopunny": {
+    "id": "428",
+    "hp": 65,
+    "attack": 76,
+    "defense": 84,
+    "special-attack": 54,
+    "special-defense": 96,
+    "speed": 105
+  },
+  "mismagius": {
+    "id": "429",
+    "hp": 60,
+    "attack": 60,
+    "defense": 60,
+    "special-attack": 105,
+    "special-defense": 105,
+    "speed": 105
+  },
+  "honchkrow": {
+    "id": "430",
+    "hp": 100,
+    "attack": 125,
+    "defense": 52,
+    "special-attack": 105,
+    "special-defense": 52,
+    "speed": 71
+  },
+  "glameow": {
+    "id": "431",
+    "hp": 49,
+    "attack": 55,
+    "defense": 42,
+    "special-attack": 42,
+    "special-defense": 37,
+    "speed": 85
+  },
+  "purugly": {
+    "id": "432",
+    "hp": 71,
+    "attack": 82,
+    "defense": 64,
+    "special-attack": 64,
+    "special-defense": 59,
+    "speed": 112
+  },
+  "chingling": {
+    "id": "433",
+    "hp": 45,
+    "attack": 30,
+    "defense": 50,
+    "special-attack": 65,
+    "special-defense": 50,
+    "speed": 45
+  },
+  "stunky": {
+    "id": "434",
+    "hp": 63,
+    "attack": 63,
+    "defense": 47,
+    "special-attack": 41,
+    "special-defense": 41,
+    "speed": 74
+  },
+  "skuntank": {
+    "id": "435",
+    "hp": 103,
+    "attack": 93,
+    "defense": 67,
+    "special-attack": 71,
+    "special-defense": 61,
+    "speed": 84
+  },
+  "bronzor": {
+    "id": "436",
+    "hp": 57,
+    "attack": 24,
+    "defense": 86,
+    "special-attack": 24,
+    "special-defense": 86,
+    "speed": 23
+  },
+  "bronzong": {
+    "id": "437",
+    "hp": 67,
+    "attack": 89,
+    "defense": 116,
+    "special-attack": 79,
+    "special-defense": 116,
+    "speed": 33
+  },
+  "bonsly": {
+    "id": "438",
+    "hp": 50,
+    "attack": 80,
+    "defense": 95,
+    "special-attack": 10,
+    "special-defense": 45,
+    "speed": 10
+  },
+  "mime jr.": {
+    "id": "439",
+    "hp": 20,
+    "attack": 25,
+    "defense": 45,
+    "special-attack": 70,
+    "special-defense": 90,
+    "speed": 60
+  },
+  "happiny": {
+    "id": "440",
+    "hp": 100,
+    "attack": 5,
+    "defense": 5,
+    "special-attack": 15,
+    "special-defense": 65,
+    "speed": 30
+  },
+  "chatot": {
+    "id": "441",
+    "hp": 76,
+    "attack": 65,
+    "defense": 45,
+    "special-attack": 92,
+    "special-defense": 42,
+    "speed": 91
+  },
+  "spiritomb": {
+    "id": "442",
+    "hp": 50,
+    "attack": 92,
+    "defense": 108,
+    "special-attack": 92,
+    "special-defense": 108,
+    "speed": 35
+  },
+  "gible": {
+    "id": "443",
+    "hp": 58,
+    "attack": 70,
+    "defense": 45,
+    "special-attack": 40,
+    "special-defense": 45,
+    "speed": 42
+  },
+  "gabite": {
+    "id": "444",
+    "hp": 68,
+    "attack": 90,
+    "defense": 65,
+    "special-attack": 50,
+    "special-defense": 55,
+    "speed": 82
+  },
+  "garchomp": {
+    "id": "445",
+    "hp": 108,
+    "attack": 130,
+    "defense": 95,
+    "special-attack": 80,
+    "special-defense": 85,
+    "speed": 102
+  },
+  "munchlax": {
+    "id": "446",
+    "hp": 135,
+    "attack": 85,
+    "defense": 40,
+    "special-attack": 40,
+    "special-defense": 85,
+    "speed": 5
+  },
+  "riolu": {
+    "id": "447",
+    "hp": 40,
+    "attack": 70,
+    "defense": 40,
+    "special-attack": 35,
+    "special-defense": 40,
+    "speed": 60
+  },
+  "lucario": {
+    "id": "448",
+    "hp": 70,
+    "attack": 110,
+    "defense": 70,
+    "special-attack": 115,
+    "special-defense": 70,
+    "speed": 90
+  },
+  "hippopotas": {
+    "id": "449",
+    "hp": 68,
+    "attack": 72,
+    "defense": 78,
+    "special-attack": 38,
+    "special-defense": 42,
+    "speed": 32
+  },
+  "hippowdon": {
+    "id": "450",
+    "hp": 108,
+    "attack": 112,
+    "defense": 118,
+    "special-attack": 68,
+    "special-defense": 72,
+    "speed": 47
+  },
+  "skorupi": {
+    "id": "451",
+    "hp": 40,
+    "attack": 50,
+    "defense": 90,
+    "special-attack": 30,
+    "special-defense": 55,
+    "speed": 65
+  },
+  "drapion": {
+    "id": "452",
+    "hp": 70,
+    "attack": 90,
+    "defense": 110,
+    "special-attack": 60,
+    "special-defense": 75,
+    "speed": 95
+  },
+  "croagunk": {
+    "id": "453",
+    "hp": 48,
+    "attack": 61,
+    "defense": 40,
+    "special-attack": 61,
+    "special-defense": 40,
+    "speed": 50
+  },
+  "toxicroak": {
+    "id": "454",
+    "hp": 83,
+    "attack": 106,
+    "defense": 65,
+    "special-attack": 86,
+    "special-defense": 65,
+    "speed": 85
+  },
+  "carnivine": {
+    "id": "455",
+    "hp": 74,
+    "attack": 100,
+    "defense": 72,
+    "special-attack": 90,
+    "special-defense": 72,
+    "speed": 46
+  },
+  "finneon": {
+    "id": "456",
+    "hp": 49,
+    "attack": 49,
+    "defense": 56,
+    "special-attack": 49,
+    "special-defense": 61,
+    "speed": 66
+  },
+  "lumineon": {
+    "id": "457",
+    "hp": 69,
+    "attack": 69,
+    "defense": 76,
+    "special-attack": 69,
+    "special-defense": 86,
+    "speed": 91
+  },
+  "mantyke": {
+    "id": "458",
+    "hp": 45,
+    "attack": 20,
+    "defense": 50,
+    "special-attack": 60,
+    "special-defense": 120,
+    "speed": 50
+  },
+  "snover": {
+    "id": "459",
+    "hp": 60,
+    "attack": 62,
+    "defense": 50,
+    "special-attack": 62,
+    "special-defense": 60,
+    "speed": 40
+  },
+  "abomasnow": {
+    "id": "460",
+    "hp": 90,
+    "attack": 92,
+    "defense": 75,
+    "special-attack": 92,
+    "special-defense": 85,
+    "speed": 60
+  },
+  "weavile": {
+    "id": "461",
+    "hp": 70,
+    "attack": 120,
+    "defense": 65,
+    "special-attack": 45,
+    "special-defense": 85,
+    "speed": 125
+  },
+  "magnezone": {
+    "id": "462",
+    "hp": 70,
+    "attack": 70,
+    "defense": 115,
+    "special-attack": 130,
+    "special-defense": 90,
+    "speed": 60
+  },
+  "lickilicky": {
+    "id": "463",
+    "hp": 110,
+    "attack": 85,
+    "defense": 95,
+    "special-attack": 80,
+    "special-defense": 95,
+    "speed": 50
+  },
+  "rhyperior": {
+    "id": "464",
+    "hp": 115,
+    "attack": 140,
+    "defense": 130,
+    "special-attack": 55,
+    "special-defense": 55,
+    "speed": 40
+  },
+  "tangrowth": {
+    "id": "465",
+    "hp": 100,
+    "attack": 100,
+    "defense": 125,
+    "special-attack": 110,
+    "special-defense": 50,
+    "speed": 50
+  },
+  "electivire": {
+    "id": "466",
+    "hp": 75,
+    "attack": 123,
+    "defense": 67,
+    "special-attack": 95,
+    "special-defense": 85,
+    "speed": 95
+  },
+  "magmortar": {
+    "id": "467",
+    "hp": 75,
+    "attack": 95,
+    "defense": 67,
+    "special-attack": 125,
+    "special-defense": 95,
+    "speed": 83
+  },
+  "togekiss": {
+    "id": "468",
+    "hp": 85,
+    "attack": 50,
+    "defense": 95,
+    "special-attack": 120,
+    "special-defense": 115,
+    "speed": 80
+  },
+  "yanmega": {
+    "id": "469",
+    "hp": 86,
+    "attack": 76,
+    "defense": 86,
+    "special-attack": 116,
+    "special-defense": 56,
+    "speed": 95
+  },
+  "leafeon": {
+    "id": "470",
+    "hp": 65,
+    "attack": 110,
+    "defense": 130,
+    "special-attack": 60,
+    "special-defense": 65,
+    "speed": 95
+  },
+  "glaceon": {
+    "id": "471",
+    "hp": 65,
+    "attack": 60,
+    "defense": 110,
+    "special-attack": 130,
+    "special-defense": 95,
+    "speed": 65
+  },
+  "gliscor": {
+    "id": "472",
+    "hp": 75,
+    "attack": 95,
+    "defense": 125,
+    "special-attack": 45,
+    "special-defense": 75,
+    "speed": 95
+  },
+  "mamoswine": {
+    "id": "473",
+    "hp": 110,
+    "attack": 130,
+    "defense": 80,
+    "special-attack": 70,
+    "special-defense": 60,
+    "speed": 80
+  },
+  "porygon-z": {
+    "id": "474",
+    "hp": 85,
+    "attack": 80,
+    "defense": 70,
+    "special-attack": 135,
+    "special-defense": 75,
+    "speed": 90
+  },
+  "gallade": {
+    "id": "475",
+    "hp": 68,
+    "attack": 125,
+    "defense": 65,
+    "special-attack": 65,
+    "special-defense": 115,
+    "speed": 80
+  },
+  "probopass": {
+    "id": "476",
+    "hp": 60,
+    "attack": 55,
+    "defense": 145,
+    "special-attack": 75,
+    "special-defense": 150,
+    "speed": 40
+  },
+  "dusknoir": {
+    "id": "477",
+    "hp": 45,
+    "attack": 100,
+    "defense": 135,
+    "special-attack": 65,
+    "special-defense": 135,
+    "speed": 45
+  },
+  "froslass": {
+    "id": "478",
+    "hp": 70,
+    "attack": 80,
+    "defense": 70,
+    "special-attack": 80,
+    "special-defense": 70,
+    "speed": 110
+  },
+  "rotom": {
+    "id": "479",
+    "hp": 50,
+    "attack": 50,
+    "defense": 77,
+    "special-attack": 95,
+    "special-defense": 77,
+    "speed": 91
+  },
+  "uxie": {
+    "id": "480",
+    "hp": 75,
+    "attack": 75,
+    "defense": 130,
+    "special-attack": 75,
+    "special-defense": 130,
+    "speed": 95
+  },
+  "mesprit": {
+    "id": "481",
+    "hp": 80,
+    "attack": 105,
+    "defense": 105,
+    "special-attack": 105,
+    "special-defense": 105,
+    "speed": 80
+  },
+  "azelf": {
+    "id": "482",
+    "hp": 75,
+    "attack": 125,
+    "defense": 70,
+    "special-attack": 125,
+    "special-defense": 70,
+    "speed": 115
+  },
+  "dialga": {
+    "id": "483",
+    "hp": 100,
+    "attack": 120,
+    "defense": 120,
+    "special-attack": 150,
+    "special-defense": 100,
+    "speed": 90
+  },
+  "palkia": {
+    "id": "484",
+    "hp": 90,
+    "attack": 120,
+    "defense": 100,
+    "special-attack": 150,
+    "special-defense": 120,
+    "speed": 100
+  },
+  "heatran": {
+    "id": "485",
+    "hp": 91,
+    "attack": 90,
+    "defense": 106,
+    "special-attack": 130,
+    "special-defense": 106,
+    "speed": 77
+  },
+  "regigigas": {
+    "id": "486",
+    "hp": 110,
+    "attack": 160,
+    "defense": 110,
+    "special-attack": 80,
+    "special-defense": 110,
+    "speed": 100
+  },
+  "giratina": {
+    "id": "487",
+    "hp": 150,
+    "attack": 100,
+    "defense": 120,
+    "special-attack": 100,
+    "special-defense": 120,
+    "speed": 90
+  },
+  "cresselia": {
+    "id": "488",
+    "hp": 120,
+    "attack": 70,
+    "defense": 110,
+    "special-attack": 75,
+    "special-defense": 120,
+    "speed": 85
+  },
+  "phione": {
+    "id": "489",
+    "hp": 80,
+    "attack": 80,
+    "defense": 80,
+    "special-attack": 80,
+    "special-defense": 80,
+    "speed": 80
+  },
+  "manaphy": {
+    "id": "490",
+    "hp": 100,
+    "attack": 100,
+    "defense": 100,
+    "special-attack": 100,
+    "special-defense": 100,
+    "speed": 100
+  },
+  "darkrai": {
+    "id": "491",
+    "hp": 70,
+    "attack": 90,
+    "defense": 90,
+    "special-attack": 135,
+    "special-defense": 90,
+    "speed": 125
+  },
+  "shaymin": {
+    "id": "492",
+    "hp": 100,
+    "attack": 100,
+    "defense": 100,
+    "special-attack": 100,
+    "special-defense": 100,
+    "speed": 100
+  },
+  "arceus": {
+    "id": "493",
+    "hp": 120,
+    "attack": 120,
+    "defense": 120,
+    "special-attack": 120,
+    "special-defense": 120,
+    "speed": 120
+  },
+  "victini": {
+    "id": "494",
+    "hp": 100,
+    "attack": 100,
+    "defense": 100,
+    "special-attack": 100,
+    "special-defense": 100,
+    "speed": 100
+  },
+  "snivy": {
+    "id": "495",
+    "hp": 45,
+    "attack": 45,
+    "defense": 55,
+    "special-attack": 45,
+    "special-defense": 55,
+    "speed": 63
+  },
+  "servine": {
+    "id": "496",
+    "hp": 60,
+    "attack": 60,
+    "defense": 75,
+    "special-attack": 60,
+    "special-defense": 75,
+    "speed": 83
+  },
+  "serperior": {
+    "id": "497",
+    "hp": 75,
+    "attack": 75,
+    "defense": 95,
+    "special-attack": 75,
+    "special-defense": 95,
+    "speed": 113
+  },
+  "tepig": {
+    "id": "498",
+    "hp": 65,
+    "attack": 63,
+    "defense": 45,
+    "special-attack": 45,
+    "special-defense": 45,
+    "speed": 45
+  },
+  "pignite": {
+    "id": "499",
+    "hp": 90,
+    "attack": 93,
+    "defense": 55,
+    "special-attack": 70,
+    "special-defense": 55,
+    "speed": 55
+  },
+  "emboar": {
+    "id": "500",
+    "hp": 110,
+    "attack": 123,
+    "defense": 65,
+    "special-attack": 100,
+    "special-defense": 65,
+    "speed": 65
+  },
+  "oshawott": {
+    "id": "501",
+    "hp": 55,
+    "attack": 55,
+    "defense": 45,
+    "special-attack": 63,
+    "special-defense": 45,
+    "speed": 45
+  },
+  "dewott": {
+    "id": "502",
+    "hp": 75,
+    "attack": 75,
+    "defense": 60,
+    "special-attack": 83,
+    "special-defense": 60,
+    "speed": 60
+  },
+  "samurott": {
+    "id": "503",
+    "hp": 95,
+    "attack": 100,
+    "defense": 85,
+    "special-attack": 108,
+    "special-defense": 70,
+    "speed": 70
+  },
+  "patrat": {
+    "id": "504",
+    "hp": 45,
+    "attack": 55,
+    "defense": 39,
+    "special-attack": 35,
+    "special-defense": 39,
+    "speed": 42
+  },
+  "watchog": {
+    "id": "505",
+    "hp": 60,
+    "attack": 85,
+    "defense": 69,
+    "special-attack": 60,
+    "special-defense": 69,
+    "speed": 77
+  },
+  "lillipup": {
+    "id": "506",
+    "hp": 45,
+    "attack": 60,
+    "defense": 45,
+    "special-attack": 25,
+    "special-defense": 45,
+    "speed": 55
+  },
+  "herdier": {
+    "id": "507",
+    "hp": 65,
+    "attack": 80,
+    "defense": 65,
+    "special-attack": 35,
+    "special-defense": 65,
+    "speed": 60
+  },
+  "stoutland": {
+    "id": "508",
+    "hp": 85,
+    "attack": 110,
+    "defense": 90,
+    "special-attack": 45,
+    "special-defense": 90,
+    "speed": 80
+  },
+  "purrloin": {
+    "id": "509",
+    "hp": 41,
+    "attack": 50,
+    "defense": 37,
+    "special-attack": 50,
+    "special-defense": 37,
+    "speed": 66
+  },
+  "liepard": {
+    "id": "510",
+    "hp": 64,
+    "attack": 88,
+    "defense": 50,
+    "special-attack": 88,
+    "special-defense": 50,
+    "speed": 106
+  },
+  "pansage": {
+    "id": "511",
+    "hp": 50,
+    "attack": 53,
+    "defense": 48,
+    "special-attack": 53,
+    "special-defense": 48,
+    "speed": 64
+  },
+  "simisage": {
+    "id": "512",
+    "hp": 75,
+    "attack": 98,
+    "defense": 63,
+    "special-attack": 98,
+    "special-defense": 63,
+    "speed": 101
+  },
+  "pansear": {
+    "id": "513",
+    "hp": 50,
+    "attack": 53,
+    "defense": 48,
+    "special-attack": 53,
+    "special-defense": 48,
+    "speed": 64
+  },
+  "simisear": {
+    "id": "514",
+    "hp": 75,
+    "attack": 98,
+    "defense": 63,
+    "special-attack": 98,
+    "special-defense": 63,
+    "speed": 101
+  },
+  "panpour": {
+    "id": "515",
+    "hp": 50,
+    "attack": 53,
+    "defense": 48,
+    "special-attack": 53,
+    "special-defense": 48,
+    "speed": 64
+  },
+  "simipour": {
+    "id": "516",
+    "hp": 75,
+    "attack": 98,
+    "defense": 63,
+    "special-attack": 98,
+    "special-defense": 63,
+    "speed": 101
+  },
+  "munna": {
+    "id": "517",
+    "hp": 76,
+    "attack": 25,
+    "defense": 45,
+    "special-attack": 67,
+    "special-defense": 55,
+    "speed": 24
+  },
+  "musharna": {
+    "id": "518",
+    "hp": 116,
+    "attack": 55,
+    "defense": 85,
+    "special-attack": 107,
+    "special-defense": 95,
+    "speed": 29
+  },
+  "pidove": {
+    "id": "519",
+    "hp": 50,
+    "attack": 55,
+    "defense": 50,
+    "special-attack": 36,
+    "special-defense": 30,
+    "speed": 43
+  },
+  "tranquill": {
+    "id": "520",
+    "hp": 62,
+    "attack": 77,
+    "defense": 62,
+    "special-attack": 50,
+    "special-defense": 42,
+    "speed": 65
+  },
+  "unfezant": {
+    "id": "521",
+    "hp": 80,
+    "attack": 115,
+    "defense": 80,
+    "special-attack": 65,
+    "special-defense": 55,
+    "speed": 93
+  },
+  "blitzle": {
+    "id": "522",
+    "hp": 45,
+    "attack": 60,
+    "defense": 32,
+    "special-attack": 50,
+    "special-defense": 32,
+    "speed": 76
+  },
+  "zebstrika": {
+    "id": "523",
+    "hp": 75,
+    "attack": 100,
+    "defense": 63,
+    "special-attack": 80,
+    "special-defense": 63,
+    "speed": 116
+  },
+  "roggenrola": {
+    "id": "524",
+    "hp": 55,
+    "attack": 75,
+    "defense": 85,
+    "special-attack": 25,
+    "special-defense": 25,
+    "speed": 15
+  },
+  "boldore": {
+    "id": "525",
+    "hp": 70,
+    "attack": 105,
+    "defense": 105,
+    "special-attack": 50,
+    "special-defense": 40,
+    "speed": 20
+  },
+  "gigalith": {
+    "id": "526",
+    "hp": 85,
+    "attack": 135,
+    "defense": 130,
+    "special-attack": 60,
+    "special-defense": 80,
+    "speed": 25
+  },
+  "woobat": {
+    "id": "527",
+    "hp": 65,
+    "attack": 45,
+    "defense": 43,
+    "special-attack": 55,
+    "special-defense": 43,
+    "speed": 72
+  },
+  "swoobat": {
+    "id": "528",
+    "hp": 67,
+    "attack": 57,
+    "defense": 55,
+    "special-attack": 77,
+    "special-defense": 55,
+    "speed": 114
+  },
+  "drilbur": {
+    "id": "529",
+    "hp": 60,
+    "attack": 85,
+    "defense": 40,
+    "special-attack": 30,
+    "special-defense": 45,
+    "speed": 68
+  },
+  "excadrill": {
+    "id": "530",
+    "hp": 110,
+    "attack": 135,
+    "defense": 60,
+    "special-attack": 50,
+    "special-defense": 65,
+    "speed": 88
+  },
+  "audino": {
+    "id": "531",
+    "hp": 103,
+    "attack": 60,
+    "defense": 86,
+    "special-attack": 60,
+    "special-defense": 86,
+    "speed": 50
+  },
+  "timburr": {
+    "id": "532",
+    "hp": 75,
+    "attack": 80,
+    "defense": 55,
+    "special-attack": 25,
+    "special-defense": 35,
+    "speed": 35
+  },
+  "gurdurr": {
+    "id": "533",
+    "hp": 85,
+    "attack": 105,
+    "defense": 85,
+    "special-attack": 40,
+    "special-defense": 50,
+    "speed": 40
+  },
+  "conkeldurr": {
+    "id": "534",
+    "hp": 105,
+    "attack": 140,
+    "defense": 95,
+    "special-attack": 55,
+    "special-defense": 65,
+    "speed": 45
+  },
+  "tympole": {
+    "id": "535",
+    "hp": 50,
+    "attack": 50,
+    "defense": 40,
+    "special-attack": 50,
+    "special-defense": 40,
+    "speed": 64
+  },
+  "palpitoad": {
+    "id": "536",
+    "hp": 75,
+    "attack": 65,
+    "defense": 55,
+    "special-attack": 65,
+    "special-defense": 55,
+    "speed": 69
+  },
+  "seismitoad": {
+    "id": "537",
+    "hp": 105,
+    "attack": 95,
+    "defense": 75,
+    "special-attack": 85,
+    "special-defense": 75,
+    "speed": 74
+  },
+  "throh": {
+    "id": "538",
+    "hp": 120,
+    "attack": 100,
+    "defense": 85,
+    "special-attack": 30,
+    "special-defense": 85,
+    "speed": 45
+  },
+  "sawk": {
+    "id": "539",
+    "hp": 75,
+    "attack": 125,
+    "defense": 75,
+    "special-attack": 30,
+    "special-defense": 75,
+    "speed": 85
+  },
+  "sewaddle": {
+    "id": "540",
+    "hp": 45,
+    "attack": 53,
+    "defense": 70,
+    "special-attack": 40,
+    "special-defense": 60,
+    "speed": 42
+  },
+  "swadloon": {
+    "id": "541",
+    "hp": 55,
+    "attack": 63,
+    "defense": 90,
+    "special-attack": 50,
+    "special-defense": 80,
+    "speed": 42
+  },
+  "leavanny": {
+    "id": "542",
+    "hp": 75,
+    "attack": 103,
+    "defense": 80,
+    "special-attack": 70,
+    "special-defense": 80,
+    "speed": 92
+  },
+  "venipede": {
+    "id": "543",
+    "hp": 30,
+    "attack": 45,
+    "defense": 59,
+    "special-attack": 30,
+    "special-defense": 39,
+    "speed": 57
+  },
+  "whirlipede": {
+    "id": "544",
+    "hp": 40,
+    "attack": 55,
+    "defense": 99,
+    "special-attack": 40,
+    "special-defense": 79,
+    "speed": 47
+  },
+  "scolipede": {
+    "id": "545",
+    "hp": 60,
+    "attack": 100,
+    "defense": 89,
+    "special-attack": 55,
+    "special-defense": 69,
+    "speed": 112
+  },
+  "cottonee": {
+    "id": "546",
+    "hp": 40,
+    "attack": 27,
+    "defense": 60,
+    "special-attack": 37,
+    "special-defense": 50,
+    "speed": 66
+  },
+  "whimsicott": {
+    "id": "547",
+    "hp": 60,
+    "attack": 67,
+    "defense": 85,
+    "special-attack": 77,
+    "special-defense": 75,
+    "speed": 116
+  },
+  "petilil": {
+    "id": "548",
+    "hp": 45,
+    "attack": 35,
+    "defense": 50,
+    "special-attack": 70,
+    "special-defense": 50,
+    "speed": 30
+  },
+  "lilligant": {
+    "id": "549",
+    "hp": 70,
+    "attack": 60,
+    "defense": 75,
+    "special-attack": 110,
+    "special-defense": 75,
+    "speed": 90
+  },
+  "basculin": {
+    "id": "550",
+    "hp": 70,
+    "attack": 92,
+    "defense": 65,
+    "special-attack": 80,
+    "special-defense": 55,
+    "speed": 98
+  },
+  "sandile": {
+    "id": "551",
+    "hp": 50,
+    "attack": 72,
+    "defense": 35,
+    "special-attack": 35,
+    "special-defense": 35,
+    "speed": 65
+  },
+  "krokorok": {
+    "id": "552",
+    "hp": 60,
+    "attack": 82,
+    "defense": 45,
+    "special-attack": 45,
+    "special-defense": 45,
+    "speed": 74
+  },
+  "krookodile": {
+    "id": "553",
+    "hp": 95,
+    "attack": 117,
+    "defense": 80,
+    "special-attack": 65,
+    "special-defense": 70,
+    "speed": 92
+  },
+  "darumaka": {
+    "id": "554",
+    "hp": 70,
+    "attack": 90,
+    "defense": 45,
+    "special-attack": 15,
+    "special-defense": 45,
+    "speed": 50
+  },
+  "darmanitan": {
+    "id": "555",
+    "hp": 105,
+    "attack": 140,
+    "defense": 55,
+    "special-attack": 30,
+    "special-defense": 55,
+    "speed": 95
+  },
+  "maractus": {
+    "id": "556",
+    "hp": 75,
+    "attack": 86,
+    "defense": 67,
+    "special-attack": 106,
+    "special-defense": 67,
+    "speed": 60
+  },
+  "dwebble": {
+    "id": "557",
+    "hp": 50,
+    "attack": 65,
+    "defense": 85,
+    "special-attack": 35,
+    "special-defense": 35,
+    "speed": 55
+  },
+  "crustle": {
+    "id": "558",
+    "hp": 70,
+    "attack": 105,
+    "defense": 125,
+    "special-attack": 65,
+    "special-defense": 75,
+    "speed": 45
+  },
+  "scraggy": {
+    "id": "559",
+    "hp": 50,
+    "attack": 75,
+    "defense": 70,
+    "special-attack": 35,
+    "special-defense": 70,
+    "speed": 48
+  },
+  "scrafty": {
+    "id": "560",
+    "hp": 65,
+    "attack": 90,
+    "defense": 115,
+    "special-attack": 45,
+    "special-defense": 115,
+    "speed": 58
+  },
+  "sigilyph": {
+    "id": "561",
+    "hp": 72,
+    "attack": 58,
+    "defense": 80,
+    "special-attack": 103,
+    "special-defense": 80,
+    "speed": 97
+  },
+  "yamask": {
+    "id": "562",
+    "hp": 38,
+    "attack": 30,
+    "defense": 85,
+    "special-attack": 55,
+    "special-defense": 65,
+    "speed": 30
+  },
+  "cofagrigus": {
+    "id": "563",
+    "hp": 58,
+    "attack": 50,
+    "defense": 145,
+    "special-attack": 95,
+    "special-defense": 105,
+    "speed": 30
+  },
+  "tirtouga": {
+    "id": "564",
+    "hp": 54,
+    "attack": 78,
+    "defense": 103,
+    "special-attack": 53,
+    "special-defense": 45,
+    "speed": 22
+  },
+  "carracosta": {
+    "id": "565",
+    "hp": 74,
+    "attack": 108,
+    "defense": 133,
+    "special-attack": 83,
+    "special-defense": 65,
+    "speed": 32
+  },
+  "archen": {
+    "id": "566",
+    "hp": 55,
+    "attack": 112,
+    "defense": 45,
+    "special-attack": 74,
+    "special-defense": 45,
+    "speed": 70
+  },
+  "archeops": {
+    "id": "567",
+    "hp": 75,
+    "attack": 140,
+    "defense": 65,
+    "special-attack": 112,
+    "special-defense": 65,
+    "speed": 110
+  },
+  "trubbish": {
+    "id": "568",
+    "hp": 50,
+    "attack": 50,
+    "defense": 62,
+    "special-attack": 40,
+    "special-defense": 62,
+    "speed": 65
+  },
+  "garbodor": {
+    "id": "569",
+    "hp": 80,
+    "attack": 95,
+    "defense": 82,
+    "special-attack": 60,
+    "special-defense": 82,
+    "speed": 75
+  },
+  "zorua": {
+    "id": "570",
+    "hp": 40,
+    "attack": 65,
+    "defense": 40,
+    "special-attack": 80,
+    "special-defense": 40,
+    "speed": 65
+  },
+  "zoroark": {
+    "id": "571",
+    "hp": 60,
+    "attack": 105,
+    "defense": 60,
+    "special-attack": 120,
+    "special-defense": 60,
+    "speed": 105
+  },
+  "minccino": {
+    "id": "572",
+    "hp": 55,
+    "attack": 50,
+    "defense": 40,
+    "special-attack": 40,
+    "special-defense": 40,
+    "speed": 75
+  },
+  "cinccino": {
+    "id": "573",
+    "hp": 75,
+    "attack": 95,
+    "defense": 60,
+    "special-attack": 65,
+    "special-defense": 60,
+    "speed": 115
+  },
+  "gothita": {
+    "id": "574",
+    "hp": 45,
+    "attack": 30,
+    "defense": 50,
+    "special-attack": 55,
+    "special-defense": 65,
+    "speed": 45
+  },
+  "gothorita": {
+    "id": "575",
+    "hp": 60,
+    "attack": 45,
+    "defense": 70,
+    "special-attack": 75,
+    "special-defense": 85,
+    "speed": 55
+  },
+  "gothitelle": {
+    "id": "576",
+    "hp": 70,
+    "attack": 55,
+    "defense": 95,
+    "special-attack": 95,
+    "special-defense": 110,
+    "speed": 65
+  },
+  "solosis": {
+    "id": "577",
+    "hp": 45,
+    "attack": 30,
+    "defense": 40,
+    "special-attack": 105,
+    "special-defense": 50,
+    "speed": 20
+  },
+  "duosion": {
+    "id": "578",
+    "hp": 65,
+    "attack": 40,
+    "defense": 50,
+    "special-attack": 125,
+    "special-defense": 60,
+    "speed": 30
+  },
+  "reuniclus": {
+    "id": "579",
+    "hp": 110,
+    "attack": 65,
+    "defense": 75,
+    "special-attack": 125,
+    "special-defense": 85,
+    "speed": 30
+  },
+  "ducklett": {
+    "id": "580",
+    "hp": 62,
+    "attack": 44,
+    "defense": 50,
+    "special-attack": 44,
+    "special-defense": 50,
+    "speed": 55
+  },
+  "swanna": {
+    "id": "581",
+    "hp": 75,
+    "attack": 87,
+    "defense": 63,
+    "special-attack": 87,
+    "special-defense": 63,
+    "speed": 98
+  },
+  "vanillite": {
+    "id": "582",
+    "hp": 36,
+    "attack": 50,
+    "defense": 50,
+    "special-attack": 65,
+    "special-defense": 60,
+    "speed": 44
+  },
+  "vanillish": {
+    "id": "583",
+    "hp": 51,
+    "attack": 65,
+    "defense": 65,
+    "special-attack": 80,
+    "special-defense": 75,
+    "speed": 59
+  },
+  "vanilluxe": {
+    "id": "584",
+    "hp": 71,
+    "attack": 95,
+    "defense": 85,
+    "special-attack": 110,
+    "special-defense": 95,
+    "speed": 79
+  },
+  "deerling": {
+    "id": "585",
+    "hp": 60,
+    "attack": 60,
+    "defense": 50,
+    "special-attack": 40,
+    "special-defense": 50,
+    "speed": 75
+  },
+  "sawsbuck": {
+    "id": "586",
+    "hp": 80,
+    "attack": 100,
+    "defense": 70,
+    "special-attack": 60,
+    "special-defense": 70,
+    "speed": 95
+  },
+  "emolga": {
+    "id": "587",
+    "hp": 55,
+    "attack": 75,
+    "defense": 60,
+    "special-attack": 75,
+    "special-defense": 60,
+    "speed": 103
+  },
+  "karrablast": {
+    "id": "588",
+    "hp": 50,
+    "attack": 75,
+    "defense": 45,
+    "special-attack": 40,
+    "special-defense": 45,
+    "speed": 60
+  },
+  "escavalier": {
+    "id": "589",
+    "hp": 70,
+    "attack": 135,
+    "defense": 105,
+    "special-attack": 60,
+    "special-defense": 105,
+    "speed": 20
+  },
+  "foongus": {
+    "id": "590",
+    "hp": 69,
+    "attack": 55,
+    "defense": 45,
+    "special-attack": 55,
+    "special-defense": 55,
+    "speed": 15
+  },
+  "amoonguss": {
+    "id": "591",
+    "hp": 114,
+    "attack": 85,
+    "defense": 70,
+    "special-attack": 85,
+    "special-defense": 80,
+    "speed": 30
+  },
+  "frillish": {
+    "id": "592",
+    "hp": 55,
+    "attack": 40,
+    "defense": 50,
+    "special-attack": 65,
+    "special-defense": 85,
+    "speed": 40
+  },
+  "jellicent": {
+    "id": "593",
+    "hp": 100,
+    "attack": 60,
+    "defense": 70,
+    "special-attack": 85,
+    "special-defense": 105,
+    "speed": 60
+  },
+  "alomomola": {
+    "id": "594",
+    "hp": 165,
+    "attack": 75,
+    "defense": 80,
+    "special-attack": 40,
+    "special-defense": 45,
+    "speed": 65
+  },
+  "joltik": {
+    "id": "595",
+    "hp": 50,
+    "attack": 47,
+    "defense": 50,
+    "special-attack": 57,
+    "special-defense": 50,
+    "speed": 65
+  },
+  "galvantula": {
+    "id": "596",
+    "hp": 70,
+    "attack": 77,
+    "defense": 60,
+    "special-attack": 97,
+    "special-defense": 60,
+    "speed": 108
+  },
+  "ferroseed": {
+    "id": "597",
+    "hp": 44,
+    "attack": 50,
+    "defense": 91,
+    "special-attack": 24,
+    "special-defense": 86,
+    "speed": 10
+  },
+  "ferrothorn": {
+    "id": "598",
+    "hp": 74,
+    "attack": 94,
+    "defense": 131,
+    "special-attack": 54,
+    "special-defense": 116,
+    "speed": 20
+  },
+  "klink": {
+    "id": "599",
+    "hp": 40,
+    "attack": 55,
+    "defense": 70,
+    "special-attack": 45,
+    "special-defense": 60,
+    "speed": 30
+  },
+  "klang": {
+    "id": "600",
+    "hp": 60,
+    "attack": 80,
+    "defense": 95,
+    "special-attack": 70,
+    "special-defense": 85,
+    "speed": 50
+  },
+  "klinklang": {
+    "id": "601",
+    "hp": 60,
+    "attack": 100,
+    "defense": 115,
+    "special-attack": 70,
+    "special-defense": 85,
+    "speed": 90
+  },
+  "tynamo": {
+    "id": "602",
+    "hp": 35,
+    "attack": 55,
+    "defense": 40,
+    "special-attack": 45,
+    "special-defense": 40,
+    "speed": 60
+  },
+  "eelektrik": {
+    "id": "603",
+    "hp": 65,
+    "attack": 85,
+    "defense": 70,
+    "special-attack": 75,
+    "special-defense": 70,
+    "speed": 40
+  },
+  "eelektross": {
+    "id": "604",
+    "hp": 85,
+    "attack": 115,
+    "defense": 80,
+    "special-attack": 105,
+    "special-defense": 80,
+    "speed": 50
+  },
+  "elgyem": {
+    "id": "605",
+    "hp": 55,
+    "attack": 55,
+    "defense": 55,
+    "special-attack": 85,
+    "special-defense": 55,
+    "speed": 30
+  },
+  "beheeyem": {
+    "id": "606",
+    "hp": 75,
+    "attack": 75,
+    "defense": 75,
+    "special-attack": 125,
+    "special-defense": 95,
+    "speed": 40
+  },
+  "litwick": {
+    "id": "607",
+    "hp": 50,
+    "attack": 30,
+    "defense": 55,
+    "special-attack": 65,
+    "special-defense": 55,
+    "speed": 20
+  },
+  "lampent": {
+    "id": "608",
+    "hp": 60,
+    "attack": 40,
+    "defense": 60,
+    "special-attack": 95,
+    "special-defense": 60,
+    "speed": 55
+  },
+  "chandelure": {
+    "id": "609",
+    "hp": 60,
+    "attack": 55,
+    "defense": 90,
+    "special-attack": 145,
+    "special-defense": 90,
+    "speed": 80
+  },
+  "axew": {
+    "id": "610",
+    "hp": 46,
+    "attack": 87,
+    "defense": 60,
+    "special-attack": 30,
+    "special-defense": 40,
+    "speed": 57
+  },
+  "fraxure": {
+    "id": "611",
+    "hp": 66,
+    "attack": 117,
+    "defense": 70,
+    "special-attack": 40,
+    "special-defense": 50,
+    "speed": 67
+  },
+  "haxorus": {
+    "id": "612",
+    "hp": 76,
+    "attack": 147,
+    "defense": 90,
+    "special-attack": 60,
+    "special-defense": 70,
+    "speed": 97
+  },
+  "cubchoo": {
+    "id": "613",
+    "hp": 55,
+    "attack": 70,
+    "defense": 40,
+    "special-attack": 60,
+    "special-defense": 40,
+    "speed": 40
+  },
+  "beartic": {
+    "id": "614",
+    "hp": 95,
+    "attack": 130,
+    "defense": 80,
+    "special-attack": 70,
+    "special-defense": 80,
+    "speed": 50
+  },
+  "cryogonal": {
+    "id": "615",
+    "hp": 80,
+    "attack": 50,
+    "defense": 50,
+    "special-attack": 95,
+    "special-defense": 135,
+    "speed": 105
+  },
+  "shelmet": {
+    "id": "616",
+    "hp": 50,
+    "attack": 40,
+    "defense": 85,
+    "special-attack": 40,
+    "special-defense": 65,
+    "speed": 25
+  },
+  "accelgor": {
+    "id": "617",
+    "hp": 80,
+    "attack": 70,
+    "defense": 40,
+    "special-attack": 100,
+    "special-defense": 60,
+    "speed": 145
+  },
+  "stunfisk": {
+    "id": "618",
+    "hp": 109,
+    "attack": 66,
+    "defense": 84,
+    "special-attack": 81,
+    "special-defense": 99,
+    "speed": 32
+  },
+  "mienfoo": {
+    "id": "619",
+    "hp": 45,
+    "attack": 85,
+    "defense": 50,
+    "special-attack": 55,
+    "special-defense": 50,
+    "speed": 65
+  },
+  "mienshao": {
+    "id": "620",
+    "hp": 65,
+    "attack": 125,
+    "defense": 60,
+    "special-attack": 95,
+    "special-defense": 60,
+    "speed": 105
+  },
+  "druddigon": {
+    "id": "621",
+    "hp": 77,
+    "attack": 120,
+    "defense": 90,
+    "special-attack": 60,
+    "special-defense": 90,
+    "speed": 48
+  },
+  "golett": {
+    "id": "622",
+    "hp": 59,
+    "attack": 74,
+    "defense": 50,
+    "special-attack": 35,
+    "special-defense": 50,
+    "speed": 35
+  },
+  "golurk": {
+    "id": "623",
+    "hp": 89,
+    "attack": 124,
+    "defense": 80,
+    "special-attack": 55,
+    "special-defense": 80,
+    "speed": 55
+  },
+  "pawniard": {
+    "id": "624",
+    "hp": 45,
+    "attack": 85,
+    "defense": 70,
+    "special-attack": 40,
+    "special-defense": 40,
+    "speed": 60
+  },
+  "bisharp": {
+    "id": "625",
+    "hp": 65,
+    "attack": 125,
+    "defense": 100,
+    "special-attack": 60,
+    "special-defense": 70,
+    "speed": 70
+  },
+  "bouffalant": {
+    "id": "626",
+    "hp": 95,
+    "attack": 110,
+    "defense": 95,
+    "special-attack": 40,
+    "special-defense": 95,
+    "speed": 55
+  },
+  "rufflet": {
+    "id": "627",
+    "hp": 70,
+    "attack": 83,
+    "defense": 50,
+    "special-attack": 37,
+    "special-defense": 50,
+    "speed": 60
+  },
+  "braviary": {
+    "id": "628",
+    "hp": 100,
+    "attack": 123,
+    "defense": 75,
+    "special-attack": 57,
+    "special-defense": 75,
+    "speed": 80
+  },
+  "vullaby": {
+    "id": "629",
+    "hp": 70,
+    "attack": 55,
+    "defense": 75,
+    "special-attack": 45,
+    "special-defense": 65,
+    "speed": 60
+  },
+  "mandibuzz": {
+    "id": "630",
+    "hp": 110,
+    "attack": 65,
+    "defense": 105,
+    "special-attack": 55,
+    "special-defense": 95,
+    "speed": 80
+  },
+  "heatmor": {
+    "id": "631",
+    "hp": 85,
+    "attack": 97,
+    "defense": 66,
+    "special-attack": 105,
+    "special-defense": 66,
+    "speed": 65
+  },
+  "durant": {
+    "id": "632",
+    "hp": 58,
+    "attack": 109,
+    "defense": 112,
+    "special-attack": 48,
+    "special-defense": 48,
+    "speed": 109
+  },
+  "deino": {
+    "id": "633",
+    "hp": 52,
+    "attack": 65,
+    "defense": 50,
+    "special-attack": 45,
+    "special-defense": 50,
+    "speed": 38
+  },
+  "zweilous": {
+    "id": "634",
+    "hp": 72,
+    "attack": 85,
+    "defense": 70,
+    "special-attack": 65,
+    "special-defense": 70,
+    "speed": 58
+  },
+  "hydreigon": {
+    "id": "635",
+    "hp": 92,
+    "attack": 105,
+    "defense": 90,
+    "special-attack": 125,
+    "special-defense": 90,
+    "speed": 98
+  },
+  "larvesta": {
+    "id": "636",
+    "hp": 55,
+    "attack": 85,
+    "defense": 55,
+    "special-attack": 50,
+    "special-defense": 55,
+    "speed": 60
+  },
+  "volcarona": {
+    "id": "637",
+    "hp": 85,
+    "attack": 60,
+    "defense": 65,
+    "special-attack": 135,
+    "special-defense": 105,
+    "speed": 100
+  },
+  "cobalion": {
+    "id": "638",
+    "hp": 91,
+    "attack": 90,
+    "defense": 129,
+    "special-attack": 90,
+    "special-defense": 72,
+    "speed": 108
+  },
+  "terrakion": {
+    "id": "639",
+    "hp": 91,
+    "attack": 129,
+    "defense": 90,
+    "special-attack": 72,
+    "special-defense": 90,
+    "speed": 108
+  },
+  "virizion": {
+    "id": "640",
+    "hp": 91,
+    "attack": 90,
+    "defense": 72,
+    "special-attack": 90,
+    "special-defense": 129,
+    "speed": 108
+  },
+  "tornadus": {
+    "id": "641",
+    "hp": 79,
+    "attack": 115,
+    "defense": 70,
+    "special-attack": 125,
+    "special-defense": 80,
+    "speed": 111
+  },
+  "thundurus": {
+    "id": "642",
+    "hp": 79,
+    "attack": 115,
+    "defense": 70,
+    "special-attack": 125,
+    "special-defense": 80,
+    "speed": 111
+  },
+  "reshiram": {
+    "id": "643",
+    "hp": 100,
+    "attack": 120,
+    "defense": 100,
+    "special-attack": 150,
+    "special-defense": 120,
+    "speed": 90
+  },
+  "zekrom": {
+    "id": "644",
+    "hp": 100,
+    "attack": 150,
+    "defense": 120,
+    "special-attack": 120,
+    "special-defense": 100,
+    "speed": 90
+  },
+  "landorus": {
+    "id": "645",
+    "hp": 89,
+    "attack": 125,
+    "defense": 90,
+    "special-attack": 115,
+    "special-defense": 80,
+    "speed": 101
+  },
+  "kyurem": {
+    "id": "646",
+    "hp": 125,
+    "attack": 130,
+    "defense": 90,
+    "special-attack": 130,
+    "special-defense": 90,
+    "speed": 95
+  },
+  "keldeo": {
+    "id": "647",
+    "hp": 91,
+    "attack": 72,
+    "defense": 90,
+    "special-attack": 129,
+    "special-defense": 90,
+    "speed": 108
+  },
+  "meloetta": {
+    "id": "648",
+    "hp": 100,
+    "attack": 77,
+    "defense": 77,
+    "special-attack": 128,
+    "special-defense": 128,
+    "speed": 90
+  },
+  "genesect": {
+    "id": "649",
+    "hp": 71,
+    "attack": 120,
+    "defense": 95,
+    "special-attack": 120,
+    "special-defense": 95,
+    "speed": 99
+  },
+  "chespin": {
+    "id": "650",
+    "hp": 56,
+    "attack": 61,
+    "defense": 65,
+    "special-attack": 48,
+    "special-defense": 45,
+    "speed": 38
+  },
+  "quilladin": {
+    "id": "651",
+    "hp": 61,
+    "attack": 78,
+    "defense": 95,
+    "special-attack": 56,
+    "special-defense": 58,
+    "speed": 57
+  },
+  "chesnaught": {
+    "id": "652",
+    "hp": 88,
+    "attack": 107,
+    "defense": 122,
+    "special-attack": 74,
+    "special-defense": 75,
+    "speed": 64
+  },
+  "fennekin": {
+    "id": "653",
+    "hp": 40,
+    "attack": 45,
+    "defense": 40,
+    "special-attack": 62,
+    "special-defense": 60,
+    "speed": 60
+  },
+  "braixen": {
+    "id": "654",
+    "hp": 59,
+    "attack": 59,
+    "defense": 58,
+    "special-attack": 90,
+    "special-defense": 70,
+    "speed": 73
+  },
+  "delphox": {
+    "id": "655",
+    "hp": 75,
+    "attack": 69,
+    "defense": 72,
+    "special-attack": 114,
+    "special-defense": 100,
+    "speed": 104
+  },
+  "froakie": {
+    "id": "656",
+    "hp": 41,
+    "attack": 56,
+    "defense": 40,
+    "special-attack": 62,
+    "special-defense": 44,
+    "speed": 71
+  },
+  "frogadier": {
+    "id": "657",
+    "hp": 54,
+    "attack": 63,
+    "defense": 52,
+    "special-attack": 83,
+    "special-defense": 56,
+    "speed": 97
+  },
+  "greninja": {
+    "id": "658",
+    "hp": 72,
+    "attack": 95,
+    "defense": 67,
+    "special-attack": 103,
+    "special-defense": 71,
+    "speed": 122
+  },
+  "bunnelby": {
+    "id": "659",
+    "hp": 38,
+    "attack": 36,
+    "defense": 38,
+    "special-attack": 32,
+    "special-defense": 36,
+    "speed": 57
+  },
+  "diggersby": {
+    "id": "660",
+    "hp": 85,
+    "attack": 56,
+    "defense": 77,
+    "special-attack": 50,
+    "special-defense": 77,
+    "speed": 78
+  },
+  "fletchling": {
+    "id": "661",
+    "hp": 45,
+    "attack": 50,
+    "defense": 43,
+    "special-attack": 40,
+    "special-defense": 38,
+    "speed": 62
+  },
+  "fletchinder": {
+    "id": "662",
+    "hp": 62,
+    "attack": 73,
+    "defense": 55,
+    "special-attack": 56,
+    "special-defense": 52,
+    "speed": 84
+  },
+  "talonflame": {
+    "id": "663",
+    "hp": 78,
+    "attack": 81,
+    "defense": 71,
+    "special-attack": 74,
+    "special-defense": 69,
+    "speed": 126
+  },
+  "scatterbug": {
+    "id": "664",
+    "hp": 38,
+    "attack": 35,
+    "defense": 40,
+    "special-attack": 27,
+    "special-defense": 25,
+    "speed": 35
+  },
+  "spewpa": {
+    "id": "665",
+    "hp": 45,
+    "attack": 22,
+    "defense": 60,
+    "special-attack": 27,
+    "special-defense": 30,
+    "speed": 29
+  },
+  "vivillon": {
+    "id": "666",
+    "hp": 80,
+    "attack": 52,
+    "defense": 50,
+    "special-attack": 90,
+    "special-defense": 50,
+    "speed": 89
+  },
+  "litleo": {
+    "id": "667",
+    "hp": 62,
+    "attack": 50,
+    "defense": 58,
+    "special-attack": 73,
+    "special-defense": 54,
+    "speed": 72
+  },
+  "pyroar": {
+    "id": "668",
+    "hp": 86,
+    "attack": 68,
+    "defense": 72,
+    "special-attack": 109,
+    "special-defense": 66,
+    "speed": 106
+  },
+  "flabebe": {
+    "id": "669",
+    "hp": 44,
+    "attack": 38,
+    "defense": 39,
+    "special-attack": 61,
+    "special-defense": 79,
+    "speed": 42
+  },
+  "floette": {
+    "id": "670",
+    "hp": 54,
+    "attack": 45,
+    "defense": 47,
+    "special-attack": 75,
+    "special-defense": 98,
+    "speed": 52
+  },
+  "florges": {
+    "id": "671",
+    "hp": 78,
+    "attack": 65,
+    "defense": 68,
+    "special-attack": 112,
+    "special-defense": 154,
+    "speed": 75
+  },
+  "skiddo": {
+    "id": "672",
+    "hp": 66,
+    "attack": 65,
+    "defense": 48,
+    "special-attack": 62,
+    "special-defense": 57,
+    "speed": 52
+  },
+  "gogoat": {
+    "id": "673",
+    "hp": 123,
+    "attack": 100,
+    "defense": 62,
+    "special-attack": 97,
+    "special-defense": 81,
+    "speed": 68
+  },
+  "pancham": {
+    "id": "674",
+    "hp": 67,
+    "attack": 82,
+    "defense": 62,
+    "special-attack": 46,
+    "special-defense": 48,
+    "speed": 43
+  },
+  "pangoro": {
+    "id": "675",
+    "hp": 95,
+    "attack": 124,
+    "defense": 78,
+    "special-attack": 69,
+    "special-defense": 71,
+    "speed": 58
+  },
+  "furfrou": {
+    "id": "676",
+    "hp": 75,
+    "attack": 80,
+    "defense": 60,
+    "special-attack": 65,
+    "special-defense": 90,
+    "speed": 102
+  },
+  "espurr": {
+    "id": "677",
+    "hp": 62,
+    "attack": 48,
+    "defense": 54,
+    "special-attack": 63,
+    "special-defense": 60,
+    "speed": 68
+  },
+  "meowstic": {
+    "id": "678",
+    "hp": 74,
+    "attack": 48,
+    "defense": 76,
+    "special-attack": 83,
+    "special-defense": 81,
+    "speed": 104
+  },
+  "honedge": {
+    "id": "679",
+    "hp": 45,
+    "attack": 80,
+    "defense": 100,
+    "special-attack": 35,
+    "special-defense": 37,
+    "speed": 28
+  },
+  "doublade": {
+    "id": "680",
+    "hp": 59,
+    "attack": 110,
+    "defense": 150,
+    "special-attack": 45,
+    "special-defense": 49,
+    "speed": 35
+  },
+  "aegislash": {
+    "id": "681",
+    "hp": 60,
+    "attack": 50,
+    "defense": 140,
+    "special-attack": 50,
+    "special-defense": 140,
+    "speed": 60
+  },
+  "spritzee": {
+    "id": "682",
+    "hp": 78,
+    "attack": 52,
+    "defense": 60,
+    "special-attack": 63,
+    "special-defense": 65,
+    "speed": 23
+  },
+  "aromatisse": {
+    "id": "683",
+    "hp": 101,
+    "attack": 72,
+    "defense": 72,
+    "special-attack": 99,
+    "special-defense": 89,
+    "speed": 29
+  },
+  "swirlix": {
+    "id": "684",
+    "hp": 62,
+    "attack": 48,
+    "defense": 66,
+    "special-attack": 59,
+    "special-defense": 57,
+    "speed": 49
+  },
+  "slurpuff": {
+    "id": "685",
+    "hp": 82,
+    "attack": 80,
+    "defense": 86,
+    "special-attack": 85,
+    "special-defense": 75,
+    "speed": 72
+  },
+  "inkay": {
+    "id": "686",
+    "hp": 53,
+    "attack": 54,
+    "defense": 53,
+    "special-attack": 37,
+    "special-defense": 46,
+    "speed": 45
+  },
+  "malamar": {
+    "id": "687",
+    "hp": 86,
+    "attack": 92,
+    "defense": 88,
+    "special-attack": 68,
+    "special-defense": 75,
+    "speed": 73
+  },
+  "binacle": {
+    "id": "688",
+    "hp": 42,
+    "attack": 52,
+    "defense": 67,
+    "special-attack": 39,
+    "special-defense": 56,
+    "speed": 50
+  },
+  "barbaracle": {
+    "id": "689",
+    "hp": 72,
+    "attack": 105,
+    "defense": 115,
+    "special-attack": 54,
+    "special-defense": 86,
+    "speed": 68
+  },
+  "skrelp": {
+    "id": "690",
+    "hp": 50,
+    "attack": 60,
+    "defense": 60,
+    "special-attack": 60,
+    "special-defense": 60,
+    "speed": 30
+  },
+  "dragalge": {
+    "id": "691",
+    "hp": 65,
+    "attack": 75,
+    "defense": 90,
+    "special-attack": 97,
+    "special-defense": 123,
+    "speed": 44
+  },
+  "clauncher": {
+    "id": "692",
+    "hp": 50,
+    "attack": 53,
+    "defense": 62,
+    "special-attack": 58,
+    "special-defense": 63,
+    "speed": 44
+  },
+  "clawitzer": {
+    "id": "693",
+    "hp": 71,
+    "attack": 73,
+    "defense": 88,
+    "special-attack": 120,
+    "special-defense": 89,
+    "speed": 59
+  },
+  "helioptile": {
+    "id": "694",
+    "hp": 44,
+    "attack": 38,
+    "defense": 33,
+    "special-attack": 61,
+    "special-defense": 43,
+    "speed": 70
+  },
+  "heliolisk": {
+    "id": "695",
+    "hp": 62,
+    "attack": 55,
+    "defense": 52,
+    "special-attack": 109,
+    "special-defense": 94,
+    "speed": 109
+  },
+  "tyrunt": {
+    "id": "696",
+    "hp": 58,
+    "attack": 89,
+    "defense": 77,
+    "special-attack": 45,
+    "special-defense": 45,
+    "speed": 48
+  },
+  "tyrantrum": {
+    "id": "697",
+    "hp": 82,
+    "attack": 121,
+    "defense": 119,
+    "special-attack": 69,
+    "special-defense": 59,
+    "speed": 71
+  },
+  "amaura": {
+    "id": "698",
+    "hp": 77,
+    "attack": 59,
+    "defense": 50,
+    "special-attack": 67,
+    "special-defense": 63,
+    "speed": 46
+  },
+  "aurorus": {
+    "id": "699",
+    "hp": 123,
+    "attack": 77,
+    "defense": 72,
+    "special-attack": 99,
+    "special-defense": 92,
+    "speed": 58
+  },
+  "sylveon": {
+    "id": "700",
+    "hp": 95,
+    "attack": 65,
+    "defense": 65,
+    "special-attack": 110,
+    "special-defense": 130,
+    "speed": 60
+  },
+  "hawlucha": {
+    "id": "701",
+    "hp": 78,
+    "attack": 92,
+    "defense": 75,
+    "special-attack": 74,
+    "special-defense": 63,
+    "speed": 118
+  },
+  "dedenne": {
+    "id": "702",
+    "hp": 67,
+    "attack": 58,
+    "defense": 57,
+    "special-attack": 81,
+    "special-defense": 67,
+    "speed": 101
+  },
+  "carbink": {
+    "id": "703",
+    "hp": 50,
+    "attack": 50,
+    "defense": 150,
+    "special-attack": 50,
+    "special-defense": 150,
+    "speed": 50
+  },
+  "goomy": {
+    "id": "704",
+    "hp": 45,
+    "attack": 50,
+    "defense": 35,
+    "special-attack": 55,
+    "special-defense": 75,
+    "speed": 40
+  },
+  "sliggoo": {
+    "id": "705",
+    "hp": 68,
+    "attack": 75,
+    "defense": 53,
+    "special-attack": 83,
+    "special-defense": 113,
+    "speed": 60
+  },
+  "goodra": {
+    "id": "706",
+    "hp": 90,
+    "attack": 100,
+    "defense": 70,
+    "special-attack": 110,
+    "special-defense": 150,
+    "speed": 80
+  },
+  "klefki": {
+    "id": "707",
+    "hp": 57,
+    "attack": 80,
+    "defense": 91,
+    "special-attack": 80,
+    "special-defense": 87,
+    "speed": 75
+  },
+  "phantump": {
+    "id": "708",
+    "hp": 43,
+    "attack": 70,
+    "defense": 48,
+    "special-attack": 50,
+    "special-defense": 60,
+    "speed": 38
+  },
+  "trevenant": {
+    "id": "709",
+    "hp": 85,
+    "attack": 110,
+    "defense": 76,
+    "special-attack": 65,
+    "special-defense": 82,
+    "speed": 56
+  },
+  "pumpkaboo": {
+    "id": "710",
+    "hp": 49,
+    "attack": 66,
+    "defense": 70,
+    "special-attack": 44,
+    "special-defense": 55,
+    "speed": 51
+  },
+  "gourgeist": {
+    "id": "711",
+    "hp": 65,
+    "attack": 90,
+    "defense": 122,
+    "special-attack": 58,
+    "special-defense": 75,
+    "speed": 84
+  },
+  "bergmite": {
+    "id": "712",
+    "hp": 55,
+    "attack": 69,
+    "defense": 85,
+    "special-attack": 32,
+    "special-defense": 35,
+    "speed": 28
+  },
+  "avalugg": {
+    "id": "713",
+    "hp": 95,
+    "attack": 117,
+    "defense": 184,
+    "special-attack": 44,
+    "special-defense": 46,
+    "speed": 28
+  },
+  "noibat": {
+    "id": "714",
+    "hp": 40,
+    "attack": 30,
+    "defense": 35,
+    "special-attack": 45,
+    "special-defense": 40,
+    "speed": 55
+  },
+  "noivern": {
+    "id": "715",
+    "hp": 85,
+    "attack": 70,
+    "defense": 80,
+    "special-attack": 97,
+    "special-defense": 80,
+    "speed": 123
+  },
+  "xerneas": {
+    "id": "716",
+    "hp": 126,
+    "attack": 131,
+    "defense": 95,
+    "special-attack": 131,
+    "special-defense": 98,
+    "speed": 99
+  },
+  "yveltal": {
+    "id": "717",
+    "hp": 126,
+    "attack": 131,
+    "defense": 95,
+    "special-attack": 131,
+    "special-defense": 98,
+    "speed": 99
+  },
+  "zygarde": {
+    "id": "718",
+    "hp": 108,
+    "attack": 100,
+    "defense": 121,
+    "special-attack": 81,
+    "special-defense": 95,
+    "speed": 95
+  },
+  "diancie": {
+    "id": "719",
+    "hp": 50,
+    "attack": 100,
+    "defense": 150,
+    "special-attack": 100,
+    "special-defense": 150,
+    "speed": 50
+  },
+  "hoopa": {
+    "id": "720",
+    "hp": 80,
+    "attack": 110,
+    "defense": 60,
+    "special-attack": 150,
+    "special-defense": 130,
+    "speed": 70
+  },
+  "volcanion": {
+    "id": "721",
+    "hp": 80,
+    "attack": 110,
+    "defense": 120,
+    "special-attack": 130,
+    "special-defense": 90,
+    "speed": 70
+  },
+  "rowlet": {
+    "id": "722",
+    "hp": 68,
+    "attack": 55,
+    "defense": 55,
+    "special-attack": 50,
+    "special-defense": 50,
+    "speed": 42
+  },
+  "dartrix": {
+    "id": "723",
+    "hp": 78,
+    "attack": 75,
+    "defense": 75,
+    "special-attack": 70,
+    "special-defense": 70,
+    "speed": 52
+  },
+  "decidueye": {
+    "id": "724",
+    "hp": 78,
+    "attack": 107,
+    "defense": 75,
+    "special-attack": 100,
+    "special-defense": 100,
+    "speed": 70
+  },
+  "litten": {
+    "id": "725",
+    "hp": 45,
+    "attack": 65,
+    "defense": 40,
+    "special-attack": 60,
+    "special-defense": 40,
+    "speed": 70
+  },
+  "torracat": {
+    "id": "726",
+    "hp": 65,
+    "attack": 85,
+    "defense": 50,
+    "special-attack": 80,
+    "special-defense": 50,
+    "speed": 90
+  },
+  "incineroar": {
+    "id": "727",
+    "hp": 95,
+    "attack": 115,
+    "defense": 90,
+    "special-attack": 80,
+    "special-defense": 90,
+    "speed": 60
+  },
+  "popplio": {
+    "id": "728",
+    "hp": 50,
+    "attack": 54,
+    "defense": 54,
+    "special-attack": 66,
+    "special-defense": 56,
+    "speed": 40
+  },
+  "brionne": {
+    "id": "729",
+    "hp": 60,
+    "attack": 69,
+    "defense": 69,
+    "special-attack": 91,
+    "special-defense": 81,
+    "speed": 50
+  },
+  "primarina": {
+    "id": "730",
+    "hp": 80,
+    "attack": 74,
+    "defense": 74,
+    "special-attack": 126,
+    "special-defense": 116,
+    "speed": 60
+  },
+  "pikipek": {
+    "id": "731",
+    "hp": 35,
+    "attack": 75,
+    "defense": 30,
+    "special-attack": 30,
+    "special-defense": 30,
+    "speed": 65
+  },
+  "trumbeak": {
+    "id": "732",
+    "hp": 55,
+    "attack": 85,
+    "defense": 50,
+    "special-attack": 40,
+    "special-defense": 50,
+    "speed": 75
+  },
+  "toucannon": {
+    "id": "733",
+    "hp": 80,
+    "attack": 120,
+    "defense": 75,
+    "special-attack": 75,
+    "special-defense": 75,
+    "speed": 60
+  },
+  "yungoos": {
+    "id": "734",
+    "hp": 48,
+    "attack": 70,
+    "defense": 30,
+    "special-attack": 30,
+    "special-defense": 30,
+    "speed": 45
+  },
+  "gumshoos": {
+    "id": "735",
+    "hp": 88,
+    "attack": 110,
+    "defense": 60,
+    "special-attack": 55,
+    "special-defense": 60,
+    "speed": 45
+  },
+  "grubbin": {
+    "id": "736",
+    "hp": 47,
+    "attack": 62,
+    "defense": 45,
+    "special-attack": 55,
+    "special-defense": 45,
+    "speed": 46
+  },
+  "charjabug": {
+    "id": "737",
+    "hp": 57,
+    "attack": 82,
+    "defense": 95,
+    "special-attack": 55,
+    "special-defense": 75,
+    "speed": 36
+  },
+  "vikavolt": {
+    "id": "738",
+    "hp": 77,
+    "attack": 70,
+    "defense": 90,
+    "special-attack": 145,
+    "special-defense": 75,
+    "speed": 43
+  },
+  "crabrawler": {
+    "id": "739",
+    "hp": 47,
+    "attack": 82,
+    "defense": 57,
+    "special-attack": 42,
+    "special-defense": 47,
+    "speed": 63
+  },
+  "crabominable": {
+    "id": "740",
+    "hp": 97,
+    "attack": 132,
+    "defense": 77,
+    "special-attack": 62,
+    "special-defense": 67,
+    "speed": 43
+  },
+  "oricorio": {
+    "id": "741",
+    "hp": 75,
+    "attack": 70,
+    "defense": 70,
+    "special-attack": 98,
+    "special-defense": 70,
+    "speed": 93
+  },
+  "cutiefly": {
+    "id": "742",
+    "hp": 40,
+    "attack": 45,
+    "defense": 40,
+    "special-attack": 55,
+    "special-defense": 40,
+    "speed": 84
+  },
+  "ribombee": {
+    "id": "743",
+    "hp": 60,
+    "attack": 55,
+    "defense": 60,
+    "special-attack": 95,
+    "special-defense": 70,
+    "speed": 124
+  },
+  "rockruff": {
+    "id": "744",
+    "hp": 45,
+    "attack": 65,
+    "defense": 40,
+    "special-attack": 30,
+    "special-defense": 40,
+    "speed": 60
+  },
+  "lycanroc": {
+    "id": "745",
+    "hp": 75,
+    "attack": 115,
+    "defense": 65,
+    "special-attack": 55,
+    "special-defense": 65,
+    "speed": 112
+  },
+  "wishiwashi": {
+    "id": "746",
+    "hp": 45,
+    "attack": 20,
+    "defense": 20,
+    "special-attack": 25,
+    "special-defense": 25,
+    "speed": 40
+  },
+  "mareanie": {
+    "id": "747",
+    "hp": 50,
+    "attack": 53,
+    "defense": 62,
+    "special-attack": 43,
+    "special-defense": 52,
+    "speed": 45
+  },
+  "toxapex": {
+    "id": "748",
+    "hp": 50,
+    "attack": 63,
+    "defense": 152,
+    "special-attack": 53,
+    "special-defense": 142,
+    "speed": 35
+  },
+  "mudbray": {
+    "id": "749",
+    "hp": 70,
+    "attack": 100,
+    "defense": 70,
+    "special-attack": 45,
+    "special-defense": 55,
+    "speed": 45
+  },
+  "mudsdale": {
+    "id": "750",
+    "hp": 100,
+    "attack": 125,
+    "defense": 100,
+    "special-attack": 55,
+    "special-defense": 85,
+    "speed": 35
+  },
+  "dewpider": {
+    "id": "751",
+    "hp": 38,
+    "attack": 40,
+    "defense": 52,
+    "special-attack": 40,
+    "special-defense": 72,
+    "speed": 27
+  },
+  "araquanid": {
+    "id": "752",
+    "hp": 68,
+    "attack": 70,
+    "defense": 92,
+    "special-attack": 50,
+    "special-defense": 132,
+    "speed": 42
+  },
+  "fomantis": {
+    "id": "753",
+    "hp": 40,
+    "attack": 55,
+    "defense": 35,
+    "special-attack": 50,
+    "special-defense": 35,
+    "speed": 35
+  },
+  "lurantis": {
+    "id": "754",
+    "hp": 70,
+    "attack": 105,
+    "defense": 90,
+    "special-attack": 80,
+    "special-defense": 90,
+    "speed": 45
+  },
+  "morelull": {
+    "id": "755",
+    "hp": 40,
+    "attack": 35,
+    "defense": 55,
+    "special-attack": 65,
+    "special-defense": 75,
+    "speed": 15
+  },
+  "shiinotic": {
+    "id": "756",
+    "hp": 60,
+    "attack": 45,
+    "defense": 80,
+    "special-attack": 90,
+    "special-defense": 100,
+    "speed": 30
+  },
+  "salandit": {
+    "id": "757",
+    "hp": 48,
+    "attack": 44,
+    "defense": 40,
+    "special-attack": 71,
+    "special-defense": 40,
+    "speed": 77
+  },
+  "salazzle": {
+    "id": "758",
+    "hp": 68,
+    "attack": 64,
+    "defense": 60,
+    "special-attack": 111,
+    "special-defense": 60,
+    "speed": 117
+  },
+  "stufful": {
+    "id": "759",
+    "hp": 70,
+    "attack": 75,
+    "defense": 50,
+    "special-attack": 45,
+    "special-defense": 50,
+    "speed": 50
+  },
+  "bewear": {
+    "id": "760",
+    "hp": 120,
+    "attack": 125,
+    "defense": 80,
+    "special-attack": 55,
+    "special-defense": 60,
+    "speed": 60
+  },
+  "bounsweet": {
+    "id": "761",
+    "hp": 42,
+    "attack": 30,
+    "defense": 38,
+    "special-attack": 30,
+    "special-defense": 38,
+    "speed": 32
+  },
+  "steenee": {
+    "id": "762",
+    "hp": 52,
+    "attack": 40,
+    "defense": 48,
+    "special-attack": 40,
+    "special-defense": 48,
+    "speed": 62
+  },
+  "tsareena": {
+    "id": "763",
+    "hp": 72,
+    "attack": 120,
+    "defense": 98,
+    "special-attack": 50,
+    "special-defense": 98,
+    "speed": 72
+  },
+  "comfey": {
+    "id": "764",
+    "hp": 51,
+    "attack": 52,
+    "defense": 90,
+    "special-attack": 82,
+    "special-defense": 110,
+    "speed": 100
+  },
+  "oranguru": {
+    "id": "765",
+    "hp": 90,
+    "attack": 60,
+    "defense": 80,
+    "special-attack": 90,
+    "special-defense": 110,
+    "speed": 60
+  },
+  "passimian": {
+    "id": "766",
+    "hp": 100,
+    "attack": 120,
+    "defense": 90,
+    "special-attack": 40,
+    "special-defense": 60,
+    "speed": 80
+  },
+  "wimpod": {
+    "id": "767",
+    "hp": 25,
+    "attack": 35,
+    "defense": 40,
+    "special-attack": 20,
+    "special-defense": 30,
+    "speed": 80
+  },
+  "golisopod": {
+    "id": "768",
+    "hp": 75,
+    "attack": 125,
+    "defense": 140,
+    "special-attack": 60,
+    "special-defense": 90,
+    "speed": 40
+  },
+  "sandygast": {
+    "id": "769",
+    "hp": 55,
+    "attack": 55,
+    "defense": 80,
+    "special-attack": 70,
+    "special-defense": 45,
+    "speed": 15
+  },
+  "palossand": {
+    "id": "770",
+    "hp": 85,
+    "attack": 75,
+    "defense": 110,
+    "special-attack": 100,
+    "special-defense": 75,
+    "speed": 35
+  },
+  "pyukumuku": {
+    "id": "771",
+    "hp": 55,
+    "attack": 60,
+    "defense": 130,
+    "special-attack": 30,
+    "special-defense": 130,
+    "speed": 5
+  },
+  "type-null": {
+    "id": "772",
+    "hp": 95,
+    "attack": 95,
+    "defense": 95,
+    "special-attack": 95,
+    "special-defense": 95,
+    "speed": 59
+  },
+  "silvally": {
+    "id": "773",
+    "hp": 95,
+    "attack": 95,
+    "defense": 95,
+    "special-attack": 95,
+    "special-defense": 95,
+    "speed": 95
+  },
+  "minior": {
+    "id": "774",
+    "hp": 60,
+    "attack": 60,
+    "defense": 100,
+    "special-attack": 60,
+    "special-defense": 100,
+    "speed": 60
+  },
+  "komala": {
+    "id": "775",
+    "hp": 65,
+    "attack": 115,
+    "defense": 65,
+    "special-attack": 75,
+    "special-defense": 95,
+    "speed": 65
+  },
+  "turtonator": {
+    "id": "776",
+    "hp": 60,
+    "attack": 78,
+    "defense": 135,
+    "special-attack": 91,
+    "special-defense": 85,
+    "speed": 36
+  },
+  "togedemaru": {
+    "id": "777",
+    "hp": 65,
+    "attack": 98,
+    "defense": 63,
+    "special-attack": 40,
+    "special-defense": 73,
+    "speed": 96
+  },
+  "mimikyu": {
+    "id": "778",
+    "hp": 55,
+    "attack": 90,
+    "defense": 80,
+    "special-attack": 50,
+    "special-defense": 105,
+    "speed": 96
+  },
+  "bruxish": {
+    "id": "779",
+    "hp": 68,
+    "attack": 105,
+    "defense": 70,
+    "special-attack": 70,
+    "special-defense": 70,
+    "speed": 92
+  },
+  "drampa": {
+    "id": "780",
+    "hp": 78,
+    "attack": 60,
+    "defense": 85,
+    "special-attack": 135,
+    "special-defense": 91,
+    "speed": 36
+  },
+  "dhelmise": {
+    "id": "781",
+    "hp": 70,
+    "attack": 131,
+    "defense": 100,
+    "special-attack": 86,
+    "special-defense": 90,
+    "speed": 40
+  },
+  "jangmo-o": {
+    "id": "782",
+    "hp": 45,
+    "attack": 55,
+    "defense": 65,
+    "special-attack": 45,
+    "special-defense": 45,
+    "speed": 45
+  },
+  "hakamo-o": {
+    "id": "783",
+    "hp": 55,
+    "attack": 75,
+    "defense": 90,
+    "special-attack": 65,
+    "special-defense": 70,
+    "speed": 65
+  },
+  "kommo-o": {
+    "id": "784",
+    "hp": 75,
+    "attack": 110,
+    "defense": 125,
+    "special-attack": 100,
+    "special-defense": 105,
+    "speed": 85
+  },
+  "tapu-koko": {
+    "id": "785",
+    "hp": 70,
+    "attack": 115,
+    "defense": 85,
+    "special-attack": 95,
+    "special-defense": 75,
+    "speed": 130
+  },
+  "tapu-lele": {
+    "id": "786",
+    "hp": 70,
+    "attack": 85,
+    "defense": 75,
+    "special-attack": 130,
+    "special-defense": 115,
+    "speed": 95
+  },
+  "tapu-bulu": {
+    "id": "787",
+    "hp": 70,
+    "attack": 130,
+    "defense": 115,
+    "special-attack": 85,
+    "special-defense": 95,
+    "speed": 75
+  },
+  "tapu-fini": {
+    "id": "788",
+    "hp": 70,
+    "attack": 75,
+    "defense": 115,
+    "special-attack": 95,
+    "special-defense": 130,
+    "speed": 85
+  },
+  "cosmog": {
+    "id": "789",
+    "hp": 43,
+    "attack": 29,
+    "defense": 31,
+    "special-attack": 29,
+    "special-defense": 31,
+    "speed": 37
+  },
+  "cosmoem": {
+    "id": "790",
+    "hp": 43,
+    "attack": 29,
+    "defense": 131,
+    "special-attack": 29,
+    "special-defense": 131,
+    "speed": 37
+  },
+  "solgaleo": {
+    "id": "791",
+    "hp": 137,
+    "attack": 137,
+    "defense": 107,
+    "special-attack": 113,
+    "special-defense": 89,
+    "speed": 97
+  },
+  "lunala": {
+    "id": "792",
+    "hp": 137,
+    "attack": 113,
+    "defense": 89,
+    "special-attack": 137,
+    "special-defense": 107,
+    "speed": 97
+  },
+  "nihilego": {
+    "id": "793",
+    "hp": 109,
+    "attack": 53,
+    "defense": 47,
+    "special-attack": 127,
+    "special-defense": 131,
+    "speed": 103
+  },
+  "buzzwole": {
+    "id": "794",
+    "hp": 107,
+    "attack": 139,
+    "defense": 139,
+    "special-attack": 53,
+    "special-defense": 53,
+    "speed": 79
+  },
+  "pheromosa": {
+    "id": "795",
+    "hp": 71,
+    "attack": 137,
+    "defense": 37,
+    "special-attack": 137,
+    "special-defense": 37,
+    "speed": 151
+  },
+  "xurkitree": {
+    "id": "796",
+    "hp": 83,
+    "attack": 89,
+    "defense": 71,
+    "special-attack": 173,
+    "special-defense": 71,
+    "speed": 83
+  },
+  "celesteela": {
+    "id": "797",
+    "hp": 97,
+    "attack": 101,
+    "defense": 103,
+    "special-attack": 107,
+    "special-defense": 101,
+    "speed": 61
+  },
+  "kartana": {
+    "id": "798",
+    "hp": 59,
+    "attack": 181,
+    "defense": 131,
+    "special-attack": 59,
+    "special-defense": 31,
+    "speed": 109
+  },
+  "guzzlord": {
+    "id": "799",
+    "hp": 223,
+    "attack": 101,
+    "defense": 53,
+    "special-attack": 97,
+    "special-defense": 53,
+    "speed": 43
+  },
+  "necrozma": {
+    "id": "800",
+    "hp": 97,
+    "attack": 107,
+    "defense": 101,
+    "special-attack": 127,
+    "special-defense": 89,
+    "speed": 79
+  },
+  "magearna": {
+    "id": "801",
+    "hp": 80,
+    "attack": 95,
+    "defense": 115,
+    "special-attack": 130,
+    "special-defense": 115,
+    "speed": 65
+  },
+  "marshadow": {
+    "id": "802",
+    "hp": 90,
+    "attack": 125,
+    "defense": 80,
+    "special-attack": 90,
+    "special-defense": 90,
+    "speed": 125
+  },
+  "poipole": {
+    "id": "803",
+    "hp": 67,
+    "attack": 73,
+    "defense": 67,
+    "special-attack": 73,
+    "special-defense": 67,
+    "speed": 73
+  },
+  "naganadel": {
+    "id": "804",
+    "hp": 73,
+    "attack": 73,
+    "defense": 73,
+    "special-attack": 127,
+    "special-defense": 73,
+    "speed": 121
+  },
+  "stakataka": {
+    "id": "805",
+    "hp": 61,
+    "attack": 131,
+    "defense": 211,
+    "special-attack": 53,
+    "special-defense": 101,
+    "speed": 13
+  },
+  "blacephalon": {
+    "id": "806",
+    "hp": 53,
+    "attack": 127,
+    "defense": 53,
+    "special-attack": 151,
+    "special-defense": 79,
+    "speed": 107
+  },
+  "zeraora": {
+    "id": "807",
+    "hp": 88,
+    "attack": 112,
+    "defense": 75,
+    "special-attack": 102,
+    "special-defense": 80,
+    "speed": 143
+  },
+  "meltan": {
+    "id": "808",
+    "hp": 46,
+    "attack": 65,
+    "defense": 65,
+    "special-attack": 55,
+    "special-defense": 35,
+    "speed": 34
+  },
+  "melmetal": {
+    "id": "809",
+    "hp": 135,
+    "attack": 143,
+    "defense": 143,
+    "special-attack": 80,
+    "special-defense": 65,
+    "speed": 34
+  },
+  "grookey": {
+    "id": "810",
+    "hp": 50,
+    "attack": 65,
+    "defense": 50,
+    "special-attack": 40,
+    "special-defense": 40,
+    "speed": 65
+  },
+  "thwackey": {
+    "id": "811",
+    "hp": 70,
+    "attack": 85,
+    "defense": 70,
+    "special-attack": 55,
+    "special-defense": 60,
+    "speed": 80
+  },
+  "rillaboom": {
+    "id": "812",
+    "hp": 100,
+    "attack": 125,
+    "defense": 90,
+    "special-attack": 60,
+    "special-defense": 70,
+    "speed": 85
+  },
+  "scorbunny": {
+    "id": "813",
+    "hp": 50,
+    "attack": 71,
+    "defense": 40,
+    "special-attack": 40,
+    "special-defense": 40,
+    "speed": 69
+  },
+  "raboot": {
+    "id": "814",
+    "hp": 65,
+    "attack": 86,
+    "defense": 60,
+    "special-attack": 55,
+    "special-defense": 60,
+    "speed": 94
+  },
+  "cinderace": {
+    "id": "815",
+    "hp": 80,
+    "attack": 116,
+    "defense": 75,
+    "special-attack": 65,
+    "special-defense": 75,
+    "speed": 119
+  },
+  "sobble": {
+    "id": "816",
+    "hp": 50,
+    "attack": 40,
+    "defense": 40,
+    "special-attack": 70,
+    "special-defense": 40,
+    "speed": 70
+  },
+  "drizzile": {
+    "id": "817",
+    "hp": 65,
+    "attack": 60,
+    "defense": 55,
+    "special-attack": 95,
+    "special-defense": 55,
+    "speed": 90
+  },
+  "inteleon": {
+    "id": "818",
+    "hp": 70,
+    "attack": 85,
+    "defense": 65,
+    "special-attack": 125,
+    "special-defense": 65,
+    "speed": 120
+  },
+  "skwovet": {
+    "id": "819",
+    "hp": 70,
+    "attack": 55,
+    "defense": 55,
+    "special-attack": 35,
+    "special-defense": 35,
+    "speed": 25
+  },
+  "greedent": {
+    "id": "820",
+    "hp": 120,
+    "attack": 95,
+    "defense": 95,
+    "special-attack": 55,
+    "special-defense": 75,
+    "speed": 20
+  },
+  "rookidee": {
+    "id": "821",
+    "hp": 38,
+    "attack": 47,
+    "defense": 35,
+    "special-attack": 33,
+    "special-defense": 35,
+    "speed": 57
+  },
+  "corvisquire": {
+    "id": "822",
+    "hp": 68,
+    "attack": 67,
+    "defense": 55,
+    "special-attack": 43,
+    "special-defense": 55,
+    "speed": 77
+  },
+  "corviknight": {
+    "id": "823",
+    "hp": 98,
+    "attack": 87,
+    "defense": 105,
+    "special-attack": 53,
+    "special-defense": 85,
+    "speed": 67
+  },
+  "blipbug": {
+    "id": "824",
+    "hp": 25,
+    "attack": 20,
+    "defense": 20,
+    "special-attack": 25,
+    "special-defense": 45,
+    "speed": 45
+  },
+  "dottler": {
+    "id": "825",
+    "hp": 50,
+    "attack": 35,
+    "defense": 80,
+    "special-attack": 50,
+    "special-defense": 90,
+    "speed": 30
+  },
+  "orbeetle": {
+    "id": "826",
+    "hp": 60,
+    "attack": 45,
+    "defense": 110,
+    "special-attack": 80,
+    "special-defense": 120,
+    "speed": 90
+  },
+  "nickit": {
+    "id": "827",
+    "hp": 40,
+    "attack": 28,
+    "defense": 28,
+    "special-attack": 47,
+    "special-defense": 52,
+    "speed": 50
+  },
+  "thievul": {
+    "id": "828",
+    "hp": 70,
+    "attack": 58,
+    "defense": 58,
+    "special-attack": 87,
+    "special-defense": 92,
+    "speed": 90
+  },
+  "gossifleur": {
+    "id": "829",
+    "hp": 40,
+    "attack": 40,
+    "defense": 60,
+    "special-attack": 40,
+    "special-defense": 60,
+    "speed": 10
+  },
+  "eldegoss": {
+    "id": "830",
+    "hp": 60,
+    "attack": 50,
+    "defense": 90,
+    "special-attack": 80,
+    "special-defense": 120,
+    "speed": 60
+  },
+  "wooloo": {
+    "id": "831",
+    "hp": 42,
+    "attack": 40,
+    "defense": 55,
+    "special-attack": 40,
+    "special-defense": 45,
+    "speed": 48
+  },
+  "dubwool": {
+    "id": "832",
+    "hp": 72,
+    "attack": 80,
+    "defense": 100,
+    "special-attack": 60,
+    "special-defense": 90,
+    "speed": 88
+  },
+  "chewtle": {
+    "id": "833",
+    "hp": 50,
+    "attack": 64,
+    "defense": 50,
+    "special-attack": 38,
+    "special-defense": 38,
+    "speed": 44
+  },
+  "drednaw": {
+    "id": "834",
+    "hp": 90,
+    "attack": 115,
+    "defense": 90,
+    "special-attack": 48,
+    "special-defense": 68,
+    "speed": 74
+  },
+  "yamper": {
+    "id": "835",
+    "hp": 59,
+    "attack": 45,
+    "defense": 50,
+    "special-attack": 40,
+    "special-defense": 50,
+    "speed": 26
+  },
+  "boltund": {
+    "id": "836",
+    "hp": 69,
+    "attack": 90,
+    "defense": 60,
+    "special-attack": 90,
+    "special-defense": 60,
+    "speed": 121
+  },
+  "rolycoly": {
+    "id": "837",
+    "hp": 30,
+    "attack": 40,
+    "defense": 50,
+    "special-attack": 40,
+    "special-defense": 50,
+    "speed": 30
+  },
+  "carkol": {
+    "id": "838",
+    "hp": 80,
+    "attack": 60,
+    "defense": 90,
+    "special-attack": 60,
+    "special-defense": 70,
+    "speed": 50
+  },
+  "coalossal": {
+    "id": "839",
+    "hp": 110,
+    "attack": 80,
+    "defense": 120,
+    "special-attack": 80,
+    "special-defense": 90,
+    "speed": 30
+  },
+  "applin": {
+    "id": "840",
+    "hp": 40,
+    "attack": 40,
+    "defense": 80,
+    "special-attack": 40,
+    "special-defense": 40,
+    "speed": 20
+  },
+  "flapple": {
+    "id": "841",
+    "hp": 70,
+    "attack": 110,
+    "defense": 80,
+    "special-attack": 95,
+    "special-defense": 60,
+    "speed": 70
+  },
+  "appletun": {
+    "id": "842",
+    "hp": 110,
+    "attack": 85,
+    "defense": 80,
+    "special-attack": 100,
+    "special-defense": 80,
+    "speed": 30
+  },
+  "silicobra": {
+    "id": "843",
+    "hp": 52,
+    "attack": 57,
+    "defense": 75,
+    "special-attack": 35,
+    "special-defense": 50,
+    "speed": 46
+  },
+  "sandaconda": {
+    "id": "844",
+    "hp": 72,
+    "attack": 107,
+    "defense": 125,
+    "special-attack": 65,
+    "special-defense": 70,
+    "speed": 71
+  },
+  "cramorant": {
+    "id": "845",
+    "hp": 70,
+    "attack": 85,
+    "defense": 55,
+    "special-attack": 85,
+    "special-defense": 95,
+    "speed": 85
+  },
+  "arrokuda": {
+    "id": "846",
+    "hp": 41,
+    "attack": 63,
+    "defense": 40,
+    "special-attack": 40,
+    "special-defense": 30,
+    "speed": 66
+  },
+  "barraskewda": {
+    "id": "847",
+    "hp": 61,
+    "attack": 123,
+    "defense": 60,
+    "special-attack": 60,
+    "special-defense": 50,
+    "speed": 136
+  },
+  "toxel": {
+    "id": "848",
+    "hp": 40,
+    "attack": 38,
+    "defense": 35,
+    "special-attack": 54,
+    "special-defense": 35,
+    "speed": 40
+  },
+  "toxtricity": {
+    "id": "849",
+    "hp": 75,
+    "attack": 98,
+    "defense": 70,
+    "special-attack": 114,
+    "special-defense": 70,
+    "speed": 75
+  },
+  "sizzlipede": {
+    "id": "850",
+    "hp": 50,
+    "attack": 65,
+    "defense": 45,
+    "special-attack": 50,
+    "special-defense": 50,
+    "speed": 45
+  },
+  "centiskorch": {
+    "id": "851",
+    "hp": 100,
+    "attack": 115,
+    "defense": 65,
+    "special-attack": 90,
+    "special-defense": 90,
+    "speed": 65
+  },
+  "clobbopus": {
+    "id": "852",
+    "hp": 50,
+    "attack": 68,
+    "defense": 60,
+    "special-attack": 50,
+    "special-defense": 50,
+    "speed": 32
+  },
+  "grapploct": {
+    "id": "853",
+    "hp": 80,
+    "attack": 118,
+    "defense": 90,
+    "special-attack": 70,
+    "special-defense": 80,
+    "speed": 42
+  },
+  "sinistea": {
+    "id": "854",
+    "hp": 40,
+    "attack": 45,
+    "defense": 45,
+    "special-attack": 74,
+    "special-defense": 54,
+    "speed": 50
+  },
+  "polteageist": {
+    "id": "855",
+    "hp": 60,
+    "attack": 65,
+    "defense": 65,
+    "special-attack": 134,
+    "special-defense": 114,
+    "speed": 70
+  },
+  "hatenna": {
+    "id": "856",
+    "hp": 42,
+    "attack": 30,
+    "defense": 45,
+    "special-attack": 56,
+    "special-defense": 53,
+    "speed": 39
+  },
+  "hattrem": {
+    "id": "857",
+    "hp": 57,
+    "attack": 40,
+    "defense": 65,
+    "special-attack": 86,
+    "special-defense": 73,
+    "speed": 49
+  },
+  "hatterene": {
+    "id": "858",
+    "hp": 57,
+    "attack": 90,
+    "defense": 95,
+    "special-attack": 136,
+    "special-defense": 103,
+    "speed": 29
+  },
+  "impidimp": {
+    "id": "859",
+    "hp": 45,
+    "attack": 45,
+    "defense": 30,
+    "special-attack": 55,
+    "special-defense": 40,
+    "speed": 50
+  },
+  "morgrem": {
+    "id": "860",
+    "hp": 65,
+    "attack": 60,
+    "defense": 45,
+    "special-attack": 75,
+    "special-defense": 55,
+    "speed": 70
+  },
+  "grimmsnarl": {
+    "id": "861",
+    "hp": 95,
+    "attack": 120,
+    "defense": 65,
+    "special-attack": 95,
+    "special-defense": 75,
+    "speed": 60
+  },
+  "obstagoon": {
+    "id": "862",
+    "hp": 93,
+    "attack": 90,
+    "defense": 101,
+    "special-attack": 60,
+    "special-defense": 81,
+    "speed": 95
+  },
+  "perrserker": {
+    "id": "863",
+    "hp": 70,
+    "attack": 110,
+    "defense": 100,
+    "special-attack": 50,
+    "special-defense": 60,
+    "speed": 50
+  },
+  "cursola": {
+    "id": "864",
+    "hp": 60,
+    "attack": 95,
+    "defense": 50,
+    "special-attack": 145,
+    "special-defense": 130,
+    "speed": 30
+  },
+  "sirfetchd": {
+    "id": "865",
+    "hp": 62,
+    "attack": 135,
+    "defense": 95,
+    "special-attack": 68,
+    "special-defense": 82,
+    "speed": 65
+  },
+  "mr. rime": {
+    "id": "866",
+    "hp": 80,
+    "attack": 85,
+    "defense": 75,
+    "special-attack": 110,
+    "special-defense": 100,
+    "speed": 70
+  },
+  "runerigus": {
+    "id": "867",
+    "hp": 58,
+    "attack": 95,
+    "defense": 145,
+    "special-attack": 50,
+    "special-defense": 105,
+    "speed": 30
+  },
+  "milcery": {
+    "id": "868",
+    "hp": 45,
+    "attack": 40,
+    "defense": 40,
+    "special-attack": 50,
+    "special-defense": 61,
+    "speed": 34
+  },
+  "alcremie": {
+    "id": "869",
+    "hp": 65,
+    "attack": 60,
+    "defense": 75,
+    "special-attack": 110,
+    "special-defense": 121,
+    "speed": 64
+  },
+  "falinks": {
+    "id": "870",
+    "hp": 65,
+    "attack": 100,
+    "defense": 100,
+    "special-attack": 70,
+    "special-defense": 60,
+    "speed": 75
+  },
+  "pincurchin": {
+    "id": "871",
+    "hp": 48,
+    "attack": 101,
+    "defense": 95,
+    "special-attack": 91,
+    "special-defense": 85,
+    "speed": 15
+  },
+  "snom": {
+    "id": "872",
+    "hp": 30,
+    "attack": 25,
+    "defense": 35,
+    "special-attack": 45,
+    "special-defense": 30,
+    "speed": 20
+  },
+  "frosmoth": {
+    "id": "873",
+    "hp": 70,
+    "attack": 65,
+    "defense": 60,
+    "special-attack": 125,
+    "special-defense": 90,
+    "speed": 65
+  },
+  "stonjourner": {
+    "id": "874",
+    "hp": 100,
+    "attack": 125,
+    "defense": 135,
+    "special-attack": 20,
+    "special-defense": 20,
+    "speed": 70
+  },
+  "eiscue": {
+    "id": "875",
+    "hp": 75,
+    "attack": 80,
+    "defense": 110,
+    "special-attack": 65,
+    "special-defense": 90,
+    "speed": 50
+  },
+  "indeedee": {
+    "id": "876",
+    "hp": 60,
+    "attack": 65,
+    "defense": 55,
+    "special-attack": 105,
+    "special-defense": 95,
+    "speed": 95
+  },
+  "morpeko": {
+    "id": "877",
+    "hp": 58,
+    "attack": 95,
+    "defense": 58,
+    "special-attack": 70,
+    "special-defense": 58,
+    "speed": 97
+  },
+  "cufant": {
+    "id": "878",
+    "hp": 72,
+    "attack": 80,
+    "defense": 49,
+    "special-attack": 40,
+    "special-defense": 49,
+    "speed": 40
+  },
+  "copperajah": {
+    "id": "879",
+    "hp": 122,
+    "attack": 130,
+    "defense": 69,
+    "special-attack": 80,
+    "special-defense": 69,
+    "speed": 30
+  },
+  "dracozolt": {
+    "id": "880",
+    "hp": 90,
+    "attack": 100,
+    "defense": 90,
+    "special-attack": 80,
+    "special-defense": 70,
+    "speed": 75
+  },
+  "arctozolt": {
+    "id": "881",
+    "hp": 90,
+    "attack": 100,
+    "defense": 90,
+    "special-attack": 90,
+    "special-defense": 80,
+    "speed": 55
+  },
+  "dracovish": {
+    "id": "882",
+    "hp": 90,
+    "attack": 90,
+    "defense": 100,
+    "special-attack": 70,
+    "special-defense": 80,
+    "speed": 75
+  },
+  "arctovish": {
+    "id": "883",
+    "hp": 90,
+    "attack": 90,
+    "defense": 100,
+    "special-attack": 80,
+    "special-defense": 90,
+    "speed": 55
+  },
+  "duraludon": {
+    "id": "884",
+    "hp": 70,
+    "attack": 95,
+    "defense": 115,
+    "special-attack": 120,
+    "special-defense": 50,
+    "speed": 85
+  },
+  "dreepy": {
+    "id": "885",
+    "hp": 28,
+    "attack": 60,
+    "defense": 30,
+    "special-attack": 40,
+    "special-defense": 30,
+    "speed": 82
+  },
+  "drakloak": {
+    "id": "886",
+    "hp": 68,
+    "attack": 80,
+    "defense": 50,
+    "special-attack": 60,
+    "special-defense": 50,
+    "speed": 102
+  },
+  "dragapult": {
+    "id": "887",
+    "hp": 88,
+    "attack": 120,
+    "defense": 75,
+    "special-attack": 100,
+    "special-defense": 75,
+    "speed": 142
+  },
+  "zacian": {
+    "id": "888",
+    "hp": 92,
+    "attack": 120,
+    "defense": 115,
+    "special-attack": 80,
+    "special-defense": 115,
+    "speed": 138
+  },
+  "zamazenta": {
+    "id": "889",
+    "hp": 92,
+    "attack": 120,
+    "defense": 115,
+    "special-attack": 80,
+    "special-defense": 115,
+    "speed": 138
+  },
+  "eternatus": {
+    "id": "890",
+    "hp": 140,
+    "attack": 85,
+    "defense": 95,
+    "special-attack": 145,
+    "special-defense": 95,
+    "speed": 130
+  },
+  "kubfu": {
+    "id": "891",
+    "hp": 60,
+    "attack": 90,
+    "defense": 60,
+    "special-attack": 53,
+    "special-defense": 50,
+    "speed": 72
+  },
+  "urshifu": {
+    "id": "892",
+    "hp": 100,
+    "attack": 130,
+    "defense": 100,
+    "special-attack": 63,
+    "special-defense": 60,
+    "speed": 97
+  },
+  "zarude": {
+    "id": "893",
+    "hp": 105,
+    "attack": 120,
+    "defense": 105,
+    "special-attack": 70,
+    "special-defense": 95,
+    "speed": 105
+  },
+  "regieleki": {
+    "id": "894",
+    "hp": 80,
+    "attack": 100,
+    "defense": 50,
+    "special-attack": 100,
+    "special-defense": 50,
+    "speed": 200
+  },
+  "regidrago": {
+    "id": "895",
+    "hp": 200,
+    "attack": 100,
+    "defense": 50,
+    "special-attack": 100,
+    "special-defense": 50,
+    "speed": 80
+  },
+  "glastrier": {
+    "id": "896",
+    "hp": 100,
+    "attack": 145,
+    "defense": 130,
+    "special-attack": 65,
+    "special-defense": 110,
+    "speed": 30
+  },
+  "spectrier": {
+    "id": "897",
+    "hp": 100,
+    "attack": 65,
+    "defense": 60,
+    "special-attack": 145,
+    "special-defense": 80,
+    "speed": 130
+  },
+  "calyrex": {
+    "id": "898",
+    "hp": 100,
+    "attack": 80,
+    "defense": 80,
+    "special-attack": 80,
+    "special-defense": 80,
+    "speed": 80
+  },
+  "wyrdeer": {
+    "id": "899",
+    "hp": 103,
+    "attack": 105,
+    "defense": 72,
+    "special-attack": 105,
+    "special-defense": 75,
+    "speed": 65
+  },
+  "kleavor": {
+    "id": "900",
+    "hp": 70,
+    "attack": 135,
+    "defense": 95,
+    "special-attack": 45,
+    "special-defense": 70,
+    "speed": 85
+  },
+  "ursaluna": {
+    "id": "901",
+    "hp": 130,
+    "attack": 140,
+    "defense": 105,
+    "special-attack": 45,
+    "special-defense": 80,
+    "speed": 50
+  },
+  "basculegion": {
+    "id": "902",
+    "hp": 120,
+    "attack": 112,
+    "defense": 65,
+    "special-attack": 80,
+    "special-defense": 75,
+    "speed": 78
+  },
+  "sneasler": {
+    "id": "903",
+    "hp": 80,
+    "attack": 130,
+    "defense": 60,
+    "special-attack": 40,
+    "special-defense": 80,
+    "speed": 120
+  },
+  "overqwil": {
+    "id": "904",
+    "hp": 85,
+    "attack": 115,
+    "defense": 95,
+    "special-attack": 65,
+    "special-defense": 65,
+    "speed": 85
+  },
+  "enamorus": {
+    "id": "905",
+    "hp": 74,
+    "attack": 115,
+    "defense": 70,
+    "special-attack": 135,
+    "special-defense": 80,
+    "speed": 106
+  },
+  "sprigatito": {
+    "id": "906",
+    "hp": 40,
+    "attack": 61,
+    "defense": 54,
+    "special-attack": 45,
+    "special-defense": 45,
+    "speed": 65
+  },
+  "floragato": {
+    "id": "907",
+    "hp": 61,
+    "attack": 80,
+    "defense": 63,
+    "special-attack": 60,
+    "special-defense": 63,
+    "speed": 83
+  },
+  "meowscarada": {
+    "id": "908",
+    "hp": 76,
+    "attack": 110,
+    "defense": 70,
+    "special-attack": 81,
+    "special-defense": 70,
+    "speed": 123
+  },
+  "fuecoco": {
+    "id": "909",
+    "hp": 67,
+    "attack": 45,
+    "defense": 59,
+    "special-attack": 63,
+    "special-defense": 40,
+    "speed": 36
+  },
+  "crocalor": {
+    "id": "910",
+    "hp": 81,
+    "attack": 55,
+    "defense": 78,
+    "special-attack": 90,
+    "special-defense": 58,
+    "speed": 49
+  },
+  "skeledirge": {
+    "id": "911",
+    "hp": 104,
+    "attack": 75,
+    "defense": 100,
+    "special-attack": 110,
+    "special-defense": 75,
+    "speed": 66
+  },
+  "quaxly": {
+    "id": "912",
+    "hp": 55,
+    "attack": 65,
+    "defense": 45,
+    "special-attack": 50,
+    "special-defense": 45,
+    "speed": 50
+  },
+  "quaxwell": {
+    "id": "913",
+    "hp": 70,
+    "attack": 85,
+    "defense": 65,
+    "special-attack": 65,
+    "special-defense": 60,
+    "speed": 65
+  },
+  "quaquaval": {
+    "id": "914",
+    "hp": 85,
+    "attack": 120,
+    "defense": 80,
+    "special-attack": 85,
+    "special-defense": 75,
+    "speed": 85
+  },
+  "lechonk": {
+    "id": "915",
+    "hp": 54,
+    "attack": 45,
+    "defense": 40,
+    "special-attack": 35,
+    "special-defense": 45,
+    "speed": 35
+  },
+  "oinkologne": {
+    "id": "916",
+    "hp": 110,
+    "attack": 100,
+    "defense": 75,
+    "special-attack": 59,
+    "special-defense": 80,
+    "speed": 65
+  },
+  "tarountula": {
+    "id": "917",
+    "hp": 35,
+    "attack": 41,
+    "defense": 45,
+    "special-attack": 29,
+    "special-defense": 40,
+    "speed": 20
+  },
+  "spidops": {
+    "id": "918",
+    "hp": 60,
+    "attack": 79,
+    "defense": 92,
+    "special-attack": 52,
+    "special-defense": 86,
+    "speed": 35
+  },
+  "nymble": {
+    "id": "919",
+    "hp": 33,
+    "attack": 46,
+    "defense": 40,
+    "special-attack": 21,
+    "special-defense": 25,
+    "speed": 45
+  },
+  "lokix": {
+    "id": "920",
+    "hp": 71,
+    "attack": 102,
+    "defense": 78,
+    "special-attack": 52,
+    "special-defense": 55,
+    "speed": 92
+  },
+  "pawmi": {
+    "id": "921",
+    "hp": 45,
+    "attack": 50,
+    "defense": 20,
+    "special-attack": 40,
+    "special-defense": 25,
+    "speed": 60
+  },
+  "pawmo": {
+    "id": "922",
+    "hp": 60,
+    "attack": 75,
+    "defense": 40,
+    "special-attack": 50,
+    "special-defense": 40,
+    "speed": 85
+  },
+  "pawmot": {
+    "id": "923",
+    "hp": 70,
+    "attack": 115,
+    "defense": 70,
+    "special-attack": 70,
+    "special-defense": 60,
+    "speed": 105
+  },
+  "tandemaus": {
+    "id": "924",
+    "hp": 50,
+    "attack": 50,
+    "defense": 45,
+    "special-attack": 40,
+    "special-defense": 45,
+    "speed": 75
+  },
+  "maushold": {
+    "id": "925",
+    "hp": 74,
+    "attack": 75,
+    "defense": 70,
+    "special-attack": 65,
+    "special-defense": 75,
+    "speed": 111
+  },
+  "fidough": {
+    "id": "926",
+    "hp": 37,
+    "attack": 55,
+    "defense": 70,
+    "special-attack": 30,
+    "special-defense": 55,
+    "speed": 65
+  },
+  "dachsbun": {
+    "id": "927",
+    "hp": 57,
+    "attack": 80,
+    "defense": 115,
+    "special-attack": 50,
+    "special-defense": 80,
+    "speed": 95
+  },
+  "smoliv": {
+    "id": "928",
+    "hp": 41,
+    "attack": 35,
+    "defense": 45,
+    "special-attack": 58,
+    "special-defense": 51,
+    "speed": 30
+  },
+  "dolliv": {
+    "id": "929",
+    "hp": 52,
+    "attack": 53,
+    "defense": 60,
+    "special-attack": 78,
+    "special-defense": 78,
+    "speed": 33
+  },
+  "arboliva": {
+    "id": "930",
+    "hp": 78,
+    "attack": 69,
+    "defense": 90,
+    "special-attack": 125,
+    "special-defense": 109,
+    "speed": 39
+  },
+  "squawkabilly": {
+    "id": "931",
+    "hp": 82,
+    "attack": 96,
+    "defense": 51,
+    "special-attack": 45,
+    "special-defense": 51,
+    "speed": 92
+  },
+  "nacli": {
+    "id": "932",
+    "hp": 55,
+    "attack": 55,
+    "defense": 75,
+    "special-attack": 35,
+    "special-defense": 35,
+    "speed": 25
+  },
+  "naclstack": {
+    "id": "933",
+    "hp": 60,
+    "attack": 60,
+    "defense": 100,
+    "special-attack": 35,
+    "special-defense": 65,
+    "speed": 35
+  },
+  "garganacl": {
+    "id": "934",
+    "hp": 100,
+    "attack": 100,
+    "defense": 130,
+    "special-attack": 45,
+    "special-defense": 90,
+    "speed": 35
+  },
+  "charcadet": {
+    "id": "935",
+    "hp": 40,
+    "attack": 50,
+    "defense": 40,
+    "special-attack": 50,
+    "special-defense": 40,
+    "speed": 35
+  },
+  "armarouge": {
+    "id": "936",
+    "hp": 85,
+    "attack": 60,
+    "defense": 100,
+    "special-attack": 125,
+    "special-defense": 80,
+    "speed": 75
+  },
+  "ceruledge": {
+    "id": "937",
+    "hp": 75,
+    "attack": 125,
+    "defense": 80,
+    "special-attack": 60,
+    "special-defense": 100,
+    "speed": 85
+  },
+  "tadbulb": {
+    "id": "938",
+    "hp": 61,
+    "attack": 31,
+    "defense": 41,
+    "special-attack": 59,
+    "special-defense": 35,
+    "speed": 45
+  },
+  "bellibolt": {
+    "id": "939",
+    "hp": 109,
+    "attack": 64,
+    "defense": 91,
+    "special-attack": 103,
+    "special-defense": 83,
+    "speed": 45
+  },
+  "wattrel": {
+    "id": "940",
+    "hp": 40,
+    "attack": 40,
+    "defense": 35,
+    "special-attack": 55,
+    "special-defense": 40,
+    "speed": 70
+  },
+  "kilowattrel": {
+    "id": "941",
+    "hp": 70,
+    "attack": 70,
+    "defense": 60,
+    "special-attack": 105,
+    "special-defense": 60,
+    "speed": 125
+  },
+  "maschiff": {
+    "id": "942",
+    "hp": 60,
+    "attack": 78,
+    "defense": 60,
+    "special-attack": 40,
+    "special-defense": 51,
+    "speed": 51
+  },
+  "mabosstiff": {
+    "id": "943",
+    "hp": 80,
+    "attack": 120,
+    "defense": 90,
+    "special-attack": 60,
+    "special-defense": 70,
+    "speed": 85
+  },
+  "shroodle": {
+    "id": "944",
+    "hp": 40,
+    "attack": 65,
+    "defense": 35,
+    "special-attack": 40,
+    "special-defense": 35,
+    "speed": 75
+  },
+  "grafaiai": {
+    "id": "945",
+    "hp": 63,
+    "attack": 95,
+    "defense": 65,
+    "special-attack": 80,
+    "special-defense": 72,
+    "speed": 110
+  },
+  "bramblin": {
+    "id": "946",
+    "hp": 40,
+    "attack": 65,
+    "defense": 30,
+    "special-attack": 45,
+    "special-defense": 35,
+    "speed": 60
+  },
+  "brambleghast": {
+    "id": "947",
+    "hp": 55,
+    "attack": 115,
+    "defense": 70,
+    "special-attack": 80,
+    "special-defense": 70,
+    "speed": 90
+  },
+  "toedscool": {
+    "id": "948",
+    "hp": 40,
+    "attack": 40,
+    "defense": 35,
+    "special-attack": 50,
+    "special-defense": 100,
+    "speed": 70
+  },
+  "toedscruel": {
+    "id": "949",
+    "hp": 80,
+    "attack": 70,
+    "defense": 65,
+    "special-attack": 80,
+    "special-defense": 120,
+    "speed": 100
+  },
+  "klawf": {
+    "id": "950",
+    "hp": 70,
+    "attack": 100,
+    "defense": 115,
+    "special-attack": 35,
+    "special-defense": 55,
+    "speed": 75
+  },
+  "capsakid": {
+    "id": "951",
+    "hp": 50,
+    "attack": 62,
+    "defense": 40,
+    "special-attack": 62,
+    "special-defense": 40,
+    "speed": 50
+  },
+  "scovillain": {
+    "id": "952",
+    "hp": 65,
+    "attack": 108,
+    "defense": 65,
+    "special-attack": 108,
+    "special-defense": 65,
+    "speed": 75
+  },
+  "rellor": {
+    "id": "953",
+    "hp": 41,
+    "attack": 50,
+    "defense": 60,
+    "special-attack": 31,
+    "special-defense": 58,
+    "speed": 30
+  },
+  "rabsca": {
+    "id": "954",
+    "hp": 75,
+    "attack": 50,
+    "defense": 85,
+    "special-attack": 115,
+    "special-defense": 100,
+    "speed": 45
+  },
+  "flittle": {
+    "id": "955",
+    "hp": 30,
+    "attack": 35,
+    "defense": 30,
+    "special-attack": 55,
+    "special-defense": 30,
+    "speed": 75
+  },
+  "espathra": {
+    "id": "956",
+    "hp": 95,
+    "attack": 60,
+    "defense": 60,
+    "special-attack": 101,
+    "special-defense": 60,
+    "speed": 105
+  },
+  "tinkatink": {
+    "id": "957",
+    "hp": 50,
+    "attack": 45,
+    "defense": 45,
+    "special-attack": 35,
+    "special-defense": 64,
+    "speed": 58
+  },
+  "tinkatuff": {
+    "id": "958",
+    "hp": 65,
+    "attack": 55,
+    "defense": 55,
+    "special-attack": 45,
+    "special-defense": 82,
+    "speed": 78
+  },
+  "tinkaton": {
+    "id": "959",
+    "hp": 85,
+    "attack": 75,
+    "defense": 77,
+    "special-attack": 70,
+    "special-defense": 105,
+    "speed": 94
+  },
+  "wiglett": {
+    "id": "960",
+    "hp": 10,
+    "attack": 55,
+    "defense": 25,
+    "special-attack": 35,
+    "special-defense": 25,
+    "speed": 95
+  },
+  "wugtrio": {
+    "id": "961",
+    "hp": 35,
+    "attack": 100,
+    "defense": 50,
+    "special-attack": 50,
+    "special-defense": 70,
+    "speed": 120
+  },
+  "bombirdier": {
+    "id": "962",
+    "hp": 70,
+    "attack": 103,
+    "defense": 85,
+    "special-attack": 60,
+    "special-defense": 85,
+    "speed": 82
+  },
+  "finizen": {
+    "id": "963",
+    "hp": 70,
+    "attack": 45,
+    "defense": 40,
+    "special-attack": 45,
+    "special-defense": 40,
+    "speed": 75
+  },
+  "palafin": {
+    "id": "964",
+    "hp": 100,
+    "attack": 70,
+    "defense": 72,
+    "special-attack": 53,
+    "special-defense": 62,
+    "speed": 100
+  },
+  "varoom": {
+    "id": "965",
+    "hp": 45,
+    "attack": 70,
+    "defense": 63,
+    "special-attack": 30,
+    "special-defense": 45,
+    "speed": 47
+  },
+  "revavroom": {
+    "id": "966",
+    "hp": 80,
+    "attack": 119,
+    "defense": 90,
+    "special-attack": 54,
+    "special-defense": 67,
+    "speed": 90
+  },
+  "cyclizar": {
+    "id": "967",
+    "hp": 70,
+    "attack": 95,
+    "defense": 65,
+    "special-attack": 85,
+    "special-defense": 65,
+    "speed": 121
+  },
+  "orthworm": {
+    "id": "968",
+    "hp": 70,
+    "attack": 85,
+    "defense": 145,
+    "special-attack": 60,
+    "special-defense": 55,
+    "speed": 65
+  },
+  "glimmet": {
+    "id": "969",
+    "hp": 48,
+    "attack": 35,
+    "defense": 42,
+    "special-attack": 105,
+    "special-defense": 60,
+    "speed": 60
+  },
+  "glimmora": {
+    "id": "970",
+    "hp": 83,
+    "attack": 55,
+    "defense": 90,
+    "special-attack": 130,
+    "special-defense": 81,
+    "speed": 86
+  },
+  "greavard": {
+    "id": "971",
+    "hp": 50,
+    "attack": 61,
+    "defense": 60,
+    "special-attack": 30,
+    "special-defense": 55,
+    "speed": 34
+  },
+  "houndstone": {
+    "id": "972",
+    "hp": 72,
+    "attack": 101,
+    "defense": 100,
+    "special-attack": 50,
+    "special-defense": 97,
+    "speed": 68
+  },
+  "flamigo": {
+    "id": "973",
+    "hp": 82,
+    "attack": 115,
+    "defense": 74,
+    "special-attack": 75,
+    "special-defense": 64,
+    "speed": 90
+  },
+  "cetoddle": {
+    "id": "974",
+    "hp": 108,
+    "attack": 68,
+    "defense": 45,
+    "special-attack": 30,
+    "special-defense": 40,
+    "speed": 43
+  },
+  "cetitan": {
+    "id": "975",
+    "hp": 170,
+    "attack": 113,
+    "defense": 65,
+    "special-attack": 45,
+    "special-defense": 55,
+    "speed": 73
+  },
+  "veluza": {
+    "id": "976",
+    "hp": 90,
+    "attack": 102,
+    "defense": 73,
+    "special-attack": 78,
+    "special-defense": 65,
+    "speed": 70
+  },
+  "dondozo": {
+    "id": "977",
+    "hp": 150,
+    "attack": 100,
+    "defense": 115,
+    "special-attack": 65,
+    "special-defense": 65,
+    "speed": 35
+  },
+  "tatsugiri": {
+    "id": "978",
+    "hp": 68,
+    "attack": 50,
+    "defense": 60,
+    "special-attack": 120,
+    "special-defense": 95,
+    "speed": 82
+  },
+  "annihilape": {
+    "id": "979",
+    "hp": 110,
+    "attack": 115,
+    "defense": 80,
+    "special-attack": 50,
+    "special-defense": 90,
+    "speed": 90
+  },
+  "clodsire": {
+    "id": "980",
+    "hp": 130,
+    "attack": 75,
+    "defense": 60,
+    "special-attack": 45,
+    "special-defense": 100,
+    "speed": 20
+  },
+  "farigiraf": {
+    "id": "981",
+    "hp": 120,
+    "attack": 90,
+    "defense": 70,
+    "special-attack": 110,
+    "special-defense": 70,
+    "speed": 60
+  },
+  "dudunsparce": {
+    "id": "982",
+    "hp": 125,
+    "attack": 100,
+    "defense": 80,
+    "special-attack": 85,
+    "special-defense": 75,
+    "speed": 55
+  },
+  "kingambit": {
+    "id": "983",
+    "hp": 100,
+    "attack": 135,
+    "defense": 120,
+    "special-attack": 60,
+    "special-defense": 85,
+    "speed": 50
+  },
+  "great-tusk": {
+    "id": "984",
+    "hp": 115,
+    "attack": 131,
+    "defense": 131,
+    "special-attack": 53,
+    "special-defense": 53,
+    "speed": 87
+  },
+  "scream-tail": {
+    "id": "985",
+    "hp": 115,
+    "attack": 65,
+    "defense": 99,
+    "special-attack": 65,
+    "special-defense": 115,
+    "speed": 111
+  },
+  "brute-bonnet": {
+    "id": "986",
+    "hp": 111,
+    "attack": 127,
+    "defense": 99,
+    "special-attack": 79,
+    "special-defense": 99,
+    "speed": 55
+  },
+  "flutter-mane": {
+    "id": "987",
+    "hp": 55,
+    "attack": 55,
+    "defense": 55,
+    "special-attack": 135,
+    "special-defense": 135,
+    "speed": 135
+  },
+  "slither-wing": {
+    "id": "988",
+    "hp": 85,
+    "attack": 135,
+    "defense": 79,
+    "special-attack": 85,
+    "special-defense": 105,
+    "speed": 81
+  },
+  "sandy-shocks": {
+    "id": "989",
+    "hp": 85,
+    "attack": 81,
+    "defense": 97,
+    "special-attack": 121,
+    "special-defense": 85,
+    "speed": 101
+  },
+  "iron-treads": {
+    "id": "990",
+    "hp": 90,
+    "attack": 112,
+    "defense": 120,
+    "special-attack": 72,
+    "special-defense": 70,
+    "speed": 106
+  },
+  "iron-bundle": {
+    "id": "991",
+    "hp": 56,
+    "attack": 80,
+    "defense": 114,
+    "special-attack": 124,
+    "special-defense": 60,
+    "speed": 136
+  },
+  "iron-hands": {
+    "id": "992",
+    "hp": 154,
+    "attack": 140,
+    "defense": 108,
+    "special-attack": 50,
+    "special-defense": 68,
+    "speed": 50
+  },
+  "iron-jugulis": {
+    "id": "993",
+    "hp": 94,
+    "attack": 80,
+    "defense": 86,
+    "special-attack": 122,
+    "special-defense": 80,
+    "speed": 108
+  },
+  "iron-moth": {
+    "id": "994",
+    "hp": 80,
+    "attack": 70,
+    "defense": 60,
+    "special-attack": 140,
+    "special-defense": 110,
+    "speed": 110
+  },
+  "iron-thorns": {
+    "id": "995",
+    "hp": 100,
+    "attack": 134,
+    "defense": 110,
+    "special-attack": 70,
+    "special-defense": 84,
+    "speed": 72
+  },
+  "frigibax": {
+    "id": "996",
+    "hp": 65,
+    "attack": 75,
+    "defense": 45,
+    "special-attack": 35,
+    "special-defense": 45,
+    "speed": 55
+  },
+  "arctibax": {
+    "id": "997",
+    "hp": 90,
+    "attack": 95,
+    "defense": 66,
+    "special-attack": 45,
+    "special-defense": 65,
+    "speed": 62
+  },
+  "baxcalibur": {
+    "id": "998",
+    "hp": 115,
+    "attack": 145,
+    "defense": 92,
+    "special-attack": 75,
+    "special-defense": 86,
+    "speed": 87
+  },
+  "gimmighoul": {
+    "id": "999",
+    "hp": 45,
+    "attack": 30,
+    "defense": 70,
+    "special-attack": 75,
+    "special-defense": 70,
+    "speed": 10
+  },
+  "gholdengo": {
+    "id": "1000",
+    "hp": 87,
+    "attack": 60,
+    "defense": 95,
+    "special-attack": 133,
+    "special-defense": 91,
+    "speed": 84
+  },
+  "wo-chien": {
+    "id": "1001",
+    "hp": 85,
+    "attack": 85,
+    "defense": 100,
+    "special-attack": 95,
+    "special-defense": 135,
+    "speed": 70
+  },
+  "chien-pao": {
+    "id": "1002",
+    "hp": 80,
+    "attack": 120,
+    "defense": 80,
+    "special-attack": 90,
+    "special-defense": 65,
+    "speed": 135
+  },
+  "ting-lu": {
+    "id": "1003",
+    "hp": 155,
+    "attack": 110,
+    "defense": 125,
+    "special-attack": 55,
+    "special-defense": 80,
+    "speed": 45
+  },
+  "chi-yu": {
+    "id": "1004",
+    "hp": 55,
+    "attack": 80,
+    "defense": 80,
+    "special-attack": 135,
+    "special-defense": 120,
+    "speed": 100
+  },
+  "roaring-moon": {
+    "id": "1005",
+    "hp": 105,
+    "attack": 139,
+    "defense": 71,
+    "special-attack": 55,
+    "special-defense": 101,
+    "speed": 119
+  },
+  "iron-valiant": {
+    "id": "1006",
+    "hp": 74,
+    "attack": 130,
+    "defense": 90,
+    "special-attack": 120,
+    "special-defense": 60,
+    "speed": 116
+  },
+  "koraidon": {
+    "id": "1007",
+    "hp": 100,
+    "attack": 135,
+    "defense": 115,
+    "special-attack": 85,
+    "special-defense": 100,
+    "speed": 135
+  },
+  "miraidon": {
+    "id": "1008",
+    "hp": 100,
+    "attack": 85,
+    "defense": 100,
+    "special-attack": 135,
+    "special-defense": 115,
+    "speed": 135
+  },
+  "walking-wake": {
+    "id": "1009",
+    "hp": 99,
+    "attack": 83,
+    "defense": 91,
+    "special-attack": 125,
+    "special-defense": 83,
+    "speed": 109
+  },
+  "iron-leaves": {
+    "id": "1010",
+    "hp": 90,
+    "attack": 130,
+    "defense": 88,
+    "special-attack": 70,
+    "special-defense": 108,
+    "speed": 104
+  },
+  "dipplin": {
+    "id": "1011",
+    "hp": 80,
+    "attack": 80,
+    "defense": 110,
+    "special-attack": 95,
+    "special-defense": 80,
+    "speed": 40
+  },
+  "poltchageist": {
+    "id": "1012",
+    "hp": 40,
+    "attack": 45,
+    "defense": 45,
+    "special-attack": 74,
+    "special-defense": 54,
+    "speed": 50
+  },
+  "sinistcha": {
+    "id": "1013",
+    "hp": 71,
+    "attack": 60,
+    "defense": 106,
+    "special-attack": 121,
+    "special-defense": 80,
+    "speed": 70
+  },
+  "okidogi": {
+    "id": "1014",
+    "hp": 88,
+    "attack": 128,
+    "defense": 115,
+    "special-attack": 58,
+    "special-defense": 86,
+    "speed": 80
+  },
+  "munkidori": {
+    "id": "1015",
+    "hp": 88,
+    "attack": 75,
+    "defense": 66,
+    "special-attack": 130,
+    "special-defense": 90,
+    "speed": 106
+  },
+  "fezandipiti": {
+    "id": "1016",
+    "hp": 88,
+    "attack": 91,
+    "defense": 82,
+    "special-attack": 70,
+    "special-defense": 125,
+    "speed": 99
+  },
+  "ogerpon": {
+    "id": "1017",
+    "hp": 80,
+    "attack": 120,
+    "defense": 84,
+    "special-attack": 60,
+    "special-defense": 96,
+    "speed": 110
+  },
+  "archaludon": {
+    "id": "1018",
+    "hp": 90,
+    "attack": 105,
+    "defense": 130,
+    "special-attack": 125,
+    "special-defense": 65,
+    "speed": 85
+  },
+  "hydrapple": {
+    "id": "1019",
+    "hp": 106,
+    "attack": 80,
+    "defense": 110,
+    "special-attack": 120,
+    "special-defense": 80,
+    "speed": 44
+  },
+  "gouging-fire": {
+    "id": "1020",
+    "hp": 105,
+    "attack": 115,
+    "defense": 121,
+    "special-attack": 65,
+    "special-defense": 93,
+    "speed": 91
+  },
+  "raging-bolt": {
+    "id": "1021",
+    "hp": 125,
+    "attack": 73,
+    "defense": 91,
+    "special-attack": 137,
+    "special-defense": 89,
+    "speed": 75
+  },
+  "iron-boulder": {
+    "id": "1022",
+    "hp": 90,
+    "attack": 120,
+    "defense": 80,
+    "special-attack": 68,
+    "special-defense": 108,
+    "speed": 124
+  },
+  "iron-crown": {
+    "id": "1023",
+    "hp": 90,
+    "attack": 72,
+    "defense": 100,
+    "special-attack": 122,
+    "special-defense": 108,
+    "speed": 98
+  },
+  "terapagos": {
+    "id": "1024",
+    "hp": 90,
+    "attack": 65,
+    "defense": 85,
+    "special-attack": 65,
+    "special-defense": 85,
+    "speed": 60
+  },
+  "pecharunt": {
+    "id": "1025",
+    "hp": 88,
+    "attack": 88,
+    "defense": 160,
+    "special-attack": 88,
+    "special-defense": 88,
+    "speed": 88
+  }
+}

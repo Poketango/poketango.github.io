@@ -1,0 +1,654 @@
+{
+ "venusaur": {
+  "t": "ポケモンのデザインを手がける杉森建さんのお気に入りの1匹。ところが、模様や花が複雑すぎて、描くのはいちばん苦手なポケモンでもあるという。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Venusaur_%28Pok%C3%A9mon%29"
+ },
+ "charizard": {
+  "t": "リザードンをデザインした西田敦子さん自身が、いちばん好きなポケモンに挙げている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Charizard_%28Pok%C3%A9mon%29"
+ },
+ "gengar": {
+  "t": "杉森建さんがいちばん好きなポケモン。理由は「いちばん描きやすいから」。フシギバナとは正反対の理由で選ばれている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Gengar_%28Pok%C3%A9mon%29"
+ },
+ "psyduck": {
+  "t": "ゲームフリークの増田順一さんのお気に入り。『Let's Go! ピカチュウ・イーブイ』では、イーブイの代わりにコダックを看板にする案もあったが、ピカチュウと色が似すぎているという理由で見送られた。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Psyduck_%28Pok%C3%A9mon%29"
+ },
+ "poliwag": {
+  "t": "ポケモンの生みの親、田尻智さんがいちばん好きなポケモンだといわれている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Poliwag_%28Pok%C3%A9mon%29"
+ },
+ "pichu": {
+  "t": "増田順一さんが、第2世代（金・銀）のポケモンの中でいちばん好きなポケモン。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pichu_%28Pok%C3%A9mon%29"
+ },
+ "zekrom": {
+  "t": "杉森建さんが『ブラック・ホワイト』のポケモンの中でいちばん気に入っているのがゼクロムだ。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Zekrom_%28Pok%C3%A9mon%29"
+ },
+ "mew": {
+  "t": "ミュウは初代の開発のほぼ最後に、森本茂樹さんが作ったポケモン。ドット絵も鳴き声も図鑑の文章も、森本さんが用意したものだという。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Mew_%28Pok%C3%A9mon%29"
+ },
+ "mankey": {
+  "t": "マンキーをデザインしたのも森本茂樹さん。上司から「こういうポケモンを」と指示されて描いたものだと、本人がゲームの中で語っている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Mankey_%28Pok%C3%A9mon%29"
+ },
+ "piloswine": {
+  "t": "イノムーをデザインしたのは森本茂樹さん。十二支の動物をすべてポケモンにしたいという思いから作られたと、本人がゲームの中で語っている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Piloswine_%28Pok%C3%A9mon%29"
+ },
+ "rhydon": {
+  "t": "初代ポケモンのプログラムの中では、サイドンに「001番」の内部番号が割り当てられている。図鑑番号の1番はフシギダネなので、内部の番号とはまったく別の並びになっているのだ。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Rhydon_%28Pok%C3%A9mon%29"
+ },
+ "hypno": {
+  "t": "初代の英語版の図鑑では、スリーパーの技が「PSI moves」と書かれている。エスパータイプが、英語で別の名前で呼ばれる予定だった名残ではないかといわれる。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Hypno_%28Pok%C3%A9mon%29"
+ },
+ "clefairy": {
+  "t": "開発中の英語名は「Aria（アリア）」だった。ロシア語版のアニメでは、その古い名前がそのまま使われていた。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Clefairy_%28Pok%C3%A9mon%29"
+ },
+ "spearow": {
+  "t": "初代のトキワシティには、オニスズメを「Speary」と呼ぶ人がいる。翻訳担当者は最初、歌手ブリトニー・スピアーズにかけて「Britney」にしようとしたが、許可が出なかった。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Spearow_%28Pok%C3%A9mon%29"
+ },
+ "magneton": {
+  "t": "コイルが3匹合体したのがレアコイルなのに、体重はコイルのちょうど10倍。計算では3倍のはずなので、ファンの間でよく話題になる。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Magneton_%28Pok%C3%A9mon%29"
+ },
+ "doduo": {
+  "t": "図鑑によると、ドードーは時速100km、進化したドードリオは時速60km近くで走る。進化前のほうが速いという不思議な設定だ。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Doduo_%28Pok%C3%A9mon%29"
+ },
+ "chikorita": {
+  "t": "アニメの英語版では、多くのポケモンの声が英語の声優に変わったが、チコリータの仲間は日本語版の声がそのまま使われた。英語名と日本語名がほとんど同じだったからだ。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Chikorita_%28Pok%C3%A9mon%29"
+ },
+ "marill": {
+  "t": "初期のグッズでは、英語名が「Marril」とつづられていたことがある。正式名が決まる前の名残だ。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Marill_%28Pok%C3%A9mon%29"
+ },
+ "snubbull": {
+  "t": "映画『ミュウツーの逆襲』の初期グッズでは、英語名が「Snubble」とまちがってつづられていた。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Snubbull_%28Pok%C3%A9mon%29"
+ },
+ "ho-oh": {
+  "t": "1997年のイベントで公開された『金・銀』の試作版では、ホウオウはほのおタイプがなく、ひこうタイプだけのポケモンだった。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Ho-Oh_%28Pok%C3%A9mon%29"
+ },
+ "celebi": {
+  "t": "2000年代初めの任天堂の公式サイトでは、セレビィのローマ字表記が「Selbi」となっていた。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Celebi_%28Pok%C3%A9mon%29"
+ },
+ "silcoon": {
+  "t": "カラサリスとマユルドは、タイプ・種族値・覚える技・体の形まで完全に同じ。ちがうのは色と、進化した先だけだ。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Silcoon_%28Pok%C3%A9mon%29"
+ },
+ "cascoon": {
+  "t": "マユルドとカラサリスは、タイプ・種族値・覚える技・体の形まで完全に同じ。ちがうのは色と、進化した先だけだ。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Cascoon_%28Pok%C3%A9mon%29"
+ },
+ "teddiursa": {
+  "t": "『ソード・シールド』の開発途中のバージョンでは、女の子主人公のかばんにヒメグマのキーホルダーが付いていた。発売前に取りのぞかれている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Teddiursa_%28Pok%C3%A9mon%29"
+ },
+ "gliscor": {
+  "t": "進化すると体の大きさはほぼ2倍になるのに、体重はグライガーより軽くなる。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Gliscor_%28Pok%C3%A9mon%29"
+ },
+ "blastoise": {
+  "t": "『大乱闘スマッシュブラザーズX』では、カメックスを参戦させる案もあった。進化の段階のバランスを考えて、最終的にはゼニガメが選ばれた。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Blastoise_%28Pok%C3%A9mon%29"
+ },
+ "decidueye": {
+  "t": "『大乱闘スマッシュブラザーズ SPECIAL』では、ジュナイパーを参戦させる案もあった。最終的にはガオガエンが選ばれた。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Decidueye_%28Pok%C3%A9mon%29"
+ },
+ "metapod": {
+  "t": "『ひだまりスケッチ』の作者・蒼樹うめさんは、自分の似顔絵としてトランセルのコスプレをした姿を使っている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Metapod_%28Pok%C3%A9mon%29"
+ },
+ "scovillain": {
+  "t": "伝説や幻のポケモンを除くと、第9世代で英語名と日本語名がまったく同じなのはスコヴィランだけだ。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Scovillain_%28Pok%C3%A9mon%29"
+ },
+ "dwebble": {
+  "t": "イシズマイは、アニメ『ベストウイッシュ』のオープニング映像で、正式発表より先に海外のファンに見つかってしまった。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Dwebble_%28Pok%C3%A9mon%29"
+ },
+ "solgaleo": {
+  "t": "ソルガレオの名前は、正式発表より前に商標の登録書類から明らかになっていた。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Solgaleo_%28Pok%C3%A9mon%29"
+ },
+ "ekans": {
+  "t": "初代『ポケモンスナップ』の開発中の画面には、アーボが登場する場面が写っていた。完成版では使われなかった。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Ekans_%28Pok%C3%A9mon%29"
+ },
+ "raticate": {
+  "t": "英語版では、コラッタとラッタの分類は昔「Rat Pokémon（ドブネズミのポケモン）」だった。第3世代からピカチュウたちと同じ「Mouse Pokémon」にまとめられた。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Raticate_%28Pok%C3%A9mon%29"
+ },
+ "rattata": {
+  "t": "英語版の分類は、第2世代までは「Rat Pokémon」。ルビー・サファイアから、ピカチュウやサンドと同じ「Mouse Pokémon」に変わった。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Rattata_%28Pok%C3%A9mon%29"
+ },
+ "pikachu": {
+  "t": "『ピカチュウ』版で主人公が連れているピカチュウだけは、アニメと同じ声で鳴く。ゲームの電子音ではなく、声優さんの声がそのまま使われた。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pikachu_%28Pok%C3%A9mon%29"
+ },
+ "clefable": {
+  "t": "アニメのロシア語吹き替え版で、ピクシーの名前として開発中の仮の名前「Ariala（アリアーラ）」が使われてしまったことがある。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Clefable_%28Pok%C3%A9mon%29"
+ },
+ "diglett": {
+  "t": "アローラのディグダは、公式イラストやアニメでは体の色がふつうのディグダより濃くて暖かい色。ところが本編ゲームの3Dモデルにはその違いが反映されていない。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Diglett_%28Pok%C3%A9mon%29"
+ },
+ "dugtrio": {
+  "t": "ダグトリオの正体は説明がぶれている。昔は「3匹のディグダが集まったもの」とされていたが、最近の図鑑では「1匹のディグダが3つに分かれた」とも書かれている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Dugtrio_%28Pok%C3%A9mon%29"
+ },
+ "slowpoke": {
+  "t": "ガラルのヤドンは配信された当初、まだ進化できないのに「しんかのきせき」の効果を受けていた。進化先のデータだけ先に組み込まれていたためと考えられている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Slowpoke_%28Pok%C3%A9mon%29"
+ },
+ "slowbro": {
+  "t": "メガヤドランは、増田順一さんが公式に発表する2日前に、韓国のポケモン公式サイトでうっかり公開されてしまった。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Slowbro_%28Pok%C3%A9mon%29"
+ },
+ "audino": {
+  "t": "メガタブンネは公式発表の2日前に、韓国の公式サイトで誤って先に公開されてしまった。同じ日にメガヤドランも漏れている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Audino_%28Pok%C3%A9mon%29"
+ },
+ "dodrio": {
+  "t": "図鑑によると、ドードーは時速100kmで走れるのに、進化したドードリオは時速60kmほど。それなのに、すばやさの種族値はドードリオのほうが高い。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Dodrio_%28Pok%C3%A9mon%29"
+ },
+ "rhyhorn": {
+  "t": "いわとじめんの2タイプを持つポケモンはたくさんいるが、「じめん・いわ」の順番なのはサイホーンとサイドンだけ。ほかはみんな「いわ・じめん」だ。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Rhyhorn_%28Pok%C3%A9mon%29"
+ },
+ "kangaskhan": {
+  "t": "ガルーラはメスしかいないのに、初期の図鑑には「メスはお腹の袋で子どもを育てる」とわざわざ書かれていた。開発の初期にはオスもいる予定だったのかもしれない。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Kangaskhan_%28Pok%C3%A9mon%29"
+ },
+ "seaking": {
+  "t": "『金・銀』では、アズマオウが最初から覚えている技に「ちょうおんぱ」が入る予定だったらしい。ところがデータの入力ミスで「しっぽをふる」が重なってしまい、技が2つだけになった。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Seaking_%28Pok%C3%A9mon%29"
+ },
+ "scyther": {
+  "t": "『スカーレット・バイオレット』のプログラムには「ストライクはバサギリに進化する」という情報が入っている。ところが進化の方法の欄には、ゲーム中のどの操作でも満たせない仮の値が入ったまま。そのため「しんかのきせき」は効く（＝まだ進化できるポケモンとして扱われている）のに、実際に進化させる手段はない。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Scyther_%28Pok%C3%A9mon%29"
+ },
+ "stantler": {
+  "t": "『スカーレット・バイオレット』のプログラムには、オドシシがアヤシシに進化するという情報が残っている。しかし進化の方法が、どの操作でも満たせない仮の値のまま。だから「しんかのきせき」の効果は受けるのに、実際には進化させられない。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Stantler_%28Pok%C3%A9mon%29"
+ },
+ "ursaring": {
+  "t": "『スカーレット・バイオレット』では、リングマがガチグマに進化する情報がプログラムに入っている。ただし進化の方法には、ゲーム中では満たせない仮の値が入ったままなので、「しんかのきせき」は効くのに進化はできない。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Ursaring_%28Pok%C3%A9mon%29"
+ },
+ "tauros": {
+  "t": "『サン・ムーン』では、昔のゲームボーイ版から連れてきたケンタロスを見せると、ゲームフリークの森本茂樹さん本人がモデルの人物が「初代のケンタロスは最強クラスだった」と懐かしがる。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Tauros_%28Pok%C3%A9mon%29"
+ },
+ "ditto": {
+  "t": "パズルゲーム『ポケモンシャッフル』では、メタモンが正式に登場する前から「どのポケモンとも組めるワイルドカード」としてデータに入っていた。正式な配信前に不正に手に入れた人もいたという。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Ditto_%28Pok%C3%A9mon%29"
+ },
+ "dragonair": {
+  "t": "フスベシティには、メスのハクリューとなら交換してあげるという女の人がいる。オスとメスがいるポケモンで、ゲーム内の交換に性別まで指定されるのはハクリューだけ。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Dragonair_%28Pok%C3%A9mon%29"
+ },
+ "bayleef": {
+  "t": "チコリータ、ベイリーフ、メガニウムは、アニメの英語版でも日本語版と同じ声のまま。鳴き声が名前を呼ぶ形なので、英語名と日本語名がほぼ同じなら差し替える必要がなかった。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Bayleef_%28Pok%C3%A9mon%29"
+ },
+ "meganium": {
+  "t": "メガニウムはローマ字表記の日本語名と英語名がまったく同じ。そのおかげで、アニメの英語版でも日本語版の鳴き声がそのまま使われている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Meganium_%28Pok%C3%A9mon%29"
+ },
+ "hoothoot": {
+  "t": "『金・銀』のデータの中には、ホーホーだけのための「すうっと現れる」演出が入っている。けれど実際のゲームでは一度も使われなかった。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Hoothoot_%28Pok%C3%A9mon%29"
+ },
+ "unown": {
+  "t": "「？」と「！」のアンノーンは『ルビー・サファイア』で追加されたのに、当時はどこでも捕まえられなかった。初めて手に入ったのは『ファイアレッド・リーフグリーン』だ。映画『結晶塔の帝王』では伝説のポケモンの本に載っていた。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Unown_%28Pok%C3%A9mon%29"
+ },
+ "donphan": {
+  "t": "日本の『金』ではゴマゾウとドンファンが出るのに、海外の英語版などでは『銀』のほうに出る。ヒメグマ系と一緒に、国によってバージョン限定が入れ替わった珍しい例だ。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Donphan_%28Pok%C3%A9mon%29"
+ },
+ "phanpy": {
+  "t": "ゴマゾウとヒメグマは、出るバージョンが日本と海外で逆になっている。どちらも特性「ものひろい」を持つなど、対になるように作られたと見られている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Phanpy_%28Pok%C3%A9mon%29"
+ },
+ "raikou": {
+  "t": "アニメでサトシの図鑑にライコウが映ったとき、杉森建さんの公式イラストではなく、別に描かれた特別な絵が使われていた。そんな扱いを受けたのはライコウだけ。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Raikou_%28Pok%C3%A9mon%29"
+ },
+ "entei": {
+  "t": "『金・銀』のデータには、レベル40のエンテイをもらえる未使用のイベントが眠っている。後の『クリスタル』では削除された。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Entei_%28Pok%C3%A9mon%29"
+ },
+ "shedinja": {
+  "t": "HPが1しかないヌケニンに「ものまね」で「いたみわけ」を覚えさせると、自分と相手のHPを足して半分にするので、相手のHPをほぼ半分に削る大技に化ける。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Shedinja_%28Pok%C3%A9mon%29"
+ },
+ "minun": {
+  "t": "『ポケモンコロシアム』には使われなかったテキストが残っていて、マイナンが登場する予定だったことがうかがえる。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Minun_%28Pok%C3%A9mon%29"
+ },
+ "spinda": {
+  "t": "パッチールのぶち模様は約40億通り。ポケモンHOMEで「基準」として使われている模様の内部の値は 7A397866 で、公式イラストの模様とほぼ一致する。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Spinda_%28Pok%C3%A9mon%29"
+ },
+ "kecleon": {
+  "t": "『ポケモンGO』で最後に実装された第3世代のポケモンがカクレオン。2023年1月の登場で、ひとつ前の第3世代の追加から4年近くもあいていた。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Kecleon_%28Pok%C3%A9mon%29"
+ },
+ "jirachi": {
+  "t": "配布されたジラーチは本来色違いにならない設定だった。ところがバグのせいで、『ポケモンチャンネル』などの配布で色違いが手に入ってしまった。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Jirachi_%28Pok%C3%A9mon%29"
+ },
+ "hippowdon": {
+  "t": "ヒポポタスとカバルドンはオスとメスで色が違うのに、杉森建さんの公式イラストやアイコンはオスの姿しか作られていない。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Hippowdon_%28Pok%C3%A9mon%29"
+ },
+ "lickilicky": {
+  "t": "ベロベルトにはちゃんとしっぽがあるのに、ゲームの内部では「しっぽがないポケモン」の仲間に分類されている。進化前のベロリンガはそうなっていない。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Lickilicky_%28Pok%C3%A9mon%29"
+ },
+ "rotom": {
+  "t": "『ハートゴールド・ソウルシルバー』の内部データでは、ロトムが「小さくてかわいい伝説のポケモン」の連れ歩きグループに入れられている。伝説ではないのに、ミュウやセレビィと同じ扱いだ。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Rotom_%28Pok%C3%A9mon%29"
+ },
+ "phione": {
+  "t": "幻のポケモンはポケモンHOMEでは交換できない決まりだが、サービス開始直後はなぜかフィオネだけ交換できてしまっていた。のちのアップデートで直された。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Phione_%28Pok%C3%A9mon%29"
+ },
+ "darkrai": {
+  "t": "日本で最初に出た『ダイヤモンド・パール』では、「なみのりバグ」を使うと配布なしでダークライに会えてしまった。海外版ではこのバグがふさがれていた。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Darkrai_%28Pok%C3%A9mon%29"
+ },
+ "victini": {
+  "t": "『ソード・シールド』の追加コンテンツ「冠の雪原」には、使われなかったビクティニの出現データが残っている。配布なしで捕まえられる計画があったのかもしれない。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Victini_%28Pok%C3%A9mon%29"
+ },
+ "swanna": {
+  "t": "スワンナは正式発表より前に、ポケモンミュージカルの紹介映像にこっそり映り、さらにYahoo!のポケモンサイトでイラストが漏れ、そのあとコロコロで公式に紹介された。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Swanna_%28Pok%C3%A9mon%29"
+ },
+ "meloetta": {
+  "t": "メロエッタは、映画『キュレムVS聖剣士 ケルディオ』のポスターに描かれていたことで、正式発表より先にファンに存在がばれてしまった。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Meloetta_%28Pok%C3%A9mon%29"
+ },
+ "noibat": {
+  "t": "公式サイトのオンバットの図鑑ページは、最初「ひこう」単タイプと間違って載っていた。本当は「ひこう・ドラゴン」で、のちに修正された。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Noibat_%28Pok%C3%A9mon%29"
+ },
+ "lunala": {
+  "t": "ルナアーラの名前は、発表より前に商標の書類から見つかっていた。そのときのローマ字は「Lunaala」で、英語名の Lunala とつづりが違っていた。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Lunala_%28Pok%C3%A9mon%29"
+ },
+ "stakataka": {
+  "t": "ツンデツンデの図鑑の高さ5.5mは、座っているときの大きさらしい。ポケモンHOMEで比べると、立ち上がった姿は同じ5.5mのアクジキングのほぼ2倍の高さになる。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Stakataka_%28Pok%C3%A9mon%29"
+ },
+ "tandemaus": {
+  "t": "ワッカネズミはいつもオスとメスのペアらしいが、ポケモンHOMEの内部データにはオスどうし・メスどうしの仮画像が残っている。同じ性別のペアも作る予定だったのかもしれない。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Tandemaus_%28Pok%C3%A9mon%29"
+ },
+ "maushold": {
+  "t": "イッカネズミのデータを調べると、ポケモンHOMEの中に同じ性別どうしの家族を想定した仮画像が見つかっている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Maushold_%28Pok%C3%A9mon%29"
+ },
+ "naclstack": {
+  "t": "『スカーレット・バイオレット』の出現データにナクラアの行が2回書かれてしまっていて、本来の予定より2倍出やすくなっている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Naclstack_%28Pok%C3%A9mon%29"
+ },
+ "wiglett": {
+  "t": "ウミディグダの発表によって、見た目は似ているけれど関係のない別種という「他人のそら似」のポケモンという考え方が初めて登場した。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Wiglett_%28Pok%C3%A9mon%29"
+ },
+ "walking-wake": {
+  "t": "追加コンテンツ「藍の円盤」が出るまで、ポケモンHOMEのウネルミナモの図鑑には「生態調査中」という仮の文章しか書かれていなかった。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Walking_Wake_%28Pok%C3%A9mon%29"
+ },
+ "iron-leaves": {
+  "t": "追加コンテンツ「藍の円盤」が出るまで、ポケモンHOMEのテツノイサハの図鑑には「生態解析中」という仮の文章だけが載っていた。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Iron_Leaves_%28Pok%C3%A9mon%29"
+ },
+ "abra": {
+  "t": "『ポケモンGO』のケーシィは逃げる確率が99%で、全ポケモンの中で最も高い。本編で出会ってすぐ「テレポート」で逃げてしまうことへのオマージュになっている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Abra_%28Pok%C3%A9mon%29"
+ },
+ "bulbasaur": {
+  "t": "DS時代のGTS（世界中と交換できるしくみ）では、英語版の「Bulbasaur」はニックネームを付けないと預けられなかった。名前の中の「sau」が、ドイツ語で「メスブタ」から転じた悪口と同じつづりだったため、自動チェックに引っかかったのだ。フシギソウ（Ivysaur）とフシギバナ（Venusaur）も同じ理由で止められた。",
+  "src": "https://pokemondb.net/pokebase/51546/why-cant-a-conkeldurr-be-traded-without-a-nickname"
+ },
+ "conkeldurr": {
+  "t": "英語版の「Conkeldurr」は、DS時代のGTSでニックネームを付けないと預けられなかった。頭の「Con」が、フランス語で「ばか」を意味する悪口と同じだったからだ。",
+  "src": "https://pokemondb.net/pokebase/51546/why-cant-a-conkeldurr-be-traded-without-a-nickname"
+ },
+ "cofagrigus": {
+  "t": "英語版の「Cofagrigus」は、名前の真ん中の文字の並びが英語の差別的な悪口と同じつづりになってしまい、第5世代のGTSではニックネームなしでは預けられなかった。のちにチェックが見直された。",
+  "src": "https://pokemondb.net/pokebase/51546/why-cant-a-conkeldurr-be-traded-without-a-nickname"
+ },
+ "cleffa": {
+  "t": "商標登録されたローマ字の名前で見ると、ピィはウッウと並んでいちばん短い2文字。かなで書くと「ピィ」のほうがさらに短い。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Cleffa_%28Pok%C3%A9mon%29"
+ },
+ "cramorant": {
+  "t": "商標登録されたローマ字の名前で見ると、ウッウはピィと並んで2文字しかない、いちばん短い名前だ。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Cramorant_%28Pok%C3%A9mon%29"
+ },
+ "farfetchd": {
+  "t": "ポケモンHOMEのバグで、ポケモンGOなどから連れてきたカモネギは、ニックネームがないのに「ニックネーム付き」扱いになることがある。名前の「'」の記号が、本来の形と別の形にすり替わってしまうのが原因だ。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Farfetch'd_%28Pok%C3%A9mon%29"
+ },
+ "sirfetchd": {
+  "t": "ネギガナイトもカモネギと同じく、HOMEで名前のアポストロフィ（'）が別の記号に置き換わり、ニックネームなしなのにニックネーム扱いになってしまうバグがある。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Sirfetch'd_%28Pok%C3%A9mon%29"
+ },
+ "lapras": {
+  "t": "『X・Y』では、なみのりで乗るポケモンはふつう黒い影のような姿で描かれるのに、ラプラスだけは専用の3Dモデルが用意されている。昔から「人を乗せて運ぶポケモン」として描かれてきたことへのオマージュと考えられている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Lapras_%28Pok%C3%A9mon%29"
+ },
+ "litleo": {
+  "t": "『オメガルビー・アルファサファイア』に出てくる「シシコ座流星群」はシシコにちなんだもの。現実の「しし座流星群」をもじっている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Litleo_%28Pok%C3%A9mon%29"
+ },
+ "litten": {
+  "t": "ニャビーの日本語名とローマ字は、正式発表より前に商標登録の情報から見つかり、商標を自動で投稿するX（旧Twitter）のアカウントで広まった。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Litten_%28Pok%C3%A9mon%29"
+ },
+ "rowlet": {
+  "t": "モクローの名前は、正式発表より前に商標登録の情報で見つかってしまった。同じ日にアシマリの名前も見つかっている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Rowlet_%28Pok%C3%A9mon%29"
+ },
+ "marshadow": {
+  "t": "マーシャドーの日本語名とローマ字は、映画やゲームで登場するずっと前の2016年4月、商標登録をきっかけに知られてしまった。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Marshadow_%28Pok%C3%A9mon%29"
+ },
+ "mr. mime": {
+  "t": "初代の英語版で交換してもらえるバリヤードには「Marcel」というニックネームが付いていた。フランスの有名なパントマイム芸人マルセル・マルソーにちなんだと考えられている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Mr._Mime_%28Pok%C3%A9mon%29"
+ },
+ "plusle": {
+  "t": "『大乱闘スマッシュブラザーズX』のデータには、使われなかったファイターの中に「Pra_Mai」という名前のファイルがある。アイスクライマーのように、プラスルとマイナンが2匹組で参戦する案があったのでは、と言われている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Plusle_%28Pok%C3%A9mon%29"
+ },
+ "skeledirge": {
+  "t": "ラウドボーンの商標が最初に出されたとき、ローマ字は「Loudbone」だった。1か月後に「Laudbon」というつづりで出し直されている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Skeledirge_%28Pok%C3%A9mon%29"
+ },
+ "umbreon": {
+  "t": "ブラッキーの公式なローマ字表記は、2023年より前は「Blacky」だった。2022年12月に「Bracky」が商標登録され、そちらが正式になった。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Umbreon_%28Pok%C3%A9mon%29"
+ },
+ "pelipper": {
+  "t": "『ソード・シールド』のガラル地方には「ペリッパー」の名前を使った運送会社があり、ロゴにもペリッパーが描かれている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pelipper_%28Pok%C3%A9mon%29"
+ },
+ "steelix": {
+  "t": "ガラル地方には、ハガネールの名前を冠した鉄道車両の会社がある。ロゴはハガネールの体の一節を輪切りにしたデザインだ。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Steelix_%28Pok%C3%A9mon%29"
+ },
+ "wailord": {
+  "t": "ガラル地方には、ホエルオーの名前を使った養殖の会社がある。ロゴにはホエルオーの頭が重なって描かれている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Wailord_%28Pok%C3%A9mon%29"
+ },
+ "ivysaur": {
+  "t": "英語版の「Ivysaur」は、名前に含まれる「sau」がドイツ語の悪口と同じつづりのため、DS時代のGTSではニックネームなしでは預けられなかった。",
+  "src": "https://pokemondb.net/pokebase/51546/why-cant-a-conkeldurr-be-traded-without-a-nickname"
+ },
+ "froslass": {
+  "t": "英語版の「Froslass」は、最後の「lass（少女）」の中に、英語で「お尻」を指す下品な言葉「ass」が隠れている。そのせいでDS時代のGTSでは、ニックネームなしでは預けられなかった。",
+  "src": "https://pokemondb.net/pokebase/51546/why-cant-a-conkeldurr-be-traded-without-a-nickname"
+ },
+ "nosepass": {
+  "t": "英語版の「Nosepass」は、後ろの「pass」の中に下品な言葉「ass」が入っているため、DS時代のGTSではニックネームを付けないと預けられなかった。進化したダイノーズ（Probopass）も同じ目にあっている。",
+  "src": "https://pokemondb.net/pokebase/51546/why-cant-a-conkeldurr-be-traded-without-a-nickname"
+ },
+ "oshawott": {
+  "t": "杉森建さんのインタビューによると、ミジュマルの日本語名は最初「ラッコマル」だった。ラッコに、男の子の名前によく付く「丸」を合わせた名前だ。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Black_and_White_beta"
+ },
+ "registeel": {
+  "t": "『ダイヤモンド・パール』のヨーロッパ版では、レジスチルの戦闘中のポーズが描き直された。片腕を斜め上に突き出す元のポーズが、ナチス・ドイツの敬礼（ドイツなどでは法律で禁止されている）に見えかねないと判断されたためだ。以後の第4世代ソフトはすべて新しいポーズを使っている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Diamond_and_Pearl_beta"
+ },
+ "porygon": {
+  "t": "アニメのポリゴンの回で起きた「ポケモンショック」のあと、ゲームの『赤・緑・青』も、はかいこうせんなどの技で画面がピカピカ点滅する演出が、ゆっくりになるよう直された。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Red_and_Green_beta"
+ },
+ "nidoqueen": {
+  "t": "最初の『赤・緑』では、ニドクインの体重が6.0kgと書かれていた。正しくは60.0kgで、後から出た『青』で直された。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Red_and_Green_beta"
+ },
+ "geodude": {
+  "t": "最初の『赤・緑』の図鑑では、イシツブテの体重が2.0kgになっていた。本当は20.0kgで、『青』で修正された。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Red_and_Green_beta"
+ },
+ "haunter": {
+  "t": "ゴーストの英語名は、開発中は「Spectre（スペクター、亡霊）」だった。アメリカで初期に出た攻略本には、うっかりその古い名前のまま載っている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Red_and_Green_beta"
+ },
+ "beedrill": {
+  "t": "初代では、バタフリーとスピアーを交換してくれるイベントが計画されていた。スピアーのニックネームは「チクチク」。海外版のデータにも、この名前を使ったセリフが残っている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Red_and_Green_beta"
+ },
+ "shellos": {
+  "t": "増田順一さんは「ルビー・サファイアに入れられなかったウミウシのポケモンを、今回入れられた」と語っている。カラナクシは本当は第3世代のポケモンになる予定だったと考えられている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Ruby_and_Sapphire_beta"
+ },
+ "gastrodon": {
+  "t": "『ダイヤモンド・パール』のデータには、トリトドンとカラナクシの少しデザインが違う背中側の画像が残っている。もともと第3世代用に作られていた名残と見られている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Ruby_and_Sapphire_beta"
+ },
+ "wimpod": {
+  "t": "『サン・ムーン』のカンタイシティの設定画には、白と青と赤のロボット掃除機として、コソクムシの初期デザインのようなものが描かれている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Sun_and_Moon_beta"
+ },
+ "hariyama": {
+  "t": "『サン・ムーン』のマリエシティの設定画では、ハリテヤマが「ケンタロスと同じタクシー会社」と書かれた車を引いている。ライドポケモンになる案があったのかもしれない。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Sun_and_Moon_beta"
+ },
+ "excadrill": {
+  "t": "ドリュウズが初めて紹介映像に出たとき、体のしま模様が左右反対だった。次の映像ではもう今の模様に直っていた。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Black_and_White_beta"
+ },
+ "groudon": {
+  "t": "グラードンの初期デザインは、目の形が違い、胴体のとげが1組多く、しっぽのとげが1本少なかった。体の赤い模様もまだなかった。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Ruby_and_Sapphire_beta"
+ },
+ "torchic": {
+  "t": "アチャモの試作デザインは、今とほぼ同じ姿で、頭の両側に大きなたれ耳が付いていた。卵の殻に入った、首がもこもこのデザイン案もあった。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Ruby_and_Sapphire_beta"
+ },
+ "wynaut": {
+  "t": "発売前の画面写真では、ソーナノの色は青緑だった。製品版では青になっている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Ruby_and_Sapphire_beta"
+ },
+ "exploud": {
+  "t": "『ルビー・サファイア』のデータには、使われなかった特性「そうおん」が入っている。効果は「ぼうおん」とほぼ同じで、似すぎていたため没になったと考えられる。バクオングのように音に関係するポケモン用だったのかもしれない。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Ruby_and_Sapphire_beta"
+ },
+ "floette": {
+  "t": "『X・Y』のデータには、物語に出てくるAZのフラエッテ（えいえんのはな）がポケモンとして入っていて、専用技「はめつのひかり」も覚える。けれど当時は手に入れる方法がなかった。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_X_and_Y_beta"
+ },
+ "staryu": {
+  "t": "『金・銀』では、ヒトデマンが「メロメロ」を覚えられ、タマゴ技まで設定されていた。性別不明にする決定が、発売直前に下されたためと考えられている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Gold_and_Silver_beta"
+ },
+ "nidoking": {
+  "t": "テレビ番組『ゲームセンターCX』の特別回で、田尻智さんがニドキングの初期の設定資料を公開した。図鑑番号が、完成版ではなくゲーム内部の管理番号のままだった。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Red_and_Green_beta"
+ },
+ "oddish": {
+  "t": "アメリカの公式攻略本の画面写真では、いあいぎりで木を切ったときの文が「Oddish Cut down a bush!（ナゾノクサは しげみを きった！）」になっていた。製品版とは違う文だ。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Red_and_Green_beta"
+ },
+ "squirtle": {
+  "t": "スペイン語版とイタリア語版の『赤・青』では、ゼニガメの甲羅を「貝殻」という意味の言葉で書いてしまっていた。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Red_and_Green_beta"
+ },
+ "hoppip": {
+  "t": "発売前の『金・銀』体験版では、ハネッコの図鑑の説明は「新しく見つかったポケモンなので調査中」という仮の文だった。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Gold_and_Silver_beta"
+ },
+ "crobat": {
+  "t": "初代のデータには、ズバットの鳴き声を改造した、クロバットにそっくりな鳴き声が残っている。クロバットは最初、初代で登場する予定だったのかもしれない。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Red_and_Green_beta"
+ },
+ "cyndaquil": {
+  "t": "『ハートゴールド・ソウルシルバー』のオープニングに出てくるヒノアラシは、本編とは違う、開発途中の画像のまま使われている。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_HeartGold_and_SoulSilver_beta"
+ },
+ "garchomp": {
+  "t": "『プラチナ』の日本の紹介映像では、ガブリアスが製品版とは違う試作の画像で映っていた。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Platinum_beta"
+ },
+ "heatran": {
+  "t": "『ダイヤモンド・パール』には、使い道のない「かざんのおきいし」が登場する。ヒードランのイベント用だったと考えられ、のちの『ブラック2・ホワイト2』で実際にヒードランを呼ぶ道具として使われた。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Diamond_and_Pearl_beta"
+ },
+ "silvally": {
+  "t": "『ウルトラサン・ウルトラムーン』のデータでは、シルヴァディは教え技の「ほのおのちかい」と「みずのちかい」を覚えられる設定になっている。でもバグのせいで、実際には覚えさせられない。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Ultra_Sun_and_Ultra_Moon_beta"
+ },
+ "pidgeot": {
+  "t": "『ピカチュウ版』では、ピジョットとピジョットを交換するイベントが計画されていたが、没になった。日本版でもらえるはずだったポケモンのニックネームは「まつみや」。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Yellow_beta"
+ },
+ "eternatus": {
+  "t": "『ソード・シールド』のデータには、ラストバトルで戦う「ムゲンダイマックス」のムゲンダイナが別の姿として入っている。ただし一度も配布されておらず、手に入れることはできない。",
+  "src": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Sword_and_Shield_beta"
+ },
+ "parasect": {
+  "t": "初代のスタッフロールでは、ポケモンたちが画面を右から左へ駆け抜けていく。その最後に登場するのがパラセクトだ。",
+  "src": "https://dic.pixiv.net/a/%E3%83%91%E3%83%A9%E3%82%BB%E3%82%AF%E3%83%88"
+ },
+ "arcanine": {
+  "t": "ウインディは、開発中は「ウイング」という名前だった。",
+  "src": "https://dic.pixiv.net/a/%E3%82%A6%E3%82%A4%E3%83%B3%E3%83%87%E3%82%A3"
+ },
+ "exeggutor": {
+  "t": "ナッシーは、1993年にゲームフリークが出した年賀状にガルーラと一緒に描かれていた。当時のナッシーは頭の葉がもっと複雑で、頭には角まで生えていた。",
+  "src": "https://dic.pixiv.net/a/%E3%83%8A%E3%83%83%E3%82%B7%E3%83%BC"
+ },
+ "snorlax": {
+  "t": "カビゴンのモデルは、ゲームフリークのゲームプランナー西野弘二さん。初代の開発当時の西野さんは顔がカビゴンにそっくりだったといい、2018年の読売新聞のインタビューで正式に明かされた。",
+  "src": "https://dic.pixiv.net/a/%E3%82%AB%E3%83%93%E3%82%B4%E3%83%B3"
+ },
+ "dragonite": {
+  "t": "ミニリュウ、ハクリューと細長い竜の姿が続くのに、カイリューだけずんぐりした姿になる。開発の途中までは、ハクリューに近い路線のデザインで進める予定だったらしい。",
+  "src": "https://dic.pixiv.net/a/%E3%82%AB%E3%82%A4%E3%83%AA%E3%83%A5%E3%83%BC"
+ },
+ "sudowoodo": {
+  "t": "ウソッキーのデザインは杉森建さん。木のふりをする見た目を生かすため、シナリオ担当が「道をふさいでいるポケモンがいる」というイベントを作ったという。",
+  "src": "https://dic.pixiv.net/a/%E3%82%A6%E3%82%BD%E3%83%83%E3%82%AD%E3%83%BC"
+ },
+ "girafarig": {
+  "t": "『金・銀』が発表されたばかりの頃の試遊台では、キリンリキは前と後ろが同じ形の「双頭」のポケモンだった。",
+  "src": "https://dic.pixiv.net/a/%E3%82%AD%E3%83%AA%E3%83%B3%E3%83%AA%E3%82%AD"
+ },
+ "wobbuffet": {
+  "t": "『金・銀』の開発中には、キリンリキの進化前になる予定の没ポケモンがいた。お餅のような姿で「自分からは攻撃せず、やり返すときは3倍にする」という設定があり、ソーナンスの原型と考えられている。",
+  "src": "https://dic.pixiv.net/a/%E3%82%BD%E3%83%BC%E3%83%8A%E3%83%B3%E3%82%B9"
+ },
+ "sneasel": {
+  "t": "『金・銀』の開発中の版に残っていたニューラの初期案は、どう見てもイタチそのものの姿だった。ツメを武器にするというアイデアは、この時点で決まっていたようだ。",
+  "src": "https://dic.pixiv.net/a/%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%A9"
+ },
+ "tyranitar": {
+  "t": "バンギラスのデザインが初めて世に出たのは1997年、雑誌『ゲーム批評』14号の表紙。杉森建さんが描いたそのモンスターは、お腹の色や腕の形、背中のトゲの数が今と違っていた。",
+  "src": "https://dic.pixiv.net/a/%E3%83%90%E3%83%B3%E3%82%AE%E3%83%A9%E3%82%B9"
+ },
+ "lugia": {
+  "t": "ルギアは、もともと映画用のアニメオリジナルのポケモンとしてデザインされた。ところが『金・銀』の開発が大きく遅れたおかげで、ゲームにも入れられることになった。",
+  "src": "https://dic.pixiv.net/a/%E3%83%AB%E3%82%AE%E3%82%A2"
+ },
+ "blaziken": {
+  "t": "杉森建さんによると、バシャーモのモデルはキックボクサーのベニー・ユキーデや、プロレスラーの小林邦昭さんだという。",
+  "src": "https://dic.pixiv.net/a/%E3%83%90%E3%82%B7%E3%83%A3%E3%83%BC%E3%83%A2"
+ },
+ "flygon": {
+  "t": "アートディレクターの杉森建さんは、ゲーム雑誌のインタビュー（2015年）で「フライゴンは『X・Y』の頃からメガシンカの候補に挙がっているが、デザインがまとまらず選考から漏れている」と話している。",
+  "src": "https://dic.pixiv.net/a/%E3%83%95%E3%83%A9%E3%82%A4%E3%82%B4%E3%83%B3"
+ },
+ "latias": {
+  "t": "『ルビー・サファイア』の開発中には、ラティアスとバシャーモが合体したような姿の没ポケモンが描かれていた。海外のファンからは「Latiaziken」などと呼ばれている。",
+  "src": "https://dic.pixiv.net/a/%E3%83%A9%E3%83%86%E3%82%A3%E3%82%A2%E3%82%B9"
+ },
+ "leafeon": {
+  "t": "リーフィアの構想は古く、『金・銀』の開発中のデータに「リーフィ」という名前で、今より体格のいい姿が残っていた。",
+  "src": "https://dic.pixiv.net/a/%E3%83%AA%E3%83%BC%E3%83%95%E3%82%A3%E3%82%A2"
+ },
+ "basculin": {
+  "t": "開発者によると、イッシュ地方のモデルのニューヨークではバス（魚）が釣れることから、バスラオが生まれたという。",
+  "src": "https://dic.pixiv.net/a/%E3%83%90%E3%82%B9%E3%83%A9%E3%82%AA"
+ },
+ "chandelure": {
+  "t": "開発中、ヒトモシの仲間は「たき火→ろうそく→ランプ」の順で、ランプラーが最後の進化形になる予定だった。途中で「照明器具でそろえる」方針に変わってたき火のポケモンが没になり、シャンデリアのシャンデラが新しく作られた。",
+  "src": "https://dic.pixiv.net/a/%E3%82%B7%E3%83%A3%E3%83%B3%E3%83%87%E3%83%A9"
+ },
+ "hydreigon": {
+  "t": "杉森建さんによると、サザンドラは最初、戦車をイメージしたポケモンになる予定だった。ジヘッドやサザンドラの体にあるキャタピラのような模様は、その名残だという。",
+  "src": "https://dic.pixiv.net/a/%E3%82%B5%E3%82%B6%E3%83%B3%E3%83%89%E3%83%A9"
+ },
+ "tyrantrum": {
+  "t": "ガチゴラスのデザインを担当したのは、マンガ『ロックマンギガミックス』で知られる漫画家のありがひとしさん。キョジオーンやクエスパトラもありがさんのデザインだ。",
+  "src": "https://dic.pixiv.net/a/%E3%82%AC%E3%83%81%E3%82%B4%E3%83%A9%E3%82%B9"
+ },
+ "gumshoos": {
+  "t": "デカグースは、海外で「トランプ氏がモチーフでは？」とうわさされた。増田順一さんはインタビューで「デザインはずっと前に作ったもので、まったく関係ない」と否定している。",
+  "src": "https://dic.pixiv.net/a/%E3%83%87%E3%82%AB%E3%82%B0%E3%83%BC%E3%82%B9"
+ },
+ "lurantis": {
+  "t": "設定資料には、カリキリとラランテスが花の姿で休む「フラワーモード」という形態が描かれている。ゲームには登場しない。",
+  "src": "https://dic.pixiv.net/a/%E3%83%A9%E3%83%A9%E3%83%B3%E3%83%86%E3%82%B9"
+ },
+ "mimikyu": {
+  "t": "英語版で、ある場所のミミッキュに話しかけると「Me…me curse…you…」と返ってくる。名前をもじった鳴き声のようで、訳すと「お前を呪う」になる。",
+  "src": "https://dic.pixiv.net/a/%E3%83%9F%E3%83%9F%E3%83%83%E3%82%AD%E3%83%A5"
+ },
+ "meltan": {
+  "t": "ポケモン社長の石原恒和さんは、メルタンを『Let's Go! ピカチュウ・イーブイ』に入れた理由の一つを「ただのリメイクだと誤解されたくなかったから」と語っている。",
+  "src": "https://dic.pixiv.net/a/%E3%83%A1%E3%83%AB%E3%82%BF%E3%83%B3"
+ },
+ "boltund": {
+  "t": "パルスワンの名前やデザインは、ゲームフリークが昔作ったアクションゲーム『パルスマン』が元ネタだと考えられている。黒い手足や胸の黄色いV字模様がそっくりだ。",
+  "src": "https://dic.pixiv.net/a/%E3%83%91%E3%83%AB%E3%82%B9%E3%83%AF%E3%83%B3"
+ },
+ "bombirdier": {
+  "t": "開発中に没になった、コウノトリがモチーフのポケモンがいた。オトシドリの原型だと考えられている。",
+  "src": "https://dic.pixiv.net/a/%E3%82%AA%E3%83%88%E3%82%B7%E3%83%89%E3%83%AA"
+ },
+ "flamigo": {
+  "t": "フラミンゴのポケモンは『X・Y』の開発中にも作られていたが、没になった。そちらは本物のフラミンゴに近い姿だったという。",
+  "src": "https://dic.pixiv.net/a/%E3%82%AB%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B4"
+ },
+ "bellibolt": {
+  "t": "ハラバリーのデザインは、開発中に没になったニョロトノのデザインとよく似ている。",
+  "src": "https://dic.pixiv.net/a/%E3%83%8F%E3%83%A9%E3%83%90%E3%83%AA%E3%83%BC"
+ },
+ "primarina": {
+  "t": "アシレーヌは、公式に発表される前に画像が流出してしまったポケモンだ。",
+  "src": "https://dic.pixiv.net/a/%E3%82%A2%E3%82%B7%E3%83%AC%E3%83%BC%E3%83%8C"
+ },
+ "shelmet": {
+  "t": "チョボマキのデザインは、元ゲームフリーク社員の北風友裕さん。同じ作品のフシデたちも担当している。",
+  "src": "https://dic.pixiv.net/a/%E3%83%81%E3%83%A7%E3%83%9C%E3%83%9E%E3%82%AD"
+ },
+ "wishiwashi": {
+  "t": "ゲームフリークが2005年に出したゲーム『スクリューブレイカー轟振どりるれろ』には、魚の群れが大きな魚の形になるボスが出てくる。ヨワシの「むれたすがた」のご先祖のような存在だ。",
+  "src": "https://dic.pixiv.net/a/%E3%83%A8%E3%83%AF%E3%82%B7"
+ }
+}

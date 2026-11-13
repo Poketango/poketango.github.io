@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google アナリティクス（アクセス数の計測） -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2S81YX6L53"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2S81YX6L53');
+    </script>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <title>練習モード（英単語の穴埋めクイズ）｜英語を勉強するテイでポケモン図鑑を見れる場所</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ポケモンの英語版図鑑の文章から、英単語の穴埋めクイズに挑戦。日本語訳つきで、間違えても何度でも練習できます。">
+    <link rel="canonical" href="https://poketango.github.io/practice.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="英語を勉強するテイでポケモン図鑑を見れる場所">
+    <meta property="og:title" content="練習モード（英単語の穴埋めクイズ）｜英語を勉強するテイでポケモン図鑑を見れる場所">
+    <meta property="og:description" content="ポケモンの英語版図鑑の文章から、英単語の穴埋めクイズに挑戦。日本語訳つきで、間違えても何度でも練習できます。">
+    <meta property="og:url" content="https://poketango.github.io/practice.html">
+    <meta property="og:image" content="https://poketango.github.io/ogp.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <style>
+        body {
+    font-family: sans-serif;
+    padding: 20px;
+    }
+
+    /* 全体レイアウト（サイドバー → チャート → メイン） */
+    #layout {
+        display: flex;
+        gap: 8px;              /* チャートと画像の距離を詰める */
+        align-items: flex-start;
+    }
+
+    /* 左：サイドバー */
+    #sidebar {
+        width: 200px;
+        padding: 10px;
+        border-right: 1px solid #ccc;
+    }
+
+    #search-box {
+        width: 100%;
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    #search-results {
+        list-style: none;
+        padding: 0;
+        margin-top: 10px;
+    }
+
+    #search-results li {
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    #search-results li:hover {
+        background-color: #eee;
+    }
+
+    /* 中央：チャート */
+    #chart-column {
+        width: 260px;
+        margin-top: 5px;       /* 上の余白を少しだけ */
+    }
+
+    #stats-chart {
+        width: 250px !important;
+        height: 250px !important;
+    }
+
+    /* 右：メイン画面（画像＋説明文） */
+    #content {
+        flex: 1;
+        text-align: left;      /* 左寄せ */
+        padding-left: 5px;     /* 左余白を最小限に */
+    }
+
+    /* ポケモン画像 */
+    #poke-img {
+        width: 200px;
+        image-rendering: pixelated;
+        display: block;        /* 左寄せ */
+        margin: 0;             /* 余白なし */
+    }
+
+    /* 英語説明文 */
+    #desc {
+        width: 100%;
+        margin: 8px 0;         /* 余白を詰める */
+        font-size: 18px;
+        text-align: left;
+        max-width: 480px;   /* ← 横幅の上限を設定 */
+        line-height: 1.4;   /* ← 読みやすくなる */
+        word-break: break-word; /* ← 長い単語でも折り返す */
+    }
+
+    /* 日本語説明文 */
+    #desc-ja {
+        max-width: 480px;      /* ← 横幅の上限を設定 */
+        line-height: 1.5;      /* ← 読みやすくなる */
+    word-break: break-all; /* ← 日本語でも自然に折り返す */
+        margin-top: 4px !important;
+        text-align: left;
+    }
+
+    /* ボタン */
+    button {
+        padding: 8px 16px;
+        font-size: 16px;
+        margin: 3px;
+    }
+
+
+    /* ===== ページ上部のタイトルバー ===== */
+    #page-header {
+        width: 100%;
+        padding: 12px 0;
+        background-color: #f5f5f5;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    #page-header h1 {
+        margin: 0;
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+
+        /* タイトルを押すとホームへ戻る */
+    .home-link { cursor: pointer; }
+    .home-link:hover { opacity: 0.7; }
+</style>
+    <link rel="stylesheet" href="theme.css">
+</head>
+
+<body>
+
+<!-- ★ ページ上部のタイトルバー -->
+<header id="page-header">
+    <h1 class="home-link" title="ホームへ戻る" onclick="if (confirm('ホームに戻りますか？')) location.href='index.html';">英語を勉強するテイでポケモン図鑑を見れる場所</h1>
+</header>
+
+<div id="layout">
+
+  <!-- 左：サイドバー（検索） -->
+  <div id="sidebar">
+      <h3>Search Pokémon</h3>
+      <input type="text" id="search-box" placeholder="Type a name...">
+      <ul id="search-results"></ul>
+  </div>
+
+  <!-- 中央：チャート -->
+  <div id="chart-column">
+    <canvas id="stats-chart" width="260" height="260"></canvas>
+
+    <!-- ★ ここに正誤表示とコンボを移動 -->
+    <p id="judge" style="font-weight:bold; margin-top:10px;"></p>
+    <p id="combo" style="font-weight:bold; color: green;"></p>
+ </div>
+
+
+  <!-- 右：メイン画面 -->
+  <div id="content">
+
+      <div class="quiz-head">
+          <img id="poke-img" src="" alt="pokemon image">
+          <h2 id="poke-name"></h2>
+      </div>
+
+      <p id="desc"></p>
+
+      <div class="answer-row">
+          <input id="answer-input" type="text" placeholder="答えを入力してEnter" autocomplete="off" autocapitalize="off" spellcheck="false">
+          <button id="check-answer-btn">答え合わせ</button>
+      </div>
+      <p id="answer" style="font-weight: bold; color: blue;"></p>
+
+      <p id="desc-ja" style="color: #444; margin-top: 10px;"></p>
+
+      <button onclick="showRandomPokemon()">ポケモンいれかえ（スペース）</button>
+
+      <p id="judge" style="font-weight:bold; margin-top:10px;"></p>
+      <p id="combo" style="font-weight:bold; color: green;"></p>
+  </div>
+
+</div>
+
+
+
+        
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+<script src="medals.js"></script>
+<script src="script.js"></script>
+
+<script src="bookmark.js"></script>
+<script src="speak.js"></script>
+<script src="trivia.js"></script>
+<script src="quiz-ux.js"></script>
+<script src="ads.js"></script>
+<script src="site-footer.js"></script>
+<script src="share.js"></script>
+</body>
+</html>
+
+
+
