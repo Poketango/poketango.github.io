@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="ja"><head><script async src="https://www.googletagmanager.com/gtag/js?id=G-2S81YX6L53"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2S81YX6L53');</script><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ポケモン英単語プリント（無料・印刷用）｜中学〜高校レベル</title><meta name="description" content="英語版ポケモン図鑑の文章を使った英単語プリントを無料で作れます。レベルと問題数を選んで印刷するだけ。解答つきで家庭学習や授業にも使えます。">
+<link rel="canonical" href="https://poketango.com/p/print.html"><link rel="icon" type="image/png" href="../favicon.png">
+<meta property="og:type" content="article"><meta property="og:title" content="ポケモン英単語プリント（無料・印刷用）｜中学〜高校レベル"><meta property="og:description" content="英語版ポケモン図鑑の文章を使った英単語プリントを無料で作れます。レベルと問題数を選んで印刷するだけ。解答つきで家庭学習や授業にも使えます。"><meta property="og:image" content="https://poketango.com/ogp.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../theme.css"><meta name="google-adsense-account" content="ca-pub-4829093383068106">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4829093383068106" crossorigin="anonymous"></script>
+</head>
+<body class="pkpage"><nav class="topnav noprint"><a class="brand" href="../index.html">📕 ポケモン英語図鑑</a><div class="tn-links"><a href="index.html">英語名一覧</a><a href="words.html">英単語</a><a href="../practice.html">クイズ</a></div></nav>
+<style>
+.ctrl{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.ctrl select,.ctrl button{font-size:16px;padding:8px 12px;border-radius:10px;border:1px solid #cbd5e1}
+.ctrl button{background:#2563eb;color:#fff;border:0;font-weight:700;cursor:pointer}.ctrl button.sub{background:#10b981}
+.sheet{background:#fff;color:#111;padding:28px 32px;border-radius:12px;margin:16px 0;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.sheet h2{margin:0 0 4px;font-size:22px}.sheet .meta{display:flex;justify-content:space-between;font-size:14px;border-bottom:2px solid #111;padding-bottom:6px;margin-bottom:14px}
+.sheet h3{font-size:16px;margin:18px 0 8px;border-left:5px solid #ef4444;padding-left:8px}
+.q1{display:grid;grid-template-columns:1fr 1fr;gap:6px 24px;font-size:16px}.q1 div{border-bottom:1px dotted #94a3b8;padding:6px 0}
+.q2 li{margin:0 0 8px;line-height:1.65;font-size:14px}.q2 .bl{display:inline-block;min-width:110px;border-bottom:1.5px solid #111}
+.q2 small{color:#475569}.ans b{color:#b91c1c}.foot{font-size:11px;color:#64748b;margin-top:16px}
+@media print{body{background:#fff!important}.noprint,.side-rail,.pk-dock,#site-footer,footer,ins{display:none!important}.pkwrap{max-width:none;padding:0;margin:0}.sheet{box-shadow:none;padding:0;margin:0}.sheet.ans{page-break-before:always}}
+</style>
+<main class="pkwrap"><section class="list-hero noprint"><h1>ポケモン英単語プリント</h1><p>レベルを選んで「作る」を押し、印刷するだけ。解答つき・無料</p></section>
+<section class="card noprint"><div class="ctrl"><label>レベル <select id="lv"><option value="chu1">中学1年</option><option value="chu2" selected>中学2年</option><option value="chu3">中学3年</option><option value="kou">高校</option><option value="dai">大学・難関</option></select></label>
+<label>問題数 <select id="n"><option>10</option><option selected>16</option><option>20</option></select></label><button id="make">🎲 作る</button><button class="sub" onclick="print()">🖨️ 印刷する</button></div>
+<p style="font-size:14px;margin-top:10px">「作る」を押すたびに問題が入れかわります。2ページ目に解答がつきます。家庭学習や授業でご自由にお使いください。</p></section>
+<div id="out"></div>
+<p class="noprint"><a href="words.html">📚 レベル別の英単語一覧 →</a></p></main>
+<script>
+const LVN={chu1:"中学1年",chu2:"中学2年",chu3:"中学3年",kou:"高校",dai:"大学・難関"};let DATA=null;
+const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function make(){const lv=document.getElementById("lv").value,n=+document.getElementById("n").value;
+ const pool=shuffle(DATA[lv].slice()).filter(x=>x[4].length<140);const half=Math.ceil(n/2);const a=pool.slice(0,half),b=pool.slice(half,n);
+ const today=new Date().toLocaleDateString("ja-JP");
+ let q='<div class="sheet"><h2>ポケモン英単語プリント（'+LVN[lv]+'）</h2><div class="meta"><span>'+today+'</span><span>名前（　　　　　　　　　）　　　／ '+n+'点</span></div>';
+ q+='<h3>1. 英単語の意味を日本語で書こう</h3><div class="q1">'+a.map((x,i)=>'<div>('+(i+1)+') <b lang="en">'+esc(x[0])+'</b>　</div>').join("")+'</div>';
+ q+='<h3>2. ポケモン図鑑の文の（　）に入る英単語を書こう</h3><ol class="q2">'+b.map(x=>{const re=new RegExp("\\b"+x[0]+"\\b","i");return '<li lang="en">'+esc(x[4]).replace(re,'<span class="bl"></span>')+'<br><small>ヒント '+esc(x[1])+'（'+x[0][0]+'から始まる）・'+esc(x[5])+'の図鑑より</small></li>'}).join("")+'</ol>';
+ q+='<p class="foot">英語版ポケモン図鑑の文章を使ったプリントです　poketango.com ／ ©Nintendo/Creatures Inc./GAME FREAK inc.</p></div>';
+ let s='<div class="sheet ans"><h2>解答</h2><h3>1.</h3><div class="q1">'+a.map((x,i)=>'<div>('+(i+1)+') '+esc(x[0])+' … <b>'+esc(x[1])+'</b></div>').join("")+'</div><h3>2.</h3><ol class="q2">'+b.map(x=>'<li><b lang="en">'+esc(x[0])+'</b>（'+esc(x[1])+'）</li>').join("")+'</ol></div>';
+ document.getElementById("out").innerHTML=q+s;}
+fetch("wordlist.json").then(r=>r.json()).then(d=>{DATA=d;make()});document.getElementById("make").onclick=make;
+</script>
+<script src="../ads.js?v=20261114a"></script><script src="../site-footer.js"></script></body></html>

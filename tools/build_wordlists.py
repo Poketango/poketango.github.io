@@ -51,9 +51,11 @@ for lv, slug, name in LV:
         ex = re.sub(r'\b(' + re.escape(w) + r')\b', r'<b>\1</b>', ex, count=1, flags=re.I)
         body += f'<dt{anchor} lang="en">{E(w)}<small>{POS[pos]}</small></dt><dd>{E(m)}<br><span class="ex" lang="en">{ex}</span> <a href="{k}.html">→ {E(JN.get(k, k))}</a></dd>'
     body += '</dl></section>'
-    body += f'<section class="card"><h2>ほかのレベルの単語</h2>{lvnav}<p><a href="../practice.html">✏️ 穴埋めクイズで覚えた単語を試す →</a></p></section>'
+    body += f'<section class="card"><h2>ほかのレベルの単語</h2>{lvnav}<p><a href="print.html">🖨️ この単語で無料プリントを作る →</a></p><p><a href="../practice.html">✏️ 穴埋めクイズで覚えた単語を試す →</a></p></section>'
     page(f'words-{slug}.html', f'ポケモンで覚える{name}レベルの英単語一覧（{len(items)}語・例文つき）', f'英語版ポケモン図鑑に出てくる{name}レベルの英単語{len(items)}語を、意味・品詞・実際の図鑑の例文つきでまとめました。ポケモンが好きな子の英語学習に。', body)
+out = {slug: [[w, D[w][0], POS[D[w][1]], k, sent, JN.get(k, k)] for w, (k, sent) in sorted(by[lv].items())] for lv, slug, _ in LV}
+json.dump(out, open(ROOT + 'p/wordlist.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 total = sum(counts.values())
-body = css + f'<section class="list-hero"><h1>ポケモン図鑑で覚える英単語</h1><p>英語版図鑑に出てくる{total}語をレベル別に</p></section><section class="card"><p>英語版のポケモン図鑑には、中学で習う単語から大学レベルの単語まで、たくさんの英単語が出てきます。好きなポケモンの図鑑文で覚えれば、例文ごと頭に残ります。</p><ul>' + ''.join(f'<li><a href="words-{slug}.html">{name}レベル</a>（{counts[slug]}語）</li>' for _, slug, name in LV) + '</ul><p><a href="../practice.html">✏️ 穴埋めクイズに挑戦 →</a></p></section>'
+body = css + f'<section class="list-hero"><h1>ポケモン図鑑で覚える英単語</h1><p>英語版図鑑に出てくる{total}語をレベル別に</p></section><section class="card"><p>英語版のポケモン図鑑には、中学で習う単語から大学レベルの単語まで、たくさんの英単語が出てきます。好きなポケモンの図鑑文で覚えれば、例文ごと頭に残ります。</p><ul>' + ''.join(f'<li><a href="words-{slug}.html">{name}レベル</a>（{counts[slug]}語）</li>' for _, slug, name in LV) + '</ul><p><a href="print.html">🖨️ 無料の英単語プリントを作る →</a></p><p><a href="../practice.html">✏️ 穴埋めクイズに挑戦 →</a></p></section>'
 page('words.html', f'ポケモン図鑑で覚える英単語一覧｜中学〜大学レベル別{total}語', f'英語版ポケモン図鑑に出てくる英単語{total}語を、中1・中2・中3・高校・大学のレベル別に例文つきでまとめました。', body)
 print(counts, total)
