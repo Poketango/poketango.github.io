@@ -94,8 +94,8 @@ def page(path, title, desc, canon, body, depth, ja_alt=None, extra_head=''):
 <meta property="og:type" content="article"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}"><meta property="og:url" content="{canon}"><meta property="og:image" content="https://poketango.com/ogp.png"><meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="{up}theme.css">{CSS}{ADS}{extra_head}
 </head><body class="pkpage"><nav class="topnav"><a class="brand" href="{up}en/">🎌 Pokémon Katakana</a><div class="tn-links"><a href="{up}en/learn/">Lessons</a><a href="{up}en/chart.html">Chart</a><a href="{up}en/quiz.html">Quiz</a><a href="{up}en/list.html">List</a><a href="{up}" lang="ja">日本語</a></div></nav>
-<main class="pkwrap">{body}</main>
-<footer class="note" style="text-align:center;padding:24px 16px">Unofficial fan-made learning site. Pokémon names, images and Pokédex text © Nintendo / Creatures Inc. / GAME FREAK inc. / The Pokémon Company.<br><a href="{up}policy.html">Operator &amp; privacy policy (Japanese)</a></footer></body></html>'''
+<main class="pkwrap">{body}</main><script src="{up}en/shop.js?v=1" defer></script>
+<footer class="note" style="text-align:center;padding:24px 16px">Unofficial fan-made learning site. As an Amazon Associate, this site earns from qualifying purchases. Pokémon names, images and Pokédex text © Nintendo / Creatures Inc. / GAME FREAK inc. / The Pokémon Company.<br><a href="{up}policy.html">Operator &amp; privacy policy (Japanese)</a></footer></body></html>'''
     open(ROOT + path, 'w', encoding='utf-8').write(h)
 def kana_html(name):
     out = ''
