@@ -1,5 +1,5 @@
 # 英語を勉強するテイでポケモン図鑑を見れる場所
 
-https://poketango.github.io/
+https://poketango.com/
 
 英語版ポケモン図鑑の文章で英単語を覚える、ファンが作った非公式の学習サイトです。

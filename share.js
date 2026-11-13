@@ -3,7 +3,7 @@
 // 実践モードの結果画面と、実績ページに表示する
 // =========================================================
 (function () {
-    const SITE_URL = "https://poketango.github.io/";
+    const SITE_URL = "https://poketango.com/";
     const TAG = "ポケモン英単語";
 
     function shareUrl(text) {
