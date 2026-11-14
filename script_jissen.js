@@ -390,7 +390,7 @@ document.getElementById("tweet-btn").addEventListener("click", () => {
 
     const mode = localStorage.getItem("lastMode") || "ノーマル";
     const head = mode.includes("タイムアタック") ? `【実践モード・${mode}】\n60秒で${score}問正解しました！` : `【実践モード・${mode}】\n${score}連続正解を達成しました！`;
-    const text = head + `\n#ポケたん\nhttps://poketango.com/jissen.html`;
+    const text = head + `\n#もんすぺ\nhttps://poketango.com/jissen.html`;
 
     const url = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text);
 

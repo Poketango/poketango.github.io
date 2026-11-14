@@ -4,7 +4,7 @@
 // =========================================================
 (function () {
     const SITE_URL = "https://poketango.com/";
-    const TAG = "ポケたん";
+    const TAG = "もんすぺ";
 
     function shareUrl(text) {
         return "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text) +
