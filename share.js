@@ -4,11 +4,11 @@
 // =========================================================
 (function () {
     const SITE_URL = "https://poketango.com/";
-    const TAG = "ポケモン英単語";
+    const TAG = "ポケたん";
 
     function shareUrl(text) {
         return "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text) +
-               "&url=" + encodeURIComponent(SITE_URL) + "&hashtags=" + encodeURIComponent(TAG) + "&via=zukan_eitango";
+               "&url=" + encodeURIComponent(SITE_URL + "?utm_source=x&utm_medium=share&utm_campaign=" + (location.pathname.split("/").pop().replace(".html","") || "top")) + "&hashtags=" + encodeURIComponent(TAG) + "&via=zukan_eitango";
     }
 
     function makeButton(getText) {
