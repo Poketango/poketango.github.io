@@ -157,7 +157,8 @@
     .home-link { cursor: pointer; }
     .home-link:hover { opacity: 0.7; }
 </style>
-    <link rel="stylesheet" href="theme.css?v=20261114m">
+    <link rel="stylesheet" href="theme.css?v=20261115a">
+<link rel="stylesheet" href="jissen-fx.css?v=20261115a">
     <style>
 /* キー操作の目印（ボタンの色に合わせて白で表示、タッチ端末では非表示） */
 kbd.key-hint {
@@ -203,7 +204,7 @@ kbd.key-hint {
 <body>
 
 <header id="site-header">
-    <h1 class="home-link" title="ホームへ戻る" onclick="if (confirm('ホームに戻りますか？')) location.href='index.html';"><img class="site-logo" src="logo.svg" alt="ポケたん" width="352" height="100"></h1>
+    <h1><a class="logo-link" href="index.html" title="ホームへ戻る"><img class="site-logo" src="logo.svg" alt="ポケたん" width="352" height="100"></a></h1>
     <p class="subtitle">実践モード：何問連続で正解できるか挑戦！</p>
 </header>
 
@@ -215,7 +216,16 @@ kbd.key-hint {
     <button data-mode="oni">鬼（日本語なし＋8秒）</button>
     <p id="mode-desc"></p>
 </div>
+<button id="sound-btn" type="button" aria-label="効果音のオン・オフ" title="効果音のオン・オフ">🔊</button>
 <div id="main">
+    <div id="start-screen">
+        <div id="ss-icon">🔥</div>
+        <h2 id="ss-name">ノーマル</h2>
+        <p id="ss-desc"></p>
+        <p id="ss-best"></p>
+        <button id="start-btn" type="button" disabled>読みこみ中…</button>
+        <p class="ss-hint">ほかのモードは上のボタンで切り替えられます</p>
+    </div>
     <div id="timer-wrap" style="display:none"><div id="timer-bar"></div><span id="timer-text"></span></div>
     <div id="question-box">
         <img id="poke-img" src="" alt="pokemon image">
@@ -277,6 +287,10 @@ kbd.key-hint {
 
 
 <div id="achievement-popup" style="display:none;"></div>
+<div id="countdown" hidden><span></span></div>
+<div id="fx-layer" aria-hidden="true"></div>
+<div id="fx-hurry" aria-hidden="true"></div>
+<canvas id="confetti" aria-hidden="true"></canvas>
 
 
     
@@ -284,7 +298,8 @@ kbd.key-hint {
 
 <script src="medals.js?v=20261114e"></script>
 <script src="quiz-words.js?v=20261113c"></script>
-<script src="script_jissen.js?v=20261114a"></script>
+<script src="jissen-fx.js?v=20261115a"></script>
+<script src="script_jissen.js?v=20261115a"></script>
 
 <div id="achievement-popup" style="
     display:none;

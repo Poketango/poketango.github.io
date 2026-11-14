@@ -1,0 +1,125 @@
+/* =========================================================
+   実践モードの演出（jissen-fx.css）
+   ========================================================= */
+
+/* ---------- スタート画面 ---------- */
+#start-screen {
+    max-width: 560px; margin: 24px auto; padding: 32px 24px 26px; text-align: center;
+    background: #fff; border-radius: 24px; box-shadow: 0 10px 30px rgba(31, 41, 51, .12);
+    border-top: 8px solid var(--mc, #2fa84f); animation: ssIn .35s cubic-bezier(.2, 1.3, .4, 1);
+}
+body[data-mode="normal"] { --mc: #2fa84f; }
+body[data-mode="noja"]   { --mc: #2a75bb; }
+body[data-mode="sec10"]  { --mc: #f08a24; }
+body[data-mode="ta60"]   { --mc: #e5b800; }
+body[data-mode="oni"]    { --mc: #c62828; }
+#ss-icon { font-size: 64px; line-height: 1; animation: ssBob 1.6s ease-in-out infinite; }
+#ss-name { margin: 10px 0 4px; font-size: 30px; }
+#ss-desc { margin: 0 0 10px; color: var(--sub, #5f6b7a); }
+#ss-best { display: table; margin: 0 auto 18px; padding: 4px 14px; border-radius: 999px; background: var(--bg, #f2f4f8); font-weight: 700; }
+#start-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 16px 48px; font-size: 24px; font-weight: 800; letter-spacing: .1em;
+    color: #fff; background: var(--mc, #2fa84f); border: none; border-radius: 999px; cursor: pointer;
+    box-shadow: 0 6px 0 rgba(0, 0, 0, .18); transition: transform .1s, box-shadow .1s;
+    animation: ssPulse 1.4s ease-in-out infinite;
+}
+#start-btn:hover { transform: translateY(-2px); }
+#start-btn:active { transform: translateY(4px); box-shadow: 0 2px 0 rgba(0, 0, 0, .18); }
+#start-btn:disabled { opacity: .5; animation: none; cursor: wait; }
+.ss-hint { margin: 16px 0 0; font-size: 13px; color: var(--sub, #5f6b7a); }
+body[data-mode="oni"] #start-screen { background: linear-gradient(180deg, #fff 55%, #fdeaea); }
+@keyframes ssIn { from { opacity: 0; transform: scale(.92) translateY(16px); } }
+@keyframes ssBob { 50% { transform: translateY(-6px) rotate(-4deg); } }
+@keyframes ssPulse { 50% { box-shadow: 0 6px 0 rgba(0, 0, 0, .18), 0 0 0 10px color-mix(in srgb, var(--mc, #2fa84f) 25%, transparent); } }
+
+/* 選んでいるモードのボタン */
+#mode-bar button[data-mode].on { background: var(--mc, #2fa84f) !important; color: #fff !important; border-color: var(--mc, #2fa84f) !important; }
+
+/* ---------- 消音ボタン ---------- */
+#sound-btn {
+    position: fixed; right: 14px; bottom: 90px; z-index: 900; width: 46px; height: 46px; border-radius: 50%;
+    border: 2px solid var(--line, #e3e7ee); background: #fff; font-size: 22px; cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+}
+#sound-btn.off { opacity: .6; }
+
+/* ---------- カウントダウン ---------- */
+#countdown {
+    position: fixed; inset: 0; z-index: 2000; display: grid; place-items: center;
+    background: radial-gradient(circle, rgba(255, 255, 255, .55), rgba(20, 24, 33, .55));
+    backdrop-filter: blur(2px); pointer-events: none;
+}
+#countdown[hidden] { display: none; }
+#countdown span {
+    font-size: min(42vw, 260px); font-weight: 900; line-height: 1; color: #fff;
+    -webkit-text-stroke: 6px #1f2933; paint-order: stroke fill;
+    text-shadow: 0 10px 0 rgba(0, 0, 0, .25);
+    animation: cdPop .8s cubic-bezier(.2, 1.5, .4, 1) both;
+}
+#countdown span.n3 { color: #2a75bb; }
+#countdown span.n2 { color: #2fa84f; }
+#countdown span.n1 { color: #f08a24; }
+#countdown span.go { color: #ffcb05; font-size: min(30vw, 200px); animation: cdGo .55s cubic-bezier(.2, 1.5, .4, 1) both; }
+@keyframes cdPop { 0% { transform: scale(2.4); opacity: 0; } 25% { transform: scale(1); opacity: 1; } 80% { transform: scale(.92); opacity: 1; } 100% { transform: scale(.6); opacity: 0; } }
+@keyframes cdGo { 0% { transform: scale(.3) rotate(-12deg); opacity: 0; } 50% { transform: scale(1.15) rotate(3deg); opacity: 1; } 100% { transform: scale(1.4); opacity: 0; } }
+
+/* ---------- 正解・不正解のフラッシュ ---------- */
+#question-box { position: relative; }
+#question-box.fx-ok { animation: fxOk .45s; }
+#question-box.fx-ng { animation: fxNg .45s; }
+@keyframes fxOk { 0% { box-shadow: 0 0 0 0 rgba(47, 168, 79, .0); } 30% { box-shadow: 0 0 0 8px rgba(47, 168, 79, .55); } 100% { box-shadow: 0 0 0 0 rgba(47, 168, 79, 0); } }
+@keyframes fxNg { 0%, 100% { transform: none; } 20% { transform: translateX(-10px); } 40% { transform: translateX(9px); } 60% { transform: translateX(-6px); } 80% { transform: translateX(4px); } }
+.fx-plus {
+    position: absolute; left: 50%; top: 30%; transform: translateX(-50%);
+    font-size: 30px; font-weight: 900; color: #2fa84f; -webkit-text-stroke: 2px #fff; paint-order: stroke fill;
+    pointer-events: none; animation: fxRise .8s ease-out forwards; white-space: nowrap;
+}
+@keyframes fxRise { from { opacity: 1; transform: translate(-50%, 0) scale(.8); } 30% { transform: translate(-50%, -14px) scale(1.15); } to { opacity: 0; transform: translate(-50%, -60px) scale(1); } }
+
+/* ---------- コンボ表示 ---------- */
+#combo { transition: color .2s; }
+#combo.pop { animation: comboPop .3s cubic-bezier(.2, 1.6, .4, 1); }
+#combo.heat1 { color: #f08a24 !important; }
+#combo.heat2 { color: #e3350d !important; text-shadow: 0 0 10px rgba(255, 138, 61, .7); }
+#combo.heat3 { color: #c2185b !important; text-shadow: 0 0 12px rgba(255, 64, 129, .8), 0 0 24px rgba(255, 203, 5, .6); }
+#combo.heat2::after, #combo.heat3::after { content: " 🔥"; }
+@keyframes comboPop { 0% { transform: scale(1); } 40% { transform: scale(1.35); } 100% { transform: scale(1); } }
+
+/* ---------- コンボの節目・新記録のバナー ---------- */
+#fx-layer { position: fixed; inset: 0; z-index: 1500; pointer-events: none; display: grid; place-items: center; }
+.fx-banner {
+    grid-area: 1 / 1; display: flex; flex-direction: column; align-items: center; gap: 4px;
+    padding: 14px 34px; border-radius: 20px; background: rgba(31, 41, 51, .88); color: #fff;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, .35); animation: bnIn 1.7s cubic-bezier(.2, 1.4, .4, 1) forwards;
+}
+.fx-banner b { font-size: 44px; font-weight: 900; color: #ffcb05; letter-spacing: .04em; }
+.fx-banner span { font-size: 18px; font-weight: 700; }
+.fx-banner.big b { font-size: 60px; }
+.fx-banner.gold { background: linear-gradient(135deg, #ffcb05, #ff8a3d); }
+.fx-banner.gold b { color: #fff; -webkit-text-stroke: 3px #b8290a; paint-order: stroke fill; }
+.fx-banner.gold span { color: #7a1606; }
+@keyframes bnIn { 0% { opacity: 0; transform: scale(.4) rotate(-6deg); } 15% { opacity: 1; transform: scale(1.08) rotate(1deg); } 25% { transform: scale(1); } 80% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(.9) translateY(-30px); } }
+
+/* ---------- 残り3秒の警告 ---------- */
+#fx-hurry { display: none; }
+body.fx-hurry #fx-hurry {
+    display: block; position: fixed; inset: 0; z-index: 800; pointer-events: none;
+    box-shadow: inset 0 0 80px 10px rgba(227, 53, 13, .55); animation: hurry .5s ease-in-out infinite alternate;
+}
+body.fx-hurry #timer-text { color: #e3350d; font-weight: 900; animation: comboPop .5s infinite; }
+@keyframes hurry { from { opacity: .35; } to { opacity: 1; } }
+
+/* ---------- 紙ふぶき ---------- */
+#confetti { position: fixed; inset: 0; z-index: 1600; pointer-events: none; display: none; }
+
+@media (max-width: 600px) {
+    #start-screen { margin: 14px 10px; padding: 24px 16px 20px; }
+    #ss-name { font-size: 24px; }
+    #start-btn { font-size: 20px; padding: 14px 36px; }
+    .fx-banner b { font-size: 34px; } .fx-banner.big b { font-size: 42px; }
+    #sound-btn { bottom: 80px; right: 10px; width: 40px; height: 40px; font-size: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    #ss-icon, #start-btn, #fx-hurry { animation: none !important; }
+}

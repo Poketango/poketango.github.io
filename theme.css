@@ -1296,3 +1296,42 @@ html[lang="en"] body::before {
 .feat-img p { margin: 0; }
 .grp { margin-top: 28px; padding-left: 10px; border-left: 5px solid var(--gc, #e3350d); font-size: 19px; }
 .closing { margin-top: 24px; color: var(--sub); }
+
+/* タイトルロゴ：どのページでも押すとホームへ */
+.logo-link { display: inline-block; cursor: pointer; line-height: 0; transition: transform .15s; }
+.logo-link:hover { transform: scale(1.04) rotate(-1deg); }
+.logo-link.logo-small img { width: 176px; height: auto; margin-bottom: 6px; }
+
+/* ホーム：実践モードのモード選択 */
+#mode-picker { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 16px; }
+#mode-picker[hidden] { display: none; }
+body.mp-open { overflow: hidden; }
+.mp-back { position: absolute; inset: 0; background: rgba(20, 24, 33, .6); backdrop-filter: blur(3px); animation: mpFade .2s; }
+.mp-panel { position: relative; width: 100%; max-width: 560px; max-height: 92vh; overflow: auto; background: #fff; border-radius: 22px; padding: 26px 22px 22px; box-shadow: 0 20px 60px rgba(0,0,0,.35); animation: mpPop .28s cubic-bezier(.2,1.4,.4,1); }
+.mp-panel h2 { margin: 0; font-size: 26px; text-align: center; }
+.mp-lead { margin: 4px 0 16px; text-align: center; color: var(--sub); }
+.mp-x { position: absolute; top: 10px; right: 12px; width: 36px; height: 36px; border: none; border-radius: 50%; background: var(--bg); font-size: 22px; cursor: pointer; }
+.mp-list { display: grid; gap: 10px; }
+.mp-card { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 16px; border: 2px solid var(--line); text-decoration: none; color: var(--ink); background: #fff; transition: transform .12s, box-shadow .12s, border-color .12s; }
+.mp-card:hover, .mp-card:focus-visible { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(31,41,51,.12); outline: none; }
+.mp-icon { flex: none; width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; font-size: 26px; background: var(--bg); }
+.mp-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.mp-name { font-weight: 800; font-size: 17px; }
+.mp-name em { font-style: normal; font-size: 11px; font-weight: 700; margin-left: 8px; padding: 2px 8px; border-radius: 999px; background: var(--bg); color: var(--sub); vertical-align: 2px; }
+.mp-desc { font-size: 13px; color: var(--sub); }
+.mp-best { flex: none; text-align: right; line-height: 1.2; }
+.mp-best small { display: block; font-size: 10px; color: var(--sub); }
+.mp-best b { font-size: 20px; }
+.mp-normal { border-left: 6px solid #2fa84f; } .mp-normal .mp-icon { background: #e8f7ec; }
+.mp-noja { border-left: 6px solid var(--blue); } .mp-noja .mp-icon { background: #e8f1fb; }
+.mp-sec10 { border-left: 6px solid #f08a24; } .mp-sec10 .mp-icon { background: #fff2e3; }
+.mp-ta60 { border-left: 6px solid #e5b800; } .mp-ta60 .mp-icon { background: #fff8d6; }
+.mp-oni { border-left: 6px solid #c62828; background: linear-gradient(90deg, #fff 60%, #fdeaea); } .mp-oni .mp-icon { background: #fde0e0; }
+.mp-card.mp-last { border-color: var(--ink); }
+.mp-card.mp-last .mp-name::after { content: "前回"; font-size: 11px; margin-left: 6px; color: var(--red); }
+@keyframes mpFade { from { opacity: 0; } }
+@keyframes mpPop { from { opacity: 0; transform: scale(.9) translateY(20px); } }
+@media (max-width: 480px) { .mp-desc { font-size: 12px; } .mp-icon { width: 40px; height: 40px; font-size: 22px; } }
+.mp-card { text-align: left; }
+.mp-name { white-space: nowrap; }
+@media (max-width: 480px) { .mp-panel { padding: 22px 14px 16px; } .mp-name { font-size: 15px; } .mp-name em { font-size: 10px; margin-left: 4px; padding: 1px 6px; } .mp-card { padding: 10px; gap: 10px; } .mp-best b { font-size: 17px; } }

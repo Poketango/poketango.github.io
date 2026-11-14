@@ -20,8 +20,12 @@ const JISSEN_MODES = {
     ta60:   { label: "60秒タイムアタック", ja: true, perQ: 0, total: 60, desc: "60秒で何問正解できるか。まちがえても続けられる（正解が表示されて次の問題へ）。" },
     oni:    { label: "鬼（日本語なし＋8秒）", ja: false, perQ: 8, total: 0, desc: "日本語訳なし、1問8秒。上級者向け。" }
 };
-let jMode = localStorage.getItem("jissenMode");
+const MODE_ICON = { normal: "🔥", noja: "🇬🇧", sec10: "⏱️", ta60: "⚡", oni: "👹" };
+// ホームのモード選択から ?mode=〇〇 で来たらそのモード、なければ前回のモード
+let jMode = new URLSearchParams(location.search).get("mode");
+if (!JISSEN_MODES[jMode]) jMode = localStorage.getItem("jissenMode");
 if (!JISSEN_MODES[jMode]) jMode = "normal";
+let dataReady = false, counting = false;
 const bestKey = m => m === "normal" ? "bestScore" : "bestScore_" + m;
 let best = Number(localStorage.getItem(bestKey(jMode)) || 0);
 document.getElementById("best").textContent = `最高記録：${best}`;
@@ -36,7 +40,8 @@ function recordModeBest(mode, score) {
 }
 function setMode(m) {
     jMode = m; localStorage.setItem("jissenMode", m);
-    document.querySelectorAll("#mode-bar button").forEach(b => b.classList.toggle("on", b.dataset.mode === m));
+    try { history.replaceState(null, "", "jissen.html?mode=" + m); } catch (e) {}
+    document.querySelectorAll("#mode-bar button[data-mode]").forEach(b => b.classList.toggle("on", b.dataset.mode === m));
     document.getElementById("mode-desc").textContent = JISSEN_MODES[m].desc;
     best = Number(localStorage.getItem(bestKey(m)) || 0);
     document.getElementById("best").textContent = `最高記録：${best}`;
@@ -49,10 +54,58 @@ function restartRun() {
     document.getElementById("gameover-box").style.display = "none";
     document.getElementById("ta-flash").textContent = "";
     const cfg = JISSEN_MODES[jMode];
-    document.getElementById("timer-wrap").style.display = (cfg.perQ || cfg.total) ? "block" : "none";
-    if (pokemonNames.length) nextQuestion();
+    document.getElementById("timer-wrap").style.display = "none";
+    if (typeof FX !== "undefined") FX.stopTimer();
+    showStart();
 }
-function stopTimer() { if (timerId) { clearInterval(timerId); timerId = null; } }
+// ===============================
+// スタート画面とカウントダウン
+// ===============================
+function showStart() {
+    const cfg = JISSEN_MODES[jMode];
+    document.getElementById("start-screen").style.display = "block";
+    document.getElementById("question-box").style.display = "none";
+    document.getElementById("ss-icon").textContent = MODE_ICON[jMode] || "🔥";
+    document.getElementById("ss-name").textContent = cfg.label;
+    document.getElementById("ss-desc").textContent = cfg.desc;
+    document.getElementById("ss-best").textContent = best ? `最高記録 ${best}問` : "まだ記録がありません";
+    document.body.dataset.mode = jMode;
+    const b = document.getElementById("start-btn");
+    b.disabled = !dataReady;
+    b.innerHTML = dataReady ? 'スタート<kbd class="key-hint">Space</kbd>' : "読みこみ中…";
+}
+function beginRun() {
+    if (!dataReady || counting || playing) return;
+    counting = true;
+    document.getElementById("start-screen").style.display = "none";
+    document.getElementById("main").style.display = "block";
+    document.getElementById("gameover-box").style.display = "none";
+    document.getElementById("question-box").style.display = "none";
+    const go = () => {
+        counting = false;
+        const cfg = JISSEN_MODES[jMode];
+        document.getElementById("question-box").style.display = "";
+        document.getElementById("timer-wrap").style.display = (cfg.perQ || cfg.total) ? "block" : "none";
+        nextQuestion();
+    };
+    if (typeof FX !== "undefined") FX.countdown(go); else go();
+}
+document.getElementById("start-btn").addEventListener("click", beginRun);
+// スタート画面では Space か Enter で始める
+window.addEventListener("keydown", e => {
+    const ss = document.getElementById("start-screen");
+    if (!ss || ss.style.display === "none" || counting) return;
+    const go = e.key === " " || e.code === "Space" || e.key === "Enter" || e.keyCode === 32 || e.keyCode === 13;
+    if (!go || e.repeat) return;
+    if (e.target && e.target.closest && e.target.closest("#mode-bar")) return;
+    e.preventDefault(); e.stopPropagation();
+    beginRun();
+}, true);
+// プレイ中にロゴを押したときだけ確認する
+document.querySelectorAll(".logo-link").forEach(a => a.addEventListener("click", e => {
+    if ((playing || counting) && !confirm("ホームに戻りますか？（今回の記録は残りません）")) e.preventDefault();
+}));
+function stopTimer() { if (timerId) { clearInterval(timerId); timerId = null; } if (typeof FX !== "undefined") FX.stopTimer(); }
 function startTimer() {
     const cfg = JISSEN_MODES[jMode];
     stopTimer();
@@ -65,6 +118,7 @@ function startTimer() {
         const bar = document.getElementById("timer-bar");
         bar.style.width = (left / limit * 100) + "%";
         bar.classList.toggle("warn", left <= Math.min(3, limit * 0.3));
+        if (typeof FX !== "undefined") FX.timer(left);
         document.getElementById("timer-text").textContent = (cfg.total ? `残り ${left.toFixed(1)} 秒　正解 ${taScore}` : `残り ${left.toFixed(1)} 秒`);
         if (left <= 0) { stopTimer(); timeoutFlag = true; if (cfg.perQ) medalOnWrong(); gameOver(); }
     }, 100);
@@ -134,8 +188,8 @@ async function loadData() {
     pokedexJP = await (await fetch("pokedex_jp.json")).json();
 
     pokemonNames = Object.keys(pokedex);
-
-    nextQuestion();
+    dataReady = true;
+    if (!playing && !counting) showStart();
 }
 loadData();
 
@@ -189,7 +243,7 @@ function checkAnswer() {
     const user = document.getElementById("answer-input").value.trim().toLowerCase();
     const correct = window.currentAnswer.toLowerCase();
 
-    if (!user || !playing && JISSEN_MODES[jMode].total && timeoutFlag) return;
+    if (!user || !playing) return;
     const cfg = JISSEN_MODES[jMode];
     const elapsed = (Date.now() - qStart) / 1000;
     if (user === correct) {
@@ -214,12 +268,14 @@ function checkAnswer() {
 
         // ★ メダル・実績用：正解を記録
         medalOnCorrect(window.currentPokemon, window.currentAnswer, "jissen", combo);
+        if (typeof FX !== "undefined") FX.correct(cfg.total ? taScore : combo, !!cfg.total);
 
         nextQuestion();
     } else if (cfg.total) {
         // タイムアタック：まちがえても続行（正解を見せて次へ）
         medalOnWrong();
         combo = 0;
+        if (typeof FX !== "undefined") FX.wrong();
         document.getElementById("ta-flash").textContent = `✗ 正解は ${window.currentAnswer}`;
         nextQuestion();
     } else {
@@ -253,10 +309,12 @@ function gameOver() {
     document.getElementById("fail-desc-ja").textContent = pokedexJP[name];
     // ★ ここまで追加
 
-    if (score > best) {
+    const newRecord = score > best;
+    if (newRecord) {
         best = score;
         localStorage.setItem(bestKey(jMode), best);
     }
+    if (typeof FX !== "undefined") FX.gameover(newRecord, score);
 
     localStorage.setItem("lastScore", score);
     localStorage.setItem("lastMode", cfg.label);
@@ -270,8 +328,8 @@ function gameOver() {
     
 
 
-document.getElementById("retry-btn").addEventListener("click", () => restartRun());
-document.querySelectorAll("#mode-bar button").forEach(b => b.addEventListener("click", () => setMode(b.dataset.mode)));
+document.getElementById("retry-btn").addEventListener("click", () => { restartRun(); beginRun(); });
+document.querySelectorAll("#mode-bar button[data-mode]").forEach(b => b.addEventListener("click", () => setMode(b.dataset.mode)));
 setMode(jMode);
 
 
