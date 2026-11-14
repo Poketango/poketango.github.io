@@ -302,9 +302,11 @@ const RAIL_A8 = [
             const gap = Math.min(left, innerWidth - right);
             const w = Math.min(200, gap - 24);
             const ok = w >= 150 && innerHeight >= 520;
-            [L, R].forEach(el => { el.classList.toggle("show", ok); el.style.width = w + "px"; });
+            const hd = document.querySelector("#site-header,#page-header,#header");
+            const top = hd ? Math.max(20, hd.offsetHeight + 20) : 120;
+            [L, R].forEach(el => { el.classList.toggle("show", ok); el.style.width = w + "px"; el.style.top = top + "px"; });
             // 縦に入りきらないカードは隠す
-            [L, R].forEach(el => { let h = 120; [...el.querySelectorAll(".rail-card,.rail-ban")].forEach(c => { c.style.display = ""; h += c.offsetHeight + 12; if (h > innerHeight - 20) c.style.display = "none"; }); });
+            [L, R].forEach(el => { let h = parseInt(el.style.top) || 120; [...el.querySelectorAll(".rail-card,.rail-ban")].forEach(c => { c.style.display = ""; h += c.offsetHeight + 12; if (h > innerHeight - 20) c.style.display = "none"; }); });
         }
         fit(); addEventListener("resize", fit); setTimeout(fit, 800);
     }

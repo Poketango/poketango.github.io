@@ -1195,3 +1195,25 @@ input, textarea, select, [contenteditable="true"] { caret-color: auto; }
     .home-feat .hub-top a { padding: 10px; font-size: 13px; }
     #contact { margin: 28px 12px 0; padding: 18px 16px; }
 }
+
+/* =========================================================
+   サイトのロゴ「ポケたん」（logo.svg）
+   ========================================================= */
+.site-logo {
+    display: block;
+    height: 52px;
+    width: auto;
+    margin: 0 auto;
+    filter: drop-shadow(0 2px 0 rgba(0, 0, 0, 0.12));
+}
+#site-header .site-logo { height: 60px; }
+#site-header:has(+ .mode-grid) .site-logo { height: 92px; margin-top: 4px; }
+#site-header .subtitle { font-size: 14px !important; letter-spacing: 0.06em; }
+.home-link .site-logo { transition: transform 0.15s; }
+.home-link:hover .site-logo { transform: rotate(-2deg) scale(1.04); }
+.brand-logo { display: block; height: 28px; width: auto; }
+@media (max-width: 640px) {
+    .site-logo { height: 40px; }
+    #site-header .site-logo { height: 44px; }
+    #site-header:has(+ .mode-grid) .site-logo { height: 64px; }
+}

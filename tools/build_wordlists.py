@@ -28,7 +28,7 @@ def page(fn, title, desc, body):
     h = re.sub(r'(<meta property="og:description" content=")[^"]*', r'\g<1>' + E(desc), h)
     h = re.sub(r'(<link rel="canonical" href=")[^"]*', r'\g<1>https://poketango.com/p/' + fn, h)
     h = re.sub(r'(<meta property="og:url" content=")[^"]*', r'\g<1>https://poketango.com/p/' + fn, h)
-    nav = '<body class="pkpage"><nav class="topnav"><a class="brand" href="../index.html">📕 ポケモン英語図鑑</a><div class="tn-links"><a href="index.html">英語名一覧</a><a href="words.html">英単語</a><a href="scary.html">怖い図鑑</a><a href="../practice.html">クイズ</a></div></nav>\n'
+    nav = '<body class="pkpage"><nav class="topnav"><a class="brand" href="../index.html"><img class="brand-logo" src="../logo.svg" alt="ポケたん" width="99" height="28"></a><div class="tn-links"><a href="index.html">英語名一覧</a><a href="words.html">英単語</a><a href="scary.html">怖い図鑑</a><a href="../practice.html">クイズ</a></div></nav>\n'
     foot = '<script src="../ads.js?v=20261114a"></script><script src="../site-footer.js"></script></body></html>'
     open(ROOT + 'p/' + fn, 'w', encoding='utf-8').write(h + nav + '<main class="pkwrap">' + body + '</main>\n' + foot)
 lvnav = '<p class="lvtabs">' + ''.join(f'<a href="words-{slug}.html">{name}</a>' for _, slug, name in LV) + '</p>'
