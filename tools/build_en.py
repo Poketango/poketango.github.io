@@ -71,7 +71,7 @@ for f in glob.glob(ROOT + 'p/*.html'):
     mons.append(dict(key=key, no=no, jn=jn, en=en, gen=gen, text=html.unescape(m.group(1)), ja=ja, sprite=sprite))
 mons.sort(key=lambda x: (x['no'], x['key']))
 for x in mons: x['ro'] = romaji(x['jn'])
-X_HANDLE = ''  # 英語版のXアカウント（@なし）
+X_HANDLE = 'PokeTango_JP'  # 英語版のXアカウント（@なし）
 GENN = {'1':'Kanto','2':'Johto','3':'Hoenn','4':'Sinnoh','5':'Unova','6':'Kalos','7':'Alola','8':'Galar','9':'Paldea'}
 GA = '<script async src="https://www.googletagmanager.com/gtag/js?id=G-2S81YX6L53"></script>\n<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag(\'js\',new Date());gtag(\'config\',\'G-2S81YX6L53\');</script>'
 ADS = '<meta name="google-adsense-account" content="ca-pub-4829093383068106">\n<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4829093383068106" crossorigin="anonymous"></script>'
