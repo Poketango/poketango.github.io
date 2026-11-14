@@ -19,10 +19,27 @@
 }
 
 /* ---------- 全体 ---------- */
-html, body {
-    background-color: var(--bg) !important;
-    background-image: radial-gradient(rgba(31, 41, 51, 0.05) 1px, transparent 1px) !important;
-    background-size: 22px 22px !important;
+html {
+    background-color: #fdf6ec !important;
+}
+body {
+    background: transparent !important;
+}
+/* 背景の飾り（画面に固定。英字と星のうすい模様＋やわらかい色のにじみ） */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cg fill='none' stroke='%231f2933' stroke-opacity='.055' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 52 L32 20 L44 52 M25 40 H39'/%3E%3Cpath d='M150 30 l5 11 12 2 -9 8 2 12 -10 -6 -10 6 2 -12 -9 -8 12 -2z'/%3E%3Ccircle cx='182' cy='150' r='11'/%3E%3Cpath d='M70 150 v-26 h11 a7 7 0 0 1 0 13 h-11 h12 a7 7 0 0 1 0 13 h-12'/%3E%3Cpath d='M118 102 l4 4 m0 -4 l-4 4'/%3E%3Cpath d='M30 190 q10 -12 20 0 t20 0'/%3E%3Cpath d='M128 196 h18 l-18 22 h18' transform='translate(0 -10)'/%3E%3Ccircle cx='95' cy='45' r='3' fill='%231f2933' fill-opacity='.06' stroke='none'/%3E%3Ccircle cx='200' cy='90' r='3' fill='%231f2933' fill-opacity='.07' stroke='none'/%3E%3C/g%3E%3C/svg%3E"),
+        radial-gradient(circle at 8% 12%, rgba(227, 53, 13, 0.16) 0, rgba(227, 53, 13, 0) 34%),
+        radial-gradient(circle at 92% 18%, rgba(255, 203, 5, 0.26) 0, rgba(255, 203, 5, 0) 36%),
+        radial-gradient(circle at 85% 88%, rgba(42, 117, 187, 0.18) 0, rgba(42, 117, 187, 0) 40%),
+        radial-gradient(circle at 12% 85%, rgba(47, 168, 79, 0.13) 0, rgba(47, 168, 79, 0) 36%),
+        linear-gradient(180deg, #fff6e8 0%, #f3f6fc 55%, #eaf2fb 100%);
+    background-size: 220px 220px, auto, auto, auto, auto, auto;
 }
 
 body {
@@ -1051,3 +1068,130 @@ input, textarea, select, [contenteditable="true"] { caret-color: auto; }
 .gram{background:#f8fafc;border-left:4px solid #6366f1;padding:10px 12px;border-radius:8px;margin:12px 0 0;line-height:1.8}
 .gram b{color:#4338ca}
 @media (max-width:520px){.vt{font-size:14px}.vt th:nth-child(3),.vt td:nth-child(3){display:none}}
+
+
+/* =========================================================
+   レイアウト調整（2026-11-14）
+   ========================================================= */
+/* ---------- ホーム：モードを3列×2段に並べる ---------- */
+.mode-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    max-width: 780px;
+    gap: 18px;
+    padding: 0 16px;
+    margin: 32px auto 0 !important;
+}
+.mode-button { width: auto !important; height: 160px; }
+.mode-button.bookmark { grid-column: auto !important; justify-self: stretch !important; }
+.mode-button.list { border-top: 6px solid #e0408a !important; }
+
+/* 広告のチップ（ads.js が入れる） */
+.chip-ad-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    max-width: 780px;
+    margin: 22px auto 0;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+.chip-ad-row .a8px { position: absolute; width: 1px; height: 1px; }
+.chip-ad {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 7px 14px;
+    border-radius: 999px;
+    background: #fff;
+    border: 1.5px solid #ffd84a;
+    box-shadow: 0 2px 8px rgba(31, 41, 51, 0.06);
+    color: var(--ink) !important;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.12s, background 0.12s;
+}
+.chip-ad:hover { background: #fff8d1; transform: translateY(-1px); }
+.chip-ad .pr {
+    margin-left: 4px;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 0 4px;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.35);
+    color: #fff;
+}
+
+/* 特集ページの案内 */
+.home-feat {
+    max-width: 748px;
+    margin: 28px auto 0;
+    padding: 18px 20px 20px;
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    box-sizing: border-box;
+}
+.home-feat h2 { margin: 0 0 12px; font-size: 18px; text-align: center; }
+.home-feat .hub-top {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: none !important;
+    margin: 0 !important;
+}
+.home-feat .hub-top a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: #fffbea;
+    border: 2px solid #ffe58a;
+    font-size: 14px;
+    line-height: 1.35;
+    transition: transform 0.12s, border-color 0.12s;
+}
+.home-feat .hub-top a { text-align: left; }
+.home-feat .hub-top a:hover { transform: translateY(-2px); border-color: var(--yellow); }
+.home-feat .hub-top a .fi { font-size: 20px; flex: none; }
+#contact { max-width: 748px; box-sizing: border-box; }
+
+/* ---------- 練習・図鑑モード：左の2列を上にくっつけて、画面に追従させる ---------- */
+#layout { align-items: flex-start !important; }
+/* 広い画面：左に「検索＋チャート」を縦に積み、右に問題を大きく置く2列 */
+@media (min-width: 901px) {
+    #layout {
+        display: grid !important;
+        grid-template-columns: 300px minmax(0, 1fr);
+        grid-template-rows: auto 1fr;
+        max-width: 1060px;
+    }
+    #sidebar { grid-column: 1; grid-row: 1; width: auto !important; }
+    #chart-column { grid-column: 1; grid-row: 2; width: auto !important; }
+    #content { grid-column: 2; grid-row: 1 / 3; }
+    #search-results { max-height: 260px; }
+}
+#content { min-width: 0; }
+
+/* ---------- 実績一覧：セクションの見出しを見やすく ---------- */
+#progress-box { margin-left: auto !important; margin-right: auto !important; }
+
+/* ---------- 狭い画面 ---------- */
+@media (max-width: 760px) {
+    .mode-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 12px; }
+    .home-feat .hub-top { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+    .chip-ad-row { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; padding-bottom: 4px; }
+    .chip-ad-row::-webkit-scrollbar { display: none; }
+    .chip-ad { flex: none; white-space: nowrap; }
+    .mode-grid { padding: 0 12px; margin-top: 20px !important; }
+    .mode-button { height: 132px; padding: 10px !important; font-size: 17px !important; gap: 4px; }
+    .mode-button img.icon { width: 48px; height: 48px; }
+    .mode-button .note { font-size: 11px; line-height: 1.4; }
+    .home-feat { margin: 22px 12px 0; padding: 16px 12px; }
+    .home-feat .hub-top a { padding: 10px; font-size: 13px; }
+    #contact { margin: 28px 12px 0; padding: 18px 16px; }
+}
