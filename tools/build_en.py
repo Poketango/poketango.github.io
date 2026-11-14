@@ -1,6 +1,7 @@
 # 海外向け（英語）ページ：ポケモンの名前でカタカナを学ぶ  en/ 以下を作る
 import re, glob, html, json, unicodedata
-ROOT = '/home/claude/gh/'
+import os
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/'
 E = lambda x: html.escape(x, quote=True)
 # ---------- katakana -> romaji (Hepburn, macron for ー) ----------
 K = {'ア':'a','イ':'i','ウ':'u','エ':'e','オ':'o','カ':'ka','キ':'ki','ク':'ku','ケ':'ke','コ':'ko','サ':'sa','シ':'shi','ス':'su','セ':'se','ソ':'so','タ':'ta','チ':'chi','ツ':'tsu','テ':'te','ト':'to','ナ':'na','ニ':'ni','ヌ':'nu','ネ':'ne','ノ':'no','ハ':'ha','ヒ':'hi','フ':'fu','ヘ':'he','ホ':'ho','マ':'ma','ミ':'mi','ム':'mu','メ':'me','モ':'mo','ヤ':'ya','ユ':'yu','ヨ':'yo','ラ':'ra','リ':'ri','ル':'ru','レ':'re','ロ':'ro','ワ':'wa','ヲ':'wo','ン':'n','ガ':'ga','ギ':'gi','グ':'gu','ゲ':'ge','ゴ':'go','ザ':'za','ジ':'ji','ズ':'zu','ゼ':'ze','ゾ':'zo','ダ':'da','ヂ':'ji','ヅ':'zu','デ':'de','ド':'do','バ':'ba','ビ':'bi','ブ':'bu','ベ':'be','ボ':'bo','パ':'pa','ピ':'pi','プ':'pu','ペ':'pe','ポ':'po','ヴ':'vu','ァ':'a','ィ':'i','ゥ':'u','ェ':'e','ォ':'o','ャ':'ya','ュ':'yu','ョ':'yo','ヮ':'wa'}
@@ -70,6 +71,7 @@ for f in glob.glob(ROOT + 'p/*.html'):
     mons.append(dict(key=key, no=no, jn=jn, en=en, gen=gen, text=html.unescape(m.group(1)), ja=ja, sprite=sprite))
 mons.sort(key=lambda x: (x['no'], x['key']))
 for x in mons: x['ro'] = romaji(x['jn'])
+X_HANDLE = ''  # 英語版のXアカウント（@なし）
 GENN = {'1':'Kanto','2':'Johto','3':'Hoenn','4':'Sinnoh','5':'Unova','6':'Kalos','7':'Alola','8':'Galar','9':'Paldea'}
 GA = '<script async src="https://www.googletagmanager.com/gtag/js?id=G-2S81YX6L53"></script>\n<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag(\'js\',new Date());gtag(\'config\',\'G-2S81YX6L53\');</script>'
 ADS = '<meta name="google-adsense-account" content="ca-pub-4829093383068106">\n<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4829093383068106" crossorigin="anonymous"></script>'
@@ -85,15 +87,16 @@ CSS = '''<style>
 </style>'''
 def page(path, title, desc, canon, body, depth, ja_alt=None, extra_head=''):
     up = '../' * depth
+    XNAV = f'<a class="tn-x" href="https://x.com/{X_HANDLE}" target="_blank" rel="noopener">𝕏 Follow</a>' if X_HANDLE else ''
     alt = ''
     if ja_alt:
         alt = f'<link rel="alternate" hreflang="en" href="{canon}"><link rel="alternate" hreflang="ja" href="{ja_alt}">'
     h = f'''<!DOCTYPE html><html lang="en"><head>{GA}<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{E(title)}</title><meta name="description" content="{E(desc)}">
 <link rel="canonical" href="{canon}">{alt}<link rel="icon" type="image/png" href="{up}favicon.png">
-<meta property="og:type" content="article"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}"><meta property="og:url" content="{canon}"><meta property="og:image" content="https://poketango.com/ogp.png"><meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="article"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}"><meta property="og:url" content="{canon}"><meta property="og:image" content="https://poketango.com/ogp-en.png"><meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="{up}theme.css">{CSS}{ADS}{extra_head}
-</head><body class="pkpage"><nav class="topnav"><a class="brand" href="{up}en/">🎌 Pokémon Katakana</a><div class="tn-links"><a href="{up}en/learn/">Lessons</a><a href="{up}en/chart.html">Chart</a><a href="{up}en/quiz.html">Quiz</a><a href="{up}en/list.html">List</a><a href="{up}" lang="ja">日本語</a></div></nav>
+</head><body class="pkpage"><nav class="topnav"><a class="brand" href="{up}en/"><img class="brand-logo-en" src="{up}logo-en.svg" alt="PokeTango" width="130" height="30"></a><div class="tn-links"><a href="{up}en/learn/">Lessons</a><a href="{up}en/chart.html">Chart</a><a href="{up}en/quiz.html">Quiz</a><a href="{up}en/list.html">List</a><a href="{up}" lang="ja">日本語</a>{XNAV}</div></nav>
 <main class="pkwrap">{body}</main><script src="{up}en/shop.js?v=1" defer></script>
 <footer class="note" style="text-align:center;padding:24px 16px">Unofficial fan-made learning site. As an Amazon Associate, this site earns from qualifying purchases. Pokémon names, images and Pokédex text © Nintendo / Creatures Inc. / GAME FREAK inc. / The Pokémon Company.<br><a href="{up}policy.html">Operator &amp; privacy policy (Japanese)</a></footer></body></html>'''
     open(ROOT + path, 'w', encoding='utf-8').write(h)
@@ -184,11 +187,11 @@ for i, (t, ks, tip) in enumerate(LESSONS):
     allr = [x for x in mons if x['lesson'] and x['lesson'] <= n]
     new.sort(key=lambda x: (len(x['jn']), x['no']))
     shown = new[:40]
-    body = f'<section class="list-hero"><h1>Lesson {n}: {E(t)}</h1><p>Learn katakana with Pokémon · {len(allr)} Pokémon names you can read after this lesson</p></section>'
+    body = f'<section class="list-hero"><h1>Lesson {n}: {E(t)}</h1><p>Learn katakana with Pokémon' + (f' · {len(allr)} Pokémon names you can read after this lesson' if allr else ' · the foundation for every name') + '</p></section>'
     body += f'<section class="card"><h2>New katakana</h2><div class="kana">{"".join(kanacell(c) for c in ks)}</div><p class="note">💡 {E(tip)}</p><div class="row"><button class="chip-btn" onclick="sayJa(\'{"、".join(c for c in ks if c in K and c not in "ャュョァィゥェォヮ")}\')">🔊 Listen to this row</button></div></section>'
     if shown:
         body += '<section class="card"><h2>Pokémon you can now read</h2><p class="note">These names use only the katakana from lessons 1–' + str(n) + '. Try reading them before looking at the romaji!</p><div class="mlist">' + ''.join(f'<a href="../p/{x["key"]}.html"><span lang="ja" style="font-size:20px">{E(x["jn"])}</span> <small>{E(x["ro"])} · {E(x["en"])}</small></a>' for x in shown) + '</div>' + (f'<p class="note">…and {len(new)-len(shown)} more.</p>' if len(new) > len(shown) else '') + '</section>'
-    body += f'<section class="card"><p><a class="cta green" href="../quiz.html?lesson={n}">🎯 Quiz: lessons 1–{n}</a> ' + (f'<a class="cta blue" href="lesson-{n+1}.html">Next lesson →</a>' if n < len(LESSONS) else '<a class="cta blue" href="../list.html">All Pokémon →</a>') + f'</p>{lnav}</section>'
+    body += f'<section class="card"><p class="cta-grid"><a class="cta green" href="../quiz.html?lesson={n}">🎯 ' + (f'Quiz: lessons 1–{n}' if n > 1 else 'Quiz: lesson 1') + '</a> ' + (f'<a class="cta blue" href="lesson-{n+1}.html">Next lesson →</a>' if n < len(LESSONS) else '<a class="cta blue" href="../list.html">All Pokémon →</a>') + f'</p>{lnav}</section>'
     body += "<script>function sayJa(t){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='ja-JP';u.rate=.7;speechSynthesis.speak(u)}</script>"
     page(f'en/learn/lesson-{n}.html', f'Katakana Lesson {n}: {t} – Learn Japanese with Pokémon', f'Katakana lesson {n} ({t}): learn {len(ks)} katakana and read {len(allr)} Pokémon names in Japanese. Free lessons with audio and a quiz.', f'https://poketango.com/en/learn/lesson-{n}.html', body, 2)
 body = '<section class="list-hero"><h1>Learn Katakana with Pokémon</h1><p>11 short lessons · read every Pokémon name by the end</p></section><section class="card"><p>Each lesson teaches a few katakana and then shows the Pokémon names you can already read. By lesson 11 you can read all of them.</p><ol>' + ''.join(f'<li style="margin:6px 0"><a href="lesson-{i+1}.html"><b>{E(t)}</b></a> <span lang="ja">{E(ks)}</span> <small>· {len([x for x in mons if x["lesson"] and x["lesson"] <= i+1])} names readable</small></li>' for i, (t, ks, _) in enumerate(LESSONS)) + '</ol></section>'
@@ -219,11 +222,18 @@ fetch("quiz.json").then(r=>r.json()).then(d=>{D=d;next()});</script>'''
 page('en/quiz.html', 'Pokémon Katakana Quiz – Learn to Read Japanese with Pokémon', 'A free quiz: read Pokémon names written in Japanese katakana and pick the right Pokémon. Great practice for beginners learning Japanese.', 'https://poketango.com/en/quiz.html', body, 1)
 # ---------- top ----------
 pick = [x for x in mons if x['key'] in ('pikachu','charmander','eevee','gengar','snorlax','bulbasaur','squirtle','jigglypuff','mewtwo','lucario','greninja','sprigatito')]
-body = f'''<section class="list-hero"><h1>Learn Japanese Katakana with Pokémon</h1><p>Read all {len(mons)} Pokémon names in Japanese – for free</p></section>
+FOLLOW = (f'<section class="card follow-x"><div><h2 style="margin:0 0 4px">Daily katakana on 𝕏</h2><p class="note" style="margin:0">One Pokémon name a day, read kana by kana. Plus fun facts you only learn from the Japanese names.</p></div><a class="xbtn" href="https://x.com/{X_HANDLE}" target="_blank" rel="noopener">Follow @{X_HANDLE}</a></section>' if X_HANDLE else '')
+body = f'''<section class="en-hero"><img class="hero-logo" src="../logo-en.svg" alt="PokeTango" width="420" height="97">
+<h1>Learn Japanese Katakana with Pokémon</h1><p>Read all {len(mons)} Pokémon names in Japanese – free, no sign-up</p>
+<div class="float-kana" lang="ja"><span>ピ<small>pi</small></span><span>カ<small>ka</small></span><span>チュ<small>chu</small></span><span>ウ<small>u</small></span></div></section>
 <section class="card"><p>In Japan, Pokémon have different names, written in <b>katakana</b>. Pikachu is <b lang="ja">ピカチュウ</b>, Charmander is <b lang="ja">ヒトカゲ</b> (Hitokage). If you love Pokémon, their names are the most fun way to learn to read Japanese.</p>
-<div class="kana">{kana_html("ピカチュウ")}</div><p class="note">ピ pi + カ ka + チュ chu + ウ u = Pikachū</p>
-<p><a class="cta green" href="learn/">📘 Start lesson 1</a> <a class="cta blue" href="chart.html">🔤 Katakana chart</a> <a class="cta green" href="quiz.html">🎯 Start the quiz</a> <a class="cta blue" href="list.html">📚 All Pokémon</a></p></section>
+<div class="cta-grid"><a class="cta green" href="learn/">📘 Start lesson 1</a><a class="cta blue" href="quiz.html">🎯 Take the quiz</a><a class="cta orange" href="chart.html">🔤 Katakana chart</a><a class="cta purple" href="list.html">📚 All Pokémon</a></div></section>
+<section class="card" id="potd-card" hidden><h2>🌟 Pokémon of the day</h2><div class="potd"><img id="potd-img" alt="" width="96" height="96"><div><p class="jp" id="potd-jp" lang="ja"></p><p class="ro" id="potd-ro"></p><a class="more" id="potd-a" href="#">Learn to read this name →</a></div></div></section>
+<script>fetch("quiz.json").then(r=>r.json()).then(d=>{{const t=new Date(),n=(t.getFullYear()*372+t.getMonth()*31+t.getDate())%d.length,x=d[n];
+document.getElementById("potd-img").src="../pokemon_sprites/"+x[4];document.getElementById("potd-img").alt=x[1];document.getElementById("potd-jp").textContent=x[2];
+document.getElementById("potd-ro").textContent=x[3]+" = "+x[1];document.getElementById("potd-a").href="p/"+x[0]+".html";document.getElementById("potd-card").hidden=false}}).catch(()=>{{}})</script>
 <section class="card"><h2>Popular Pokémon in Japanese</h2><div class="mlist">{''.join(f'<a href="p/{x["key"]}.html">{E(x["en"])} <span lang="ja">{E(x["jn"])}</span> <small>{E(x["ro"])}</small></a>' for x in pick)}</div></section>
+{FOLLOW}
 <section class="card"><h2>How it works</h2><p class="note">Each Pokémon page breaks the Japanese name into single katakana with romaji, lets you hear it read aloud, and shows the Pokédex entry in both English and Japanese. Made by a Japanese Pokémon fan who runs a site for Japanese kids learning English with the Pokédex.</p></section>'''
 page('en/index.html', 'Learn Japanese Katakana with Pokémon – Pokémon Names in Japanese', f'Learn to read Japanese katakana with {len(mons)} Pokémon names. Romaji, audio, a katakana chart with Pokémon examples, and a free quiz.', 'https://poketango.com/en/', body, 1)
 print(len(mons), len(qd))

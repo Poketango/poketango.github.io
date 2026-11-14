@@ -1217,3 +1217,71 @@ input, textarea, select, [contenteditable="true"] { caret-color: auto; }
     #site-header .site-logo { height: 44px; }
     #site-header:has(+ .mode-grid) .site-logo { height: 64px; }
 }
+
+
+/* =========================================================
+   英語版（PokeTango）の飾り 2026-11-14
+   ========================================================= */
+html[lang="en"] body::before {
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='290' viewBox='0 0 260 290'%3E%3Cg fill='%231f2933' fill-opacity='.05'%3E%3Cpath transform='translate%2830 62%29 rotate%28-10%29 scale%280.0357 -0.0357%29' d='M968 677 872 766C851 760 785 756 752 756C704 756 304 756 233 756C189 756 147 761 106 767V600C158 605 189 608 233 608C304 608 672 608 727 608C705 566 636 490 562 443L687 343C777 408 872 533 923 617C933 633 956 662 968 677ZM556 541H380C386 505 388 476 388 441C388 278 363 193 252 109C210 77 173 60 138 48L279 -67C561 90 556 306 556 541Z'/%3E%3Cpath transform='translate%28150 48%29 rotate%288%29 scale%280.0357 -0.0357%29' d='M881 593 778 643C750 638 720 635 695 635H535L539 717C540 741 543 787 546 811H368C372 787 376 736 376 714L375 635H250C212 635 155 638 109 643V485C155 489 219 490 250 490H363C345 364 303 260 216 170C170 122 115 85 68 59L209 -55C394 78 485 237 521 490H716C716 381 702 207 678 152C668 127 657 115 623 115C585 115 534 121 487 130L506 -32C553 -36 613 -41 675 -41C751 -41 793 -10 815 45C857 150 870 423 874 538C874 548 878 577 881 593Z'/%3E%3Cpath transform='translate%2895 150%29 rotate%28-4%29 scale%280.0357 -0.0357%29' d='M249 776 134 653C206 602 332 492 385 434L509 561C449 625 318 729 249 776ZM101 112 204 -48C330 -28 460 24 562 84C729 182 871 321 951 463L857 634C790 493 655 338 475 234C377 177 248 132 101 112Z'/%3E%3Cpath transform='translate%28200 170%29 rotate%2810%29 scale%280.0357 -0.0357%29' d='M787 756C787 783 809 805 836 805C863 805 885 783 885 756C885 729 863 707 836 707C809 707 787 729 787 756ZM352 354 214 419C172 332 95 227 28 162L159 73C212 131 304 264 352 354ZM788 424 656 352C702 291 771 172 816 82L958 160C918 233 838 360 788 424ZM83 645V486C112 489 156 490 186 490H426L425 115C424 89 415 81 390 81C366 81 323 84 281 92L296 -57C352 -64 410 -66 470 -66C547 -66 585 -25 585 36V490H801C830 490 874 489 908 486V644L859 639C914 650 955 698 955 756C955 822 902 875 836 875C770 875 717 822 717 756C717 694 765 643 826 637H800H585V703C585 730 593 786 596 800H417C421 781 426 732 426 704V637H186C155 637 114 641 83 645Z'/%3E%3Cpath transform='translate%2820 230%29 rotate%286%29 scale%280.0357 -0.0357%29' d='M587 796 412 850C401 811 377 759 359 731C306 647 219 517 42 408L173 307C267 372 363 468 436 563H693C680 511 642 437 598 373C540 411 482 447 436 474L328 363C373 334 432 293 492 249C415 173 310 98 138 44L279 -78C427 -21 537 60 623 149C664 116 700 85 726 61L842 199C814 221 775 250 732 281C801 379 849 481 875 555C886 585 901 615 914 637L792 713C766 705 726 700 693 700H527C542 726 565 765 587 796Z'/%3E%3Cpath transform='translate%28130 255%29 rotate%28-8%29 scale%280.0357 -0.0357%29' d='M894 875 795 835C823 797 853 741 874 700L973 742C955 776 920 837 894 875ZM110 153V-20C146 -16 209 -13 247 -13H686L685 -63H861C858 -24 856 33 856 67V586C856 619 858 663 859 687L778 684L831 706C814 742 780 803 754 841L656 801C679 768 705 723 723 684H254C218 684 162 687 122 691V523C153 525 209 527 254 527H687V147H242C195 147 149 150 110 153Z'/%3E%3C/g%3E%3Cg fill='%231f2933' fill-opacity='.06'%3E%3Ccircle cx='240' cy='90' r='3'/%3E%3Ccircle cx='80' cy='110' r='3'/%3E%3Ccircle cx='230' cy='270' r='3'/%3E%3C/g%3E%3C/svg%3E"),
+        radial-gradient(circle at 8% 12%, rgba(227, 53, 13, 0.16) 0, rgba(227, 53, 13, 0) 34%),
+        radial-gradient(circle at 92% 18%, rgba(255, 203, 5, 0.26) 0, rgba(255, 203, 5, 0) 36%),
+        radial-gradient(circle at 85% 88%, rgba(42, 117, 187, 0.18) 0, rgba(42, 117, 187, 0) 40%),
+        radial-gradient(circle at 12% 85%, rgba(224, 64, 138, 0.12) 0, rgba(224, 64, 138, 0) 36%),
+        linear-gradient(180deg, #fff6e8 0%, #fdf1f4 50%, #eaf2fb 100%);
+    background-size: 260px 290px, auto, auto, auto, auto, auto;
+}
+.topnav .brand-logo-en { display: block; height: 30px; width: auto; }
+.tn-x { background: #111; color: #fff !important; }
+.tn-x:hover { background: #333 !important; }
+
+/* トップのヒーロー */
+.en-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 30px 22px 26px;
+    border-radius: 28px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(135deg, #e3350d 0%, #f0602f 45%, #ff9f1c 100%);
+    box-shadow: 0 12px 34px rgba(227, 53, 13, 0.25);
+}
+.en-hero::before, .en-hero::after {
+    content: ""; position: absolute; border-radius: 50%; border: 26px solid rgba(255, 255, 255, 0.12);
+}
+.en-hero::before { width: 220px; height: 220px; left: -80px; top: -90px; }
+.en-hero::after { width: 260px; height: 260px; right: -90px; bottom: -120px; }
+.en-hero > * { position: relative; z-index: 1; }
+.en-hero .hero-logo { display: block; width: min(420px, 86%); height: auto; margin: 0 auto 8px; filter: drop-shadow(0 4px 0 rgba(0,0,0,.12)); }
+.en-hero h1 { margin: 6px 0 4px; font-size: 24px; font-weight: 900; text-shadow: 0 2px 0 rgba(0,0,0,.15); }
+.en-hero p { margin: 0; font-weight: 600; opacity: .95; }
+.float-kana { display: flex; justify-content: center; gap: 10px; margin: 18px 0 4px; flex-wrap: wrap; }
+.float-kana span {
+    display: grid; place-items: center; min-width: 58px; height: 58px; padding: 0 8px; box-sizing: border-box; white-space: nowrap; border-radius: 16px;
+    background: #fff; color: #1f2933; font-size: 30px; font-weight: 900; box-shadow: 0 5px 0 rgba(0,0,0,.15);
+    animation: kana-bob 2.4s ease-in-out infinite;
+}
+.float-kana span:nth-child(2) { animation-delay: .2s; } .float-kana span:nth-child(3) { animation-delay: .4s; } .float-kana span:nth-child(4) { animation-delay: .6s; }
+.float-kana small { display: block; font-size: 11px; color: #b45309; margin-top: -6px; }
+@keyframes kana-bob { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-7px) rotate(2deg); } }
+@media (prefers-reduced-motion: reduce) { .float-kana span { animation: none; } }
+
+.cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 16px 0 0; }
+.cta-grid .cta { margin: 0; font-size: 16px; }
+.cta.purple { background: #7b3fbf; } .cta.orange { background: #f08a24; }
+
+/* 今日のポケモン */
+.potd { display: flex; align-items: center; gap: 16px; }
+.potd img { width: 96px; height: 96px; image-rendering: pixelated; background: #fff7ed; border-radius: 50%; flex: none; }
+.potd .jp { font-size: 34px; font-weight: 900; margin: 0; line-height: 1.2; }
+.potd .ro { font-size: 17px; margin: 2px 0 6px; }
+.potd a.more { font-weight: 700; }
+.follow-x { display: flex; align-items: center; gap: 12px; }
+.follow-x .xbtn { flex: none; padding: 10px 18px; border-radius: 999px; background: #111; color: #fff !important; font-weight: 800; text-decoration: none; }
+@media (max-width: 560px) {
+    .en-hero h1 { font-size: 20px; }
+    .float-kana span { min-width: 50px; height: 50px; font-size: 26px; }
+    .potd .jp { font-size: 28px; }
+    .follow-x { flex-direction: column; align-items: stretch; text-align: center; }
+}
