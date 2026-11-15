@@ -70,6 +70,9 @@
             color: #696969;
             
         }
+        .home-search{display:flex;gap:8px;max-width:760px;margin:16px auto 0;padding:0 12px;box-sizing:border-box}
+        .home-search .pk-search{flex:1;min-width:0;border:2px solid var(--line,#ddd);border-radius:14px;padding:12px 14px;font-size:16px;background:#fff}
+        .home-search button{flex:none;border:0;border-radius:14px;padding:0 18px;font-size:16px;font-weight:bold;color:#fff;background:#e3350d;cursor:pointer}
     </style>
     <link rel="stylesheet" href="theme.css?v=20261115a">
 <meta name="google-adsense-account" content="ca-pub-4829093383068106">
@@ -82,6 +85,11 @@
     <h1><a class="logo-link" href="index.html" title="ホームへ戻る"><img class="site-logo" src="logo.svg" alt="もんすぺ！" width="442" height="100"></a></h1>
     <p class="subtitle">英語を勉強するテイでポケモン図鑑を見れる場所</p>
 </header>
+
+<form class="home-search" action="p/" method="get" role="search">
+    <input name="q" type="search" class="pk-search" placeholder="🔍 ポケモンを探す（キモリ / Treecko）" aria-label="ポケモンの名前で探す" autocomplete="off" required>
+    <button type="submit">探す</button>
+</form>
 
 <div class="mode-grid">
     <button class="mode-button practice" onclick="location.href='practice.html'">

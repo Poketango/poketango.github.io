@@ -14,7 +14,10 @@
 </main>
 <script>
 (function(){const q=document.getElementById('q'),lis=[...document.querySelectorAll('.pk-list li')],cnt=document.getElementById('cnt');let g='0';
-function f(){const v=q.value.trim().toLowerCase().replace(/^0+/,'');let n=0;lis.forEach(li=>{const ok=(g==='0'||li.dataset.g===g)&&(!v||li.textContent.toLowerCase().replace(/no\.0*/,'no.').includes(v));li.hidden=!ok;if(ok)n++});cnt.textContent=n+'匹';}
-q.addEventListener('input',f);document.querySelectorAll('.gchip').forEach(b=>b.onclick=()=>{document.querySelectorAll('.gchip').forEach(x=>x.classList.remove('on'));b.classList.add('on');g=b.dataset.g;f()});f();})();
+const norm=t=>t.normalize('NFKC').trim().toLowerCase().replace(/[\u3041-\u3096]/g,c=>String.fromCharCode(c.charCodeAt(0)+96)).replace(/[\s・.\-'’]/g,'');
+const num=li=>parseInt(li.querySelector('.no').textContent.replace(/\D/g,''),10);
+function f(){const v=norm(q.value).replace(/^no/,'').replace(/^0+(?=\d)/,'');const isN=/^\d+$/.test(v);let n=0;lis.forEach(li=>{const ok=(g==='0'||li.dataset.g===g)&&(!v||(isN?num(li)===+v:norm(li.textContent).includes(v)));li.hidden=!ok;if(ok)n++});cnt.textContent=n?n+'匹':'見つかりませんでした。カタカナ・ひらがな・英語名・図鑑番号で探せます';}
+q.addEventListener('input',f);
+const pq=new URLSearchParams(location.search).get('q');if(pq){q.value=pq;const v=norm(pq);const hit=lis.find(li=>norm(li.querySelector('.jn').textContent)===v||norm(li.querySelector('.en').textContent)===v||(/^\d+$/.test(v)&&num(li)===+v));if(hit){location.replace(hit.querySelector('a').href);return;}}document.querySelectorAll('.gchip').forEach(b=>b.onclick=()=>{document.querySelectorAll('.gchip').forEach(x=>x.classList.remove('on'));b.classList.add('on');g=b.dataset.g;f()});f();})();
 </script>
 <script src="../ads.js?v=20261114b"></script><script src="../site-footer.js"></script></body></html>
