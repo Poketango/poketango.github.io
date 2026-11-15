@@ -93,7 +93,7 @@ def page(path, title, desc, canon, body, depth, ja_alt=None, extra_head=''):
         alt = f'<link rel="alternate" hreflang="en" href="{canon}"><link rel="alternate" hreflang="ja" href="{ja_alt}">'
     h = f'''<!DOCTYPE html><html lang="en"><head>{GA}<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{E(title)}</title><meta name="description" content="{E(desc)}">
-<link rel="canonical" href="{canon}">{alt}<link rel="icon" type="image/png" href="{up}favicon.png">
+<link rel="canonical" href="{canon}">{alt}<link rel="icon" type="image/png" sizes="48x48" href="{up}favicon-48.png"><link rel="icon" type="image/png" sizes="96x96" href="{up}favicon-96.png"><link rel="icon" type="image/png" sizes="192x192" href="{up}favicon-192.png">
 <meta property="og:type" content="article"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}"><meta property="og:url" content="{canon}"><meta property="og:image" content="https://poketango.com/ogp-en.png"><meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="{up}theme.css">{CSS}{ADS}{extra_head}
 </head><body class="pkpage"><nav class="topnav"><a class="brand" href="{up}en/"><img class="brand-logo-en" src="{up}logo-en.svg" alt="PokeTango" width="130" height="30"></a><div class="tn-links"><a href="{up}en/learn/">Lessons</a><a href="{up}en/chart.html">Chart</a><a href="{up}en/quiz.html">Quiz</a><a href="{up}en/list.html">List</a><a href="{up}" lang="ja">日本語</a>{XNAV}</div></nav>

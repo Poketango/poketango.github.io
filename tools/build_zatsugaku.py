@@ -11,7 +11,7 @@ SITE = "https://poketango.com"
 HEAD = """<!DOCTYPE html><html lang="ja"><head><script async src="https://www.googletagmanager.com/gtag/js?id=G-2S81YX6L53"></script>
 <script>try{{var q=location.search;if(q.indexOf('notrack=1')>=0)localStorage.setItem('pt_notrack','1');if(q.indexOf('notrack=0')>=0)localStorage.removeItem('pt_notrack');if(localStorage.getItem('pt_notrack'))window['ga-disable-G-2S81YX6L53']=true;}}catch(e){{}}window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-2S81YX6L53');</script><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title><meta name="description" content="{desc}">
-<link rel="canonical" href="{url}"><link rel="icon" type="image/png" href="../favicon.png">
+<link rel="canonical" href="{url}"><link rel="icon" type="image/png" sizes="48x48" href="../favicon-48.png"><link rel="icon" type="image/png" sizes="96x96" href="../favicon-96.png"><link rel="icon" type="image/png" sizes="192x192" href="../favicon-192.png">
 <meta property="og:type" content="article"><meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:image" content="{ogimg}"><meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../theme.css"><meta name="google-adsense-account" content="ca-pub-4829093383068106">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4829093383068106" crossorigin="anonymous"></script>
@@ -38,7 +38,7 @@ def article(a):
     ld = {"@context": "https://schema.org", "@type": "Article", "headline": a["title"], "description": a["desc"],
           "datePublished": a["date"], "dateModified": a["date"], "inLanguage": "ja", "mainEntityOfPage": url,
           "author": {"@type": "Organization", "name": "ポケモン雑学採掘所"},
-          "publisher": {"@type": "Organization", "name": "もんすぺ！", "logo": {"@type": "ImageObject", "url": SITE + "/favicon.png"}},
+          "publisher": {"@type": "Organization", "name": "もんすぺ！", "logo": {"@type": "ImageObject", "url": SITE + "/favicon-512.png"}},
           "image": f"https://i.ytimg.com/vi/{a['video']}/hqdefault.jpg"}
     h = HEAD.format(title=E(a["title"]), desc=E(a["desc"]), url=url, ogimg=f"https://i.ytimg.com/vi/{a['video']}/hqdefault.jpg",
                     ld='<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + "</script>")
