@@ -1,0 +1,1778 @@
+{
+ "_note": "英語版ページの「日本語名の意味」。確かなものだけ書く。parts は [日本語, ローマ字, 意味]",
+ "bulbasaur": {
+  "parts": [
+   [
+    "ふしぎ",
+    "fushigi",
+    "mysterious"
+   ],
+   [
+    "種",
+    "tane",
+    "seed"
+   ]
+  ],
+  "text": "Its name is literally “mysterious seed” – fitting for the bulb on its back."
+ },
+ "ivysaur": {
+  "parts": [
+   [
+    "ふしぎ",
+    "fushigi",
+    "mysterious"
+   ],
+   [
+    "草",
+    "sō",
+    "plant"
+   ]
+  ],
+  "text": "The seed has sprouted, so the name changes from “seed” to “plant”."
+ },
+ "venusaur": {
+  "parts": [
+   [
+    "ふしぎ",
+    "fushigi",
+    "mysterious"
+   ],
+   [
+    "花",
+    "hana",
+    "flower"
+   ]
+  ],
+  "text": "The last stage of the line: the plant finally becomes a “mysterious flower”."
+ },
+ "charmander": {
+  "parts": [
+   [
+    "火",
+    "hi",
+    "fire"
+   ],
+   [
+    "トカゲ",
+    "tokage",
+    "lizard"
+   ]
+  ],
+  "text": "A plain and perfect description: a “fire lizard”."
+ },
+ "charmeleon": {
+  "parts": [
+   [
+    "リザード",
+    "rizādo",
+    "lizard"
+   ]
+  ],
+  "text": "The Japanese name is just the English word “lizard” written in katakana."
+ },
+ "charizard": {
+  "parts": [
+   [
+    "リザード",
+    "rizādo",
+    "lizard"
+   ],
+   [
+    "ン",
+    "-don",
+    "dinosaur-style ending"
+   ]
+  ],
+  "text": "“Lizard” plus the “-don” ending heard in dinosaur names like iguanodon."
+ },
+ "squirtle": {
+  "parts": [
+   [
+    "銭亀",
+    "zenigame",
+    "young pond turtle"
+   ]
+  ],
+  "text": "Zenigame is a real Japanese word for a baby turtle. It literally means “coin turtle”, because the shell looks like an old coin."
+ },
+ "caterpie": {
+  "parts": [
+   [
+    "キャタピー",
+    "kyatapī",
+    "caterpillar"
+   ]
+  ],
+  "text": "From the English word “caterpillar”."
+ },
+ "butterfree": {
+  "parts": [
+   [
+    "バタフリー",
+    "batafurī",
+    "butterfly"
+   ]
+  ],
+  "text": "From the English word “butterfly”, the same as in English."
+ },
+ "kakuna": {
+  "parts": [
+   [
+    "コクーン",
+    "kokūn",
+    "cocoon"
+   ]
+  ],
+  "text": "The English word “cocoon” in katakana."
+ },
+ "beedrill": {
+  "parts": [
+   [
+    "スピアー",
+    "supiā",
+    "spear"
+   ]
+  ],
+  "text": "Named after the spears on its arms."
+ },
+ "pidgey": {
+  "parts": [
+   [
+    "ポッポ",
+    "poppo",
+    "coo-coo"
+   ]
+  ],
+  "text": "Poppo is the sound a pigeon makes in Japanese – the same sound as in the children’s song “Hato poppo”."
+ },
+ "pidgeotto": {
+  "parts": [
+   [
+    "ピジョン",
+    "pijon",
+    "pigeon"
+   ]
+  ],
+  "text": "The English word “pigeon” in katakana."
+ },
+ "rattata": {
+  "parts": [
+   [
+    "子",
+    "ko",
+    "small"
+   ],
+   [
+    "ラッタ",
+    "ratta",
+    "rat"
+   ]
+  ],
+  "text": "A “little rat”. Its evolution is simply ラッタ, “rat”."
+ },
+ "raticate": {
+  "parts": [
+   [
+    "ラッタ",
+    "ratta",
+    "rat"
+   ]
+  ],
+  "text": "Just “rat” – the little ko (子) is dropped once it grows up."
+ },
+ "spearow": {
+  "parts": [
+   [
+    "鬼",
+    "oni",
+    "demon"
+   ],
+   [
+    "雀",
+    "suzume",
+    "sparrow"
+   ]
+  ],
+  "text": "A “demon sparrow”, because of its fierce temper."
+ },
+ "ekans": {
+  "parts": [
+   [
+    "アーボ",
+    "ābo",
+    "boa (backwards)"
+   ]
+  ],
+  "text": "Like its English name (snake backwards), the Japanese name is “boa” read backwards."
+ },
+ "arbok": {
+  "parts": [
+   [
+    "アーボック",
+    "ābokku",
+    "kobra (backwards)"
+   ]
+  ],
+  "text": "“Kobra” spelled backwards – the same trick as its English name."
+ },
+ "pikachu": {
+  "parts": [
+   [
+    "ピカ",
+    "pika",
+    "sparkle"
+   ],
+   [
+    "チュウ",
+    "chū",
+    "squeak"
+   ]
+  ],
+  "text": "Pika is the Japanese sound of something flashing or sparkling, and chū is the squeak of a mouse."
+ },
+ "raichu": {
+  "parts": [
+   [
+    "雷",
+    "rai",
+    "thunder"
+   ],
+   [
+    "チュウ",
+    "chū",
+    "squeak"
+   ]
+  ],
+  "text": "Pika (sparkle) grows up into rai (thunder)."
+ },
+ "sandshrew": {
+  "parts": [
+   [
+    "サンド",
+    "sando",
+    "sand"
+   ]
+  ],
+  "text": "Simply the English word “sand”."
+ },
+ "sandslash": {
+  "parts": [
+   [
+    "サンド",
+    "sando",
+    "sand"
+   ],
+   [
+    "パン",
+    "pan",
+    "pangolin"
+   ]
+  ],
+  "text": "Sand plus pangolin, the scaly animal it is based on."
+ },
+ "nidoking": {
+  "parts": [
+   [
+    "ニド",
+    "nido",
+    "from Nidoran"
+   ],
+   [
+    "キング",
+    "kingu",
+    "king"
+   ]
+  ],
+  "text": "Nidoran becomes a king."
+ },
+ "nidoqueen": {
+  "parts": [
+   [
+    "ニド",
+    "nido",
+    "from Nidoran"
+   ],
+   [
+    "クイン",
+    "kuin",
+    "queen"
+   ]
+  ],
+  "text": "Nidoran becomes a queen."
+ },
+ "clefable": {
+  "parts": [
+   [
+    "ピクシー",
+    "pikushī",
+    "pixie"
+   ]
+  ],
+  "text": "The English word “pixie”, a small fairy."
+ },
+ "vulpix": {
+  "parts": [
+   [
+    "六",
+    "roku",
+    "six"
+   ],
+   [
+    "コン",
+    "kon",
+    "a fox’s cry"
+   ]
+  ],
+  "text": "Roku is six (its six tails) and kon is the sound a fox makes in Japanese."
+ },
+ "ninetales": {
+  "parts": [
+   [
+    "九",
+    "kyū",
+    "nine"
+   ],
+   [
+    "コン",
+    "kon",
+    "a fox’s cry"
+   ]
+  ],
+  "text": "Six tails become nine: kyū is nine. It is based on the nine-tailed fox of Japanese legend."
+ },
+ "jigglypuff": {
+  "parts": [
+   [
+    "プリン",
+    "purin",
+    "custard pudding"
+   ]
+  ],
+  "text": "Purin is the Japanese word for custard pudding – soft, round and wobbly."
+ },
+ "wigglytuff": {
+  "parts": [
+   [
+    "ぷく",
+    "puku",
+    "puffed up"
+   ],
+   [
+    "プリン",
+    "purin",
+    "pudding"
+   ]
+  ],
+  "text": "A puffed-up pudding."
+ },
+ "oddish": {
+  "parts": [
+   [
+    "謎の",
+    "nazo no",
+    "mysterious"
+   ],
+   [
+    "草",
+    "kusa",
+    "grass"
+   ]
+  ],
+  "text": "Literally “the mysterious grass”."
+ },
+ "gloom": {
+  "parts": [
+   [
+    "臭い",
+    "kusai",
+    "smelly"
+   ],
+   [
+    "花",
+    "hana",
+    "flower"
+   ]
+  ],
+  "text": "A “smelly flower” – which is also a pun on kusa (grass)."
+ },
+ "vileplume": {
+  "parts": [
+   [
+    "ラフレシア",
+    "rafureshia",
+    "Rafflesia"
+   ]
+  ],
+  "text": "Named after Rafflesia, the giant flower that smells of rotten meat."
+ },
+ "parasect": {
+  "parts": [
+   [
+    "パラ",
+    "para",
+    "parasite"
+   ],
+   [
+    "セクト",
+    "sekuto",
+    "insect"
+   ]
+  ],
+  "text": "A parasite and an insect in one name."
+ },
+ "venomoth": {
+  "parts": [
+   [
+    "モルフォン",
+    "morufon",
+    "morpho"
+   ]
+  ],
+  "text": "From the morpho, a large and colourful butterfly."
+ },
+ "diglett": {
+  "parts": [
+   [
+    "ディグ",
+    "digu",
+    "dig"
+   ]
+  ],
+  "text": "From the English word “dig”."
+ },
+ "dugtrio": {
+  "parts": [
+   [
+    "ダグ",
+    "dagu",
+    "dug"
+   ],
+   [
+    "トリオ",
+    "torio",
+    "trio"
+   ]
+  ],
+  "text": "Three Diglett digging together: a trio."
+ },
+ "meowth": {
+  "parts": [
+   [
+    "ニャー",
+    "nyā",
+    "meow"
+   ]
+  ],
+  "text": "Nyā is how a cat says “meow” in Japanese."
+ },
+ "persian": {
+  "parts": [
+   [
+    "ペルシアン",
+    "perushian",
+    "Persian cat"
+   ]
+  ],
+  "text": "Named after the Persian cat breed."
+ },
+ "psyduck": {
+  "parts": [
+   [
+    "子",
+    "ko",
+    "small"
+   ],
+   [
+    "ダック",
+    "dakku",
+    "duck"
+   ]
+  ],
+  "text": "A “little duck”."
+ },
+ "golduck": {
+  "parts": [
+   [
+    "ゴル",
+    "goru",
+    "gold"
+   ],
+   [
+    "ダック",
+    "dakku",
+    "duck"
+   ]
+  ],
+  "text": "The little duck grows into a golden duck."
+ },
+ "mankey": {
+  "parts": [
+   [
+    "マンキー",
+    "mankī",
+    "monkey"
+   ]
+  ],
+  "text": "The English word “monkey” in katakana."
+ },
+ "primeape": {
+  "parts": [
+   [
+    "怒り",
+    "okori",
+    "anger"
+   ],
+   [
+    "猿",
+    "saru",
+    "monkey"
+   ]
+  ],
+  "text": "Literally the “angry monkey”."
+ },
+ "growlithe": {
+  "parts": [
+   [
+    "ガーディ",
+    "gādi",
+    "guard"
+   ]
+  ],
+  "text": "From “guard” or “guardian” – it is a loyal guard dog."
+ },
+ "arcanine": {
+  "parts": [
+   [
+    "ウインディ",
+    "uindi",
+    "windy"
+   ]
+  ],
+  "text": "From “windy”, because it runs as fast as the wind."
+ },
+ "poliwag": {
+  "parts": [
+   [
+    "にょろ",
+    "nyoro",
+    "wriggly"
+   ]
+  ],
+  "text": "Nyoro-nyoro is the Japanese sound of something wriggling, like a tadpole’s tail."
+ },
+ "kadabra": {
+  "parts": [
+   [
+    "ユンゲラー",
+    "yungerā",
+    "Uri Geller"
+   ]
+  ],
+  "text": "Based on Uri Geller, the famous spoon-bender. He later sued over the name, and Kadabra disappeared from Pokémon cards for about twenty years."
+ },
+ "alakazam": {
+  "parts": [
+   [
+    "フーディン",
+    "fūdin",
+    "Houdini"
+   ]
+  ],
+  "text": "Named after the escape artist Harry Houdini."
+ },
+ "machop": {
+  "parts": [
+   [
+    "腕力",
+    "wanryoku",
+    "arm strength"
+   ]
+  ],
+  "text": "Wanryoku means physical strength in your arms."
+ },
+ "machoke": {
+  "parts": [
+   [
+    "剛力",
+    "gōriki",
+    "great strength"
+   ]
+  ],
+  "text": "The strength level goes up: gōriki is “mighty strength”."
+ },
+ "machamp": {
+  "parts": [
+   [
+    "怪力",
+    "kairiki",
+    "monstrous strength"
+   ]
+  ],
+  "text": "Kairiki means superhuman strength. The three names show the strength going up step by step."
+ },
+ "bellsprout": {
+  "parts": [
+   [
+    "まだ",
+    "mada",
+    "still"
+   ],
+   [
+    "蕾",
+    "tsubomi",
+    "bud"
+   ]
+  ],
+  "text": "“Still a bud” – it has not bloomed yet."
+ },
+ "victreebel": {
+  "parts": [
+   [
+    "ウツボ",
+    "utsubo",
+    "pitcher plant"
+   ],
+   [
+    "ボット",
+    "botto",
+    "pot"
+   ]
+  ],
+  "text": "From utsubo-kazura, the Japanese name for the pitcher plant that traps insects."
+ },
+ "tentacool": {
+  "parts": [
+   [
+    "目の",
+    "me no",
+    "eyed"
+   ],
+   [
+    "クラゲ",
+    "kurage",
+    "jellyfish"
+   ]
+  ],
+  "text": "An “eyed jellyfish”, after the red gems that look like eyes."
+ },
+ "tentacruel": {
+  "parts": [
+   [
+    "毒",
+    "doku",
+    "poison"
+   ],
+   [
+    "クラゲ",
+    "kurage",
+    "jellyfish"
+   ]
+  ],
+  "text": "Simply a “poison jellyfish”."
+ },
+ "geodude": {
+  "parts": [
+   [
+    "石つぶて",
+    "ishitsubute",
+    "a thrown stone"
+   ]
+  ],
+  "text": "Ishitsubute means a stone thrown at someone."
+ },
+ "graveler": {
+  "parts": [
+   [
+    "ゴロン",
+    "goron",
+    "rolling sound"
+   ]
+  ],
+  "text": "Goro-goro is the Japanese sound of something heavy rolling."
+ },
+ "ponyta": {
+  "parts": [
+   [
+    "ポニー",
+    "ponī",
+    "pony"
+   ]
+  ],
+  "text": "From the English word “pony”."
+ },
+ "rapidash": {
+  "parts": [
+   [
+    "ギャロップ",
+    "gyaroppu",
+    "gallop"
+   ]
+  ],
+  "text": "From “gallop”, the fastest way a horse runs."
+ },
+ "slowpoke": {
+  "parts": [
+   [
+    "ヤド",
+    "yado",
+    "from yadokari (hermit crab)"
+   ],
+   [
+    "鈍",
+    "don",
+    "slow"
+   ]
+  ],
+  "text": "Yadokari is a hermit crab (it ends up carrying a Shellder) and don means dull or slow."
+ },
+ "magnemite": {
+  "parts": [
+   [
+    "コイル",
+    "koiru",
+    "coil"
+   ]
+  ],
+  "text": "From the English word “coil”, as in an electric coil."
+ },
+ "magneton": {
+  "parts": [
+   [
+    "レア",
+    "rea",
+    "rare"
+   ],
+   [
+    "コイル",
+    "koiru",
+    "coil"
+   ]
+  ],
+  "text": "A “rare coil” – three Coil joined together."
+ },
+ "farfetchd": {
+  "parts": [
+   [
+    "鴨",
+    "kamo",
+    "duck"
+   ],
+   [
+    "葱",
+    "negi",
+    "leek"
+   ]
+  ],
+  "text": "From the Japanese saying “kamo ga negi wo shotte kuru” – a duck turning up carrying its own leek, ready for the pot. It means something conveniently falling into your lap."
+ },
+ "doduo": {
+  "parts": [
+   [
+    "ドードー",
+    "dōdō",
+    "dodo"
+   ]
+  ],
+  "text": "Named after the dodo bird."
+ },
+ "dodrio": {
+  "parts": [
+   [
+    "ドードー",
+    "dōdō",
+    "dodo"
+   ],
+   [
+    "トリオ",
+    "torio",
+    "trio"
+   ]
+  ],
+  "text": "A dodo with three heads: a trio."
+ },
+ "dewgong": {
+  "parts": [
+   [
+    "ジュゴン",
+    "jugon",
+    "dugong"
+   ]
+  ],
+  "text": "Named after the dugong, a sea mammal."
+ },
+ "grimer": {
+  "parts": [
+   [
+    "べとべと",
+    "betobeto",
+    "sticky"
+   ]
+  ],
+  "text": "Betobeto is the Japanese word for something sticky and gooey."
+ },
+ "muk": {
+  "parts": [
+   [
+    "べとべと",
+    "betobeto",
+    "sticky"
+   ]
+  ],
+  "text": "Even more sticky goo than Grimer."
+ },
+ "shellder": {
+  "parts": [
+   [
+    "シェル",
+    "sheru",
+    "shell"
+   ]
+  ],
+  "text": "From the English word “shell”."
+ },
+ "gastly": {
+  "parts": [
+   [
+    "ゴース",
+    "gōsu",
+    "ghost"
+   ]
+  ],
+  "text": "From “ghost”. Its evolution’s Japanese name is exactly ゴースト (ghost)."
+ },
+ "haunter": {
+  "parts": [
+   [
+    "ゴースト",
+    "gōsuto",
+    "ghost"
+   ]
+  ],
+  "text": "The English word “ghost”, written in katakana."
+ },
+ "gengar": {
+  "parts": [
+   [
+    "ゲンガー",
+    "gengā",
+    "Doppelgänger"
+   ]
+  ],
+  "text": "From Doppelgänger, a ghostly double of a living person."
+ },
+ "onix": {
+  "parts": [
+   [
+    "岩",
+    "iwa",
+    "rock"
+   ]
+  ],
+  "text": "Iwa means rock – fitting for a giant rock snake."
+ },
+ "drowzee": {
+  "parts": [
+   [
+    "スリープ",
+    "surīpu",
+    "sleep"
+   ]
+  ],
+  "text": "From the English word “sleep”."
+ },
+ "hypno": {
+  "parts": [
+   [
+    "スリーパー",
+    "surīpā",
+    "sleeper"
+   ]
+  ],
+  "text": "From “sleeper” – it puts others to sleep."
+ },
+ "krabby": {
+  "parts": [
+   [
+    "クラブ",
+    "kurabu",
+    "crab"
+   ]
+  ],
+  "text": "From the English word “crab”."
+ },
+ "kingler": {
+  "parts": [
+   [
+    "キング",
+    "kingu",
+    "king"
+   ],
+   [
+    "クラブ",
+    "kurabu",
+    "crab"
+   ]
+  ],
+  "text": "A king crab."
+ },
+ "voltorb": {
+  "parts": [
+   [
+    "ビリリ",
+    "biriri",
+    "zap"
+   ],
+   [
+    "玉",
+    "dama",
+    "ball"
+   ]
+  ],
+  "text": "Biri-biri is the Japanese sound of an electric shock, and tama means ball."
+ },
+ "electrode": {
+  "parts": [
+   [
+    "丸",
+    "maru",
+    "round"
+   ],
+   [
+    "マイン",
+    "main",
+    "mine"
+   ]
+  ],
+  "text": "A “round mine” – a land mine that explodes."
+ },
+ "exeggcute": {
+  "parts": [
+   [
+    "タマ",
+    "tama",
+    "ball / egg"
+   ],
+   [
+    "タマ",
+    "tama",
+    "ball / egg"
+   ]
+  ],
+  "text": "Tama means ball and also comes from tamago (egg). It is doubled because it is a group of eggs."
+ },
+ "cubone": {
+  "parts": [
+   [
+    "からから",
+    "karakara",
+    "rattling"
+   ]
+  ],
+  "text": "Karakara is the sound of something dry and hollow rattling."
+ },
+ "marowak": {
+  "parts": [
+   [
+    "がらがら",
+    "garagara",
+    "loud rattle"
+   ]
+  ],
+  "text": "Garagara is a louder rattle, and also the Japanese word for a baby’s rattle toy."
+ },
+ "hitmonlee": {
+  "parts": [
+   [
+    "サワムラー",
+    "sawamurā",
+    "Sawamura"
+   ]
+  ],
+  "text": "Named after Tadashi Sawamura, a famous Japanese kickboxer – it is the kicking Pokémon."
+ },
+ "hitmonchan": {
+  "parts": [
+   [
+    "エビワラー",
+    "ebiwarā",
+    "Ebihara"
+   ]
+  ],
+  "text": "Named after Hiroyuki Ebihara, a Japanese boxing champion – it is the punching Pokémon."
+ },
+ "lickitung": {
+  "parts": [
+   [
+    "べろ",
+    "bero",
+    "tongue"
+   ]
+  ],
+  "text": "Bero is a casual Japanese word for tongue."
+ },
+ "weezing": {
+  "parts": [
+   [
+    "また",
+    "mata",
+    "more"
+   ],
+   [
+    "ドガス",
+    "dogasu",
+    "poison gas"
+   ]
+  ],
+  "text": "“More poison gas” – two Koffing joined together."
+ },
+ "rhyhorn": {
+  "parts": [
+   [
+    "犀",
+    "sai",
+    "rhino"
+   ],
+   [
+    "ホーン",
+    "hōn",
+    "horn"
+   ]
+  ],
+  "text": "Sai is the Japanese word for rhinoceros."
+ },
+ "rhydon": {
+  "parts": [
+   [
+    "犀",
+    "sai",
+    "rhino"
+   ],
+   [
+    "ドン",
+    "don",
+    "dinosaur-style ending"
+   ]
+  ],
+  "text": "Rhino plus the “-don” of dinosaur names."
+ },
+ "chansey": {
+  "parts": [
+   [
+    "ラッキー",
+    "rakkī",
+    "lucky"
+   ]
+  ],
+  "text": "From the English word “lucky” – it is said to bring happiness."
+ },
+ "kangaskhan": {
+  "parts": [
+   [
+    "ガルーラ",
+    "garūra",
+    "kangaroo"
+   ]
+  ],
+  "text": "From kangaroo."
+ },
+ "horsea": {
+  "parts": [
+   [
+    "竜",
+    "tatsu",
+    "dragon"
+   ]
+  ],
+  "text": "From tatsu-no-otoshigo, the Japanese word for seahorse, which literally means “dragon’s child”."
+ },
+ "seadra": {
+  "parts": [
+   [
+    "シー",
+    "shī",
+    "sea"
+   ],
+   [
+    "ドラ",
+    "dora",
+    "dragon"
+   ]
+  ],
+  "text": "A sea dragon."
+ },
+ "goldeen": {
+  "parts": [
+   [
+    "トサキン",
+    "tosakin",
+    "Tosakin goldfish"
+   ]
+  ],
+  "text": "Named after the Tosakin, a fancy goldfish breed from Kōchi with a fan-shaped tail."
+ },
+ "staryu": {
+  "parts": [
+   [
+    "ヒトデ",
+    "hitode",
+    "starfish"
+   ],
+   [
+    "マン",
+    "man",
+    "man"
+   ]
+  ],
+  "text": "A “starfish man”."
+ },
+ "mr-mime": {
+  "parts": [
+   [
+    "バリヤー",
+    "bariyā",
+    "barrier"
+   ]
+  ],
+  "text": "From “barrier”, after the invisible walls it builds by miming."
+ },
+ "scyther": {
+  "parts": [
+   [
+    "ストライク",
+    "sutoraiku",
+    "strike"
+   ]
+  ],
+  "text": "From the English word “strike”."
+ },
+ "jynx": {
+  "parts": [
+   [
+    "ルージュ",
+    "rūju",
+    "rouge"
+   ]
+  ],
+  "text": "From rouge, the French word for red lipstick."
+ },
+ "tauros": {
+  "parts": [
+   [
+    "ケンタウロス",
+    "kentaurosu",
+    "centaur"
+   ]
+  ],
+  "text": "From kentauros, the centaur of Greek myth, and tauros, Greek for bull."
+ },
+ "magikarp": {
+  "parts": [
+   [
+    "鯉",
+    "koi",
+    "carp"
+   ],
+   [
+    "キング",
+    "kingu",
+    "king"
+   ]
+  ],
+  "text": "The “carp king” – a big name for the weakest Pokémon."
+ },
+ "ditto": {
+  "parts": [
+   [
+    "メタモン",
+    "metamon",
+    "from metamorphosis"
+   ]
+  ],
+  "text": "From metamorphosis, the act of changing shape."
+ },
+ "eevee": {
+  "parts": [
+   [
+    "イー",
+    "ī",
+    "E"
+   ],
+   [
+    "ブイ",
+    "bui",
+    "V"
+   ]
+  ],
+  "text": "E and V, short for “evolution”."
+ },
+ "vaporeon": {
+  "parts": [
+   [
+    "シャワーズ",
+    "shawāzu",
+    "showers"
+   ]
+  ],
+  "text": "From “showers”."
+ },
+ "jolteon": {
+  "parts": [
+   [
+    "サンダース",
+    "sandāsu",
+    "thunders"
+   ]
+  ],
+  "text": "From “thunders”."
+ },
+ "flareon": {
+  "parts": [
+   [
+    "ブースター",
+    "būsutā",
+    "booster"
+   ]
+  ],
+  "text": "From “booster”, as in a rocket booster."
+ },
+ "porygon": {
+  "parts": [
+   [
+    "ポリゴン",
+    "porigon",
+    "polygon"
+   ]
+  ],
+  "text": "From polygon – it is made of computer graphics."
+ },
+ "omanyte": {
+  "parts": [
+   [
+    "オムナイト",
+    "omunaito",
+    "ammonite"
+   ]
+  ],
+  "text": "From the ammonite, a real fossil shellfish."
+ },
+ "kabuto": {
+  "parts": [
+   [
+    "兜",
+    "kabuto",
+    "helmet"
+   ]
+  ],
+  "text": "Kabuto is a samurai helmet, and kabutogani is the Japanese name for the horseshoe crab it is based on."
+ },
+ "aerodactyl": {
+  "parts": [
+   [
+    "プテラ",
+    "putera",
+    "pteranodon"
+   ]
+  ],
+  "text": "From the pteranodon, a flying reptile."
+ },
+ "articuno": {
+  "parts": [
+   [
+    "フリーザー",
+    "furīzā",
+    "freezer"
+   ]
+  ],
+  "text": "Simply “freezer”. The three legendary birds are named fire, thunder and freezer in Japanese."
+ },
+ "zapdos": {
+  "parts": [
+   [
+    "サンダー",
+    "sandā",
+    "thunder"
+   ]
+  ],
+  "text": "Simply “thunder”."
+ },
+ "moltres": {
+  "parts": [
+   [
+    "ファイヤー",
+    "faiyā",
+    "fire"
+   ]
+  ],
+  "text": "Simply “fire”."
+ },
+ "dratini": {
+  "parts": [
+   [
+    "ミニ",
+    "mini",
+    "mini"
+   ],
+   [
+    "竜",
+    "ryū",
+    "dragon"
+   ]
+  ],
+  "text": "A “mini dragon”."
+ },
+ "dragonair": {
+  "parts": [
+   [
+    "白",
+    "haku",
+    "white"
+   ],
+   [
+    "竜",
+    "ryū",
+    "dragon"
+   ]
+  ],
+  "text": "A “white dragon”."
+ },
+ "dragonite": {
+  "parts": [
+   [
+    "海",
+    "kai",
+    "sea"
+   ],
+   [
+    "竜",
+    "ryū",
+    "dragon"
+   ]
+  ],
+  "text": "A “sea dragon” – the Pokédex says it lives in the sea."
+ },
+ "mewtwo": {
+  "parts": [
+   [
+    "ミュウ",
+    "myū",
+    "Mew"
+   ],
+   [
+    "ツー",
+    "tsū",
+    "two"
+   ]
+  ],
+  "text": "The same as in English: Mew number two."
+ },
+ "chikorita": {
+  "parts": [
+   [
+    "チコリ",
+    "chikori",
+    "chicory"
+   ]
+  ],
+  "text": "From chicory, a leafy herb."
+ },
+ "bayleef": {
+  "parts": [
+   [
+    "ベイリーフ",
+    "beirīfu",
+    "bay leaf"
+   ]
+  ],
+  "text": "The bay leaf, a herb used in cooking."
+ },
+ "cyndaquil": {
+  "parts": [
+   [
+    "火",
+    "hi",
+    "fire"
+   ],
+   [
+    "山嵐",
+    "yamaarashi",
+    "porcupine"
+   ]
+  ],
+  "text": "A “fire porcupine”."
+ },
+ "quilava": {
+  "parts": [
+   [
+    "マグマ",
+    "maguma",
+    "magma"
+   ],
+   [
+    "山嵐",
+    "yamaarashi",
+    "porcupine"
+   ]
+  ],
+  "text": "The fire turns into magma."
+ },
+ "typhlosion": {
+  "parts": [
+   [
+    "爆風",
+    "bakufū",
+    "blast wave"
+   ]
+  ],
+  "text": "Bakufū is the blast of wind from an explosion."
+ },
+ "totodile": {
+  "parts": [
+   [
+    "鰐の子",
+    "wani no ko",
+    "little crocodile"
+   ]
+  ],
+  "text": "Literally “child of a crocodile”."
+ },
+ "croconaw": {
+  "parts": [
+   [
+    "アリゲイツ",
+    "arigeitsu",
+    "alligator"
+   ]
+  ],
+  "text": "From alligator."
+ },
+ "treecko": {
+  "parts": [
+   [
+    "木",
+    "ki",
+    "tree"
+   ],
+   [
+    "守宮",
+    "yamori",
+    "gecko"
+   ]
+  ],
+  "text": "A “tree gecko”. A real spider was named after its English name in 2021."
+ },
+ "grovyle": {
+  "parts": [
+   [
+    "ジュプトル",
+    "juputoru",
+    "jungle + reptile"
+   ]
+  ],
+  "text": "Usually explained as jungle plus reptile."
+ },
+ "torchic": {
+  "parts": [
+   [
+    "あちゃ",
+    "acha",
+    "ouch, hot!"
+   ],
+   [
+    "軍鶏",
+    "shamo",
+    "gamecock"
+   ]
+  ],
+  "text": "Shamo is a breed of fighting rooster."
+ },
+ "combusken": {
+  "parts": [
+   [
+    "若",
+    "waka",
+    "young"
+   ],
+   [
+    "軍鶏",
+    "shamo",
+    "gamecock"
+   ]
+  ],
+  "text": "A “young fighting rooster”."
+ },
+ "mudkip": {
+  "parts": [
+   [
+    "水",
+    "mizu",
+    "water"
+   ],
+   [
+    "ムツゴロウ",
+    "mutsugorō",
+    "mudskipper"
+   ]
+  ],
+  "text": "Water plus mutsugorō, a mudskipper fish found on Japanese mud flats."
+ },
+ "turtwig": {
+  "parts": [
+   [
+    "苗",
+    "nae",
+    "seedling"
+   ],
+   [
+    "タートル",
+    "tātoru",
+    "turtle"
+   ]
+  ],
+  "text": "A “seedling turtle”."
+ },
+ "grotle": {
+  "parts": [
+   [
+    "林",
+    "hayashi",
+    "grove"
+   ],
+   [
+    "亀",
+    "game",
+    "turtle"
+   ]
+  ],
+  "text": "A turtle carrying a small grove."
+ },
+ "torterra": {
+  "parts": [
+   [
+    "土台",
+    "dodai",
+    "foundation"
+   ],
+   [
+    "トータス",
+    "tōtasu",
+    "tortoise"
+   ]
+  ],
+  "text": "A tortoise as big as the ground itself."
+ },
+ "chimchar": {
+  "parts": [
+   [
+    "火",
+    "hi",
+    "fire"
+   ],
+   [
+    "小猿",
+    "kozaru",
+    "little monkey"
+   ]
+  ],
+  "text": "A “little fire monkey”."
+ },
+ "monferno": {
+  "parts": [
+   [
+    "猛火",
+    "mōka",
+    "raging fire"
+   ],
+   [
+    "猿",
+    "zaru",
+    "monkey"
+   ]
+  ],
+  "text": "The fire gets stronger: mōka is a raging fire."
+ },
+ "infernape": {
+  "parts": [
+   [
+    "業火",
+    "gōka",
+    "hellfire"
+   ],
+   [
+    "猿",
+    "zaru",
+    "monkey"
+   ]
+  ],
+  "text": "Gōka is the fire of hell – the three names show the flame growing."
+ },
+ "snivy": {
+  "parts": [
+   [
+    "蔦",
+    "tsuta",
+    "ivy"
+   ],
+   [
+    "蛇",
+    "ja",
+    "snake"
+   ]
+  ],
+  "text": "An “ivy snake”."
+ },
+ "tepig": {
+  "parts": [
+   [
+    "ぽかぽか",
+    "poka",
+    "warm"
+   ],
+   [
+    "豚",
+    "buta",
+    "pig"
+   ]
+  ],
+  "text": "Poka-poka means nice and warm, and buta is pig."
+ },
+ "oshawott": {
+  "parts": [
+   [
+    "水",
+    "mizu",
+    "water"
+   ],
+   [
+    "丸",
+    "maru",
+    "boys’ name ending"
+   ]
+  ],
+  "text": "Maru is an old ending for boys’ names, often given to young samurai."
+ },
+ "dewott": {
+  "parts": [
+   [
+    "二太刀",
+    "futachi",
+    "two swords"
+   ],
+   [
+    "丸",
+    "maru",
+    "boys’ name ending"
+   ]
+  ],
+  "text": "It fights with two scalchops, like a samurai with two swords."
+ },
+ "chespin": {
+  "parts": [
+   [
+    "針",
+    "hari",
+    "needle"
+   ],
+   [
+    "マロン",
+    "maron",
+    "chestnut"
+   ]
+  ],
+  "text": "A spiky chestnut."
+ },
+ "fennekin": {
+  "parts": [
+   [
+    "フォッコ",
+    "fokko",
+    "fox"
+   ]
+  ],
+  "text": "From fox."
+ },
+ "rowlet": {
+  "parts": [
+   [
+    "木",
+    "moku",
+    "wood"
+   ],
+   [
+    "梟",
+    "kurō",
+    "owl"
+   ]
+  ],
+  "text": "Wood plus fukurō, the Japanese word for owl."
+ },
+ "popplio": {
+  "parts": [
+   [
+    "アシカ",
+    "ashika",
+    "sea lion"
+   ],
+   [
+    "鞠",
+    "mari",
+    "ball"
+   ]
+  ],
+  "text": "A sea lion playing with a ball."
+ },
+ "grookey": {
+  "parts": [
+   [
+    "猿",
+    "saru",
+    "monkey"
+   ],
+   [
+    "ノリ",
+    "nori",
+    "groove"
+   ]
+  ],
+  "text": "Nori means getting into the rhythm – it is a drumming monkey."
+ },
+ "scorbunny": {
+  "parts": [
+   [
+    "火",
+    "hi",
+    "fire"
+   ],
+   [
+    "バニー",
+    "banī",
+    "bunny"
+   ]
+  ],
+  "text": "A “fire bunny”."
+ },
+ "sobble": {
+  "parts": [
+   [
+    "めそめそ",
+    "meso",
+    "sobbing"
+   ]
+  ],
+  "text": "Meso-meso is the Japanese sound of someone quietly crying."
+ },
+ "sprigatito": {
+  "parts": [
+   [
+    "ニャオ",
+    "nyao",
+    "meow"
+   ],
+   [
+    "葉",
+    "ha",
+    "leaf"
+   ]
+  ],
+  "text": "A meowing leaf cat."
+ }
+}
