@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800&display=swap");
 /* =========================================================
    サイト共通デザイン（theme.css）
    各ページの <style> の後に読み込んで、見た目だけを上書きする
@@ -1445,4 +1446,288 @@ button.title-chip:hover { transform: translateY(-1px); }
     .rank-icon { font-size: 38px; }
     .rank-name { font-size: 20px; }
     .rank-ladder span { font-size: 14px; }
+}
+
+
+/* =========================================================
+   デザイン刷新 2026-11-16
+   方針：影のない平らな面＋下に厚みのある縁（押せるもの）
+   背景は方眼ノート、見出しは単語帳のインデックス見出し
+   ========================================================= */
+:root {
+    --paper: #ffffff;
+    --desk: #eceef1;
+    --edge: #d3d8de;
+    --edge-dark: #b9c0c9;
+    --ink: #24282d;
+    --radius: 12px;
+    --shadow: none;
+    --round: "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", "Hiragino Sans", "Yu Gothic UI", sans-serif;
+}
+html { background-color: var(--desk) !important; }
+html body::before, html[lang="en"] body::before {
+    background-image:
+        linear-gradient(rgba(36, 40, 45, .045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(36, 40, 45, .045) 1px, transparent 1px) !important;
+    background-size: 24px 24px, 24px 24px !important;
+    background-color: var(--desk);
+}
+
+/* 見出し・ボタンは丸ゴシック */
+h1, h2, h3, button, .mode-button, .cta, .en-name, .pk-jn, .rank-name, .mp-name,
+.bm-jp, .pk-list .jn, .potd .jp, .list-hero h1, .en-hero h1, .chip-ad, .goods-btn {
+    font-family: var(--round) !important;
+}
+
+/* ---------- タイトルバー：単色の赤 ---------- */
+#page-header, #site-header, #header {
+    background: var(--red) !important;
+    box-shadow: none !important;
+    border-bottom: 4px solid var(--ink) !important;
+}
+#page-header::before, #site-header::before, #header::before { display: none !important; }
+#page-header h1, #site-header h1, #header h1 { text-shadow: none; }
+.site-logo { filter: none; }
+#site-header .subtitle { letter-spacing: 0 !important; }
+
+/* ---------- 面（カード）：影をやめて縁取り ---------- */
+#sidebar, #chart-column, #content, #question-box, #gameover-box,
+.home-feat, #contact, .policy, .progress-item, .achievement, .bm-card, #bm-empty,
+.pkwrap .card, .near-box {
+    background: var(--paper);
+    box-shadow: none !important;
+    border: 2px solid var(--edge) !important;
+    border-radius: var(--radius) !important;
+}
+.achievement { border-left-width: 6px !important; }
+.achievement.is-new { box-shadow: 0 0 0 3px var(--red) !important; }
+.bm-card:hover { transform: none; border-color: var(--edge-dark) !important; box-shadow: none; }
+
+/* ---------- ボタン：平らで、下に厚み ---------- */
+button {
+    border-radius: 12px !important;
+    border: 2px solid var(--edge) !important;
+    border-bottom-width: 4px !important;
+    box-shadow: none !important;
+    background: var(--paper);
+    transition: none;
+}
+button:hover { background: #f5f6f8; transform: none; }
+button:active { transform: translateY(2px); border-bottom-width: 2px !important; margin-bottom: 6px !important; }
+button:focus-visible, a:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+#check-answer-btn, #retry-btn {
+    background: var(--blue) !important;
+    border-color: var(--blue-dark) !important;
+    box-shadow: none !important;
+}
+.tweet-button { border-color: #000 !important; }
+.bm-btn { border-color: #e2b400 !important; border-bottom-width: 4px !important; }
+.speak-btn { border-bottom-width: 4px !important; }
+
+/* 入力欄 */
+#search-box, #answer-input, .pk-search, .home-search .pk-search,
+#contact-form input, #contact-form select, #contact-form textarea {
+    border: 2px solid var(--edge) !important;
+    border-radius: 10px !important;
+    background: #fff !important;
+    box-shadow: none !important;
+}
+#search-box:focus, #answer-input:focus, .pk-search:focus,
+#contact-form input:focus, #contact-form select:focus, #contact-form textarea:focus {
+    border-color: var(--blue) !important;
+    outline: none;
+}
+
+/* ---------- 出題中のポケモン：図鑑の四角い枠 ---------- */
+#poke-img {
+    border-radius: 12px !important;
+    background: #f3f5f7 !important;
+    border: 2px solid var(--edge) !important;
+    box-shadow: none !important;
+}
+#poke-name { border-bottom: none; }
+#desc-ja { background: #f5f6f8; border-left-color: var(--edge-dark); }
+.blank { background: #fff3b0; border-bottom: 3px solid var(--ink); border-radius: 4px; color: var(--ink); }
+
+/* ---------- ホーム ---------- */
+.home-search { max-width: 780px !important; padding: 0 16px !important; margin-top: 20px !important; }
+.home-search button {
+    background: var(--ink) !important; color: #fff !important;
+    border-color: #000 !important; margin: 0 !important;
+}
+.mode-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-auto-rows: auto;
+    gap: 12px !important;
+    margin-top: 20px !important;
+}
+.mode-button {
+    height: auto !important;
+    min-height: 0;
+    border-radius: 14px !important;
+    border: 2px solid var(--edge) !important;
+    border-bottom-width: 5px !important;
+    box-shadow: none !important;
+    transition: none;
+}
+.mode-button:hover { transform: none; box-shadow: none !important; }
+.mode-button:hover img.icon { transform: none; }
+.mode-button:active { transform: translateY(3px); border-bottom-width: 2px !important; }
+/* 主役の3モードは色で塗る */
+.mode-button.practice, .mode-button.dex, .mode-button.battle {
+    padding: 22px 12px 18px !important;
+    color: #fff !important;
+    font-size: 22px !important;
+    font-weight: 800;
+}
+.mode-button.practice { background: var(--blue) !important; border-color: var(--blue-dark) !important; }
+.mode-button.dex { background: var(--red) !important; border-color: var(--red-dark) !important; }
+.mode-button.battle { background: #23994e !important; border-color: #17733a !important; }
+.mode-button.practice .note, .mode-button.dex .note, .mode-button.battle .note { color: rgba(255,255,255,.9); font-size: 13px; }
+.mode-button.practice img.icon, .mode-button.dex img.icon, .mode-button.battle img.icon {
+    width: 72px; height: 72px; padding: 6px; border-radius: 12px; background: #fff;
+}
+/* 残りの3つは白い横長のボタン（アイコン左） */
+.mode-button.trophy, .mode-button.bookmark, .mode-button.list {
+    display: grid !important;
+    grid-template-columns: 40px 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 10px;
+    row-gap: 0;
+    align-items: center;
+    justify-items: start;
+    text-align: left;
+    padding: 10px 12px !important;
+    font-size: 16px !important;
+    background: var(--paper) !important;
+}
+.mode-button.trophy img.icon, .mode-button.bookmark img.icon, .mode-button.list img.icon {
+    grid-row: 1 / 3; width: 40px; height: 40px;
+}
+.mode-button.trophy .note, .mode-button.bookmark .note, .mode-button.list .note {
+    font-size: 12px; line-height: 1.4;
+}
+
+/* 広告のチップ */
+.chip-ad { box-shadow: none; border: 2px solid var(--edge); border-radius: 10px; }
+.chip-ad:hover { transform: none; background: #f5f6f8; }
+
+/* 読みもの：単語帳のインデックス見出し＋罫線の一覧 */
+.home-feat, #contact { position: relative; margin-top: 44px !important; }
+.home-feat h2, #contact h2 {
+    position: absolute; left: 14px; top: -34px;
+    margin: 0 !important; padding: 6px 16px 4px;
+    font-size: 16px !important; text-align: left !important;
+    background: var(--paper);
+    border: 2px solid var(--edge); border-bottom: none;
+    border-radius: 10px 10px 0 0;
+}
+.home-feat { padding: 6px 20px 8px !important; }
+.home-feat .hub-top {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    column-gap: 28px !important; row-gap: 0 !important;
+}
+.home-feat .hub-top a {
+    display: block !important;
+    padding: 13px 0 !important;
+    border: none !important;
+    border-bottom: 1px solid var(--line) !important;
+    border-radius: 0 !important;
+    background: none !important;
+    font-size: 15px !important;
+    font-weight: 700;
+    color: var(--ink);
+    transition: none;
+}
+.home-feat .hub-top a:hover { transform: none; color: var(--red); text-decoration: underline; }
+.home-feat .hub-top a .fi { display: none; }
+
+/* お問い合わせは開いたときだけフォームを出す */
+#contact { padding: 18px 24px !important; }
+#contact summary {
+    cursor: pointer; font-weight: 800; font-family: var(--round);
+    font-size: 15px; padding: 4px 0; color: var(--blue-dark);
+}
+#contact details[open] summary { margin-bottom: 12px; }
+.contact-x { text-align: left; }
+
+/* ---------- 英語図鑑ページ（p/）：グラデーションをやめて単色 ---------- */
+.pk-hero, .list-hero, .pkpage[class*=" g"] .list-hero {
+    background: var(--gc, var(--red)) !important;
+    box-shadow: none !important;
+    border-radius: 16px !important;
+    border-bottom: 5px solid rgba(0, 0, 0, .22);
+}
+.pk-hero::after { display: none; }
+.pk-hero-img { border-radius: 14px; box-shadow: none; background: #fff; }
+.pk-hero .pk-jn { text-shadow: none; }
+.badge { background: rgba(0, 0, 0, .18); }
+.en-name { border-radius: 8px; }
+.pkwrap .card { border-top: 6px solid var(--gc) !important; }
+.pk-toc a { border-radius: 10px; border-color: var(--edge); }
+.pkwrap .pk-list a { box-shadow: none; border: 2px solid var(--edge); border-left: 6px solid #ccc; border-radius: 10px; transition: none; }
+.pkwrap .pk-list a:hover { transform: none; border-color: var(--edge-dark); }
+.pkwrap .pk-list img { border-radius: 8px; }
+.cta { border-radius: 12px; box-shadow: none; border-bottom: 4px solid rgba(0, 0, 0, .25); }
+.cta:active { box-shadow: none; border-bottom-width: 2px; }
+.chip-btn, .pk-random, .gchip { border-radius: 10px !important; }
+.finder { background: transparent; }
+.pk-dock { border-radius: 14px; box-shadow: none; background: var(--ink); }
+.pk-dock a { border-radius: 10px; }
+.pk-dock .dock-rand { border-radius: 10px; }
+.goods-btn { border-radius: 10px; }
+.ad-box { border: 2px solid var(--edge); border-radius: var(--radius); background: var(--paper); }
+
+/* ---------- 英語版のトップ ---------- */
+.en-hero {
+    background: var(--red) !important;
+    box-shadow: none !important;
+    border-radius: 16px !important;
+    border-bottom: 5px solid var(--red-dark);
+}
+.en-hero::before, .en-hero::after { display: none; }
+.en-hero h1 { text-shadow: none; }
+.en-hero .hero-logo { filter: none; }
+.float-kana span { box-shadow: none; border-bottom: 4px solid #d3d8de; border-radius: 10px; }
+
+/* ---------- 実績 ---------- */
+.rank-card { background: var(--blue) !important; border-bottom: 5px solid var(--blue-dark); }
+.progress-fill { background: var(--yellow) !important; }
+.achievement.unlocked { background: #fff8d6 !important; }
+.near-box { background: #f3fbf5; }
+.medal-toast { box-shadow: none; border: 2px solid var(--edge); border-left-width: 8px; }
+.mp-panel { border-radius: 16px; }
+.mp-card { border-radius: 12px; border-bottom-width: 4px; transition: none; }
+.mp-card:hover, .mp-card:focus-visible { transform: none; box-shadow: none; border-color: var(--edge-dark); }
+
+/* ---------- 狭い画面 ---------- */
+@media (max-width: 760px) {
+    .mode-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 8px !important; }
+    .mode-button.practice, .mode-button.dex, .mode-button.battle { font-size: 16px !important; padding: 14px 4px 12px !important; }
+    .mode-button.practice img.icon, .mode-button.dex img.icon, .mode-button.battle img.icon { width: 52px; height: 52px; padding: 4px; }
+    .mode-button.practice .note, .mode-button.dex .note, .mode-button.battle .note { font-size: 11px; }
+    .mode-button.trophy, .mode-button.bookmark, .mode-button.list { grid-column: 1 / -1; }
+    .home-feat .hub-top { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 480px) {
+    .mode-grid { padding: 0 12px !important; }
+    .home-feat, #contact { margin-left: 12px !important; margin-right: 12px !important; }
+    .home-feat { padding: 4px 16px 6px !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+    #medal-badge .badge-new, .medal.is-new { animation: none; }
+}
+.mode-grid .mode-button.trophy, .mode-grid .mode-button.bookmark, .mode-grid .mode-button.list {
+    border-top: 2px solid var(--edge) !important;
+    justify-self: stretch !important;
+}
+.mode-grid .mode-button.practice, .mode-grid .mode-button.dex, .mode-grid .mode-button.battle { border-top-width: 2px !important; }
+.home-feat .hub-top a:last-child, .home-feat .hub-top a:nth-last-child(2):nth-child(odd) { border-bottom: none !important; }
+@media (max-width: 760px) {
+    .mode-grid .mode-button.trophy, .mode-grid .mode-button.bookmark, .mode-grid .mode-button.list { grid-column: 1 / -1 !important; }
+    .home-feat .hub-top a:nth-last-child(2):nth-child(odd) { border-bottom: 1px solid var(--line) !important; }
+}
+@media (max-width: 480px) {
+    .mode-grid .mode-button.practice .note, .mode-grid .mode-button.dex .note, .mode-grid .mode-button.battle .note { display: none; }
 }

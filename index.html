@@ -74,7 +74,7 @@
         .home-search .pk-search{flex:1;min-width:0;border:2px solid var(--line,#ddd);border-radius:14px;padding:12px 14px;font-size:16px;background:#fff}
         .home-search button{flex:none;border:0;border-radius:14px;padding:0 18px;font-size:16px;font-weight:bold;color:#fff;background:#e3350d;cursor:pointer}
     </style>
-    <link rel="stylesheet" href="theme.css?v=20261116a">
+    <link rel="stylesheet" href="theme.css?v=20261116d">
 <meta name="google-adsense-account" content="ca-pub-4829093383068106">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4829093383068106" crossorigin="anonymous"></script>
 </head>
@@ -117,13 +117,15 @@
 </div>
 
 <section class="home-feat">
-    <h2>特集・読みもの</h2>
-    <p class="hub-top"><a href="p/starters.html"><span class="fi">🔥</span>御三家ポケモンの英語名</a><a href="p/different.html"><span class="fi">🔀</span>日本語と英語で名前が全然違うポケモン</a><a href="p/pun.html"><span class="fi">😆</span>英語名がダジャレなポケモン</a><a href="p/scary.html"><span class="fi">👻</span>英語版の図鑑が怖いポケモン</a><a href="p/gen1.html"><span class="fi">🔢</span>初代151匹の英語名</a><a href="zatsugaku/"><span class="fi">⛏️</span>ポケモンの深い雑学コラム</a><a href="p/words.html"><span class="fi">📚</span>レベル別の英単語一覧</a><a href="p/print.html"><span class="fi">🖨️</span>無料の英単語プリント</a><a href="en/" lang="en"><span class="fi">🌏</span>English: Learn Japanese with Pokémon</a></p>
+    <h2>読みもの</h2>
+    <p class="hub-top"><a href="p/starters.html">御三家ポケモンの英語名</a><a href="p/different.html">日本語と英語で名前が全然違うポケモン</a><a href="p/pun.html">英語名がダジャレなポケモン</a><a href="p/scary.html">英語版の図鑑が怖いポケモン</a><a href="p/gen1.html">初代151匹の英語名</a><a href="zatsugaku/">ポケモンの深い雑学コラム</a><a href="p/words.html">レベル別の英単語一覧</a><a href="p/print.html">無料の英単語プリント</a><a href="en/" lang="en">English: Learn Japanese with Pokémon</a></p>
 </section>
 
 <section id="contact">
-    <h2>お問い合わせ・ご意見</h2>
+    <h2>お問い合わせ</h2>
     <p class="contact-x">Xでポケモンの英語名クイズや雑学を出しています → <a href="https://x.com/zukan_eitango" target="_blank" rel="noopener">@zukan_eitango</a></p>
+    <details>
+    <summary>不具合の報告やご意見を送る</summary>
     <p class="contact-note">不具合の報告、ほしい機能、ポケモン雑学のまちがいなど、なんでも送ってください。返信がほしいときだけメールアドレスを書いてください。</p>
     <form name="contact" id="contact-form">
         <p class="hp">ここは空のままにしてください <input name="bot-field"></p>
@@ -147,10 +149,12 @@
         <button type="submit" id="contact-send">送信する</button>
         <p id="contact-result" role="status"></p>
     </form>
+    </details>
     <p class="privacy-note">このサイトでは、アクセス数を知るためにGoogle アナリティクスを使っています。Cookieを使って匿名の利用データを集めていますが、名前などの個人を特定する情報は集めていません。詳しくは<a href="https://policies.google.com/technologies/partner-sites?hl=ja" target="_blank" rel="noopener">Googleのポリシー</a>をご覧ください。広告やCookieについては<a href="policy.html">プライバシーポリシー</a>をご覧ください。</p>
 </section>
 
 <script>
+if (location.hash === "#contact") document.querySelector("#contact details").open = true;
 document.getElementById("contact-form").addEventListener("submit", async e => {
     e.preventDefault();
     const f = e.target, btn = document.getElementById("contact-send"), out = document.getElementById("contact-result");
