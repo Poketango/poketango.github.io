@@ -313,10 +313,42 @@ function showToast(icon, head, body, cls) {
     div.innerHTML =
         `<span class="medal-toast-icon">${icon}</span>` +
         `<span><b>${head}</b><br>${body}</span>`;
+    // 押すと実績一覧へ（実績一覧のページ以外）
+    if (!/achievements\.html/.test(location.pathname)) {
+        div.classList.add("clickable");
+        div.title = "実績一覧を見る";
+        div.addEventListener("click", () => { location.href = "achievements.html"; });
+    }
     medalToastBox.appendChild(div);
 
-    setTimeout(() => div.classList.add("hide"), 3500);
-    setTimeout(() => div.remove(), 4000);
+    // 金メダルやランクアップは紙吹雪で祝う
+    if (cls === "gold" || cls === "rankup") medalConfetti(cls === "rankup" ? 70 : 50);
+
+    const stay = (cls === "gold" || cls === "rankup") ? 6000 : (cls === "near" ? 4500 : 3500);
+    setTimeout(() => div.classList.add("hide"), stay);
+    setTimeout(() => div.remove(), stay + 500);
+}
+
+// 紙吹雪
+function medalConfetti(n) {
+    try {
+        if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        const box = document.createElement("div");
+        box.className = "medal-confetti";
+        const colors = ["#ffcb05", "#e3350d", "#2a75bb", "#3fbf6f", "#ff9f1c", "#b36bff"];
+        for (let i = 0; i < n; i++) {
+            const c = document.createElement("i");
+            c.style.left = Math.random() * 100 + "vw";
+            c.style.background = colors[i % colors.length];
+            c.style.animationDelay = (Math.random() * 0.6) + "s";
+            c.style.animationDuration = (2.2 + Math.random() * 1.6) + "s";
+            c.style.setProperty("--drift", (Math.random() * 200 - 100) + "px");
+            c.style.transform = `rotate(${Math.random() * 360}deg)`;
+            box.appendChild(c);
+        }
+        document.body.appendChild(box);
+        setTimeout(() => box.remove(), 4800);
+    } catch (e) {}
 }
 
 // ---------------------------------------------------------
@@ -328,9 +360,9 @@ function medalBadgeUpdate() {
 
     let badge = document.getElementById("medal-badge");
     if (!badge) {
-        badge = document.createElement("div");
+        badge = document.createElement("a");
         badge.id = "medal-badge";
-        badge.title = "獲得メダル数（地方メダル＋実績メダル）";
+        badge.href = "achievements.html";
         header.appendChild(badge);
     }
 
@@ -342,12 +374,21 @@ function medalBadgeUpdate() {
     });
 
     const prog = medalOverallProgress();
-    badge.title = `全メダルの進捗 ${prog.got} / ${prog.total}（地方メダル＋実績メダル）`;
+    const rank = medalRank(prog.got);
+    const unseen = collUnseenCount();
+    const eq = collEquipped();
+    badge.title = `${rank.name}　全メダル ${prog.got} / ${prog.total}` +
+        (rank.next ? `　次のランク「${rank.next.name}」まであと ${rank.next.need - prog.got} 個` : "");
     badge.innerHTML =
+        (eq ? `<span class="badge-title ${eq.tier}">${MEDAL_EMOJI[eq.tier] || ""}${eq.title}</span>` : "") +
+        `<span class="badge-rank">${rank.icon}${rank.name}</span>` +
         `<span>🥇${count.gold}</span>` +
         `<span>🥈${count.silver}</span>` +
         `<span>🥉${count.bronze}</span>` +
-        `<span class="badge-progress"><span class="badge-bar"><span style="width:${prog.percent}%"></span></span>${prog.percent}%</span>`;
+        `<span class="badge-progress"><span class="badge-bar"><span style="width:${prog.percent}%"></span></span>${prog.percent}%</span>` +
+        (unseen ? `<span class="badge-new">NEW ${unseen}</span>` : "");
+
+    medalRankUpCheck(rank);
 }
 
 // すべてのメダル（地方メダル＋実績メダル）を100%としたときの進捗
@@ -633,7 +674,7 @@ function medalOnCorrect(name, answer, mode, combo) {
     }
     achExSave(ex);
 
-    medalReady.then(() => achCheck({ correct: true, answer: answer, name: name, mode: mode }, false));
+    medalReady.then(() => { achCheck({ correct: true, answer: answer, name: name, mode: mode }, false); achNearCheck(); });
 }
 
 function medalOnWrong() {
@@ -666,7 +707,7 @@ function medalOnZukan(name) {
     ex.zukanBy[name] = (ex.zukanBy[name] || 0) + 1;
     achExMode(ex, "zukan");
     achExSave(ex);
-    medalReady.then(() => achCheck({ name: name, mode: "zukan" }, false));
+    medalReady.then(() => { achCheck({ name: name, mode: "zukan" }, false); achNearCheck(); });
 }
 
 // ---------------------------------------------------------
@@ -983,3 +1024,253 @@ Object.assign(ACH_TRIVIA, {
     fast2s: { msg: "初代では、急所に当たる確率がポケモンの素早さで決まっていた。素早さの種族値が高いほど急所に当たりやすく、ペルシアンやダグトリオのような速いポケモンは、きりさくを使うとほぼ確実に急所に当たった。", src: "https://bulbapedia.bulbagarden.net/wiki/Critical_hit" },
     buzzer: { msg: "ヌケニンのHPは常に1だ。『剣・盾』でダイマックスすると、ほかのポケモンはHPが大きく増えるが、ヌケニンだけはダイマックスしてもHP1のまま。ダイマックスアメを与えても変わらない。巨大化しても一撃で倒れる、ギリギリの巨人である。", src: "https://pokemondb.net/pokebase/335956/does-dyanamax-shedinja-get-a-hp-boost" }
 });
+
+
+// =========================================================
+// 集めたくなる仕掛け
+// ・トレーナーランク（メダルの合計数で上がっていく）
+// ・未解除の実績の進み具合（あと何回で取れるか）
+// ・隠し実績のヒント
+// ・新しく取ったものに付く NEW
+// ・好きな称号を名乗る
+// ・あと少しで取れるときのお知らせ
+// =========================================================
+
+// ---------- トレーナーランク ----------
+const MEDAL_RANKS = [
+    { need: 0,   icon: "🥚", name: "たまごトレーナー" },
+    { need: 3,   icon: "🌱", name: "かけだしトレーナー" },
+    { need: 8,   icon: "🎒", name: "たびだちトレーナー" },
+    { need: 15,  icon: "🏅", name: "ジムチャレンジャー" },
+    { need: 25,  icon: "🎖️", name: "バッジハンター" },
+    { need: 40,  icon: "⭐", name: "エリートトレーナー" },
+    { need: 60,  icon: "🏟️", name: "ジムリーダー級" },
+    { need: 80,  icon: "🔥", name: "四天王級" },
+    { need: 105, icon: "👑", name: "チャンピオン級" },
+    { need: 130, icon: "🌈", name: "ポケモンマスター" }
+];
+
+function medalRank(got) {
+    if (got === undefined) got = medalOverallProgress().got;
+    let i = 0;
+    MEDAL_RANKS.forEach((r, k) => { if (got >= r.need) i = k; });
+    const cur = MEDAL_RANKS[i];
+    const next = MEDAL_RANKS[i + 1] || null;
+    const ratio = next ? (got - cur.need) / (next.need - cur.need) : 1;
+    return Object.assign({ index: i, next, got, ratio }, cur);
+}
+
+// ランクが上がったらお祝い（初めて開いたときは記録するだけ）
+function medalRankUpCheck(rank) {
+    let shown = null;
+    try { shown = localStorage.getItem("medalRankShown"); } catch (e) {}
+    if (shown === null) {
+        try { localStorage.setItem("medalRankShown", String(rank.index)); } catch (e) {}
+        return;
+    }
+    if (rank.index > Number(shown)) {
+        try { localStorage.setItem("medalRankShown", String(rank.index)); } catch (e) {}
+        if (medalRegionLists) {
+            showToast(rank.icon, `ランクアップ！「${rank.name}」になった`,
+                rank.next ? `次は「${rank.next.name}」。あと ${rank.next.need - rank.got} 個のメダルで届く。` : "すべてのランクをきわめた！",
+                "rankup");
+        }
+    }
+}
+
+// ---------- 進み具合 ----------
+function achMaxOf(obj) { const v = Object.values(obj || {}); return v.length ? Math.max(...v) : 0; }
+function achHave(listKey, names) { const s = new Set(medalLoad(listKey)); return names.filter(n => s.has(n)).length; }
+function achAllHave(listKey) { const all = achAllNames(); const s = new Set(medalLoad(listKey)); return [all.filter(n => s.has(n)).length, all.length]; }
+function achRegionsWith(suffix) { const m = medalLoad("medals"); return MEDAL_REGIONS.filter(r => m.includes(`${r.key}-${suffix}`)).length; }
+function achNum(key) { try { return Number(localStorage.getItem(key) || 0); } catch (e) { return 0; } }
+
+// key: (累計の記録, 細かい記録) => [今の数, 目標]
+const ACH_PROGRESS = {
+    correct100: st => [st.correctTotal, 100],
+    correct500: st => [st.correctTotal, 500],
+    correct1000: st => [st.correctTotal, 1000],
+    correct1025: st => [st.correctTotal, 1025],
+    miss100: st => [st.wrongTotal, 100],
+    seen100: () => [medalLoad("seen").length, 100],
+    seen500: () => [medalLoad("seen").length, 500],
+    seenAll: () => achAllHave("seen"),
+    correctAll: () => achAllHave("correct"),
+    zukan50: () => [medalLoad("zukanRead").length, 50],
+    zukan300: () => [medalLoad("zukanRead").length, 300],
+    zukanAll: () => achAllHave("zukanRead"),
+    zukan1000: (st, ex) => [ex.zukanViews, 1000],
+    zukanFav: (st, ex) => [achMaxOf(ex.zukanBy), 10],
+    practice10: st => [st.practiceBest, 10],
+    practice30: st => [st.practiceBest, 30],
+    medal10: () => [medalLoad("medals").length, 10],
+    allBronze: () => [achRegionsWith("seen-bronze"), 9],
+    allSilver: () => [achRegionsWith("seen-silver"), 9],
+    allGold: () => [achRegionsWith("seen-gold"), 9],
+    halfway: () => [medalOverallProgress().percent, 50],
+    days3: st => [st.days.length, 3],
+    days7: st => [st.days.length, 7],
+    days30: st => [st.days.length, 30],
+    days100: st => [st.days.length, 100],
+    daily100: () => [achExToday(), 100],
+    daily300: () => [achExToday(), 300],
+    revenge50: (st, ex) => [ex.revenge, 50],
+    familiar: (st, ex) => [achMaxOf(ex.seenCount), 10],
+    familiar30: (st, ex) => [achMaxOf(ex.seenCount), 30],
+    nemesis: (st, ex) => [achMaxOf(ex.wrongBy), 3],
+    allModes: (st, ex) => [(ex.modes[achToday()] || []).filter(m => ["practice", "jissen", "zukan"].includes(m)).length, 3],
+    eeveelution: () => [achHave("seen", ["eevee", "vaporeon", "jolteon", "flareon", "espeon", "umbreon", "leafeon", "glaceon", "sylveon"]), 9],
+    kantoStarters: () => [achHave("correct", ["bulbasaur", "charmander", "squirtle"]), 3],
+    birds: () => [achHave("seen", ["articuno", "zapdos", "moltres"]), 3],
+    mewAndMewtwo: () => [achHave("correct", ["mew", "mewtwo"]), 2],
+    zoromeDex: () => [achHave("seen", ["rhyhorn", "corsola", "swablu", "gabite", "darmanitan", "vivillon", "togedemaru", "zacian", "gimmighoul"]), 9],
+    alphaOmega: () => [achHave("correct", ["bulbasaur", "pecharunt"]), 2],
+    combo10: () => [achNum("bestScore"), 10],
+    combo20: () => [achNum("bestScore"), 20],
+    combo50: () => [achNum("bestScore"), 50],
+    noja10: () => [jsCombo("noja"), 10],
+    noja30: () => [jsCombo("noja"), 30],
+    sec10_10: () => [jsCombo("sec10"), 10],
+    sec10_30: () => [jsCombo("sec10"), 30],
+    ta10: () => [jsBest("ta60"), 10],
+    ta20: () => [jsBest("ta60"), 20],
+    ta30: () => [jsBest("ta60"), 30],
+    oni5: () => [jsCombo("oni"), 5],
+    oni15: () => [jsCombo("oni"), 15]
+};
+
+function achProgressOf(key, st, ex) {
+    const f = ACH_PROGRESS[key];
+    if (!f) return null;
+    try {
+        const r = f(st || achStats(), ex || achEx());
+        const goal = Number(r[1]) || 0;
+        if (!goal) return null;
+        const cur = Math.min(Number(r[0]) || 0, goal);
+        return { cur, goal, ratio: cur / goal, left: goal - cur };
+    } catch (e) { return null; }
+}
+
+// ---------- 隠し実績（取るまで名前を伏せて、ヒントだけ出す） ----------
+const ACH_SECRET_HINTS = {
+    pokemonDay: "ポケモンにとって特別な記念日に遊ぶと…",
+    joya: "1年の最後の日に遊ぶと…",
+    halloween: "おばけが街を歩く夜に遊ぶと…",
+    zoromeTime: "時計の数字がぜんぶそろった瞬間に正解すると…",
+    midnight: "日付が変わったばかりのころに正解すると…",
+    nightOwl: "みんなが寝静まった真夜中に正解すると…",
+    earlyBird: "朝日がのぼるころに正解すると…",
+    noon: "おなかがすくお昼どきに正解すると…",
+    sunday: "週に一度のお休みの日に正解すると…",
+    just151: "累計の正解数が、ポケモンの始まりの数ぴったりになると…",
+    just493: "累計の正解数が、世界を創ったポケモンの番号ぴったりになると…",
+    lucky777: "累計の正解数が、スロットで一番うれしい数ぴったりになると…",
+    miss404: "累計の不正解数が、ページが見つからないときの数字になると…",
+    comeback: "しばらくお休みしてから戻ってくると…",
+    wrongStreak5: "とことん間違え続けると…",
+    kishikaisei: "ピンチからの大逆転を決めると…",
+    palindrome: "前から読んでも後ろから読んでも同じ英語名のポケモンに正解すると…",
+    shortName: "英語名がとても短いポケモンに正解すると…",
+    balanced: "6つの能力がきれいにそろったポケモンに正解すると…",
+    bigHP: "とてもタフなポケモンに正解すると…",
+    speedster: "とても素早いポケモンに正解すると…",
+    smallStep: "とても小さく弱いポケモンに正解すると…",
+    bst600: "ドラゴン使いがあこがれる、ある数字のポケモンに正解すると…",
+    magikarp: "最弱と呼ばれるあのポケモンに正解すると…",
+    ditto: "なんにでも化けるポケモンに出会うと…",
+    mythical: "ある幻のポケモンと出会うと…",
+    buzzer: "時間切れ寸前で正解すると…",
+    fast2s: "問題を見た瞬間に正解すると…",
+    quick10: "とにかく速く、たくさん正解すると…"
+};
+
+// ---------- NEW（新しく取ったもの） ----------
+function collAllOwnedIds() {
+    let owned = {};
+    try { owned = JSON.parse(localStorage.getItem("achievements") || "{}"); } catch (e) {}
+    const ids = Object.keys(owned).filter(k => owned[k] && ACH_TIER[k]).map(k => "a:" + k);
+    medalLoad("medals").forEach(id => ids.push("m:" + id));
+    return ids;
+}
+function collSeenList() {
+    let v = null;
+    try { v = JSON.parse(localStorage.getItem("collSeen") || "null"); } catch (e) {}
+    if (!Array.isArray(v)) {
+        // 初めてのときは、今持っているものを全部「見た」ことにする
+        v = collAllOwnedIds();
+        try { localStorage.setItem("collSeen", JSON.stringify(v)); } catch (e) {}
+    }
+    return v;
+}
+function collUnseenIds() {
+    const seen = new Set(collSeenList());
+    return collAllOwnedIds().filter(id => !seen.has(id));
+}
+function collUnseenCount() { return collUnseenIds().length; }
+function collMarkAllSeen() {
+    try { localStorage.setItem("collSeen", JSON.stringify(collAllOwnedIds())); } catch (e) {}
+}
+
+// ---------- 名乗る称号 ----------
+function collEquipped() {
+    try { return JSON.parse(localStorage.getItem("equippedTitle") || "null"); } catch (e) { return null; }
+}
+function collEquip(title, tier) {
+    try {
+        if (title) localStorage.setItem("equippedTitle", JSON.stringify({ title, tier: tier || "bronze" }));
+        else localStorage.removeItem("equippedTitle");
+    } catch (e) {}
+    medalBadgeUpdate();
+}
+
+// ---------- もうすぐ取れるもの ----------
+// 実績と地方メダルのうち、未獲得で進み具合が大きい順
+function collNearList(limit) {
+    const st = achStats(), ex = achEx();
+    let owned = {};
+    try { owned = JSON.parse(localStorage.getItem("achievements") || "{}"); } catch (e) {}
+    const out = [];
+    const names = Object.assign({}, ACH_EXTRA_NAMES);
+    ACH_LIST.forEach(a => { names[a.key] = a.name; });
+    const icons = { combo10: "🔥", combo20: "🔥", combo50: "🔥" };
+    ACH_LIST.forEach(a => { icons[a.key] = a.icon; });
+
+    for (const key in ACH_PROGRESS) {
+        if (owned[key] || !ACH_TIER[key]) continue;
+        const p = achProgressOf(key, st, ex);
+        if (!p || p.left <= 0) continue;
+        out.push({ kind: "ach", key, icon: icons[key] || "🏆", name: names[key], tier: ACH_TIER[key], ...p });
+    }
+    if (medalRegionLists) {
+        const m = new Set(medalLoad("medals"));
+        MEDAL_REGIONS.forEach(r => MEDAL_TYPES.forEach(t => {
+            const p = medalProgress(r.key, t.key);
+            // その地方・種類でまだ取っていない一番下のメダルだけを候補にする
+            const tier = MEDAL_TIERS.find(tr => !m.has(`${r.key}-${t.key}-${tr.key}`));
+            if (!tier) return;
+            const goal = medalGoal(tier, p.total);
+            const cur = Math.min(p.count, goal);
+            if (cur >= goal) return;
+            out.push({ kind: "medal", key: `${r.key}-${t.key}-${tier.key}`, icon: MEDAL_EMOJI[tier.key],
+                name: `${r.name}・${t.name}の${tier.name}メダル`, title: MEDAL_TITLES[r.key][t.key][tier.key],
+                tier: tier.key, cur, goal, ratio: cur / goal, left: goal - cur });
+        }));
+    }
+    // 進み具合が大きい順。同じなら残りが少ない順
+    out.sort((a, b) => (b.ratio - a.ratio) || (a.left - b.left));
+    return limit ? out.slice(0, limit) : out;
+}
+
+// ---------- あと少しのお知らせ（1つの目標につき1回だけ） ----------
+function achNearCheck() {
+    try {
+        let told = [];
+        try { told = JSON.parse(localStorage.getItem("achNearTold") || "[]"); } catch (e) {}
+        const c = collNearList().find(n => n.goal >= 5 && n.ratio >= 0.8 && !told.includes(n.key));
+        if (!c) return;
+        told.push(c.key);
+        localStorage.setItem("achNearTold", JSON.stringify(told));
+        showToast("🎯", `あと ${c.left} で「${c.kind === "medal" ? c.title : c.name}」`,
+            `${c.name}　${c.cur} / ${c.goal}`, "near");
+    } catch (e) {}
+}

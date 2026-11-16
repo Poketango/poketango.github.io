@@ -1335,3 +1335,114 @@ body.mp-open { overflow: hidden; }
 .mp-card { text-align: left; }
 .mp-name { white-space: nowrap; }
 @media (max-width: 480px) { .mp-panel { padding: 22px 14px 16px; } .mp-name { font-size: 15px; } .mp-name em { font-size: 10px; margin-left: 4px; padding: 1px 6px; } .mp-card { padding: 10px; gap: 10px; } .mp-best b { font-size: 17px; } }
+
+/* =========================================================
+   集めたくなる仕掛け（ランク・もうすぐ・NEW・名乗る称号）
+   ========================================================= */
+a#medal-badge { color: #fff; text-decoration: none; cursor: pointer; flex-wrap: wrap; justify-content: center; align-items: center; }
+a#medal-badge:hover { background: rgba(255, 255, 255, 0.3); }
+#medal-badge .badge-rank { font-size: 12px; opacity: 0.95; }
+#medal-badge .badge-title {
+    padding: 1px 8px; border-radius: 999px; font-size: 12px;
+    background: #fff; color: #8a4b1c;
+}
+#medal-badge .badge-title.silver { color: #4b5563; }
+#medal-badge .badge-title.gold { color: #8a6a00; background: #fff6cc; }
+#medal-badge .badge-new {
+    padding: 1px 7px; border-radius: 999px; font-size: 11px;
+    background: #e3350d; color: #fff; animation: badge-pulse 1.6s ease-in-out infinite;
+}
+@keyframes badge-pulse { 50% { transform: scale(1.12); } }
+
+.medal-toast.clickable { cursor: pointer; }
+.medal-toast.near { border-left-color: #3fbf6f; }
+.medal-toast.rankup {
+    border-left-color: #b36bff;
+    background: linear-gradient(90deg, #f6efff, #fff);
+}
+.medal-toast.gold, .medal-toast.rankup { animation: medal-in 0.35s ease-out, medal-shine 1.2s ease-in-out 0.4s 2; }
+@keyframes medal-shine { 50% { box-shadow: 0 0 0 4px rgba(255, 203, 5, 0.55), 0 8px 24px rgba(31, 41, 51, 0.2); } }
+
+.medal-confetti { position: fixed; inset: 0; pointer-events: none; z-index: 999; overflow: hidden; }
+.medal-confetti i {
+    position: absolute; top: -12px; width: 8px; height: 14px; border-radius: 2px;
+    animation-name: confetti-fall; animation-timing-function: cubic-bezier(.3,.6,.6,1); animation-fill-mode: forwards;
+}
+@keyframes confetti-fall {
+    to { top: 105vh; margin-left: var(--drift); transform: rotate(720deg); opacity: 0.6; }
+}
+
+/* ランク */
+.rank-card {
+    display: flex; gap: 16px; align-items: center;
+    padding: 16px 18px; margin-bottom: 10px; border-radius: 16px;
+    background: linear-gradient(120deg, #2a75bb, #6a4bd1); color: #fff;
+}
+.rank-icon { font-size: 48px; line-height: 1; filter: drop-shadow(0 2px 4px rgba(0,0,0,.25)); }
+.rank-main { flex: 1; min-width: 0; }
+.rank-label { font-size: 12px; opacity: 0.85; }
+.rank-name { font-size: 24px; font-weight: 800; letter-spacing: 0.02em; }
+.rank-card .progress-bar { background: rgba(255,255,255,.3) !important; height: 10px; }
+.rank-next { font-size: 13px; opacity: 0.95; }
+.rank-next b { font-size: 16px; color: #ffe066; }
+.rank-ladder { display: flex; justify-content: space-between; gap: 4px; margin: 0 4px 16px; }
+.rank-ladder span {
+    flex: 1; text-align: center; font-size: 18px; padding: 4px 0; border-radius: 8px;
+    background: #edf0f5; color: #9aa4b2; font-weight: 700;
+}
+.rank-ladder span.done { background: #e7f0fb; }
+.rank-ladder span.now { background: #ffcb05; box-shadow: 0 0 0 2px #ff9f1c inset; }
+
+/* もうすぐ手に入る */
+.near-box { margin: 0 0 16px; padding: 12px 14px; border-radius: 14px; background: #f3fbf5; border: 1px solid #cdebd6; }
+.near-head { font-weight: 800; margin-bottom: 6px; color: #23744a; }
+.near-item { display: flex; align-items: center; gap: 10px; padding: 6px 0; }
+.near-item + .near-item { border-top: 1px dashed #cdebd6; }
+.near-icon { font-size: 22px; width: 28px; text-align: center; }
+.near-body { flex: 1; min-width: 0; }
+.near-name { font-size: 14px; font-weight: 700; }
+.near-name small { display: block; font-weight: 400; color: #5f6b7a; font-size: 11px; }
+.near-body .progress-bar { margin: 4px 0 0; height: 7px; }
+.near-left { font-size: 12px; color: #5f6b7a; white-space: nowrap; }
+.near-left b { font-size: 18px; color: #e3350d; margin: 0 2px; }
+
+/* 名乗る称号・NEW */
+.equip-note { font-size: 12px; color: #5f6b7a; margin: 10px 0 6px; }
+button.title-chip { cursor: pointer; font-family: inherit; text-align: left; transition: transform .15s; }
+button.title-chip:hover { transform: translateY(-1px); }
+.title-chip.equipped { box-shadow: 0 0 0 3px #2a75bb; }
+.new-tag, .eq-tag {
+    display: inline-block; margin-left: 6px; padding: 0 6px; border-radius: 999px;
+    font-size: 10px; font-weight: 800; vertical-align: middle; color: #fff;
+}
+.new-tag { background: #e3350d; }
+.eq-tag { background: #2a75bb; }
+.medal.is-new { animation: badge-pulse 1.6s ease-in-out 3; box-shadow: 0 0 0 2px #e3350d; }
+.achievement.is-new { box-shadow: 0 0 0 3px #e3350d, var(--shadow) !important; }
+
+/* 実績一覧：絞り込み・未解除の見せ方 */
+.ach-filter { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 14px; }
+.ach-filter button {
+    padding: 6px 14px; border-radius: 999px; border: 1px solid #d5dbe5; background: #fff;
+    font-size: 14px; cursor: pointer; font-family: inherit;
+}
+.ach-filter button.on { background: #2a75bb; border-color: #2a75bb; color: #fff; font-weight: 700; }
+.achievement.locked { background: #fff !important; font-weight: 400; }
+.achievement.locked .ach-title { font-weight: 700; color: #3b4652; }
+.achievement.locked .ach-icon { filter: grayscale(1); opacity: .6; }
+.achievement .ach-medal.dim { opacity: .45; }
+.achievement.locked.bronze { border-left-color: #e2c3a3 !important; }
+.achievement.locked.silver { border-left-color: #cfd5dd !important; }
+.achievement.locked.gold { border-left-color: #f1dc8a !important; }
+.achievement.secret { background: repeating-linear-gradient(135deg, #fff, #fff 10px, #f6f7fb 10px, #f6f7fb 20px) !important; }
+.ach-cond, .ach-hint { margin: 6px 0 0; font-size: 14px; color: #5f6b7a; }
+.ach-hint { color: #6a4bd1; }
+.ach-prog { display: flex; align-items: center; gap: 10px; margin-top: 6px; }
+.ach-prog .progress-bar { flex: 1; margin: 0; }
+.ach-prog span { font-size: 13px; color: #5f6b7a; white-space: nowrap; }
+.ach-reward { margin: 6px 0 0; font-size: 12px; color: #9a7b00; }
+@media (max-width: 600px) {
+    .rank-icon { font-size: 38px; }
+    .rank-name { font-size: 20px; }
+    .rank-ladder span { font-size: 14px; }
+}

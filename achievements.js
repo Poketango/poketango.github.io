@@ -1,8 +1,12 @@
 // ===============================
 // 地方ごとのメダル表示（データは medals.js）
 // ===============================
+// 前に見たときから増えたもの（NEW を付ける）
+let COLL_UNSEEN = new Set();
+
 async function renderMedals() {
     await medalReady;
+    COLL_UNSEEN = new Set(collUnseenIds());
 
     const owned = new Set(medalLoad("medals"));
     const board = document.getElementById("medal-board");
@@ -31,14 +35,15 @@ async function renderMedals() {
                 if (has) {
                     got++;
                     tierCount[tier.key]++;
-                    titles.push({ title, tier: tier.key, msg: MEDAL_MESSAGES[region.key][type.key][tier.key], src: MEDAL_SOURCES[region.key][type.key][tier.key] });
+                    titles.push({ isNew: COLL_UNSEEN.has("m:" + id), title, tier: tier.key, msg: MEDAL_MESSAGES[region.key][type.key][tier.key], src: MEDAL_SOURCES[region.key][type.key][tier.key] });
                 }
 
                 const tip = has
                     ? `称号「${title}」`
                     : `あと ${Math.max(goal - p.count, 0)} 匹で獲得`;
 
-                slots += `<div class="medal ${tier.key} ${has ? "got" : ""}" data-tip="${tip}">` +
+                const isNew = has && COLL_UNSEEN.has("m:" + id);
+                slots += `<div class="medal ${tier.key} ${has ? "got" : ""} ${isNew ? "is-new" : ""}" data-tip="${tip}">` +
                          `<span class="m-icon">${MEDAL_EMOJI[tier.key]}</span>${tier.name}・${label}</div>`;
             });
 
@@ -64,7 +69,7 @@ async function renderMedals() {
     for (const key in ACH_TRIVIA) {
         if (!achOwned[key]) continue;
         const a = ACH_LIST.find(x => x.key === key);
-        achTitles.push({ title: a ? a.name : ACH_EXTRA_NAMES[key], tier: ACH_TIER[key] || "bronze",
+        achTitles.push({ isNew: COLL_UNSEEN.has("a:" + key), title: a ? a.name : ACH_EXTRA_NAMES[key], tier: ACH_TIER[key] || "bronze",
                          msg: ACH_TRIVIA[key].msg, src: ACH_TRIVIA[key].src, ach: true });
     }
 
@@ -76,7 +81,40 @@ async function renderMedals() {
     titles.push(...achTitles);
 
     const prog = medalOverallProgress();
+    const rank = medalRank(prog.got);
+    const near = collNearList(4);
+    const eq = collEquipped();
+    const rankPct = Math.round(rank.ratio * 100);
+
     document.getElementById("medal-summary").innerHTML = `
+        <div class="rank-card">
+            <div class="rank-icon">${rank.icon}</div>
+            <div class="rank-main">
+                <div class="rank-label">トレーナーランク ${rank.index + 1} / ${MEDAL_RANKS.length}</div>
+                <div class="rank-name">${rank.name}</div>
+                ${rank.next
+                    ? `<div class="progress-bar rank-bar"><div class="progress-fill" style="width:${rankPct}%"></div></div>
+                       <div class="rank-next">次の「${rank.next.icon}${rank.next.name}」まで、あとメダル <b>${rank.next.need - prog.got}</b> 個</div>`
+                    : `<div class="rank-next">最高ランクに到達！</div>`}
+            </div>
+        </div>
+        <div class="rank-ladder">${MEDAL_RANKS.map((r, i) =>
+            `<span class="${i < rank.index ? "done" : i === rank.index ? "now" : ""}" title="${r.name}（メダル${r.need}個）">${i <= rank.index ? r.icon : "？"}</span>`).join("")}</div>
+
+        ${near.length ? `
+        <div class="near-box">
+            <div class="near-head">🎯 もうすぐ手に入る</div>
+            ${near.map(n => `
+                <div class="near-item ${n.tier}">
+                    <span class="near-icon">${n.icon}</span>
+                    <div class="near-body">
+                        <div class="near-name">${n.kind === "medal" ? `称号「${n.title}」<small>${n.name}</small>` : n.name}</div>
+                        <div class="progress-bar"><div class="progress-fill" style="width:${Math.floor(n.ratio * 100)}%"></div></div>
+                    </div>
+                    <span class="near-left">あと<b>${n.left}</b></span>
+                </div>`).join("")}
+        </div>` : ""}
+
         <div class="overall-progress">
             <div class="overall-head"><span>全メダルの進捗</span><span>${prog.percent}%（${prog.got} / ${prog.total}）</span></div>
             <div class="progress-bar"><div class="progress-fill" style="width:${prog.percent}%"></div></div>
@@ -89,15 +127,34 @@ async function renderMedals() {
             <span class="pill">🥈 ${tierCount.silver}</span>
             <span class="pill">🥉 ${tierCount.bronze}</span>
         </div>
+        ${titles.length ? `<p class="equip-note">称号を押すと、その称号を名乗れます。名乗った称号は、どのページでも上のバッジに表示されます。</p>` : ""}
         ${titles.length
             ? `<div class="title-rows">${titles.map(t =>
-                `<div class="title-row"><span class="title-chip ${t.tier}">${MEDAL_EMOJI[t.tier]} ${t.title}${t.ach ? '<small class="ach-tag">実績</small>' : ""}</span><span class="title-msg">${t.msg}<a class="title-src" href="${t.src}" target="_blank" rel="noopener">出典</a></span></div>`
+                `<div class="title-row"><button type="button" class="title-chip ${t.tier} ${eq && eq.title === t.title ? "equipped" : ""}" data-title="${t.title}" data-tier="${t.tier}">${MEDAL_EMOJI[t.tier]} ${t.title}${t.ach ? '<small class="ach-tag">実績</small>' : ""}${t.isNew ? '<small class="new-tag">NEW</small>' : ""}${eq && eq.title === t.title ? '<small class="eq-tag">名乗り中</small>' : ""}</button><span class="title-msg">${t.msg}<a class="title-src" href="${t.src}" target="_blank" rel="noopener">出典</a></span></div>`
               ).join("")}</div>`
             : `<p class="empty-note">まだ称号はありません。練習モードか実践モードでポケモンに出会ってみましょう。</p>`}
     `;
+
+    // 称号を名乗る（もう一度押すとやめる）
+    document.querySelectorAll("#medal-summary .title-chip").forEach(btn => {
+        btn.addEventListener("click", () => {
+            const cur = collEquipped();
+            const title = btn.dataset.title;
+            if (cur && cur.title === title) collEquip(null);
+            else collEquip(title, btn.dataset.tier);
+            const now = collEquipped();
+            document.querySelectorAll("#medal-summary .title-chip").forEach(b => {
+                const on = !!now && b.dataset.title === now.title;
+                b.classList.toggle("equipped", on);
+                const tag = b.querySelector(".eq-tag");
+                if (on && !tag) b.insertAdjacentHTML("beforeend", '<small class="eq-tag">名乗り中</small>');
+                if (!on && tag) tag.remove();
+            });
+        });
+    });
 }
 
-renderMedals();
+const medalsDone = renderMedals();
 
 // ===============================
 // 連続正解進捗
@@ -170,6 +227,10 @@ async function renderAchievements() {
     ACH_LIST.forEach(a => all.push(a));
 
     const got = all.filter(a => achievements[a.key]);
+    const st = achStats(), ex = achEx();
+    const progOf = {};
+    all.forEach(a => { progOf[a.key] = achProgressOf(a.key, st, ex); });
+
     const head = document.createElement("h2");
     head.className = "ach-head";
     const mc = achMedalCount();
@@ -177,26 +238,76 @@ async function renderAchievements() {
         `<span class="ach-medals">🥇 ${mc.gold}　🥈 ${mc.silver}　🥉 ${mc.bronze}</span>`;
     list.appendChild(head);
 
-    // 解除済みを先に、未解除はあとに
-    [...got, ...all.filter(a => !achievements[a.key])].forEach(a => {
+    // 絞り込み
+    const filters = [["all", "すべて"], ["near", "もうすぐ"], ["locked", "未解除"], ["got", "解除済み"], ["secret", "隠し実績"]];
+    const bar = document.createElement("div");
+    bar.className = "ach-filter";
+    bar.innerHTML = filters.map(([k, n], i) => `<button type="button" data-f="${k}" class="${i === 0 ? "on" : ""}">${n}</button>`).join("");
+    list.appendChild(bar);
+
+    // 解除済み（新しいもの優先）→ 進み具合の大きい未解除 → 残り
+    const locked = all.filter(a => !achievements[a.key]);
+    locked.sort((x, y) => ((progOf[y.key]?.ratio) || 0) - ((progOf[x.key]?.ratio) || 0));
+    const gotSorted = [...got].sort((x, y) => (COLL_UNSEEN.has("a:" + y.key) ? 1 : 0) - (COLL_UNSEEN.has("a:" + x.key) ? 1 : 0));
+
+    const cards = [];
+    [...gotSorted, ...locked].forEach(a => {
         const has = !!achievements[a.key];
+        const tier = ACH_TIER[a.key] || "bronze";
+        const secret = !has && !!ACH_SECRET_HINTS[a.key];
+        const p = progOf[a.key];
         const div = document.createElement("div");
-        div.classList.add("achievement");
-        if (has) div.classList.add("unlocked", ACH_TIER[a.key] || "bronze");
+        div.classList.add("achievement", tier);
+        div.dataset.state = has ? "got" : "locked";
+        if (secret || (ACH_SECRET_HINTS[a.key])) div.dataset.secret = "1";
+        if (!has && p && p.ratio >= 0.5) div.dataset.near = "1";
 
         if (has) {
+            div.classList.add("unlocked");
+            const isNew = COLL_UNSEEN.has("a:" + a.key);
+            if (isNew) div.classList.add("is-new");
             div.innerHTML =
                 `<div class="ach-title"><span class="ach-icon">${a.icon || "🏆"}</span>${a.name}` +
-                `<span class="ach-medal">${MEDAL_EMOJI[ACH_TIER[a.key] || "bronze"]}</span></div>` +
+                (isNew ? `<span class="new-tag">NEW</span>` : "") +
+                `<span class="ach-medal">${MEDAL_EMOJI[tier]}</span></div>` +
                 `<p class="ach-secret">${a.secret}</p>` +
                 (ACH_TRIVIA[a.key] ? `<p class="ach-trivia">${ACH_TRIVIA[a.key].msg}<a class="title-src" href="${ACH_TRIVIA[a.key].src}" target="_blank" rel="noopener">出典</a></p>` : "");
             div.dataset.desc = a.desc;
-        } else {
+        } else if (secret) {
+            div.classList.add("locked", "secret");
             div.innerHTML =
-                `<div class="ach-title"><span class="ach-icon">🔒</span>？？？</div>`;
+                `<div class="ach-title"><span class="ach-icon">❓</span>？？？<span class="ach-medal dim">${MEDAL_EMOJI[tier]}</span></div>` +
+                `<p class="ach-hint">ヒント：${ACH_SECRET_HINTS[a.key]}</p>`;
+        } else {
+            div.classList.add("locked");
+            div.innerHTML =
+                `<div class="ach-title"><span class="ach-icon">${a.icon || "🏆"}</span>${a.name}<span class="ach-medal dim">${MEDAL_EMOJI[tier]}</span></div>` +
+                `<p class="ach-cond">${a.desc}</p>` +
+                (p ? `<div class="ach-prog"><div class="progress-bar"><div class="progress-fill" style="width:${Math.floor(p.ratio * 100)}%"></div></div><span>${p.cur} / ${p.goal}</span></div>` : "") +
+                `<p class="ach-reward">🎁 解除すると称号と、とっておきのポケモン雑学がもらえる</p>`;
         }
+        cards.push(div);
         list.appendChild(div);
+    });
+
+    bar.addEventListener("click", e => {
+        const b = e.target.closest("button");
+        if (!b) return;
+        bar.querySelectorAll("button").forEach(x => x.classList.toggle("on", x === b));
+        const f = b.dataset.f;
+        cards.forEach(c => {
+            const show = f === "all" ||
+                (f === "got" && c.dataset.state === "got") ||
+                (f === "locked" && c.dataset.state === "locked") ||
+                (f === "near" && c.dataset.near === "1") ||
+                (f === "secret" && c.dataset.secret === "1");
+            c.style.display = show ? "" : "none";
+        });
     });
 }
 
-renderAchievements();
+// メダルと実績を両方描いてから、NEW を「見た」にする
+Promise.all([medalsDone, renderAchievements()]).then(() => {
+    collMarkAllSeen();
+    medalBadgeUpdate();
+});
