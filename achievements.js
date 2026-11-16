@@ -103,7 +103,7 @@ async function renderMedals() {
 
         ${near.length ? `
         <div class="near-box">
-            <div class="near-head">🎯 もうすぐ手に入る</div>
+            <div class="near-head">${pkIcon("poke-radar")}もうすぐ手に入る</div>
             ${near.map(n => `
                 <div class="near-item ${n.tier}">
                     <span class="near-icon">${n.icon}</span>
@@ -123,9 +123,9 @@ async function renderMedals() {
         <div class="summary-counts">
             <span>獲得メダル ${owned.size} / ${total}</span>
             <span>称号 ${titles.length}</span>
-            <span class="pill">🥇 ${tierCount.gold}</span>
-            <span class="pill">🥈 ${tierCount.silver}</span>
-            <span class="pill">🥉 ${tierCount.bronze}</span>
+            <span class="pill">${MEDAL_EMOJI.gold} ${tierCount.gold}</span>
+            <span class="pill">${MEDAL_EMOJI.silver} ${tierCount.silver}</span>
+            <span class="pill">${MEDAL_EMOJI.bronze} ${tierCount.bronze}</span>
         </div>
         ${titles.length ? `<p class="equip-note">称号を押すと、その称号を名乗れます。名乗った称号は、どのページでも上のバッジに表示されます。</p>` : ""}
         ${titles.length
@@ -217,7 +217,7 @@ async function renderAchievements() {
 
     // 連続正解の実績＋medals.js の実績をまとめる
     // （ジョウト・ホウエンのコンプ実績は金メダルに置き換えたので、取った人にだけ表示）
-    const icons = { combo10: "🔥", combo20: "🔥", combo50: "🔥", kantoComplete: "🏆", johtoComplete: "🏆", hoennComplete: "🏆" };
+    const icons = ACH_ICON_IMG;
     const all = [];
     for (const key in achievementInfo) {
         const always = key.startsWith("combo");
@@ -235,7 +235,7 @@ async function renderAchievements() {
     head.className = "ach-head";
     const mc = achMedalCount();
     head.innerHTML = `実績 ${got.length} / ${all.length}` +
-        `<span class="ach-medals">🥇 ${mc.gold}　🥈 ${mc.silver}　🥉 ${mc.bronze}</span>`;
+        `<span class="ach-medals">${MEDAL_EMOJI.gold} ${mc.gold}　${MEDAL_EMOJI.silver} ${mc.silver}　${MEDAL_EMOJI.bronze} ${mc.bronze}</span>`;
     list.appendChild(head);
 
     // 絞り込み
@@ -267,7 +267,7 @@ async function renderAchievements() {
             const isNew = COLL_UNSEEN.has("a:" + a.key);
             if (isNew) div.classList.add("is-new");
             div.innerHTML =
-                `<div class="ach-title"><span class="ach-icon">${a.icon || "🏆"}</span>${a.name}` +
+                `<div class="ach-title"><span class="ach-icon">${a.icon || pkIcon("gold-bottle-cap")}</span>${a.name}` +
                 (isNew ? `<span class="new-tag">NEW</span>` : "") +
                 `<span class="ach-medal">${MEDAL_EMOJI[tier]}</span></div>` +
                 `<p class="ach-secret">${a.secret}</p>` +
@@ -276,15 +276,15 @@ async function renderAchievements() {
         } else if (secret) {
             div.classList.add("locked", "secret");
             div.innerHTML =
-                `<div class="ach-title"><span class="ach-icon">❓</span>？？？<span class="ach-medal dim">${MEDAL_EMOJI[tier]}</span></div>` +
+                `<div class="ach-title"><span class="ach-icon">${pkIcon("mystery-egg", "ふしぎなタマゴ")}</span>？？？<span class="ach-medal dim">${MEDAL_EMOJI[tier]}</span></div>` +
                 `<p class="ach-hint">ヒント：${ACH_SECRET_HINTS[a.key]}</p>`;
         } else {
             div.classList.add("locked");
             div.innerHTML =
-                `<div class="ach-title"><span class="ach-icon">${a.icon || "🏆"}</span>${a.name}<span class="ach-medal dim">${MEDAL_EMOJI[tier]}</span></div>` +
+                `<div class="ach-title"><span class="ach-icon">${a.icon || pkIcon("gold-bottle-cap")}</span>${a.name}<span class="ach-medal dim">${MEDAL_EMOJI[tier]}</span></div>` +
                 `<p class="ach-cond">${a.desc}</p>` +
                 (p ? `<div class="ach-prog"><div class="progress-bar"><div class="progress-fill" style="width:${Math.floor(p.ratio * 100)}%"></div></div><span>${p.cur} / ${p.goal}</span></div>` : "") +
-                `<p class="ach-reward">🎁 解除すると称号と、とっておきのポケモン雑学がもらえる</p>`;
+                `<p class="ach-reward">${tier === "gold" ? "解除すると称号と、いちばんマニアックな雑学が読める" : tier === "silver" ? "解除すると称号と、知る人ぞ知る雑学が読める" : "解除すると称号と、ポケモン雑学が読める"}</p>`;
         }
         cards.push(div);
         list.appendChild(div);

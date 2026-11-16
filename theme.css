@@ -1816,3 +1816,39 @@ h2 img.hi { width: 28px; height: 28px; object-fit: contain; image-rendering: pix
 .mp-x { padding: 0 !important; margin: 0 !important; display: grid; place-items: center; line-height: 1; }
 .hrb-icon img, .rk-hero-icon img { object-fit: contain; image-rendering: pixelated; }
 .hrb-icon, .rk-hero-icon { background: #fff !important; border: 2px solid #e6c94a; }
+
+/* =========================================================
+   実績ページ：ゲームの道具の絵のアイコン（2026-11-16）
+   ========================================================= */
+img.pk-ic { width: 1.3em; height: 1.3em; object-fit: contain; image-rendering: pixelated; vertical-align: -0.3em; }
+img.pk-ic.poke { width: 1.7em; height: 1.7em; vertical-align: -0.5em; margin: -0.2em 0; }
+.ach-icon { display: inline-grid; place-items: center; width: 34px; height: 34px; flex: none; border-radius: 8px; background: #f3f5f7; border: 2px solid var(--edge); }
+.ach-icon img.pk-ic { width: 24px; height: 24px; vertical-align: 0; margin: 0; }
+.ach-icon img.pk-ic.poke { width: 34px; height: 34px; }
+.achievement.locked .ach-icon img { filter: grayscale(1); opacity: .55; }
+.ach-medal img.pk-ic { width: 22px; height: 22px; }
+.ach-medal.dim img { filter: grayscale(1); opacity: .45; }
+.rank-icon { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 12px; background: #fff; flex: none; }
+.rank-icon img.pk-ic { width: 44px; height: 44px; vertical-align: 0; }
+.rank-ladder span { display: grid; place-items: center; min-height: 34px; }
+.rank-ladder span img.pk-ic { width: 24px; height: 24px; vertical-align: 0; }
+.rank-ladder span:not(.done):not(.now) img { filter: grayscale(1); opacity: .5; }
+.near-icon img.pk-ic { width: 26px; height: 26px; }
+.near-head img.pk-ic { margin-right: 6px; }
+.medal .m-icon img.pk-ic { width: 22px; height: 22px; vertical-align: 0; }
+.medal-toast-icon img.pk-ic { width: 32px; height: 32px; vertical-align: 0; }
+#medal-badge img.pk-ic { width: 16px; height: 16px; vertical-align: -3px; margin-right: 2px; }
+.title-chip img.pk-ic { width: 18px; height: 18px; vertical-align: -3px; }
+
+/* 実績と雑学の説明 */
+#ach-intro { max-width: 960px; margin: 0 auto 16px; padding: 14px 18px; box-sizing: border-box; background: var(--paper); border: 2px solid var(--edge); border-radius: var(--radius); }
+#ach-intro .ai-lead { margin: 0 0 10px; font-size: 16px; font-weight: 700; }
+#ach-intro .ai-lead b { color: var(--red); }
+.ai-tiers { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.ai-tiers li { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 10px; font-size: 14px; line-height: 1.5; }
+.ai-tiers li img.pk-ic { width: 26px; height: 26px; flex: none; vertical-align: 0; }
+.ai-tiers li b { margin-right: 8px; }
+.ai-tiers .bronze { background: #fbefe4; } .ai-tiers .silver { background: #f1f3f6; } .ai-tiers .gold { background: #fff6cc; }
+#ach-intro .ai-note { margin: 10px 0 0; font-size: 13px; color: var(--sub); }
+@media (max-width: 1000px) { #ach-intro { margin-left: 16px; margin-right: 16px; } }
+.achievement.locked .ach-icon img { filter: grayscale(.5); opacity: .8; }

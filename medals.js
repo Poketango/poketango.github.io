@@ -1,3 +1,8 @@
+// ---------- アイコン（ゲームの道具とポケモンの絵） ----------
+function pkIcon(name, alt, poke) {
+    const src = poke ? "/pokemon_sprites/" + name + ".png" : "/home_icons/items/" + name + ".png";
+    return '<img class="pk-ic' + (poke ? " poke" : "") + '" src="' + src + '" alt="' + (alt || "") + '" width="24" height="24">';
+}
 // =========================================================
 // メダル・称号システム（medals.js）
 // 練習モード・実践モード・実績一覧で共通して使う
@@ -24,8 +29,8 @@ const MEDAL_REGIONS = [
 
 // 記録の種類
 const MEDAL_TYPES = [
-    { key: "seen",    name: "遭遇", icon: "👀" },
-    { key: "correct", name: "正解", icon: "✍️" }
+    { key: "seen",    name: "遭遇", icon: pkIcon("poke-radar") },
+    { key: "correct", name: "正解", icon: pkIcon("tm-normal") }
 ];
 
 // メダルの段階（goal が "all" のときは地方コンプリート）
@@ -288,7 +293,7 @@ function medalRecordCorrect(name) { medalRecord("correct", name); }
 // ---------------------------------------------------------
 // メダル獲得のポップアップ
 // ---------------------------------------------------------
-const MEDAL_EMOJI = { bronze: "🥉", silver: "🥈", gold: "🥇" };
+const MEDAL_EMOJI = { bronze: pkIcon("relic-copper", "銅メダル"), silver: pkIcon("relic-silver", "銀メダル"), gold: pkIcon("relic-gold", "金メダル") };
 let medalToastBox = null;
 
 function medalToast(m) {
@@ -382,9 +387,9 @@ function medalBadgeUpdate() {
     badge.innerHTML =
         (eq ? `<span class="badge-title ${eq.tier}">${MEDAL_EMOJI[eq.tier] || ""}${eq.title}</span>` : "") +
         `<span class="badge-rank">${rank.icon}${rank.name}</span>` +
-        `<span>🥇${count.gold}</span>` +
-        `<span>🥈${count.silver}</span>` +
-        `<span>🥉${count.bronze}</span>` +
+        `<span>${MEDAL_EMOJI.gold}${count.gold}</span>` +
+        `<span>${MEDAL_EMOJI.silver}${count.silver}</span>` +
+        `<span>${MEDAL_EMOJI.bronze}${count.bronze}</span>` +
         `<span class="badge-progress"><span class="badge-bar"><span style="width:${prog.percent}%"></span></span>${prog.percent}%</span>` +
         (unseen ? `<span class="badge-new">NEW ${unseen}</span>` : "");
 
@@ -1026,6 +1031,101 @@ Object.assign(ACH_TRIVIA, {
 });
 
 
+// 実績のアイコンを絵にする
+const ACH_ICON_IMG = {
+    firstCorrect: pkIcon("miracle-seed"),
+    firstMiss: pkIcon("potion"),
+    correct100: pkIcon("rare-candy"),
+    correct500: pkIcon("exp-candy-xl"),
+    correct1000: pkIcon("exp-charm"),
+    miss100: pkIcon("revive"),
+    seen100: pkIcon("poke-radar"),
+    seen500: pkIcon("town-map"),
+    seenAll: pkIcon("bicycle"),
+    correctAll: pkIcon("gold-bottle-cap"),
+    zukan50: pkIcon("unown-report"),
+    zukan300: pkIcon("journal"),
+    practice10: pkIcon("tm-normal"),
+    medal10: pkIcon("medal-box"),
+    firstGold: pkIcon("relic-gold"),
+    allBronze: pkIcon("relic-copper"),
+    days3: pkIcon("leftovers"),
+    days7: pkIcon("lucky-egg"),
+    nightOwl: pkIcon("noctowl", "", true),
+    earlyBird: pkIcon("torchic", "", true),
+    longWord: pkIcon("wide-lens"),
+    mythical: pkIcon("cherish-ball"),
+    pokemonDay: pkIcon("poke-doll"),
+    joya: pkIcon("clear-bell"),
+    halloween: pkIcon("pumpkaboo", "", true),
+    zoromeTime: pkIcon("metronome"),
+    sunday: pkIcon("sun-stone"),
+    noon: pkIcon("lava-cookie"),
+    midnight: pkIcon("moon-stone"),
+    days30: pkIcon("soothe-bell"),
+    days100: pkIcon("sacred-ash"),
+    comeback: pkIcon("escape-rope"),
+    just151: pkIcon("mew", "", true),
+    just493: pkIcon("arceus", "", true),
+    lucky777: pkIcon("amulet-coin"),
+    miss404: pkIcon("porygon", "", true),
+    correct1025: pkIcon("tm-case"),
+    daily100: pkIcon("macho-brace"),
+    daily300: pkIcon("fire-stone"),
+    wrongStreak5: pkIcon("lagging-tail"),
+    revenge: pkIcon("razor-claw"),
+    revenge50: pkIcon("focus-sash"),
+    nemesis: pkIcon("red-chain"),
+    familiar: pkIcon("friend-ball"),
+    familiar30: pkIcon("love-ball"),
+    quick10: pkIcon("quick-claw"),
+    kishikaisei: pkIcon("max-revive"),
+    pikachu: pkIcon("pikachu", "", true),
+    magikarp: pkIcon("magikarp", "", true),
+    ditto: pkIcon("ditto", "", true),
+    eeveelution: pkIcon("eevee", "", true),
+    kantoStarters: pkIcon("bulbasaur", "", true),
+    birds: pkIcon("articuno", "", true),
+    mewAndMewtwo: pkIcon("mewtwo", "", true),
+    palindrome: pkIcon("repeat-ball"),
+    shortName: pkIcon("muk", "", true),
+    longName: pkIcon("crabominable", "", true),
+    zoromeDex: pkIcon("level-ball"),
+    alphaOmega: pkIcon("dream-ball"),
+    bigHP: pkIcon("blissey", "", true),
+    speedster: pkIcon("fast-ball"),
+    bst600: pkIcon("dragonite", "", true),
+    smallStep: pkIcon("caterpie", "", true),
+    balanced: pkIcon("pp-up"),
+    zukanFav: pkIcon("luvdisc", "", true),
+    zukan1000: pkIcon("weedle", "", true),
+    zukanAll: pkIcon("rotom", "", true),
+    allModes: pkIcon("expert-belt"),
+    allSilver: pkIcon("relic-silver"),
+    halfway: pkIcon("dusk-ball"),
+    allGold: pkIcon("relic-crown"),
+    master: pkIcon("master-ball"),
+    practice30: pkIcon("muscle-band"),
+    noja10: pkIcon("silph-scope"),
+    noja30: pkIcon("chatot", "", true),
+    sec10_10: pkIcon("quick-ball"),
+    sec10_30: pkIcon("scope-lens"),
+    ta10: pkIcon("cheri-berry"),
+    ta20: pkIcon("deoxys", "", true),
+    ta30: pkIcon("regieleki", "", true),
+    oni5: pkIcon("kings-rock"),
+    oni15: pkIcon("zoom-lens"),
+    fast2s: pkIcon("lansat-berry"),
+    buzzer: pkIcon("focus-band"),
+    combo10: pkIcon("flame-orb"),
+    combo20: pkIcon("flame-orb"),
+    combo50: pkIcon("fire-stone"),
+    kantoComplete: pkIcon("gold-bottle-cap"),
+    johtoComplete: pkIcon("gold-bottle-cap"),
+    hoennComplete: pkIcon("gold-bottle-cap")
+};
+ACH_LIST.forEach(a => { if (ACH_ICON_IMG[a.key]) a.icon = ACH_ICON_IMG[a.key]; });
+
 // =========================================================
 // 集めたくなる仕掛け
 // ・トレーナーランク（メダルの合計数で上がっていく）
@@ -1038,16 +1138,16 @@ Object.assign(ACH_TRIVIA, {
 
 // ---------- トレーナーランク ----------
 const MEDAL_RANKS = [
-    { need: 0,   icon: "🥚", name: "たまごトレーナー" },
-    { need: 3,   icon: "🌱", name: "かけだしトレーナー" },
-    { need: 8,   icon: "🎒", name: "たびだちトレーナー" },
-    { need: 15,  icon: "🏅", name: "ジムチャレンジャー" },
-    { need: 25,  icon: "🎖️", name: "バッジハンター" },
-    { need: 40,  icon: "⭐", name: "エリートトレーナー" },
-    { need: 60,  icon: "🏟️", name: "ジムリーダー級" },
-    { need: 80,  icon: "🔥", name: "四天王級" },
-    { need: 105, icon: "👑", name: "チャンピオン級" },
-    { need: 130, icon: "🌈", name: "ポケモンマスター" }
+    { need: 0,   icon: pkIcon("egg"), name: "たまごトレーナー" },
+    { need: 3,   icon: pkIcon("poke-ball"), name: "かけだしトレーナー" },
+    { need: 8,   icon: pkIcon("bicycle"), name: "たびだちトレーナー" },
+    { need: 15,  icon: pkIcon("great-ball"), name: "ジムチャレンジャー" },
+    { need: 25,  icon: pkIcon("coin-case"), name: "バッジハンター" },
+    { need: 40,  icon: pkIcon("ultra-ball"), name: "エリートトレーナー" },
+    { need: 60,  icon: pkIcon("tm-case"), name: "ジムリーダー級" },
+    { need: 80,  icon: pkIcon("expert-belt"), name: "四天王級" },
+    { need: 105, icon: pkIcon("gold-bottle-cap"), name: "チャンピオン級" },
+    { need: 130, icon: pkIcon("master-ball"), name: "ポケモンマスター" }
 ];
 
 function medalRank(got) {
@@ -1232,14 +1332,14 @@ function collNearList(limit) {
     const out = [];
     const names = Object.assign({}, ACH_EXTRA_NAMES);
     ACH_LIST.forEach(a => { names[a.key] = a.name; });
-    const icons = { combo10: "🔥", combo20: "🔥", combo50: "🔥" };
+    const icons = Object.assign({}, ACH_ICON_IMG);
     ACH_LIST.forEach(a => { icons[a.key] = a.icon; });
 
     for (const key in ACH_PROGRESS) {
         if (owned[key] || !ACH_TIER[key]) continue;
         const p = achProgressOf(key, st, ex);
         if (!p || p.left <= 0) continue;
-        out.push({ kind: "ach", key, icon: icons[key] || "🏆", name: names[key], tier: ACH_TIER[key], ...p });
+        out.push({ kind: "ach", key, icon: icons[key] || pkIcon("gold-bottle-cap"), name: names[key], tier: ACH_TIER[key], ...p });
     }
     if (medalRegionLists) {
         const m = new Set(medalLoad("medals"));
@@ -1270,7 +1370,7 @@ function achNearCheck() {
         if (!c) return;
         told.push(c.key);
         localStorage.setItem("achNearTold", JSON.stringify(told));
-        showToast("🎯", `あと ${c.left} で「${c.kind === "medal" ? c.title : c.name}」`,
+        showToast(pkIcon("poke-radar"), `あと ${c.left} で「${c.kind === "medal" ? c.title : c.name}」`,
             `${c.name}　${c.cur} / ${c.goal}`, "near");
     } catch (e) {}
 }
