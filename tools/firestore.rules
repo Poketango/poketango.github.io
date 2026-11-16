@@ -1,0 +1,55 @@
+// Firebase（monspe-ranking）の Firestore セキュリティルールの控え。変えたらコンソールの「ルール」に貼って公開する
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // 今の週の番号（日本時間の月曜0時で切り替わる）
+    function weekNow() {
+      return string(int(math.floor((request.time.toMillis() + 291600000) / 604800000.0)));
+    }
+
+    // ニックネームの決まり：1〜10文字、数字の4つ並び・URL・メールアドレス・悪口は不可
+    function okName(n) {
+      return n is string && n.size() >= 1 && n.size() <= 10
+        && !n.matches('.*[0-9０-９]{4,}.*')
+        && !n.matches('(?i).*(http|www|[.]com|@|＠|死ね|しね|シネ|ころす|殺す|きもい|キモい|うざい|ちんこ|まんこ|うんこ|fuck|shit|sex).*');
+    }
+
+    // スタートから58秒以上、150秒以内に送られた記録だけ受け付ける
+    function runOk(uid) {
+      let s = get(/databases/$(database)/documents/runs/$(uid)).data.start;
+      return request.time >= s + duration.value(58, 's')
+          && request.time <= s + duration.value(150, 's');
+    }
+
+    function okScore(d) {
+      return d.keys().hasOnly(['name', 'score', 'at'])
+        && okName(d.name)
+        && d.score is int && d.score >= 1 && d.score <= 50
+        && d.at == request.time;
+    }
+
+    // タイムアタックのスタート時刻（本人だけが書ける）
+    match /runs/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow create, update: if request.auth != null && request.auth.uid == uid
+        && request.resource.data.keys().hasOnly(['start'])
+        && request.resource.data.start == request.time;
+    }
+
+    // 週間ランキング（だれでも見られる。書けるのは自分の枠だけ）
+    match /ta60/{week}/scores/{uid} {
+      allow read: if true;
+      allow create: if request.auth != null && request.auth.uid == uid
+        && week == weekNow()
+        && okScore(request.resource.data)
+        && runOk(uid);
+      allow update: if request.auth != null && request.auth.uid == uid
+        && week == weekNow()
+        && okScore(request.resource.data)
+        && request.resource.data.score >= resource.data.score
+        && runOk(uid);
+      allow delete: if false;
+    }
+  }
+}

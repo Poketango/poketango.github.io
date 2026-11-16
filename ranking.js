@@ -97,7 +97,7 @@ async function submit(name, score) {
     const uid = await ensureUser();
     const ref = doc(db, "ta60", weekId(), "scores", uid);
     const old = await getDoc(ref);
-    if (old.exists() && old.data().score > score) {
+    if (old.exists() && old.data().score >= score) {
         return { ok: false, reason: "keep", score: old.data().score, rank: await rankOf(old.data().score) };
     }
     // スタートから58秒たっていなければ待つ
