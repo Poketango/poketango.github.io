@@ -1814,3 +1814,5 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--blue); outline-
 .mp-icon { background: #f3f5f7 !important; border: 2px solid var(--edge); }
 h2 img.hi { width: 28px; height: 28px; object-fit: contain; image-rendering: pixelated; vertical-align: -6px; margin-right: 8px; }
 .mp-x { padding: 0 !important; margin: 0 !important; display: grid; place-items: center; line-height: 1; }
+.hrb-icon img, .rk-hero-icon img { object-fit: contain; image-rendering: pixelated; }
+.hrb-icon, .rk-hero-icon { background: #fff !important; border: 2px solid #e6c94a; }
