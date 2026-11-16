@@ -109,7 +109,7 @@ def link_pokemon_pages():
         s = open(path, encoding="utf-8").read()
         s = re.sub(r'<section class="card" id="zatsugaku">.*?</section>', "", s, flags=re.S)
         items = "".join(f'<li><a href="../zatsugaku/{a["slug"]}.html">{E(a["title"])}</a></li>' for a in lst)
-        block = f'<section class="card" id="zatsugaku"><h2>⛏️ このポケモンが出てくる雑学コラム</h2><ul>{items}</ul></section>'
+        block = f'<section class="card" id="zatsugaku"><h2><img class="hi" src="/home_icons/items/explorer-kit.png" alt="" width="28" height="28">このポケモンが出てくる雑学コラム</h2><ul>{items}</ul></section>'
         anchor = '<section class="card" id="faq">'
         s = s.replace(anchor, block + anchor, 1) if anchor in s else s.replace("</main>", block + "</main>", 1)
         open(path, "w", encoding="utf-8").write(s)
