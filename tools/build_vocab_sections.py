@@ -97,7 +97,7 @@ def section(name_ja, words, text):
     rows = table(words)
     gs = grammar(text)
     if len(rows) < 2 and not gs: return None
-    h = '<section class="card" id="words"><h2>📝 この図鑑文に出てくる英単語</h2>\n'
+    h = '<section class="card" id="words"><h2><img class="hi" src="/home_icons/items/tm.png" alt="" width="28" height="28">この図鑑文に出てくる英単語</h2>\n'
     if rows:
         h += '<table class="vt"><tr><th>英単語</th><th>意味</th><th>品詞</th><th>レベル</th></tr>\n'
         for w, m, pos, lv in rows:
@@ -124,6 +124,6 @@ if __name__ == '__main__':
         if sample and key == sample: print(text); print(sec)
         if dry: n += 1; continue
         s = s.replace('<section class="card" id="origin">', sec + '<section class="card" id="origin">', 1) if 'id="origin"' in s else s.replace('<section class="card" id="stats">', sec + '<section class="card" id="stats">', 1)
-        s = s.replace('<a href="#dex">📖 図鑑</a>', '<a href="#dex">📖 図鑑</a><a href="#words">📝 単語</a>', 1)
+        s = s.replace('<a href="#dex">図鑑</a>', '<a href="#dex">図鑑</a><a href="#words">単語</a>', 1)
         open(p, 'w', encoding='utf-8').write(s); n += 1
     print('pages', n, 'without grammar', nog)

@@ -4,11 +4,11 @@
 // =========================================================
 (function () {
     const MODES = [
-        { id: "normal", icon: "🔥", name: "ノーマル", desc: "1回まちがえたら終わり。何問つづけて正解できる？", tag: "定番" },
-        { id: "noja",   icon: "🇬🇧", name: "日本語なし", desc: "日本語訳なし。英文だけで答えを考える", tag: "中級" },
-        { id: "sec10",  icon: "⏱️", name: "10秒サバイバル", desc: "1問10秒。時間切れでも終わり", tag: "スピード" },
-        { id: "ta60",   icon: "⚡", name: "60秒タイムアタック", desc: "60秒で何問とけるか。まちがえても続く", tag: "スコア" },
-        { id: "oni",    icon: "👹", name: "鬼", desc: "日本語なし＋1問8秒。上級者向け", tag: "最難関" }
+        { id: "normal", icon: "poke-ball", name: "ノーマル", desc: "1回まちがえたら終わり。何問つづけて正解できる？", tag: "定番" },
+        { id: "noja",   icon: "great-ball", name: "日本語なし", desc: "日本語訳なし。英文だけで答えを考える", tag: "中級" },
+        { id: "sec10",  icon: "quick-ball", name: "10秒サバイバル", desc: "1問10秒。時間切れでも終わり", tag: "スピード" },
+        { id: "ta60",   icon: "timer-ball", name: "60秒タイムアタック", desc: "60秒で何問とけるか。まちがえても続く", tag: "スコア" },
+        { id: "oni",    icon: "master-ball", name: "鬼", desc: "日本語なし＋1問8秒。上級者向け", tag: "最難関" }
     ];
     const bestKey = m => m === "normal" ? "bestScore" : "bestScore_" + m;
     function best(m) { try { return Number(localStorage.getItem(bestKey(m)) || 0); } catch (e) { return 0; } }
@@ -25,7 +25,7 @@
             '<h2 id="mp-title">実践モード</h2><p class="mp-lead">挑戦するモードを選んでください</p>' +
             '<div class="mp-list">' + MODES.map(m =>
                 `<a class="mp-card mp-${m.id}" href="jissen.html?mode=${m.id}">` +
-                `<span class="mp-icon">${m.icon}</span>` +
+                `<span class="mp-icon"><img src="home_icons/items/${m.icon}.png" alt="" width="36" height="36"></span>` +
                 `<span class="mp-body"><span class="mp-name">${m.name}<em>${m.tag}</em></span>` +
                 `<span class="mp-desc">${m.desc}</span></span>` +
                 `<span class="mp-best"><small>最高記録</small><b data-best="${m.id}">0</b></span></a>`).join("") +

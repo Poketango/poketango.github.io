@@ -1807,3 +1807,10 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--blue); outline-
 .home-rank-banner small { font-size: 12px; color: var(--sub); }
 .home-rank-banner .hrb-go { font-weight: 800; color: var(--red); white-space: nowrap; }
 @media (max-width: 820px) { .home-rank-banner { margin-left: 16px; margin-right: 16px; } }
+/* 道具アイコン（ゲームの道具の絵、2026-11-16） */
+.mode-button img.icon { object-fit: contain; image-rendering: pixelated; }
+.mode-button img.icon[src*="rotom-phone"] { image-rendering: auto; }
+.mp-icon img { width: 36px; height: 36px; object-fit: contain; image-rendering: pixelated; }
+.mp-icon { background: #f3f5f7 !important; border: 2px solid var(--edge); }
+h2 img.hi { width: 28px; height: 28px; object-fit: contain; image-rendering: pixelated; vertical-align: -6px; margin-right: 8px; }
+.mp-x { padding: 0 !important; margin: 0 !important; display: grid; place-items: center; line-height: 1; }
