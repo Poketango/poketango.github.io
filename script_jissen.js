@@ -69,6 +69,14 @@ function showStart() {
     document.getElementById("ss-name").textContent = cfg.label;
     document.getElementById("ss-desc").textContent = cfg.desc;
     document.getElementById("ss-best").textContent = best ? `最高記録 ${best}問` : "まだ記録がありません";
+    const ssr = document.getElementById("ss-rank");
+    if (ssr) {
+        ssr.style.display = jMode === "ta60" ? "" : "none";
+        if (jMode === "ta60") {
+            if (window.MonspeRank) window.MonspeRank.showStartHint();
+            else window.addEventListener("monspe-rank-ready", () => window.MonspeRank.showStartHint(), { once: true });
+        }
+    }
     document.body.dataset.mode = jMode;
     const b = document.getElementById("start-btn");
     b.disabled = !dataReady;
@@ -86,6 +94,8 @@ function beginRun() {
         const cfg = JISSEN_MODES[jMode];
         document.getElementById("question-box").style.display = "";
         document.getElementById("timer-wrap").style.display = (cfg.perQ || cfg.total) ? "block" : "none";
+        // 60秒タイムアタックはランキング用にスタート時刻をサーバーへ記録
+        if (jMode === "ta60" && window.MonspeRank) window.MonspeRank.startRun();
         nextQuestion();
     };
     if (typeof FX !== "undefined") FX.countdown(go); else go();
@@ -320,6 +330,11 @@ function gameOver() {
     localStorage.setItem("lastMode", cfg.label);
 
     document.getElementById("best-score").textContent = `最高記録：${best} 問`;
+
+    // 60秒タイムアタックは週間ランキングへ
+    const rb = document.getElementById("rank-box");
+    if (jMode === "ta60" && window.MonspeRank) window.MonspeRank.showResultBox(score);
+    else if (rb) rb.style.display = "none";
 
     combo = 0;
 }

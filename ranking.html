@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google アナリティクス（アクセス数の計測） -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2S81YX6L53"></script>
+    <script>
+      try{var q=location.search;if(q.indexOf('notrack=1')>=0)localStorage.setItem('pt_notrack','1');if(q.indexOf('notrack=0')>=0)localStorage.removeItem('pt_notrack');if(localStorage.getItem('pt_notrack'))window['ga-disable-G-2S81YX6L53']=true;}catch(e){}
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2S81YX6L53');
+    </script>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png"><link rel="icon" type="image/png" sizes="96x96" href="favicon-96.png"><link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <title>週間ランキング（60秒タイムアタック）｜もんすぺ！</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="もんすぺ！の60秒タイムアタックの週間ランキング。ポケモン図鑑の英単語を60秒で何問答えられるか、ニックネームだけで参加できます。毎週月曜0時にリセット。">
+    <link rel="canonical" href="https://poketango.com/ranking.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="もんすぺ！">
+    <meta property="og:title" content="週間ランキング（60秒タイムアタック）｜もんすぺ！">
+    <meta property="og:description" content="ポケモン図鑑の英単語を60秒で何問答えられるか。ニックネームだけで参加できる週間ランキング。">
+    <meta property="og:url" content="https://poketango.com/ranking.html">
+    <meta property="og:image" content="https://poketango.com/ogp.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="theme.css?v=20261116r">
+<meta name="google-adsense-account" content="ca-pub-4829093383068106">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4829093383068106" crossorigin="anonymous"></script>
+</head>
+<body>
+<header id="site-header">
+    <h1><a class="logo-link" href="index.html" title="ホームへ戻る"><img class="site-logo" src="logo.svg" alt="もんすぺ！" width="442" height="100"></a></h1>
+    <p class="subtitle">週間ランキング</p>
+</header>
+<main id="rk-page">
+    <section class="rk-hero">
+        <div class="rk-hero-icon">⚡</div>
+        <div>
+            <h2>60秒タイムアタック</h2>
+            <p>ポケモン図鑑の英文の穴を、60秒で何問うめられるか。ニックネームだけで参加できます。</p>
+            <p class="rk-reset" id="rk-reset"></p>
+        </div>
+        <a class="rk-play" href="jissen.html?mode=ta60">挑戦する</a>
+    </section>
+
+    <section class="rk-mine" id="rk-mine"></section>
+
+    <section id="rank-board">
+        <h3>今週のトップ50</h3>
+        <div id="rk-board-body"><p class="rk-empty">読みこみ中…</p></div>
+    </section>
+
+    <details class="rk-rules">
+        <summary>ランキングの決まり</summary>
+        <ul>
+            <li>実践モードの「60秒タイムアタック」の記録が対象です。遊び終わると自動で登録されます。</li>
+            <li>1人1枠で、今週の自己ベストだけが残ります。日本時間の毎週月曜0時にリセットされます。</li>
+            <li>ニックネームは10文字までです。本名や学校名、連絡先は書かないでください。悪口や数字の並びは登録できません。</li>
+            <li>記録は使っている端末とブラウザごとに見分けています。ブラウザの記録を消すと、別の人として扱われます。</li>
+            <li>あり得ない記録やふさわしくない名前は、予告なく消すことがあります。</li>
+        </ul>
+    </details>
+</main>
+<button id="back-btn" onclick="location.href='index.html'">ホームへ戻る</button>
+<script src="medals.js?v=20261116a"></script>
+<script type="module">
+import "./ranking.js?v=20261116r";
+const R = window.MonspeRank;
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const tick = () => { document.getElementById("rk-reset").textContent = "毎週月曜0時にリセット（" + R.resetText() + "）"; };
+tick(); setInterval(tick, 60000);
+
+async function load() {
+    const mine = document.getElementById("rk-mine");
+    try {
+        const uid = await R.ensureUser();
+        const list = await R.top(50);
+        document.getElementById("rk-board-body").innerHTML = R.listHtml(list, uid);
+        const me = await R.myEntry();
+        if (me) {
+            const rank = await R.rankOf(me.score);
+            mine.innerHTML = `<span>あなたの今週の記録</span><b>${esc(me.name)}</b><span class="rk-mine-score">${me.score}問</span><span class="rk-mine-rank">${rank}位</span>`;
+        } else {
+            mine.innerHTML = `<span>今週はまだ記録がありません。</span><a href="jissen.html?mode=ta60">60秒タイムアタックに挑戦 →</a>`;
+        }
+    } catch (e) {
+        document.getElementById("rk-board-body").innerHTML = `<p class="rk-empty">ランキングを読みこめませんでした。時間をおいてもう一度開いてください。</p>`;
+        mine.style.display = "none";
+    }
+}
+load();
+</script>
+<script src="ads.js?v=20261114m"></script>
+<script src="site-footer.js"></script>
+</body>
+</html>

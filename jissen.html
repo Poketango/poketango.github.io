@@ -157,7 +157,7 @@
     .home-link { cursor: pointer; }
     .home-link:hover { opacity: 0.7; }
 </style>
-    <link rel="stylesheet" href="theme.css?v=20261116d">
+    <link rel="stylesheet" href="theme.css?v=20261116r">
 <link rel="stylesheet" href="jissen-fx.css?v=20261115a">
     <style>
 /* キー操作の目印（ボタンの色に合わせて白で表示、タッチ端末では非表示） */
@@ -223,6 +223,7 @@ kbd.key-hint {
         <h2 id="ss-name">ノーマル</h2>
         <p id="ss-desc"></p>
         <p id="ss-best"></p>
+        <p id="ss-rank" style="display:none"></p>
         <button id="start-btn" type="button" disabled>読みこみ中…</button>
         <p class="ss-hint">ほかのモードは上のボタンで切り替えられます</p>
     </div>
@@ -299,7 +300,8 @@ kbd.key-hint {
 <script src="medals.js?v=20261116a"></script>
 <script src="quiz-words.js?v=20261113c"></script>
 <script src="jissen-fx.js?v=20261115a"></script>
-<script src="script_jissen.js?v=20261115a"></script>
+<script src="script_jissen.js?v=20261116r"></script>
+<script type="module" src="ranking.js?v=20261116r"></script>
 
 <div id="achievement-popup" style="
     display:none;
