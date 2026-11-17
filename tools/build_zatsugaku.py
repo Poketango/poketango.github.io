@@ -1,4 +1,4 @@
-# 雑学コラム（ポケモン雑学採掘所の動画と対になる記事）を作る
+# 雑学コラム（ポケモン雑学採掘場の動画と対になる記事）を作る
 #   python3 tools/build_zatsugaku.py
 #   記事の中身は tools/zatsugaku/*.json に1本ずつ置く
 import json, os, glob, html
@@ -37,14 +37,14 @@ def article(a):
     url = f"{SITE}/zatsugaku/{a['slug']}.html"
     ld = {"@context": "https://schema.org", "@type": "Article", "headline": a["title"], "description": a["desc"],
           "datePublished": a["date"], "dateModified": a["date"], "inLanguage": "ja", "mainEntityOfPage": url,
-          "author": {"@type": "Organization", "name": "ポケモン雑学採掘所"},
+          "author": {"@type": "Organization", "name": "ポケモン雑学採掘場"},
           "publisher": {"@type": "Organization", "name": "もんすぺ！", "logo": {"@type": "ImageObject", "url": SITE + "/favicon-512.png"}},
           "image": f"https://i.ytimg.com/vi/{a['video']}/hqdefault.jpg"}
     h = HEAD.format(title=E(a["title"]), desc=E(a["desc"]), url=url, ogimg=f"https://i.ytimg.com/vi/{a['video']}/hqdefault.jpg",
                     ld='<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + "</script>")
     b = [f'<main class="pkwrap"><section class="list-hero"><h1>{E(a["h1"])}</h1><p>{E(a["sub"])}</p></section>']
     b.append('<section class="card zt-body">')
-    b.append(f'<p class="zt-meta">ポケモン雑学採掘所 第{a["no"]:03d}回の動画をもとにした記事です（{E(a["date"])}）</p>')
+    b.append(f'<p class="zt-meta">ポケモン雑学採掘場 第{a["no"]:03d}回の動画をもとにした記事です（{E(a["date"])}）</p>')
     b.append(f'<p><b>{E(a["lead"])}</b></p>')
     b.append(f'<div class="zt-video"><iframe src="https://www.youtube-nocookie.com/embed/{a["video"]}" title="{E(a["title"])}" loading="lazy" allowfullscreen></iframe></div>')
     for sec in a["sections"]:
@@ -63,9 +63,9 @@ def article(a):
 def index(arts):
     url = f"{SITE}/zatsugaku/"
     title = "ポケモン雑学コラム｜深いところに埋まった雑学を掘り出す"
-    desc = "論文や当時の記録までさかのぼって調べた、ポケモンの深い雑学のまとめ記事です。YouTube「ポケモン雑学採掘所」の動画とセットで読めます。"
+    desc = "論文や当時の記録までさかのぼって調べた、ポケモンの深い雑学のまとめ記事です。YouTube「ポケモン雑学採掘場」の動画とセットで読めます。"
     h = HEAD.format(title=E(title), desc=E(desc), url=url, ogimg=SITE + "/ogp.png", ld="")
-    b = ['<main class="pkwrap"><section class="list-hero"><h1>ポケモン雑学コラム</h1><p>YouTube「ポケモン雑学採掘所」の動画とセットで読める記事</p></section><section class="card zt-list">',
+    b = ['<main class="pkwrap"><section class="list-hero"><h1>ポケモン雑学コラム</h1><p>YouTube「ポケモン雑学採掘場」の動画とセットで読める記事</p></section><section class="card zt-list">',
          '<p>ポケモン好きでも知らない、深いところに埋まった雑学を、論文や当時の記録までさかのぼって調べた記事です。</p>']
     for a in sorted(arts, key=lambda x: x["date"], reverse=True):
         b.append(f'<a href="{a["slug"]}.html"><b>{E(a["title"])}</b><br><span class="zt-meta">{E(a["date"])}　{E(a["desc"])}</span></a>')
