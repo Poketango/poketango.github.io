@@ -19,8 +19,9 @@
     css.textContent = `
     .gad{margin:18px auto;max-width:760px;text-align:center;clear:both;min-height:0}
     .gad .gad-l{display:block;font-size:11px;color:#9ca3af;letter-spacing:.08em;margin:0 0 4px}
-    .gad ins.adsbygoogle{display:block;min-height:100px}
-    .gad:has(ins[data-ad-status="unfilled"]){display:none!important}
+    .gad ins.adsbygoogle{display:block}
+    /* 広告が実際に入るまでは高さ0で待たせる（幅は残すので広告の読み込みは止まらない） */
+    .gad:not(:has(ins[data-ad-status="filled"])){height:0;margin:0 auto;overflow:hidden}
     li.gad-li{list-style:none;grid-column:1/-1;width:100%}
     @media print{.gad{display:none!important}}`;
     document.head.appendChild(css);

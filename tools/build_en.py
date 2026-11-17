@@ -80,7 +80,7 @@ def mean_html(x, h='h2'):
 X_HANDLE = 'PokeTango_JP'  # 英語版のXアカウント（@なし）
 GENN = {'1':'Kanto','2':'Johto','3':'Hoenn','4':'Sinnoh','5':'Unova','6':'Kalos','7':'Alola','8':'Galar','9':'Paldea'}
 GA = '<script async src="https://www.googletagmanager.com/gtag/js?id=G-2S81YX6L53"></script>\n<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag(\'js\',new Date());gtag(\'config\',\'G-2S81YX6L53\');</script>'
-ADS = '<meta name="google-adsense-account" content="ca-pub-4829093383068106">\n<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4829093383068106" crossorigin="anonymous"></script><script defer src="/adslots.js?v=20261118"></script>'
+ADS = '<meta name="google-adsense-account" content="ca-pub-4829093383068106">\n<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4829093383068106" crossorigin="anonymous"></script><script defer src="/adslots.js?v=20261118b"></script>'
 CSS = '''<style>
 .kana{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}.kana .u{display:flex;flex-direction:column;align-items:center;min-width:64px;padding:10px 8px;border-radius:14px;background:#fff7ed;border:2px solid #fed7aa}
 .kana .u b{font-size:34px;line-height:1.1;font-family:"Noto Sans JP",sans-serif}.kana .u span{font-size:14px;color:#9a3412;font-weight:700;margin-top:4px}
