@@ -19,7 +19,10 @@
 //   overlays: [ {type:'bigtext', line:i, page:k, words:['DARE','MIGHTY','THINGS']},
 //               {type:'ring', line:i, cx:540, cy:540, r:448},
 //               {type:'bits', line:i, bits:'0000000100', caption:'＝4 → 4番目の文字「D」'},
-//               {type:'label', line:i, text:'大きく見せたい一言'} ],
+//               {type:'label', line:i, text:'大きく見せたい一言'},
+//               {type:'bars', line:i, title:'高さくらべ', items:[{label:'溶岩の噴水',v:220,text:'220m',color:'#ff5a1f'},{label:'東京タワー',v:333,text:'333m'}]},
+//               {type:'count', line:i, page:k, to:55, unit:'回目', sub:'2024.12〜2026.10', cols:11} ],
+//   bars=比較の棒グラフ（下から伸びる。ポン）、count=マス目が1つずつ点いて数が増える図（電子音）
 //   idea: {line:i, page:k}   … ひらめき音（キラーン）を鳴らす字幕。謎が解けた瞬間に使う
 //   answer: {line:i, page:k} … 答え・結末を言う字幕。衝撃音を鳴らし、BGMの盛り上がりをここに合わせる
 //   bgm: 'mystery'（謎解き） | 'moving'（切ない・感動） | 'drama'（緊迫から感動） | 'space'（静かで壮大、山なし）
@@ -29,7 +32,7 @@
 // 2026-11-16 同系統300本の分析で決めた作法（手順書の「編集の作法」も読む）:
 //   ・声は0秒から。最初の3秒は1つの絵（最初の切り替えは3秒以降）。画面の大きな切り替えは4〜5秒に1回
 //   ・字幕ごとの寄り引きと「ポン」はやめた。punch:true はゆっくり寄せ続ける動きになる（昔の動きは punch:'jump'）
-//   ・効果音は役割で鳴らす: 冒頭と答え=衝撃音、場面転換=シュッ、ring/tag=ポン、label=打撃音、bits=電子音、idea=キラーン
+//   ・効果音は役割で鳴らす: 冒頭と答え=衝撃音、場面転換=シュッ、ring/tag/bars=ポン、label=打撃音、bits/count=電子音、idea=キラーン
 //   ・NC.setup の戻り値の warn に、作法から外れている所が出る。直してから NC.start する
 // overlays に {type:'tag', line:i, text:'実際の映像'} を足すと、映像の左上に赤い札が出る
 // shot.cont:true にすると前の行の再生位置から続けて流す（同じ場面を何行にもまたがせる時）
@@ -55,7 +58,7 @@ NC.setup=async function(cfg){
   NC.MUX=NC.MUX||await import('https://cdn.jsdelivr.net/npm/mp4-muxer@5.2.1/+esm');
   const v=document.createElement('video');v.crossOrigin='anonymous';v.muted=true;v.preload='auto';v.src=cfg.video;NC.V=v;
   await new Promise((res,rej)=>{v.onloadedmetadata=res;v.onerror=()=>rej('映像を読み込めない')});
-  const all=cfg.lines.map(l=>l.pages.flat().join('')).join('')+cfg.head.join('')+cfg.credit+(cfg.overlays||[]).map(o=>(o.words||[]).join('')+(o.caption||'')+(o.text||'')).join('')+'0123456789';
+  const all=cfg.lines.map(l=>l.pages.flat().join('')).join('')+cfg.head.join('')+cfg.credit+(cfg.overlays||[]).map(o=>(o.words||[]).join('')+(o.caption||'')+(o.text||'')+(o.title||'')+(o.unit||'')+(o.sub||'')+(o.items||[]).map(x=>x.label+x.text).join('')).join('')+'0123456789';
   await loadFonts(all);
   NC.BUF=[];NC.KANA=[];for(const l of cfg.lines){const t=await tts(l);NC.BUF.push(t.buf);NC.KANA.push(t.kana);}
   // 時刻表
@@ -97,6 +100,18 @@ NC.draw=function(g,time,seg){const cfg=NC.cfg,L=NC.L;g.textAlign='center';g.text
     if(o.type=='bigtext'){const cp=NC.capT.find(c=>c.line==o.line&&c.k==(o.page||0));const st=cp?cp.s:ln.start;const en=L[o.line+1]?L[o.line+1].start:(NC.OUTRO?NC.OUTRO.start:NC.TOTAL);if(time>=st&&time<en){const a=Math.min(1,(time-st)/0.15);const sc=1+0.35*(1-Math.min(1,(time-st)/0.18));g.fillStyle=`rgba(0,0,0,${0.55*a})`;g.fillRect(0,VY,VS,VS);g.save();g.translate(W/2,VY+VS/2);g.scale(sc,sc);g.globalAlpha=a;const n=o.words.length;o.words.forEach((w,k)=>{fit(g,w,150,'{s}px "Dela Gothic One"',1000);stroked(g,w,0,(k-(n-1)/2)*190,'#ffe14d',22);});g.restore();g.globalAlpha=1;}}
     if(o.type=='ring'){const en=L[o.line+1]?L[o.line+1].start:(NC.OUTRO?NC.OUTRO.start:NC.TOTAL);if(time>=ln.start&&time<en){g.globalAlpha=Math.min(1,(time-ln.start)/0.25);g.strokeStyle='#ff2a2a';g.lineWidth=16;g.beginPath();g.arc(o.cx||540,VY+(o.cy||540),o.r||448,0,Math.PI*2);g.stroke();g.globalAlpha=1;}}
     if(o.type=='tag'){const en=L[o.line+1]?L[o.line+1].start:(NC.OUTRO?NC.OUTRO.start:NC.TOTAL);if(time>=ln.start&&time<en)drawTag(g,o.text,time-ln.start);}
+    if(o.type=='bars'){const en=L[o.line+1]?L[o.line+1].start:(NC.OUTRO?NC.OUTRO.start:NC.TOTAL);if(time>=ln.start&&time<en){const dt=time-ln.start;const a=Math.min(1,dt/0.15);g.fillStyle=`rgba(0,0,0,${0.6*a})`;g.fillRect(0,VY,VS,VS);g.globalAlpha=a;
+      if(o.title){fit(g,o.title,70,'{s}px "Dela Gothic One"',900);stroked(g,o.title,W/2,VY+90,'#fff',14);}
+      const its=o.items,n=its.length,mx=Math.max(...its.map(x=>x.v)),bw=Math.min(260,800/n-60),gap=(VS-n*bw)/(n+1),base=VY+VS-150,top=VY+260;
+      its.forEach((it,k)=>{const p=Math.max(0,Math.min(1,(dt-0.1-k*0.25)/0.55));const e=1-Math.pow(1-p,3);const h=(base-top)*it.v/mx*e;const x=gap+k*(bw+gap);g.fillStyle=it.color||'#f4f4f4';g.fillRect(x,base-h,bw,h);g.lineWidth=6;g.strokeStyle='#000';g.strokeRect(x,base-h,bw,h);
+        fit(g,it.label,56,'900 {s}px "Noto Sans JP"',bw+gap-20);stroked(g,it.label,x+bw/2,base+60,'#fff',12);
+        if(p>0.6){fit(g,it.text,84,'{s}px "Dela Gothic One"',bw+gap);stroked(g,it.text,x+bw/2,base-h-58,it.color||'#ffe14d',16);}});
+      g.globalAlpha=1;}}
+    if(o.type=='count'){const cp=NC.capT.find(c=>c.line==o.line&&c.k==(o.page||0));const st=cp?cp.s:ln.start;const en=L[o.line+1]?L[o.line+1].start:(NC.OUTRO?NC.OUTRO.start:NC.TOTAL);if(time>=st&&time<en){const dt=time-st;const a=Math.min(1,dt/0.12);g.fillStyle=`rgba(0,0,0,${0.62*a})`;g.fillRect(0,VY,VS,VS);g.globalAlpha=a;
+      const N=o.to,cols=o.cols||11,rows=Math.ceil(N/cols),cs=70,cg=12,gx=(VS-(cols*(cs+cg)-cg))/2,gy=VY+330;const lit=Math.min(N,Math.floor(N*Math.min(1,dt/(o.dur||1.6))));
+      for(let k=0;k<N;k++){const r=Math.floor(k/cols),c=k%cols;const on=k<lit;const last=k==N-1&&lit==N;g.fillStyle=last?'#ff2b2b':(on?'#ff8a1f':'rgba(255,255,255,0.18)');g.fillRect(gx+c*(cs+cg),gy+r*(cs+cg),cs,cs);}
+      const num=String(Math.max(1,lit))+(o.unit||'');const sc=lit==N?1+0.3*(1-Math.min(1,(dt-(o.dur||1.6))/0.18)):1;g.save();g.translate(W/2,VY+180);g.scale(sc,sc);fit(g,num,170,'{s}px "Dela Gothic One"',1000);stroked(g,num,0,0,lit==N?'#ff2b2b':'#ffe14d',24);g.restore();
+      if(o.sub){fit(g,o.sub,52,'900 {s}px "Noto Sans JP"',980);stroked(g,o.sub,W/2,gy+rows*(cs+cg)+50,'#fff',12);}g.globalAlpha=1;}}
     if(o.type=='label'){const en=L[o.line+1]?L[o.line+1].start:(NC.OUTRO?NC.OUTRO.start:NC.TOTAL);if(time>=ln.start&&time<en){const sc=1+0.3*(1-Math.min(1,(time-ln.start)/0.15));g.save();g.translate(W/2,VY+200);g.scale(sc,sc);fit(g,o.text,110,'{s}px "Dela Gothic One"',1000);stroked(g,o.text,0,0,'#ffe14d',20);g.restore();}}
   }
   if(NC.OUTRO&&time>=NC.OUTRO.start)drawTag(g,cfg.outro.tag||'実際の音声',time-NC.OUTRO.start);
@@ -140,7 +155,7 @@ NC.post=function(name){window.opener.postMessage({kind:'ncvideo',blob:NC.OUT,nam
 NC.download=async function(name){const a=document.createElement('a');a.href=URL.createObjectURL(NC.OUT);a.download=name;document.body.appendChild(a);a.click();await new Promise(r=>setTimeout(r,4000));return NC.OUT.size;};
 NC.events=function(){const cfg=NC.cfg,ev=[{t:0,k:'impact'}];const cuts=NC.SEG.slice(1).filter(s=>!s.cont&&!s.outro);cuts.forEach(s=>ev.push({t:s.from-0.12,k:'whoosh'}));
   // 字幕ごとの「ポン」は鳴らさない（2026-11-16 の分析。効果音は起きた瞬間だけ）
-  for(const o of (cfg.overlays||[])){const ln=NC.L[o.line];if(o.type=='bits')ev.push({t:ln.start,k:'cyber'});if(o.type=='ring'||o.type=='tag')ev.push({t:ln.start+0.05,k:'pop'});if(o.type=='label')ev.push({t:ln.start+0.05,k:'hit'});if(o.type=='bigtext'){const cp=NC.capT.find(c=>c.line==o.line&&c.k==(o.page||0));ev.push({t:cp?cp.s:ln.start,k:'boom'});}}
+  for(const o of (cfg.overlays||[])){const ln=NC.L[o.line];if(o.type=='bits')ev.push({t:ln.start,k:'cyber'});if(o.type=='ring'||o.type=='tag')ev.push({t:ln.start+0.05,k:'pop'});if(o.type=='label')ev.push({t:ln.start+0.05,k:'hit'});if(o.type=='bars')ev.push({t:ln.start+0.05,k:'pop'});if(o.type=='count'){const cp=NC.capT.find(c=>c.line==o.line&&c.k==(o.page||0));ev.push({t:cp?cp.s:ln.start,k:'cyber'});}if(o.type=='bigtext'){const cp=NC.capT.find(c=>c.line==o.line&&c.k==(o.page||0));ev.push({t:cp?cp.s:ln.start,k:'boom'});}}
   if(cfg.answer){const at=NC.answerTime();if(!ev.some(e=>(e.k=='boom'||e.k=='impact')&&Math.abs(e.t-at)<0.3))ev.push({t:at,k:'impact'});}
   if(cfg.idea){const cp=NC.capT.find(c=>c.line==cfg.idea.line&&c.k==(cfg.idea.page||0));if(cp)ev.push({t:cp.s+0.9,k:'idea'});}
   return JSON.stringify({total:NC.TOTAL,ev});};
