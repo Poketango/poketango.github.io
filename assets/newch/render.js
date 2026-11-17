@@ -21,7 +21,7 @@
 //               {type:'bits', line:i, bits:'0000000100', caption:'＝4 → 4番目の文字「D」'},
 //               {type:'label', line:i, text:'大きく見せたい一言'},
 //               {type:'bars', line:i, title:'高さくらべ', items:[{label:'溶岩の噴水',v:220,text:'220m',color:'#ff5a1f'},{label:'東京タワー',v:333,text:'333m'}]},
-//               {type:'count', line:i, page:k, to:55, unit:'回目', sub:'2024.12〜2026.10', cols:11} ],
+//               {type:'count', line:i, page:k, to:55, unit:'回目', sub:'2024.12〜2026.10', cols:11, until:i+1} ],
 //   bars=比較の棒グラフ（下から伸びる。ポン）、count=マス目が1つずつ点いて数が増える図（電子音）
 //   idea: {line:i, page:k}   … ひらめき音（キラーン）を鳴らす字幕。謎が解けた瞬間に使う
 //   answer: {line:i, page:k} … 答え・結末を言う字幕。衝撃音を鳴らし、BGMの盛り上がりをここに合わせる
@@ -102,12 +102,12 @@ NC.draw=function(g,time,seg){const cfg=NC.cfg,L=NC.L;g.textAlign='center';g.text
     if(o.type=='tag'){const en=L[o.line+1]?L[o.line+1].start:(NC.OUTRO?NC.OUTRO.start:NC.TOTAL);if(time>=ln.start&&time<en)drawTag(g,o.text,time-ln.start);}
     if(o.type=='bars'){const en=L[o.line+1]?L[o.line+1].start:(NC.OUTRO?NC.OUTRO.start:NC.TOTAL);if(time>=ln.start&&time<en){const dt=time-ln.start;const a=Math.min(1,dt/0.15);g.fillStyle=`rgba(0,0,0,${0.6*a})`;g.fillRect(0,VY,VS,VS);g.globalAlpha=a;
       if(o.title){fit(g,o.title,70,'{s}px "Dela Gothic One"',900);stroked(g,o.title,W/2,VY+90,'#fff',14);}
-      const its=o.items,n=its.length,mx=Math.max(...its.map(x=>x.v)),bw=Math.min(260,800/n-60),gap=(VS-n*bw)/(n+1),base=VY+VS-150,top=VY+260;
+      const its=o.items,n=its.length,mx=Math.max(...its.map(x=>x.v)),bw=Math.min(260,800/n-60),gap=(VS-n*bw)/(n+1),base=VY+780,top=VY+250;
       its.forEach((it,k)=>{const p=Math.max(0,Math.min(1,(dt-0.1-k*0.25)/0.55));const e=1-Math.pow(1-p,3);const h=(base-top)*it.v/mx*e;const x=gap+k*(bw+gap);g.fillStyle=it.color||'#f4f4f4';g.fillRect(x,base-h,bw,h);g.lineWidth=6;g.strokeStyle='#000';g.strokeRect(x,base-h,bw,h);
-        fit(g,it.label,56,'900 {s}px "Noto Sans JP"',bw+gap-20);stroked(g,it.label,x+bw/2,base+60,'#fff',12);
+        fit(g,it.label,56,'900 {s}px "Noto Sans JP"',bw+gap-20);stroked(g,it.label,x+bw/2,base+52,'#fff',12);
         if(p>0.6){fit(g,it.text,84,'{s}px "Dela Gothic One"',bw+gap);stroked(g,it.text,x+bw/2,base-h-58,it.color||'#ffe14d',16);}});
       g.globalAlpha=1;}}
-    if(o.type=='count'){const cp=NC.capT.find(c=>c.line==o.line&&c.k==(o.page||0));const st=cp?cp.s:ln.start;const en=L[o.line+1]?L[o.line+1].start:(NC.OUTRO?NC.OUTRO.start:NC.TOTAL);if(time>=st&&time<en){const dt=time-st;const a=Math.min(1,dt/0.12);g.fillStyle=`rgba(0,0,0,${0.62*a})`;g.fillRect(0,VY,VS,VS);g.globalAlpha=a;
+    if(o.type=='count'){const cp=NC.capT.find(c=>c.line==o.line&&c.k==(o.page||0));const st=cp?cp.s:ln.start;const ul=o.until!=null?o.until:o.line;const en=L[ul+1]?L[ul+1].start:(NC.OUTRO?NC.OUTRO.start:NC.TOTAL);if(time>=st&&time<en){const dt=time-st;const a=Math.min(1,dt/0.12);g.fillStyle=`rgba(0,0,0,${0.62*a})`;g.fillRect(0,VY,VS,VS);g.globalAlpha=a;
       const N=o.to,cols=o.cols||11,rows=Math.ceil(N/cols),cs=70,cg=12,gx=(VS-(cols*(cs+cg)-cg))/2,gy=VY+330;const lit=Math.min(N,Math.floor(N*Math.min(1,dt/(o.dur||1.6))));
       for(let k=0;k<N;k++){const r=Math.floor(k/cols),c=k%cols;const on=k<lit;const last=k==N-1&&lit==N;g.fillStyle=last?'#ff2b2b':(on?'#ff8a1f':'rgba(255,255,255,0.18)');g.fillRect(gx+c*(cs+cg),gy+r*(cs+cg),cs,cs);}
       const num=String(Math.max(1,lit))+(o.unit||'');const sc=lit==N?1+0.3*(1-Math.min(1,(dt-(o.dur||1.6))/0.18)):1;g.save();g.translate(W/2,VY+180);g.scale(sc,sc);fit(g,num,170,'{s}px "Dela Gothic One"',1000);stroked(g,num,0,0,lit==N?'#ff2b2b':'#ffe14d',24);g.restore();
