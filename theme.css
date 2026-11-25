@@ -1852,3 +1852,9 @@ img.pk-ic.poke { width: 1.7em; height: 1.7em; vertical-align: -0.5em; margin: -0
 #ach-intro .ai-note { margin: 10px 0 0; font-size: 13px; color: var(--sub); }
 @media (max-width: 1000px) { #ach-intro { margin-left: 16px; margin-right: 16px; } }
 .achievement.locked .ach-icon img { filter: grayscale(.5); opacity: .8; }
+
+/* トップページの説明文（2026-11-25 AdSense対策で追加） */
+.home-about { line-height: 1.9; font-size: 15px; }
+.home-about h3 { font-size: 16px; margin: 18px 0 6px; }
+.home-about p { margin: 0 0 12px; }
+.home-about a { color: var(--red); }

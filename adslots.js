@@ -9,6 +9,8 @@
 (function () {
     if (window.__adslots) return;
     window.__adslots = true;
+    // 検索から外した中身の薄いページ（noindex）には広告を出さない（AdSense「有用性の低いコンテンツ」対策）
+    if (document.querySelector('meta[name="robots"][content*="noindex"]')) return;
     const CLIENT = "ca-pub-4829093383068106";
     const SLOT = "1478855669";
     const MAX = 5;
