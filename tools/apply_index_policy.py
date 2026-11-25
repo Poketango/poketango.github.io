@@ -19,6 +19,7 @@ import re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 META = '<meta name="robots" content="noindex,follow">'
 RX = re.compile(r'<meta name="robots"[^>]*>\s*')
+ADS_TAG = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4829093383068106" crossorigin="anonymous"></script>'
 ADSRX = re.compile(r'<script[^>]*adsbygoogle\.js[^>]*></script>\s*')
 
 
@@ -36,12 +37,16 @@ def set_noindex(path, on):
         t = t.replace("<head>", "<head>" + META, 1)
         # 自動広告も出ないよう、AdSense の読み込みコードも外す
         t = ADSRX.sub("", t)
+    elif "adsbygoogle.js" not in t:
+        # 検索の対象に戻したページには AdSense の読み込みコードを戻す
+        t = t.replace("</head>", ADS_TAG + "\n</head>", 1)
     if t != s:
         open(path, "w", encoding="utf-8").write(t)
 
 
 def main():
     noidx = set()
+    indexed = set()
     for d in ("p", "en/p"):
         for f in glob.glob(os.path.join(ROOT, d, "*.html")):
             s = open(f, encoding="utf-8").read()
@@ -51,8 +56,8 @@ def main():
                 continue
             off = not has_value(f, s)
             set_noindex(f, off)
-            if off:
-                noidx.add(os.path.relpath(f, ROOT).replace(os.sep, "/"))
+            rel = os.path.relpath(f, ROOT).replace(os.sep, "/")
+            (noidx if off else indexed).add(rel)
     # 転送だけのページ
     for extra in ("home.html", "oauth.html"):
         p = os.path.join(ROOT, extra)
@@ -68,6 +73,11 @@ def main():
         if loc and loc.group(1) in noidx:
             continue
         kept.append(m.group(0))
+    have = set(re.findall(r"<loc>https://poketango\.com/(.*?)</loc>", s))
+    import datetime
+    today = datetime.date.today().isoformat()
+    for rel in sorted(indexed - have):
+        kept.append(f"\n  <url><loc>https://poketango.com/{rel}</loc><lastmod>{today}</lastmod></url>")
     head = s[: s.index("<urlset")]
     urlset = re.search(r"<urlset[^>]*>", s).group(0)
     open(sm, "w", encoding="utf-8").write(head + urlset + "".join(kept) + "\n</urlset>\n")
